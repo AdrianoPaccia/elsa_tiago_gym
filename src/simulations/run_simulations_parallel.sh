@@ -33,10 +33,8 @@ for ((i=0; i<$num_scripts; i++)); do
 done
 
 # Run scripts for the principal simulator environment
-gnome-terminal -- bash -c "roslaunch tiago_gazebo tiago_gazebo.launch world:=elsa end_effector:=robotiq-2f-85 public_sim:=true; exec bash"
-
-#roslaunch tiago_gazebo tiago_gazebo.launch world:=elsa end_effector:=robotiq-2f-85 public_sim:=true &
-pids+=($!)
+gnome-terminal -- bash -c "roslaunch tiago_gazebo tiago_gazebo.launch world:=elsa end_effector:=robotiq-2f-85 public_sim:=true tuck_arm:=false; exec bash" &
+pids+=($!) # Store the PID of the last background process
 
 # Wait for all background processes to finish
 for pid in "${pids[@]}"; do

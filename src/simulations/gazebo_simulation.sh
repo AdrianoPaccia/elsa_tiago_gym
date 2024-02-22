@@ -26,7 +26,7 @@ exec 2>&1
 
 # Add your specific commands here
 echo "Simulation client #$index_i..."
-roslaunch tiago_gazebo tiago_gazebo.launch world:=elsa end_effector:=robotiq-2f-85 public_sim:=true gui:=true
+roslaunch tiago_gazebo tiago_gazebo.launch world:=elsa end_effector:=robotiq-2f-85 public_sim:=true gui:=true tuck_arm:=false 
 
 # Create a flag file to indicate that the simulation is done
 #echo "Simulation done" > "simulation_done_$index_i.flag"

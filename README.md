@@ -28,4 +28,4 @@ Tested on Ubuntu 18.04 only. Beware! Instructions assume familiarity with the RO
     - To speed up simulation you can run the command `gz physics –u 0 -s 0.0025` in a separate terminal.
 
 ### TiagoSimpleEnv-v0
-Describe the environment
+TODO: Describe the environment

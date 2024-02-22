@@ -3,13 +3,13 @@ import numpy.core.multiarray
 import rospy
 import gym
 import tensorflow as tf
-from tiago_gym import tiago_reach_env, tiago_simple_env
+from elsa_tiago_gym import tiago_reach_env, tiago_simple_env
 from agents import dqn, ddpg
 
 tf.compat.v1.enable_eager_execution()
 
 # To run as fast as possible:
-# roslaunch tiago_gym start_training.launch gazebo:=false
+# roslaunch elsa_tiago_gym start_training.launch gazebo:=false
 # gz physics -u 0 -s 0.0025; gz stats
 
 def train_reach_env():

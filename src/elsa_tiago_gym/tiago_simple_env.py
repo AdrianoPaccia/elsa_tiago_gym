@@ -19,33 +19,23 @@ import rospkg
 import os
 from std_msgs.msg import Bool
 
-
-'''
-register(
-        id='TiagoSimpleEnv-v0',
-        entry_point='tiago_simple_env:TiagoSimpleEnv',
-        max_episode_steps=max_episode_steps,
-    )
-'''
     
 class TiagoSimpleEnv(tiago_env.TiagoEnv):
     """
     Observation:
         Type: Box(3)
         Num     Observation
-        0       absolute pos of end effector
-        1       position of all the objects
+        0       for each cube in the scene: absolute position, code_type, held (bool)
+        1       for each cylinder in the scene: absolute position, code_type
+        2       end effector position 
 
     Actions:
         Type: Box(4)
         Num     Action
-        0       x-pos of end effector
-        1       y-pos of end effector
-        2       z-pos of end effector
+        0       delta x-pos of end effector
+        1       delta y-pos of end effector
+        2       delta z-pos of end effector
         3       Grasping action (True/False)
-
-    Reward:
-
     """
     
     def __init__(self,env_code=None,max_episode_steps = 128, multimodal=False, discrete=True):
@@ -70,9 +60,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         # Action spaces
         self.discrete_actions = discrete
         if self.discrete_actions:
-            #d_space = spaces.Discrete(7)
-            #hold_space = spaces.Discrete(2)
-            self.action_space = spaces.Discrete(7) #spaces.Tuple((d_space,d_space,d_space,hold_space))            
+            self.action_space = spaces.Discrete(7)
         else:
             dpos_low = np.array([-1.0, -1.0, -1.0])
             dpos_high = np.array([1.0, 1.0, 1.0])
@@ -143,9 +131,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
     def _set_init_pose(self):
         """Sets the Robot in its init pose
         """
-        poses = [[0.4, -0.5, 0.7, 0, np.radians(90), 0],
-                 [0.65, -0.1, 0.8, np.radians(90), np.radians(90)/2, np.radians(90)]
-        ]
+        poses = [[0.65, -0.1, 0.85, np.radians(90), np.radians(90)/2, np.radians(90)]]
         self.execute_trajectory(poses,only_arm=False)
         self.arm_torso_group.clear_pose_targets()
 
@@ -282,6 +268,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         return reward
         
     # Internal TaskEnv Methods
+    #------------------------------------------------
 
     # To extend for all objects in the different worlds
     def collision_cb(self, data):
@@ -297,7 +284,6 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             elif (c1 and c2) in [*self.items,*self.forniture] or self.collision_detected:
                 pass
             else:
-            #if ((c1 or c2) not in self.items) and ((c1 or c2) not in [*self.items,*self.forniture]) and not self.collision_detected:
                 self.collision_detected = True
                 self.collision_arm_state = self.stored_arm_state
                 rospy.logerr("COLLISION DETECTED between {:} - {:}".format(c1,c2))
