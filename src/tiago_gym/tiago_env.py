@@ -14,7 +14,7 @@ from gazebo_msgs.msg import ContactsState
 from gazebo_msgs.srv import GetModelState,SetModelState
 from control_msgs.msg import PointHeadActionGoal
 from gazebo_msgs.msg import ModelStates,ModelState
-from tiago_gym.utils import Model,objects_from_scene
+from elsa_tiago_gym.utils import Model,objects_from_scene
 from tf.transformations import quaternion_from_euler
 import tf
 from gazebo_msgs.srv import SpawnModel, DeleteModel
@@ -56,7 +56,7 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         self.delete_object = rospy.ServiceProxy('/gazebo/delete_model',DeleteModel)
         self.spawn_object = rospy.ServiceProxy('/gazebo/spawn_sdf_model',SpawnModel)
         rospack = rospkg.RosPack()
-        path_to_yaml = os.path.join(rospack.get_path('tiago_gym'),'config/environment_variables.yaml')
+        path_to_yaml = os.path.join(rospack.get_path('elsa_tiago_gym'),'config/environment_variables.yaml')
         with open(path_to_yaml,'r') as file:
             try:
                 self.environments = yaml.safe_load(file)

@@ -7,7 +7,7 @@ import rospy
 from geometry_msgs.msg import Twist
 from gazebo_msgs.msg import ModelState
 from gazebo_msgs.srv import GetModelState,SetModelState
-from tiago_gym.utils import setup_env
+from elsa_tiago_gym.utils import setup_env
 import gym
 
 numberOfCpuCore_to_be_used = 2

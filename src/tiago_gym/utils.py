@@ -5,8 +5,6 @@ import random
 from gym import spaces
 import numpy as np
 from gym.envs.registration import register
-#from tiago_gym.tiago_reach_env import TiagoReachEnv
-#from tiago_gym.tiago_simple_env import TiagoSimpleEnv
 import sys
 import math
 from gazebo_msgs.srv import GetModelState,SetModelState
@@ -18,10 +16,9 @@ max_episode_steps = 100
 
 
 def setup_env(env_name, port = "http://localhost:11311/"):
-    #rospy.init_node('tiago_gym')
     rospack = rospkg.RosPack()
-    dir = rospack.get_path('tiago_gym')
-    tasks_path = os.path.join(dir,'src/tiago_gym')
+    dir = rospack.get_path('elsa_tiago_gym')
+    tasks_path = os.path.join(dir,'src/elsa_tiago_gym')
     sys.path.append(tasks_path)
     os.environ['ROS_MASTER_URI'] = port
     if env_name =='TiagoReachEnv-v0':

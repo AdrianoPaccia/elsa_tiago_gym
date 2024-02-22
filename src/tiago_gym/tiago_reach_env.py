@@ -7,7 +7,7 @@ import os
 import random
 
 from gym.envs.registration import register
-from tiago_gym import tiago_env
+from elsa_tiago_gym import tiago_env
 
 max_episode_steps = 100
 
@@ -25,7 +25,7 @@ def check_registration(env_id):
 env_name = rospy.get_param('/env_name')
 
 def setup_env(entry_point):
-    rospy.init_node('tiago_gym')
+    rospy.init_node('elsa_tiago_gym')
     register(
         id=env_name,
         entry_point=entry_point,#'tiago_reach_env:TiagoReachEnv',

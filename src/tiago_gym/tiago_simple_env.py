@@ -4,11 +4,11 @@ from gym import spaces
 from gym.spaces import Discrete
 import random
 from gym.envs.registration import register
-from tiago_gym import tiago_env
+from elsa_tiago_gym import tiago_env
 from gazebo_msgs.msg import ContactsState, ModelStates
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
-from tiago_gym.utils import Model
+from elsa_tiago_gym.utils import Model
 import math
 from geometry_msgs.msg import Twist,Pose,Point,Quaternion
 import tf
