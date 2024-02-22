@@ -1,0 +1,9 @@
+tiago:
+  grasping_threshold: 0.2
+
+training_parameters:
+  R_goal: 10
+  R_coll: -10
+  R_dist: -1.0
+  R_semigoal: 0.0
+  R_fail: 0.0

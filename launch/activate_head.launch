@@ -1,0 +1,13 @@
+<!-- look_hand_launch.launch -->
+
+<launch>
+  <!-- Specify the package and executable for your node -->
+  <node pkg="tiago_gym" type="look_hand.py" name="look_hand_node" output="screen">
+    <!-- Add any node-specific parameters here if needed -->
+  </node>
+
+  <!-- Launch an image viewer for visualization (e.g., image_view from image_transport) -->
+  <node pkg="image_view" type="image_view" name="image_view_node" respawn="false" output="screen">
+    <remap from="/image" to="/xtion/rgb/image_raw"/>
+  </node>
+</launch>

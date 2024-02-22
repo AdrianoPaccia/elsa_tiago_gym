@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <!-- Arguments
+  <arg name="world_1" default="elsa"/>
+  <arg name="world_2" default="elsa_10"/>
+  <rosparam file="$(find tiago_gym)/config/tiago_train_params.yaml" command="load"/>
+  <arg name="port_1" default="11345"/>
+
+  <include file="$(find tiago_gazebo)/launch/tiago_gazebo.launch" >
+    <arg name="world" value="$(arg world_1)"/>
+    <arg name="end_effector" value="robotiq-2f-85"/>
+    <arg name="public_sim" value="true"/>
+    <arg name="port" value="$(arg port_1)"/>
+  </include>-->
+
+  <!-- Define parameters for Gazebo instance 1 -->
+  <arg name="port_1" default="11345"/>
+
+  <!-- Launch Gazebo instance 1 -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="port" value="$(arg port_1)"/>
+  </include>
+
+  <!-- Define parameters for Gazebo instance 2 -->
+  <arg name="port_2" default="11346"/>
+
+  <!-- Launch Gazebo instance 2 -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="port" value="$(arg port_2)"/>
+  </include>
+
+  <!-- Add more instances as needed -->
+
+</launch>
+
