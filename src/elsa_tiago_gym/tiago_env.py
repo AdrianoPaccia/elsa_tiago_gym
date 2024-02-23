@@ -378,6 +378,9 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         get_gazebo_object_state = rospy.ServiceProxy('/gazebo/get_model_state', GetModelState)
         for id,cube in self.model_state.cubes.items():
             cube_state = get_gazebo_object_state(id,'')
+            c = cube_state.pose.position
+            if not self.arm_pose_reachable(c.x, c.y, c.z):
+                self.set_obj_pos(id,[*cube.init_position,0,0,0])
             cube.set_state(cube_state)
         for id,cyl in self.model_state.cylinders.items():
             cyl_state = get_gazebo_object_state(id,'')

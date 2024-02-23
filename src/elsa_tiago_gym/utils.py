@@ -171,6 +171,7 @@ class Object:
     def __init__(self,id:str,position:list, type_code:str, gazebo_state):
         self.id=id
         self.position = position
+        self.init_position = position
         self.type_code = type_to_code[type_code]
         self.gazebo_state = gazebo_state
     def set_state(self,state):
