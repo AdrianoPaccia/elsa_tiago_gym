@@ -18,6 +18,9 @@ if ! [[ "$num_scripts" =~ ^[0-9]+$ ]]; then
     exit 1
 fi
 
+#silence the WARN and INFO ros logs
+export ROS_LOG_DIR=error 
+
 # Store PIDs of background processes
 pids=()
 
@@ -26,15 +29,31 @@ script_dir="$(cd "$(dirname $0)" && pwd)"
 current_dir="$(pwd)"
 relative_path=$(realpath --relative-to="$current_dir" "$script_dir")
 
-# Run scripts for the worker simulator environments
+# Create a new terminal window
+#gnome-terminal --window --title="Simulations Window" -- bash -c "sleep 2; exec bash"
+
+# Open tabs for each script in the new window
 for ((i=0; i<$num_scripts; i++)); do
-    gnome-terminal -- bash -c "./$relative_path/gazebo_simulation.sh $i $velocity $gui; exec bash" &
-    pids+=($!)  # Store the PID of the last background process
-    sleep 10
+    gnome-terminal --tab --title="Simulation #$i" -- bash -c "
+    ./$relative_path/gazebo_simulation.sh $i $velocity $gui;
+    exec bash;
+    rosparam set /rosout/level fatal;
+    exec bash;" &
+    sleep 5
 done
+# Run scripts for the worker simulator environments
+#for ((i=0; i<$num_scripts; i++)); do
+#    gnome-terminal -- bash -c "./$relative_path/gazebo_simulation.sh $i $velocity $gui; exec bash" &
+#    pids+=($!)  # Store the PID of the last background process
+#    sleep 10
+#done
 
 # Run scripts for the principal simulator environment
-gnome-terminal -- bash -c "roslaunch tiago_gazebo tiago_gazebo.launch world:=elsa end_effector:=robotiq-2f-85 public_sim:=true tuck_arm:=false; ./$relative_path/set_velocity.sh $velocity; exec bash" &
+gnome-terminal --tab -- bash -c "
+    roslaunch tiago_gazebo tiago_gazebo.launch world:=elsa end_effector:=robotiq-2f-85 public_sim:=true tuck_arm:=false gui:=false;
+    rosparam set /rosout/level fatal;,
+    ./$relative_path/set_velocity.sh $velocity;
+     exec bash" &
 pids+=($!) # Store the PID of the last background process
 sleep 10
 

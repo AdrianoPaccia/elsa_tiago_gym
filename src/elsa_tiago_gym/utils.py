@@ -10,6 +10,7 @@ import math
 from gazebo_msgs.srv import GetModelState,SetModelState
 from gazebo_msgs.msg import ModelState 
 from tf.transformations import quaternion_from_euler,euler_from_quaternion
+from elsa_tiago_gym.utils_parallel import set_sim_velocity
 
 
 max_episode_steps = 100
@@ -21,6 +22,8 @@ def setup_env(env_name, port = "http://localhost:11311/"):
     tasks_path = os.path.join(dir,'src/elsa_tiago_gym')
     sys.path.append(tasks_path)
     os.environ['ROS_MASTER_URI'] = port
+
+
     if env_name =='TiagoReachEnv-v0':
         entry_point = 'tiago_reach_env:TiagoReachEnv'
     elif env_name == 'TiagoSimpleEnv-v0':

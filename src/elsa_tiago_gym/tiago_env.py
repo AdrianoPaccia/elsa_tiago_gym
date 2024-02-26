@@ -24,14 +24,21 @@ import rospkg
 import os
 import random
 
+import logging
+import multiprocessing as mp
+logger = mp.log_to_stderr()
+logger.setLevel(logging.DEBUG)
+
+
 class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
     """
     Initializes a new Tiago Steel environment
     """
     def __init__(self, env_code:str):
         rospy.logdebug("========= In Tiago Env")
-
+        
         self.env_code = env_code
+        self.ros_master_uri = os.environ.get('ROS_MASTER_URI')
         self.controllers_list = []
         self.robot_name_space = ""
         self.out_of_reach = True
@@ -51,7 +58,8 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
                                        reset_controls=reset_controls_bool,
                                        reset_world_or_sim="WORLD")
 
-        
+        self.grasp = rospy.ServiceProxy('/gripper_controller/grasp', Empty)
+
         # define services for changing environemnt
         self.delete_object = rospy.ServiceProxy('/gazebo/delete_model',DeleteModel)
         self.spawn_object = rospy.ServiceProxy('/gazebo/spawn_sdf_model',SpawnModel)
@@ -99,8 +107,8 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         self.arm_group.set_planning_time(1)
         self.store_arm_state()
 
-        self.arm_workspace_low =  np.array([0.5, -0.5, 0.6])
-        self.arm_workspace_high = np.array([0.8,  0.5, 0.8])
+        self.arm_workspace_low =  np.array([0.6, -0.5, 0.63])
+        self.arm_workspace_high = np.array([0.8,  0.5, 0.9])
 
         rospy.sleep(2)
         p = PoseStamped()
@@ -115,14 +123,16 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
 
         self.release()
         #self.look_down()
-
+        '''
+        ## ADD objects in the scene
         # Place the table in movit
         self.table = self.get_gazebo_object_state('table_0m4','')
         self.table.header.frame_id = "base_footprint"
         self.table.pose.position.z = 0.21
         self.scene.add_box("table", self.table, size=(1.02, 0.82, 0.44))
-
+        
         # Place the cubes and cylinders in movit
+        
         for id,cube in self.model_state.cubes.items():
             cube_state = self.get_gazebo_object_state(id,'')
             cube_state.header.frame_id = "base_footprint"
@@ -131,6 +141,7 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
             cyl_state = self.get_gazebo_object_state(id,'')
             cyl_state.header.frame_id = "base_footprint"
             self.scene.add_cylinder(id, cyl_state, cyl.heigth+0.02, cyl.radius+0.01)
+        '''
         rospy.sleep(2)
 
     def _init_rviz(self):
@@ -221,43 +232,53 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         return plan
 
     def grasping(self, object):
+        #logger.debug(f'GRASPING')
+        #collec where to grasp
         x,y,z = object.position
-        angle = object.orientation[2]
-        self.set_arm_pose(x, y, z + 0.27,0, np.radians(90), 0)
-        self.set_obj_pos(object.id,[x, y, z,0, 0, 0])
-        rospy.sleep(1)
-        action_failed=True
+
         roll, pitch, yaw = 0, np.radians(90), 0
-        #if y>0:
-        #    roll, pitch, yaw = np.radians(90), np.radians(90)/2, np.radians(90)
-        #else:
-        #    roll, pitch, yaw = np.radians(90), np.radians(90)*3/2, np.radians(90)
-        action_failed = not self.set_arm_pose(x, y, z + 0.23, 0, np.radians(90), 0)
-        grasp = rospy.ServiceProxy('/gripper_controller/grasp', Empty)
-        grasp()
+
+        #remove the object
+        self.set_obj_pos(object.id,[-2, 0, 0,0, 0, 0])
+
+        #go in that position
+        self.set_arm_pose(x, y, z + 0.23, roll, pitch, yaw)
+        self.release()
+        rospy.sleep(1)
+
+        # get the object back
+        self.set_obj_pos(object.id,[x, y, z, 0, 0, 0])
+        
+        # grasp the object
+        
+        self.grasp()
         grasped = rospy.wait_for_message("/gripper/is_grasped", Bool)
+
         if grasped.data is True:
             grasping_group = 'gripper'
             touch_links = self.robot.get_link_names(group=grasping_group)
             self.scene.attach_box("gripper_base_link", object.id, touch_links=touch_links)
             self.grasped_item = object.id
-            self.set_arm_pose(x, y, z + 0.27,roll, pitch, yaw)
+            self.set_arm_pose(x, y, z + 0.3, roll, pitch, yaw)
             return True
         else:
             self.release()
             self.grasped_item = None
-            self.set_arm_pose(x, y, z + 0.27,roll, pitch, yaw)
+            self.set_arm_pose(x, y, z + 0.3,roll, pitch, yaw)
             return False
 
     def placing(self):
+        #logger.debug('PLACING')
         self.release()
         self.scene.remove_attached_object("gripper_base_link", name=self.grasped_item)
         placed = self.wait_for_placed_item(self.grasped_item)
-        rospy.sleep(2)
+        #rospy.sleep(2)
         object = self.model_state.cubes[self.grasped_item]
         object_state = self.get_gazebo_object_state(self.grasped_item,'')
         object_state.header.frame_id = "base_footprint"
+        '''
         self.scene.add_box(self.grasped_item, object_state, size=(object.side+0.01, object.side+0.01, object.side+0.01))
+        '''
         self.grasped_item = None
         return True
     
@@ -265,7 +286,7 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         self.placed_item = None
         cnt=0
         while not self.placed_item == item :
-            rospy.sleep(1)
+            rospy.sleep(0.1)
             rospy.loginfo("waiting for dropping")
             cnt+=1
             if cnt>20:
@@ -362,12 +383,12 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         try:
             set_state = rospy.ServiceProxy('/gazebo/set_model_state', SetModelState)
             resp = set_state(state_msg)
-            self.scene.remove_world_object(name=id)
+            '''self.scene.remove_world_object(name=id)
             cube = self.model_state.cubes[id]
             size = cube.side +0.01
             cube_state = self.get_gazebo_object_state(id,'')
             cube_state.header.frame_id = "base_footprint"
-            self.scene.add_box(id,cube_state, size=(size,size,size))
+            self.scene.add_box(id,cube_state, size=(size,size,size))'''
         except rospy.ServiceException as exc:
             print("Service did not process request: " + str(exc))
 
@@ -375,16 +396,18 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         self.stored_torso_state = (self.arm_torso_group.get_current_joint_values())[0]
     
     def store_model_state(self):
+        # upadte the model states
         get_gazebo_object_state = rospy.ServiceProxy('/gazebo/get_model_state', GetModelState)
         for id,cube in self.model_state.cubes.items():
             cube_state = get_gazebo_object_state(id,'')
             c = cube_state.pose.position
-            if not self.arm_pose_reachable(c.x, c.y, c.z):
+            if c.z < 0.4:
                 self.set_obj_pos(id,[*cube.init_position,0,0,0])
             cube.set_state(cube_state)
         for id,cyl in self.model_state.cylinders.items():
             cyl_state = get_gazebo_object_state(id,'')
             cyl.set_state(cyl_state)
+
 
     def arm_pose_reachable(self, x, y, z):
         return  (([x, y, z] >= self.arm_workspace_low) & ([x, y, z] <= self.arm_workspace_high)).all()

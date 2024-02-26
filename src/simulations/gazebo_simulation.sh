@@ -32,9 +32,9 @@ current_dir="$(pwd)"
 relative_path=$(realpath --relative-to="$current_dir" "$script_dir")
 
 # Add your specific commands here
-echo "Simulation client #$index_i..."
+echo "Simulation client #$index_i at a velocity $velocity"
 roslaunch tiago_gazebo tiago_gazebo.launch world:=elsa end_effector:=robotiq-2f-85 public_sim:=true gui:=$gui tuck_arm:=false 
-gz physics –u 0 -s $velocity
+sleep 5
 
 # Create a flag file to indicate that the simulation is done
 #echo "Simulation done" > "simulation_done_$index_i.flag"

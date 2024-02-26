@@ -18,6 +18,8 @@ import yaml
 import rospkg
 import os
 from std_msgs.msg import Bool
+from elsa_tiago_gym.utils_parallel import set_sim_velocity
+
 
     
 class TiagoSimpleEnv(tiago_env.TiagoEnv):
@@ -38,8 +40,9 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         3       Grasping action (True/False)
     """
     
-    def __init__(self,env_code=None,max_episode_steps = 128, multimodal=False, discrete=True):
+    def __init__(self,env_code=None, max_episode_steps = 128, multimodal=False, discrete=True):
         super(TiagoSimpleEnv, self).__init__(env_code)
+
 
         #self.env_code = env_code
         self.max_episode_steps = max_episode_steps
@@ -47,7 +50,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         # Observation space
         self.is_multimodal = multimodal
         self.obs_low = np.array([0.4, -0.25, 0.65])
-        self.obs_high = np.array([0.76, 0.25, 0.75])
+        self.obs_high = np.array([0.76, 0.25, 0.8])
         self.observation_space = spaces.Box(self.obs_low, self.obs_high)
 
         #define which collions are not important
@@ -99,6 +102,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         
         rospy.Subscriber("/table_contact", ContactsState, self.collision_cb)
         rospy.Subscriber("/cylinder_contact", ContactsState, self.collision_cb)
+        rospy.Subscriber("/gripper/is_grasped", Bool, self.check_grasp)
         #rospy.Subscriber("/gazebo/model_states", ModelStates, self.orientation_controller)
 
 
@@ -128,10 +132,11 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             sdff = f.close()
 
 
+
     def _set_init_pose(self):
         """Sets the Robot in its init pose
         """
-        poses = [[0.65, -0.1, 0.85, np.radians(90), np.radians(90)/2, np.radians(90)]]
+        poses = [[0.65, -0.1, 0.85, 0, np.radians(90), 0]]
         self.execute_trajectory(poses,only_arm=False)
         self.arm_torso_group.clear_pose_targets()
 
@@ -147,10 +152,10 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         self.grasped_item = None
         self.placed_item = None
         self.action_failed = False
-        for id,cube in self.model_state.cubes.items():
+        '''for id,cube in self.model_state.cubes.items():
             cube_state = self.get_gazebo_object_state(id,'')
             cube_state.header.frame_id = "base_footprint"
-            self.scene.add_box(id, cube_state, size=(cube.side+0.01, cube.side+0.01, cube.side+0.01))
+            self.scene.add_box(id, cube_state, size=(cube.side+0.01, cube.side+0.01, cube.side+0.01))'''
 
 
 
@@ -178,8 +183,6 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
                 if grasp_item_id is not None:
                     grasp_item = self.model_state.cubes[grasp_item_id]
                     grasping_accomplished = self.grasping(grasp_item)
-                    if not grasping_accomplished:
-                        rospy.logwarn('GRASPING attempted, NOT accomplished')
                     #else:
                     #    rospy.logwarn('GRASPING attempted and ACCOMPLISHED >> {:}'.format(grasp_item.id))
             else:
@@ -286,7 +289,13 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             else:
                 self.collision_detected = True
                 self.collision_arm_state = self.stored_arm_state
-                rospy.logerr("COLLISION DETECTED between {:} - {:}".format(c1,c2))
+                rospy.loginfo("COLLISION DETECTED between {:} - {:}".format(c1,c2))
+
+            
+    def check_grasp(self,data):
+        if data is False and self.grasped_item is not None:
+            self.grasped_item = None
+
 
     def get_grasping_obj(self):
         x, y, z, _, _, _ = self.stored_arm_state
@@ -298,7 +307,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             if dist < min_dist:
                 min_dist = dist
                 candidate = id
-        if dist<0.3:
+        if dist<0.25 and z_c<z+0.25:
             return candidate, dist
         else:
             return None,None
