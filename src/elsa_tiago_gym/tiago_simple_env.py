@@ -20,6 +20,10 @@ import os
 from std_msgs.msg import Bool
 from elsa_tiago_gym.utils_parallel import set_sim_velocity
 
+import logging
+import multiprocessing as mp
+logger = mp.log_to_stderr()
+logger.setLevel(logging.DEBUG)
 
     
 class TiagoSimpleEnv(tiago_env.TiagoEnv):
@@ -220,7 +224,6 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         else:
             x, y, z, _, _, _ = self.collision_arm_state
         gripper_pose = np.array([x, y, z])
-        
         if self.is_multimodal:
             img_msg = rospy.wait_for_message("/xtion/rgb/image_raw", Image)
             bridge = CvBridge()
