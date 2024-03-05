@@ -30,7 +30,6 @@ current_dir="$(pwd)"
 relative_path=$(realpath --relative-to="$current_dir" "$script_dir")
 
 # Create a new terminal window
-#gnome-terminal --window --title="Simulations Window" -- bash -c "sleep 2; exec bash"
 
 # Open tabs for each script in the new window
 for ((i=0; i<$num_scripts; i++)); do

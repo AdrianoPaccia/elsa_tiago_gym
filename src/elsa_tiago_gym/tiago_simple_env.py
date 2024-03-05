@@ -7,6 +7,8 @@ from gym.envs.registration import register
 from elsa_tiago_gym import tiago_env
 from gazebo_msgs.msg import ContactsState, ModelStates
 from sensor_msgs.msg import Image
+from std_msgs.msg import Header
+
 from cv_bridge import CvBridge
 from elsa_tiago_gym.utils import Model
 import math
@@ -19,6 +21,7 @@ import rospkg
 import os
 from std_msgs.msg import Bool
 from elsa_tiago_gym.utils_parallel import set_sim_velocity
+from elsa_tiago_fl.utils.utils import tic,toc
 
 import logging
 import multiprocessing as mp
@@ -103,11 +106,11 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
                 'R_semigoal': 0.0,
                 'R_fail': 0.0,
                 }
-        
+
+        #define topics to listen to
         rospy.Subscriber("/table_contact", ContactsState, self.collision_cb)
         rospy.Subscriber("/cylinder_contact", ContactsState, self.collision_cb)
         rospy.Subscriber("/gripper/is_grasped", Bool, self.check_grasp)
-        #rospy.Subscriber("/gazebo/model_states", ModelStates, self.orientation_controller)
 
 
 
@@ -135,14 +138,10 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             #rospy.loginfo("cube_"+cube['color']+"_"+str(number_of_cube))
             sdff = f.close()
 
-
-
     def _set_init_pose(self):
         """Sets the Robot in its init pose
         """
-        poses = [[0.65, -0.1, 0.85, 0, np.radians(90), 0]]
-        self.execute_trajectory(poses,only_arm=False)
-        self.arm_torso_group.clear_pose_targets()
+        self.set_arm_pose(0.65, -0.1, 0.85, 0, np.radians(90), 0)
 
 
     def _init_env_variables(self):
@@ -162,24 +161,26 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             self.scene.add_box(id, cube_state, size=(cube.side+0.01, cube.side+0.01, cube.side+0.01))'''
 
 
-
-
     def _set_action(self, action):
         """
-        Move the robot based on the action variable given
-        4 dim vector composed of the 3 continuos displacements and a boolean for grasping.
+        Move the robot based on the action variable given:
+        8 dim vector: 7 JOINT displacemets (continuos) and 1 (boolean) for grasping.
         """
         self.episode_step += 1
-        
-        #position related action
         scale=0.05
+        motion_time = 0.1
+        #logger.debug(f'action {[round(x*scale ,2)for x in action[:-1]]}')
+
+        
+        #joint position-related act
         if type(action) == np.ndarray:
             action = action.tolist()
 
-        dx, dy, dz, grasp = action
-        x, y, z, _, _, _ = self.stored_arm_state
+        djoins = action[:-1]
+        grasp = action[-1]
 
         grasp_item_id,distance = self.get_grasping_obj()
+
         # grasping/releasing action
         if grasp == True and grasp_item_id is not None:
             if self.grasped_item == None:
@@ -187,52 +188,39 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
                 if grasp_item_id is not None:
                     grasp_item = self.model_state.cubes[grasp_item_id]
                     grasping_accomplished = self.grasping(grasp_item)
-                    #else:
-                    #    rospy.logwarn('GRASPING attempted and ACCOMPLISHED >> {:}'.format(grasp_item.id))
             else:
-                #release what ever is the grasped object
-                #rospy.logwarn('PLACING attempted and ACCOMPLISHED >> {:}'.format(self.grasped_item))
                 placing_accomplished = self.placing()
+        
+        # joint motion
         else:
-            x_target = x + dx*scale
-            y_target = y + dy*scale
-            z_target = z + dz*scale
-
-            roll, pitch, yaw = 0, np.radians(90), 0
-            #if y_target>0:
-            #    roll, pitch, yaw = np.radians(90), np.radians(90)/2, np.radians(90)
-            #else:
-            #    roll, pitch, yaw = np.radians(90), np.radians(90)*3/2, np.radians(90)
-
-            self.visualize_points(x_target,y_target,z_target, ns='action')
-            self.action_failed = not self.set_arm_torso_pose(x_target,y_target,z_target, roll, pitch, yaw)
-            #if self.action_failed:
-            #    rospy.logwarn('ACTION failed')
-
+            target_joints = [j + dj*scale for j,dj in zip(self.stored_join_state, djoins)]
+            #self.visualize_points(x_target,y_target,z_target, ns='action')
+            self.action_failed = not self.set_arm_joint_pose(target_joints, motion_time)
 
 
     def _get_obs(self):
         """
-        Here we define what sensor data of our robots observations
-        To know which Variables we have acces to, we need to read the
-        MyRobotEnv API DOCS
-        :return: observations
+        Get the current observations as:
+        models states and joint contfiguration (if not multimodal)
+                or 
+        curent image and joint configuration (if multimodal)    
         """
         self.store_model_state()
         if self.collision_detected is False:
-            x, y, z, _, _, _ = self.stored_arm_state
+            joint_state = np.array(self.stored_join_state)
         else:
-            x, y, z, _, _, _ = self.collision_arm_state
-        gripper_pose = np.array([x, y, z])
+            joint_state = np.array(self.collision_arm_state)
+
         if self.is_multimodal:
             img_msg = rospy.wait_for_message("/xtion/rgb/image_raw", Image)
             bridge = CvBridge()
             cv_image = bridge.imgmsg_to_cv2(img_msg, desired_encoding="passthrough")
             image = np.array(cv_image)
-            return [image,gripper_pose]
+            return [image,joint_state]
         else:
             cubes_obs, cylinders_obs = self.model_state.get_obs()
-            return [cubes_obs,cylinders_obs,gripper_pose]
+            return [cubes_obs,cylinders_obs,joint_state]
+
 
     def _is_done(self, observations):
         """
@@ -272,11 +260,13 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         reward += sum(self.model_state.get_distances()) * self.reward_coef['R_dist']
 
         return reward
+
+
         
     # Internal TaskEnv Methods
     #------------------------------------------------
 
-    # To extend for all objects in the different worlds
+    # TODO: I a collision I need to store the join values (not the gripper pose)
     def collision_cb(self, data):
         for contacts in data.states:
             coll_1 = contacts.collision1_name.split('::')
@@ -291,7 +281,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
                 pass
             else:
                 self.collision_detected = True
-                self.collision_arm_state = self.stored_arm_state
+                self.collision_arm_state = self.stored_join_state
                 rospy.loginfo("COLLISION DETECTED between {:} - {:}".format(c1,c2))
 
             
@@ -301,7 +291,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
 
 
     def get_grasping_obj(self):
-        x, y, z, _, _, _ = self.stored_arm_state
+        x, y, z, _, _, _ = self.stored_arm_pose
         min_dist = 999
         candidate = 'None'
         for id,cube in self.model_state.cubes.items():
