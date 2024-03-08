@@ -9,11 +9,14 @@ fi
 # Extract the velocity from the command-line argument
 gz_master_uri=$1
 velocity=$2
+
+(export GAZEBO_MASTER_URI=http://localhost:1134$gz_master_uri
+gz physics -u 0 -s $velocity)&
  
-gnome-terminal --geometry=80x24+0+0 -- bash -c "
-    echo 'GAZEBO_MASTER_URI=$gz_master_uri'
-    export GAZEBO_MASTER_URI=$gz_master_uri;
-    gz physics -u 0 -s $velocity;
-    exit"
+#gnome-terminal --geometry=80x24+0+0 -- bash -c "
+#    echo 'GAZEBO_MASTER_URI=$gz_master_uri'
+#    export GAZEBO_MASTER_URI=$gz_master_uri;
+#    gz physics -u 0 -s $velocity;
+#    exit"
 
 

@@ -12,6 +12,7 @@ from trajectory_msgs.msg import JointTrajectory,JointTrajectoryPoint
 from std_msgs.msg import ColorRGBA, Bool,Header
 from std_srvs.srv import Empty
 from elsa_tiago_fl.utils.utils import tic,toc
+from elsa_tiago_gym.utils_parallel import set_sim_velocity
 
 from gazebo_msgs.msg import ContactsState
 from gazebo_msgs.srv import GetModelState,SetModelState
@@ -38,7 +39,7 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
     """
     Initializes a new Tiago Steel environment
     """
-    def __init__(self, env_code:str):
+    def __init__(self, env_code:str,speed:float):
         rospy.logdebug("========= In Tiago Env")
         
         self.env_code = env_code
@@ -83,10 +84,13 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         self.test_env = 'elsa_'+str(env_code)
 
         # define the reachability boundaries (ws, joint bounds)
+        self.joint_names = ["arm_"+str(i)+"_joint" for i in range(1,8)] 
         self.arm_workspace_low =  np.array([0.6, -0.5, 0.63])
         self.arm_workspace_high = np.array([0.8,  0.5, 0.9])
-        self.arm_joint_bounds_low = np.array([0, -90, -202.5, -22.5, -120, -90, -120])/90 * np.pi 
-        self.arm_joint_bounds_high = np.array([157.5, 62.5, 90, 135, 120, 90, 120])/90 * np.pi
+        #self.arm_joint_bounds_low = np.array([0, -90, -202.5, -22.5, -120, -90, -120])/90 * np.pi 
+        #self.arm_joint_bounds_high = np.array([157.5, 62.5, 90, 135, 120, 90, 120])/90 * np.pi
+        self.arm_joint_bounds_low = np.array( [45,     0, -90,  20, -120, -90, -120])/90 * np.pi 
+        self.arm_joint_bounds_high = np.array([135, 60,  90, 135, 120,  90,  120])/90 * np.pi
         
 
         # init and start
@@ -94,6 +98,7 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         self.init_model_states()
         self._init_moveit()
         self._init_rviz()
+        set_sim_velocity(speed)
         self._check_all_systems_ready()
         self.gazebo.pauseSim()
 
@@ -236,22 +241,32 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         4. put the obj in place again
         3. close the gripper
         """
-        #collect the object position to grasp and remove the object
+        #collect the object position
         x,y,z = object.position
+        roll, pitch, yaw = 0, np.radians(90), 0
 
+        '''
         # go over the object
         roll, pitch, yaw = 0, np.radians(90), 0
         self.set_arm_pose(x, y, z + 0.27, roll, pitch, yaw)
-
         #remove the object
         self.set_obj_pos(object.id,[3, 0, 0,0, 0, 0])
-
         #go in the object position
         self.set_arm_pose(x, y, z + 0.23, roll, pitch, yaw)
         self.release()
         rospy.sleep(1)
+        '''
+        self.release()
+        self.execute_trajectory(
+            [[x, y, z + 0.27, roll, pitch, yaw],
+            [x, y, z + 0.23, roll, pitch, yaw]]
+        )
 
-        # get the object back and grasp
+
+
+        
+
+        # get the object in position and grasp
         self.set_obj_pos(object.id,[x, y, z, 0, 0, 0])
         self.grasp()
         grasped = rospy.wait_for_message("/gripper/is_grasped", Bool)
@@ -316,15 +331,33 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         self.store_arm_state()
         return plan
 
+    def execute_trajectory(self,poses):
+        waypoints = [ Pose(Point(*p[:3]), Quaternion(*quaternion_from_euler(*p[3:]))) for p in poses]
+        (plan, fraction) = self.arm_group.compute_cartesian_path(waypoints, 0.01, 0.0)
+        self.arm_group.execute(plan, wait=True)
+        self.arm_group.stop()
+        self.arm_group.clear_pose_targets()
+        self.store_arm_state()
+
+
     
-    def set_arm_joint_pose(self, joint_poses, time_from_start):
+    def set_arm_joint_pose(self, joint_poses, velocity):
         """
         Motions of the arm in the joint space (7 joints)
         """
+        
+        joint_poses  = np.clip(joint_poses, self.arm_joint_bounds_low, self.arm_joint_bounds_high)
+        max_displacement =  np.max(np.abs(joint_poses - self.arm_joint_bounds_low))
+        time_from_start = max_displacement/velocity
+
+        '''
+        feasible = self.arm_joints_feasible(joint_poses)
         if not self.arm_joints_feasible(joint_poses):
-            logger.debug(f'action {joint_poses} is OUT')
+            idx_high = np.where(joint_poses>self.arm_joint_bounds_high)[0]
+            idx_low = np.where(joint_poses<self.arm_joint_bounds_low)[0]
+            logger.debug(f'joints {idx_high+idx_low} out of bounds - feasible {feasible}')
             self.out_of_reach = True
-            return False
+            return False'''
 
         # Create a JointTrajectoryPoint for the desired joint positions    
         trajectory_point = JointTrajectoryPoint()
@@ -338,24 +371,25 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         joint_trajectory_msg.header = Header()
         joint_trajectory_msg.header.stamp = rospy.Time.now()
         joint_trajectory_msg.header.frame_id = "world"
-        joint_trajectory_msg.joint_names = ["arm_"+str(i)+"_joint" for i in range(1,8)] 
+        joint_trajectory_msg.joint_names = self.joint_names
         joint_trajectory_msg.points.append(trajectory_point)
 
         self.pub_arm_joint_controller.publish(joint_trajectory_msg)
         e = 1
+        #rospy.sleep(1)
         
         accomplished = ''
         start_time = time.time()
-        while e>0.03:
+        while e>0.05:
             self.store_arm_state()
             e = np.linalg.norm(np.subtract(self.stored_join_state,joint_poses))
             time_from_start = time.time() - start_time
-            if time_from_start> 5:
+            if time_from_start> 1.0:
                 accomplished = 'NOT'
                 break
         
         end_time =  time.time() - start_time
-        #logger.debug(f"Action was {accomplished} accomplished in {round(end_time,3)}s with e = {e}")
+        #logger.debug(f"{accomplished} acc. - t = {round(end_time,3)}s - e = {e}")
 
         
 

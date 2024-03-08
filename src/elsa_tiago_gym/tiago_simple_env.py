@@ -20,7 +20,6 @@ import yaml
 import rospkg
 import os
 from std_msgs.msg import Bool
-from elsa_tiago_gym.utils_parallel import set_sim_velocity
 from elsa_tiago_fl.utils.utils import tic,toc
 
 import logging
@@ -47,8 +46,8 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         3       Grasping action (True/False)
     """
     
-    def __init__(self,env_code=None, max_episode_steps = 128, multimodal=False, discrete=True):
-        super(TiagoSimpleEnv, self).__init__(env_code)
+    def __init__(self,env_code=None,speed=0.0025, max_episode_steps = 128, multimodal=False, discrete=True):
+        super(TiagoSimpleEnv, self).__init__(env_code,speed)
 
 
         #self.env_code = env_code
@@ -68,15 +67,11 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         self.collision_detected = False
 
         # Action spaces
-        self.discrete_actions = discrete
-        if self.discrete_actions:
-            self.action_space = spaces.Discrete(7)
-        else:
-            dpos_low = np.array([-1.0, -1.0, -1.0])
-            dpos_high = np.array([1.0, 1.0, 1.0])
-            dpos_space = spaces.Box(low=dpos_low, high=dpos_high, shape=(3,), dtype=np.float32) # Space for increments in position
-            hold_space = spaces.Discrete(2)  # Space for the booleans for picking/droping act 
-            self.action_space = spaces.Tuple((dpos_space, hold_space))
+        dpos_low = np.array([-1.0, -1.0, -1.0])
+        dpos_high = np.array([1.0, 1.0, 1.0])
+        dpos_space = spaces.Box(low=dpos_low, high=dpos_high, shape=(3,), dtype=np.float32) # Space for increments in position
+        hold_space = spaces.Discrete(2)  # Space for the booleans for picking/droping act 
+        self.action_space = spaces.Tuple((dpos_space, hold_space))
 
         self.obs_points = {'x': [], 'y': [], 'z':[]}
         for x in np.arange(self.obs_low[0], self.obs_high[0]+0.1, 0.1):
@@ -138,6 +133,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             #rospy.loginfo("cube_"+cube['color']+"_"+str(number_of_cube))
             sdff = f.close()
 
+
     def _set_init_pose(self):
         """Sets the Robot in its init pose
         """
@@ -168,7 +164,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         """
         self.episode_step += 1
         scale=0.05
-        motion_time = 0.1
+        motion_vel = 15
         #logger.debug(f'action {[round(x*scale ,2)for x in action[:-1]]}')
 
         
@@ -188,6 +184,8 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
                 if grasp_item_id is not None:
                     grasp_item = self.model_state.cubes[grasp_item_id]
                     grasping_accomplished = self.grasping(grasp_item)
+                else:
+                    pass
             else:
                 placing_accomplished = self.placing()
         
@@ -195,7 +193,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         else:
             target_joints = [j + dj*scale for j,dj in zip(self.stored_join_state, djoins)]
             #self.visualize_points(x_target,y_target,z_target, ns='action')
-            self.action_failed = not self.set_arm_joint_pose(target_joints, motion_time)
+            self.action_failed = not self.set_arm_joint_pose(target_joints, motion_vel)
 
 
     def _get_obs(self):

@@ -27,20 +27,21 @@ def set_velocity(n:int,speed:float = 0.0025):
                     str(n),
                     str(speed)])
 
-def set_sim_velocity(uri:str,speed:float = 0.0025):
-    vel_path = os.path.join(sim_pkg_path,'src/simulations/set_sim_velocity.sh')
-    subprocess.run(['gnome-terminal', '--',vel_path, 
-                    uri,
-                    str(speed)])
-    rospy.loginfo(f"Physics imposed to {speed} at URI {uri}")
+#def set_sim_velocity(uri:str,speed:float = 0.0025):
+#    vel_path = os.path.join(sim_pkg_path,'src/simulations/set_sim_velocity.sh')
+#    subprocess.run(['gnome-terminal', '--',vel_path, 
+#                    uri,
+#                    str(speed)])
+#    rospy.loginfo(f"Physics imposed to {speed} at URI {uri}")
+
+def set_sim_velocity(speed:float = 0.0025):
+    command = 'gz physics -u 0 -s ' + str(speed)
+    result = subprocess.run(command, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=False)
+
 
 
 def kill_simulations():
     kill_path = os.path.join(sim_pkg_path,'src/simulations/kill_simulations.sh')
     subprocess.run(['gnome-terminal', '--', kill_path])
 
-def set_v(gazebo_master_uri,speed):
-    gazebo_command = f"execute GAZEBO_MASTER_URI={gazebo_master_uri}; gz physics -u 0 -s {speed}"
-    result = subprocess.run(gazebo_command, shell=True, capture_output=True, text=True)
-    return result.stdout
 

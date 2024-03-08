@@ -11,6 +11,11 @@ N=$1
 velocity=$2
 
 for ((i = 0; i < $N; i++)); do
-    export GAZEBO_MASTER_URI=http://localhost:1134$i
-    gz physics -u 0 -s $velocity
+    (export GAZEBO_MASTER_URI=http://localhost:1134$i
+    gz physics -u 0 -s $velocity)&
 done
+
+#for ((i = 0; i < $N; i++)); do
+#    export GAZEBO_MASTER_URI=http://localhost:1134$i
+#    gz physics -u 0 -s $velocity
+#done

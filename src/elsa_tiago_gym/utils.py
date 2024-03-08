@@ -16,13 +16,13 @@ from elsa_tiago_gym.utils_parallel import set_sim_velocity
 max_episode_steps = 100
 
 
-def setup_env(env_name, port = "http://localhost:11311/"):
+def setup_env(env_name, ros_uri = "http://localhost:11311/", gz_uri='http://localhost:11345'):
+    os.environ['ROS_MASTER_URI'] = ros_uri
+    os.environ['GAZEBO_MASTER_URI'] = gz_uri
     rospack = rospkg.RosPack()
     dir = rospack.get_path('elsa_tiago_gym')
     tasks_path = os.path.join(dir,'src/elsa_tiago_gym')
     sys.path.append(tasks_path)
-    os.environ['ROS_MASTER_URI'] = port
-
 
     if env_name =='TiagoReachEnv-v0':
         entry_point = 'tiago_reach_env:TiagoReachEnv'
