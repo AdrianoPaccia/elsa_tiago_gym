@@ -138,6 +138,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         """Sets the Robot in its init pose
         """
         self.set_arm_pose(0.65, -0.1, 0.85, 0, np.radians(90), 0)
+        self.release()
 
 
     def _init_env_variables(self):
