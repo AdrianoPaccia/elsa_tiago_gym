@@ -22,10 +22,6 @@ import os
 from std_msgs.msg import Bool
 from elsa_tiago_fl.utils.utils import tic,toc
 
-import logging
-import multiprocessing as mp
-logger = mp.log_to_stderr()
-logger.setLevel(logging.DEBUG)
 
     
 class TiagoSimpleEnv(tiago_env.TiagoEnv):
@@ -113,6 +109,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
     def init_environment(self, test_env):
         #To integrate the cube deletion loop
         model_states_msg = rospy.wait_for_message('/gazebo/model_states', ModelStates, timeout=5.0)
+
         cube_names = [obj for obj in model_states_msg.name if obj[:4]=='cube']
         for cube in cube_names:
             self.delete_object(cube)
@@ -166,7 +163,6 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         self.episode_step += 1
         scale=0.05
         motion_vel = 15
-        #logger.debug(f'action {[round(x*scale ,2)for x in action[:-1]]}')
 
         
         #joint position-related act

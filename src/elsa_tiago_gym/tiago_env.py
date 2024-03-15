@@ -29,10 +29,6 @@ import os
 import random
 import time
 
-import logging
-import multiprocessing as mp
-logger = mp.log_to_stderr()
-logger.setLevel(logging.DEBUG)
 
 
 class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):

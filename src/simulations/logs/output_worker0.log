@@ -1,10 +1,10 @@
-... logging to /home/adriano/.ros/log/c3bfb4f0-e079-11ee-9678-f7a9fa7bfd66/roslaunch-oem-IdeaPad-Gaming-3-16IAH7-832376.log
+... logging to /home/adriano/.ros/log/6e34a824-e2db-11ee-80f6-5962c4e1c5ec/roslaunch-oem-IdeaPad-Gaming-3-16IAH7-638307.log
 Checking log directory for disk usage. This may take a while.
 Press Ctrl-C to interrupt
 Done checking log file disk usage. Usage is <1GB.
 ]2;/home/adriano/Desktop/tiago_ws/src/tiago_simulation/tiago_gazebo/launch/tiago_gazebo.launch
 xacro: in-order processing became default in ROS Melodic. You can drop the option.
-[1mstarted roslaunch server http://oem-IdeaPad-Gaming-3-16IAH7:40661/[0m
+[1mstarted roslaunch server http://oem-IdeaPad-Gaming-3-16IAH7:34235/[0m
 
 SUMMARY
 ========
@@ -627,7 +627,6 @@ NODES
     bringup_controllers_spawner_imu (controller_manager/spawner)
     default_controllers_spawner (controller_manager/spawner)
     gazebo (gazebo_ros/gzserver)
-    gazebo_gui (gazebo_ros/gzclient)
     gripper_controllers_spawner (controller_manager/spawner)
     gripper_grasping (pal_robotiq_gripper_wrapper/gripper_grasping.py)
     home_gripper (pal_robotiq_controller_configuration/home_gripper.py)
@@ -649,229 +648,186 @@ NODES
 
 [1mROS_MASTER_URI=http://localhost:11350[0m
 ]2;/home/adriano/Desktop/tiago_ws/src/tiago_simulation/tiago_gazebo/launch/tiago_gazebo.launch http://localhost:11350
-[33m[ WARN] [1710252659.740734559]: MoveGroup launched with ~default_planning_pipeline '' not configured in ~planning_pipelines[0m
-[33m[ WARN] [1710252659.741661487]: Falling back to using the move_group node's namespace (deprecated Melodic behavior).[0m
-[33m[ WARN] [1710252659.803600491]: Transformer::setExtrapolationLimit is deprecated and does not do anything[0m
-[33m[ WARN] [1710252659.864548706]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.880144349]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.881442245]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.881658039]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.881850068]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.882040062]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.882207561]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252660.363997807]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252660.430319961]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252660.431523377]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252660.431570707]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252660.431626093]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252660.431673874]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252660.431726153]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252660.431802592]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252660.627128602]: Kinematics solver doesn't support #attempts anymore, but only a timeout.
-Please remove the parameter '/robot_description_kinematics/arm/kinematics_solver_attempts' from your configuration.[0m
-[33m[ WARN] [1710252661.045391890]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252661.194493493]: Kinematics solver doesn't support #attempts anymore, but only a timeout.
-Please remove the parameter '/robot_description_kinematics/arm/kinematics_solver_attempts' from your configuration.[0m
-[33m[ WARN] [1710252662.114877484]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead[0m
-[0m[ INFO] [1710252661.973255659]: Finished loading Gazebo ROS API Plugin.[0m
-[0m[ INFO] [1710252661.975460256]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...[0m
-Error: Non-unique names detected in <link name='link'>
-  <collision name='surface'>
-    <pose>0 0 0.4 0 -0 0</pose>
-    <geometry>
-      <box>
-        <size>1 0.8 0.03</size>
-      </box>
-    </geometry>
-  </collision>
-  <visual name='visual1'>
-    <pose>0 0 0.4 0 -0 0</pose>
-    <geometry>
-      <box>
-        <size>1 0.8 0.03</size>
-      </box>
-    </geometry>
-    <material>
-      <script>
-        <uri>file://media/materials/scripts/gazebo.material</uri>
-        <name>Gazebo/Wood</name>
-      </script>
-    </material>
-  </visual>
-  <collision name='front_left_leg'>
-    <pose>0.48 0.38 0.2 0 -0 0</pose>
-    <geometry>
-      <cylinder>
-        <radius>0.02</radius>
-        <length>0.4</length>
-      </cylinder>
-    </geometry>
-  </collision>
-  <visual name='front_left_leg'>
-    <pose>0.48 0.38 0.2 0 -0 0</pose>
-    <geometry>
-      <cylinder>
-        <radius>0.02</radius>
-        <length>0.4</length>
-      </cylinder>
-    </geometry>
-    <material>
-      <script>
-        <uri>file://media/materials/scripts/gazebo.material</uri>
-        <name>Gazebo/Grey</name>
-      </script>
-    </material>
-  </visual>
-  <collision name='front_right_leg'>
-    <pose>0.48 -0.38 0.2 0 -0 0</pose>
-    <geometry>
-      <cylinder>
-        <radius>0.02</radius>
-        <length>0.4</length>
-      </cylinder>
-    </geometry>
-  </collision>
-  <visual name='front_right_leg'>
-    <pose>0.48 -0.38 0.2 0 -0 0</pose>
-    <geometry>
-      <cylinder>
-        <radius>0.02</radius>
-        <length>0.4</length>
-      </cylinder>
-    </geometry>
-    <material>
-      <script>
-        <uri>file://media/materials/scripts/gazebo.material</uri>
-        <name>Gazebo/Grey</name>
-      </script>
-    </material>
-  </visual>
-  <collision name='back_right_leg'>
-    <pose>-0.48 -0.38 0.2 0 -0 0</pose>
-    <geometry>
-      <cylinder>
-        <radius>0.02</radius>
-        <length>0.4</length>
-      </cylinder>
-    </geometry>
-  </collision>
-  <visual name='back_right_leg'>
-    <pose>-0.48 -0.38 0.2 0 -0 0</pose>
-    <geometry>
-      <cylinder>
-        <radius>0.02</radius>
-        <length>0.4</length>
-      </cylinder>
-    </geometry>
-    <material>
-      <script>
-        <uri>file://media/materials/scripts/gazebo.material</uri>
-        <name>Gazebo/Grey</name>
-      </script>
-    </material>
-  </visual>
-  <collision name='back_left_leg'>
-    <pose>-0.48 0.38 0.2 0 -0 0</pose>
-    <geometry>
-      <cylinder>
-        <radius>0.02</radius>
-        <length>0.4</length>
-      </cylinder>
-    </geometry>
-  </collision>
-  <visual name='back_left_leg'>
-    <pose>-0.48 0.38 0.2 0 -0 0</pose>
-    <geometry>
-      <cylinder>
-        <radius>0.02</radius>
-        <length>0.4</length>
-      </cylinder>
-    </geometry>
-    <material>
-      <script>
-        <uri>file://media/materials/scripts/gazebo.material</uri>
-        <name>Gazebo/Grey</name>
-      </script>
-    </material>
-  </visual>
-  <velocity_decay>
-    <linear>0</linear>
-    <angular>0</angular>
-  </velocity_decay>
-  <self_collide>0</self_collide>
-  <kinematic>0</kinematic>
-  <gravity>1</gravity>
-  <sensor name='wall_contact_sensor' type='contact'>
-    <update_rate>100</update_rate>
-    <always_on>1</always_on>
-    <contact>
-      <collision>surface</collision>
-      <topic>/base_bumper_contact</topic>
-    </contact>
-    <plugin name='gazebo_ros_bumper_controller' filename='libgazebo_ros_bumper.so'>
-      <alwaysOn>1</alwaysOn>
-      <updateRate>100.0</updateRate>
-      <bumperTopicName>/table_contact</bumperTopicName>
-      <frameName>world</frameName>
-    </plugin>
-  </sensor>
-</link>
-
-../src/intel/isl/isl.c:2105: FINISHME: ../src/intel/isl/isl.c:isl_surf_supports_ccs: CCS for 3D textures is disabled, but a workaround is available.
-../src/intel/isl/isl.c:2105: FINISHME: ../src/intel/isl/isl.c:isl_surf_supports_ccs: CCS for 3D textures is disabled, but a workaround is available.
-[31m[ERROR] [1710252665.527101823, 0.001000000]: [registerPublisher] Failed to contact master at [localhost:11350].  Retrying...[0m
-[31m[ERROR] [1710252665.537157659, 0.001000000]: [registerPublisher] Failed to contact master at [localhost:11350].  Retrying...[0m
-[WARN] [1710252665.580267, 0.000000]: wait_for_service(/controller_manager/load_controller): failed to contact, will keep trying
-[WARN] [1710252665.592233, 0.000000]: wait_for_service(/controller_manager/load_controller): failed to contact, will keep trying
-[WARN] [1710252665.665925, 0.000000]: wait_for_service(/controller_manager/load_controller): failed to contact, will keep trying
-[WARN] [1710252665.698103, 0.000000]: wait_for_service(/controller_manager/load_controller): failed to contact, will keep trying
-[31m[ERROR] [1710252665.840914369, 0.001000000]: [setParam] Failed to contact master at [localhost:11350].  Retrying...[0m
-[WARN] [1710252691.826138, 0.000000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
-[INFO] [1710252661.664967, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
-[WARN] [1710252691.940310, 0.000000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
-[INFO] [1710252661.755213, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
-[WARN] [1710252781.173127, 0.000000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
-[INFO] [1710252661.123066, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
-[WARN] [1710252781.703451, 0.000000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
-[INFO] [1710252661.653703, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+[33m[ WARN] [1710514329.871725262]: Transformer::setExtrapolationLimit is deprecated and does not do anything[0m
+[33m[ WARN] [1710514329.949203827]: MoveGroup launched with ~default_planning_pipeline '' not configured in ~planning_pipelines[0m
+[33m[ WARN] [1710514329.949962266]: Falling back to using the move_group node's namespace (deprecated Melodic behavior).[0m
+[33m[ WARN] [1710514329.955632688]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514329.955727482]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514329.955754804]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514329.955797183]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514329.955832396]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514329.955868360]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514329.955893938]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.008612619]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.008660656]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.008674866]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.008706537]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.008730458]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.008764611]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.008783913]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.699972908]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.870163264]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.944015752]: No kinematics plugins defined. Fill and load kinematics.yaml![0m
+[31m[ERROR] [1710514330.944573198]: [registerPublisher] Failed to contact master at [localhost:11350].  Retrying...[0m
+[33m[ WARN] [1710514330.948755800]: No kinematics plugins defined. Fill and load kinematics.yaml![0m
+[33m[ WARN] [1710514331.023394295]: No ROS master - start roscore to continue...[0m
+[31m[ERROR] [1710514331.304864685]: [registerService] Failed to contact master at [localhost:11350].  Retrying...[0m
+[33m[ WARN] [1710514331.523670631]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514332.024091789]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514332.524507401]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514333.024728709]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514333.524899029]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514334.025153789]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514334.525431063]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514335.025557312]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514335.525726296]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514336.026006913]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514336.526235013]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514337.026416127]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514337.526601897]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514338.026912759]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514338.527109771]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514339.027291165]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514339.527472928]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514340.027674183]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514340.527865668]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514341.028049821]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514341.528333731]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514342.028539337]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514342.528712304]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514343.028987498]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514343.529245605]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514344.029525261]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514344.529792716]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514345.030049971]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514345.530221026]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514346.030428132]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514346.530718876]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514347.031000807]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514347.531154099]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514348.031319032]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514348.531492567]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514349.031678505]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514349.531886953]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514350.032082417]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514350.532367898]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514351.032550367]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514351.532707295]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514352.032878832]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514352.533049140]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514353.033301728]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514353.533497541]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514354.033674604]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514354.533846767]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514355.034070151]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514355.534302336]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514356.034597303]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514356.534812358]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514357.035080077]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514357.535251818]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514358.035422841]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514358.535594550]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514359.035792668]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514359.535998749]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514360.036149140]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514360.536357164]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514361.036569274]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514361.536740852]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514362.036943628]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514362.537165074]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514363.037365896]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514363.537563890]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514364.037768772]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514364.538029761]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514365.038200452]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514365.538506366]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514366.038724626]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514366.538928816]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514367.039101511]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514367.539278848]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514368.039453126]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514368.539628984]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514369.039911332]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514369.540074969]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514370.040364088]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514370.540667523]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514371.040846703]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514371.541030355]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514372.041223184]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514372.541441764]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514373.041609683]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514373.541872741]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514374.042087084]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514374.542399561]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514375.042572016]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514375.542783347]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514376.042965702]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514376.543170385]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514377.043335546]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514377.543497173]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514378.043751088]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514378.543956511]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514379.044271121]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514379.544514707]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514380.044686626]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514380.544892648]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514381.045086812]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514381.545288473]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514382.045604701]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514382.545803848]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514383.046004771]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514383.546177036]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514384.046383310]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514384.546611227]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514385.046873097]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514385.547097509]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514386.047254531]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514386.547399788]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514387.047544963]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514387.547746227]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514388.047942180]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514388.548214148]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514389.048384160]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514389.548686855]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514390.048916580]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514390.549138052]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514391.049349545]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514391.549560231]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514392.049764256]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514392.549937998]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514393.050148782]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514393.550316787]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514394.050527167]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514394.550787955]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514395.051063111]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514395.551252734]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514396.051427710]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514396.551661897]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514397.051910709]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514397.552163683]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514398.052425847]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514398.552573817]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514399.052829480]: No ROS master - start roscore to continue...[0m
 terminate called after throwing an instance of 'std::runtime_error'
   what():  Unable to connect to move_group action server 'move_group' within allotted time (0s)
-[0m[ INFO] [1710252659.752674379]: Topic handler 'navigation' subscribed to topic 'nav_vel': timeout = 0.500000s, priority = 10[0m
-[0m[ INFO] [1710252659.756525502]: Topic handler 'joystick' subscribed to topic 'joy_vel': timeout = 0.500000s, priority = 100[0m
-[0m[ INFO] [1710252659.770660741]: Topic handler 'keyboard' subscribed to topic 'key_vel': timeout = 0.500000s, priority = 90[0m
-[0m[ INFO] [1710252659.783020419]: Topic handler 'tablet' subscribed to topic 'tab_vel': timeout = 0.500000s, priority = 100[0m
-[0m[ INFO] [1710252659.834048462]: Topic handler 'marker' subscribed to topic 'marker_vel': timeout = 0.500000s, priority = 99[0m
-[0m[ INFO] [1710252659.836856482]: Topic handler 'phone' subscribed to topic 'phone_vel': timeout = 0.500000s, priority = 98[0m
-[0m[ INFO] [1710252659.839052633]: Topic handler 'rviz_joy' subscribed to topic 'rviz_joy_vel': timeout = 0.500000s, priority = 95[0m
-[0m[ INFO] [1710252659.846545422]: Topic handler 'servoing_cmd_vel' subscribed to topic 'servoing_cmd_vel': timeout = 0.500000s, priority = 20[0m
-[0m[ INFO] [1710252659.849940783]: Topic handler 'pause' subscribed to topic 'pause_navigation': timeout = None, priority = 100[0m
-[0m[ INFO] [1710252659.854408932]: Topic handler 'loop_closure' subscribed to topic 'stop_closing_loop': timeout = None, priority = 200[0m
-[0m[ INFO] [1710252659.867067694]: Topic handler 'joystick' subscribed to topic 'joy_priority': timeout = None, priority = 100[0m
-[0m[ INFO] [1710252659.729435633]: tf_lookup starting[0m
-[0m[ INFO] [1710252659.810415035]: Loading robot model 'tiago'...[0m
-[0m[ INFO] [1710252659.810631126]: No root/virtual joint specified in SRDF. Assuming fixed joint[0m
-[0m[ INFO] [1710252662.104822666]: Publishing maintained planning scene on 'monitored_planning_scene'[0m
-[0m[ INFO] [1710252662.106648424]: Listening to 'joint_states' for joint states[0m
-[0m[ INFO] [1710252662.109877840]: Listening to '/attached_collision_object' for attached collision objects[0m
-[0m[ INFO] [1710252662.109900744]: Starting planning scene monitor[0m
-[0m[ INFO] [1710252662.111749133]: Listening to '/planning_scene'[0m
-[0m[ INFO] [1710252662.111770021]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.[0m
-[0m[ INFO] [1710252662.113071829]: Listening to '/collision_object'[0m
-[0m[ INFO] [1710252662.114577526]: Listening to '/planning_scene_world' for planning scene world geometry[0m
-[0m[ INFO] [1710252662.115167526]: No 3D sensor plugin(s) defined for octomap updates[0m
-[0m[ INFO] [1710252663.109729961]: Loading planning pipeline ''[0m
-[0m[ INFO] [1710252663.170563016]: Using planning interface 'OMPL'[0m
-[0m[ INFO] [1710252663.176147844]: Param 'default_workspace_bounds' was not set. Using default value: 10[0m
-[0m[ INFO] [1710252663.176773891]: Param 'start_state_max_bounds_error' was set to 0.1[0m
-[0m[ INFO] [1710252663.177242857]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
-[0m[ INFO] [1710252663.177749538]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
-[0m[ INFO] [1710252663.178583137]: Param 'jiggle_fraction' was set to 0.05[0m
-[0m[ INFO] [1710252663.179096674]: Param 'max_sampling_attempts' was not set. Using default value: 100[0m
-[0m[ INFO] [1710252663.179175837]: Using planning request adapter 'Add Time Parameterization'[0m
-[0m[ INFO] [1710252663.179218058]: Using planning request adapter 'Fix Workspace Bounds'[0m
-[0m[ INFO] [1710252663.179276383]: Using planning request adapter 'Fix Start State Bounds'[0m
-[0m[ INFO] [1710252663.179326490]: Using planning request adapter 'Fix Start State In Collision'[0m
-[0m[ INFO] [1710252663.179373246]: Using planning request adapter 'Fix Start State Path Constraints'[0m
+[0m[ INFO] [1710514329.831142910]: Topic handler 'navigation' subscribed to topic 'nav_vel': timeout = 0.500000s, priority = 10[0m
+[0m[ INFO] [1710514329.833533545]: Topic handler 'joystick' subscribed to topic 'joy_vel': timeout = 0.500000s, priority = 100[0m
+[0m[ INFO] [1710514329.847978401]: Topic handler 'keyboard' subscribed to topic 'key_vel': timeout = 0.500000s, priority = 90[0m
+[0m[ INFO] [1710514329.851091459]: Topic handler 'tablet' subscribed to topic 'tab_vel': timeout = 0.500000s, priority = 100[0m
+[0m[ INFO] [1710514329.854821281]: Topic handler 'marker' subscribed to topic 'marker_vel': timeout = 0.500000s, priority = 99[0m
+[0m[ INFO] [1710514329.857851129]: Topic handler 'phone' subscribed to topic 'phone_vel': timeout = 0.500000s, priority = 98[0m
+[0m[ INFO] [1710514329.861795174]: Topic handler 'rviz_joy' subscribed to topic 'rviz_joy_vel': timeout = 0.500000s, priority = 95[0m
+[0m[ INFO] [1710514329.873604307]: Topic handler 'servoing_cmd_vel' subscribed to topic 'servoing_cmd_vel': timeout = 0.500000s, priority = 20[0m
+[0m[ INFO] [1710514329.878189033]: Topic handler 'pause' subscribed to topic 'pause_navigation': timeout = None, priority = 100[0m
+[0m[ INFO] [1710514329.881769823]: Topic handler 'loop_closure' subscribed to topic 'stop_closing_loop': timeout = None, priority = 200[0m
+[0m[ INFO] [1710514329.904314726]: Topic handler 'joystick' subscribed to topic 'joy_priority': timeout = None, priority = 100[0m
+[0m[ INFO] [1710514329.814826113]: tf_lookup starting[0m
+[33m[ WARN] [1710514399.553012552]: No ROS master - start roscore to continue...[0m
+[0m[ INFO] [1710514329.638356812]: Load description from: /robot_description[0m
+[33m[ WARN] [1710514400.053250850]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514400.553429224]: No ROS master - start roscore to continue...[0m
+[0m[ INFO] [1710514329.975758952]: Loading robot model 'tiago'...[0m
+[0m[ INFO] [1710514329.975804309]: No root/virtual joint specified in SRDF. Assuming fixed joint[0m
 [96mLoading 'move_group/ApplyPlanningSceneService'...
 [0m[96mLoading 'move_group/ClearOctomapService'...
 [0m[96mLoading 'move_group/MoveGroupCartesianPathService'...
@@ -886,145 +842,132 @@ terminate called after throwing an instance of 'std::runtime_error'
 [0m[92m
 You can start planning now!
 
-[0m[0m[ INFO] [1710252659.479928004]: Load description from: /robot_description[0m
+[0m[33m[ WARN] [1710514401.053615693]: No ROS master - start roscore to continue...[0m
+[WARN] [1710514331.074236, 0.000000]: wait_for_service(/gazebo/spawn_urdf_model): failed to contact, will keep trying
+[33m[ WARN] [1710514401.553839029]: No ROS master - start roscore to continue...[0m
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/devel/lib/gazebo_ros/spawn_model", line 15, in <module>
+    exec(compile(fh.read(), python_script, 'exec'), context)
+  File "/home/adriano/Desktop/tiago_ws/src/gazebo_ros_pkgs/gazebo_ros/scripts/spawn_model", line 313, in <module>
+    sm.callSpawnService()
+  File "/home/adriano/Desktop/tiago_ws/src/gazebo_ros_pkgs/gazebo_ros/scripts/spawn_model", line 270, in callSpawnService
+    success = gazebo_interface.spawn_urdf_model_client(self.model_name, model_xml, self.robot_namespace,
+  File "/home/adriano/Desktop/tiago_ws/src/gazebo_ros_pkgs/gazebo_ros/src/gazebo_ros/gazebo_interface.py", line 28, in spawn_urdf_model_client
+    rospy.wait_for_service(gazebo_namespace+'/spawn_urdf_model')
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py", line 166, in wait_for_service
+    raise ROSInterruptException("rospy shutdown")
+rospy.exceptions.ROSInterruptException: rospy shutdown
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/src/play_motion/play_motion/scripts/is_already_there.py", line 43, in <module>
+    rospy.init_node("is_already_there")
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
+Unable to register with master node [http://localhost:11350]: master may not be running yet. Will keep trying.
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/twist_mux/joystick_relay.py", line 223, in <module>
+    rospy.init_node('joystick_relay')
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
 Traceback (most recent call last):
   File "/home/adriano/Desktop/tiago_ws/src/pal_motion_loader/scripts/load_available_motions.py", line 39, in <module>
     main()
-  File "/home/adriano/Desktop/tiago_ws/src/pal_motion_loader/scripts/load_available_motions.py", line 16, in main
-    js = rospy.wait_for_message('/joint_states', JointState)
-  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 428, in wait_for_message
-    raise rospy.exceptions.ROSInterruptException("rospy shutdown")
-rospy.exceptions.ROSInterruptException: rospy shutdown
-[INFO] [1710252662.670560, 0.000000]: Waiting for gripper_controller...
-[INFO] [1710252828.899071, 0.000000]: ...connected.
+  File "/home/adriano/Desktop/tiago_ws/src/pal_motion_loader/scripts/load_available_motions.py", line 14, in main
+    rospy.init_node('load_motions_node')
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
+Unable to register with master node [http://localhost:11350]: master may not be running yet. Will keep trying.
 Traceback (most recent call last):
-  File "/home/adriano/Desktop/tiago_ws/src/pal_robotiq_gripper/pal_robotiq_controller_configuration/scripts/home_gripper.py", line 23, in <module>
-    rospy.wait_for_message("joint_states", JointState)
-  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 428, in wait_for_message
-    raise rospy.exceptions.ROSInterruptException("rospy shutdown")
-rospy.exceptions.ROSInterruptException: rospy shutdown
-[INFO] [1710252662.219725, 0.000000]: Initializing Gripper Grasper...
-[INFO] [1710252662.646574, 0.000000]: timeout2.2closing_time0.2
-[INFO] [1710252662.669550, 0.000000]: Initialized dynamic reconfigure on: /gripper_grasping
-[INFO] [1710252662.686416, 0.000000]: Subscribed to topic: /gripper_controller/state
-[INFO] [1710252662.693153, 0.000000]: Publishing to topic: /gripper_controller/command
-[INFO] [1710252662.695390, 0.000000]: Offering grasp service on: /gripper_controller/grasp
-[INFO] [1710252662.701574, 0.000000]: Done initializing Gripper Grasp Service!
-[INFO] [1710252662.705207, 0.000000]: Offering release service on: /gripper_controller/release
-[INFO] [1710252662.706219, 0.000000]: Done initializing Gripper Release Service!
-[31m[gazebo-1] escalating to SIGTERM[0m
-[1mprocess[gazebo-1]: started with pid [832759][0m
-[1mprocess[gazebo_gui-2]: started with pid [832764][0m
-[1mprocess[spawn_model-3]: started with pid [832769][0m
-[1mprocess[default_controllers_spawner-4]: started with pid [832776][0m
-[1mprocess[head_controller/point_head_action-5]: started with pid [832781][0m
-[1mprocess[bringup_controllers_spawner_imu-6]: started with pid [832784][0m
-[1mprocess[bringup_controllers_spawner_ft-7]: started with pid [832786][0m
-[1mprocess[gripper_controllers_spawner-8]: started with pid [832788][0m
-[1mprocess[gripper_grasping-9]: started with pid [832790][0m
-[1mprocess[home_gripper-10]: started with pid [832844][0m
-[1mprocess[load_motions-11]: started with pid [832846][0m
-[1mprocess[play_motion-12]: started with pid [832852][0m
-[1mprocess[is_already_there-13]: started with pid [832862][0m
-[1mprocess[move_group-14]: started with pid [832869][0m
-[1mprocess[robot_state_publisher-15]: started with pid [832876][0m
-[1mprocess[tf_lookup-16]: started with pid [832879][0m
-[1mprocess[twist_mux-17]: started with pid [832882][0m
-[1mprocess[twist_marker-18]: started with pid [832894][0m
-[1mprocess[joystick_relay-19]: started with pid [832917][0m
-[1mprocess[image_raw_to_rect_color_relay-20]: started with pid [832943][0m
-[1mprocess[xtion/rgb/image_proc-21]: started with pid [832975][0m
-[1m[spawn_model-3] process has finished cleanly
-log file: /home/adriano/.ros/log/c3bfb4f0-e079-11ee-9678-f7a9fa7bfd66/spawn_model-3*.log[0m
-[1m[bringup_controllers_spawner_imu-6] process has finished cleanly
-log file: /home/adriano/.ros/log/c3bfb4f0-e079-11ee-9678-f7a9fa7bfd66/bringup_controllers_spawner_imu-6*.log[0m
-[1m[bringup_controllers_spawner_ft-7] process has finished cleanly
-log file: /home/adriano/.ros/log/c3bfb4f0-e079-11ee-9678-f7a9fa7bfd66/bringup_controllers_spawner_ft-7*.log[0m
-[1m[default_controllers_spawner-4] process has finished cleanly
-log file: /home/adriano/.ros/log/c3bfb4f0-e079-11ee-9678-f7a9fa7bfd66/default_controllers_spawner-4*.log[0m
-[1m[gripper_controllers_spawner-8] process has finished cleanly
-log file: /home/adriano/.ros/log/c3bfb4f0-e079-11ee-9678-f7a9fa7bfd66/gripper_controllers_spawner-8*.log[0m
-[xtion/rgb/image_proc-21] killing on exit
-[image_raw_to_rect_color_relay-20] killing on exit
-[joystick_relay-19] killing on exit
-[twist_marker-18] killing on exit
-[twist_mux-17] killing on exit
-[tf_lookup-16] killing on exit
-[robot_state_publisher-15] killing on exit
-[move_group-14] killing on exit
-[is_already_there-13] killing on exit
-[play_motion-12] killing on exit
-[load_motions-11] killing on exit
-[home_gripper-10] killing on exit
-[gripper_grasping-9] killing on exit
-[head_controller/point_head_action-5] killing on exit
-[gazebo_gui-2] killing on exit
+  File "/home/adriano/Desktop/tiago_ws/src/pal_robotiq_gripper/pal_robotiq_controller_configuration/scripts/home_gripper.py", line 12, in <module>
+    rospy.init_node("home_gripper")
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
+Unable to register with master node [http://localhost:11350]: master may not be running yet. Will keep trying.
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 212, in <module>
+    if __name__ == '__main__': main()
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 108, in main
+    rospy.init_node('spawner', anonymous=True)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
+Unable to register with master node [http://localhost:11350]: master may not be running yet. Will keep trying.
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/src/pal_robotiq_gripper/pal_robotiq_gripper_wrapper/scripts/gripper_grasping.py", line 276, in <module>
+    rospy.init_node('gripper_grasping')
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
+Unable to register with master node [http://localhost:11350]: master may not be running yet. Will keep trying.
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 212, in <module>
+    if __name__ == '__main__': main()
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 108, in main
+    rospy.init_node('spawner', anonymous=True)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
+Unable to register with master node [http://localhost:11350]: master may not be running yet. Will keep trying.
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 212, in <module>
+    if __name__ == '__main__': main()
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 108, in main
+    rospy.init_node('spawner', anonymous=True)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
+Unable to register with master node [http://localhost:11350]: master may not be running yet. Will keep trying.
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 212, in <module>
+    if __name__ == '__main__': main()
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 108, in main
+    rospy.init_node('spawner', anonymous=True)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
+[1mprocess[gazebo-1]: started with pid [638712][0m
+[1mprocess[spawn_model-2]: started with pid [638717][0m
+[1mprocess[default_controllers_spawner-3]: started with pid [638718][0m
+[1mprocess[head_controller/point_head_action-4]: started with pid [638722][0m
+[1mprocess[bringup_controllers_spawner_imu-5]: started with pid [638729][0m
+[1mprocess[bringup_controllers_spawner_ft-6]: started with pid [638732][0m
+[1mprocess[gripper_controllers_spawner-7]: started with pid [638734][0m
+[1mprocess[gripper_grasping-8]: started with pid [638740][0m
+[1mprocess[home_gripper-9]: started with pid [638744][0m
+[1mprocess[load_motions-10]: started with pid [638761][0m
+[1mprocess[play_motion-11]: started with pid [638767][0m
+[1mprocess[is_already_there-12]: started with pid [638771][0m
+[1mprocess[move_group-13]: started with pid [638777][0m
+[1mprocess[robot_state_publisher-14]: started with pid [638795][0m
+[1mprocess[tf_lookup-15]: started with pid [638798][0m
+[1mprocess[twist_mux-16]: started with pid [638804][0m
+[1mprocess[twist_marker-17]: started with pid [638810][0m
+[1mprocess[joystick_relay-18]: started with pid [638813][0m
+[1mprocess[image_raw_to_rect_color_relay-19]: started with pid [638820][0m
+[1mprocess[xtion/rgb/image_proc-20]: started with pid [638830][0m
+[xtion/rgb/image_proc-20] killing on exit
+[image_raw_to_rect_color_relay-19] killing on exit
+[joystick_relay-18] killing on exit
+[twist_marker-17] killing on exit
+[twist_mux-16] killing on exit
+[tf_lookup-15] killing on exit
+[robot_state_publisher-14] killing on exit
+[move_group-13] killing on exit
+[is_already_there-12] killing on exit
+[play_motion-11] killing on exit
+[load_motions-10] killing on exit
+[home_gripper-9] killing on exit
+[gripper_grasping-8] killing on exit
+[gripper_controllers_spawner-7] killing on exit
+[bringup_controllers_spawner_ft-6] killing on exit
+[bringup_controllers_spawner_imu-5] killing on exit
+[head_controller/point_head_action-4] killing on exit
+[default_controllers_spawner-3] killing on exit
+[spawn_model-2] killing on exit
 [gazebo-1] killing on exit
-shutting down processing monitor...
-... shutting down processing monitor complete
-[1mdone[0m
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [31m[gripper_controllers_spawner-9] escalating to SIGTERM[0m
-[31m[bringup_controllers_spawner_ft-8] escalating to SIGTERM[0m
-[31m[bringup_controllers_spawner_imu-7] escalating to SIGTERM[0m
-[31m[default_controllers_spawner-5] escalating to SIGTERM[0m
-[31m[gripper_controllers_spawner-9] escalating to SIGKILL[0m
-[31m[bringup_controllers_spawner_ft-8] escalating to SIGKILL[0m
-[31m[bringup_controllers_spawner_imu-7] escalating to SIGKILL[0m
-[31m[default_controllers_spawner-5] escalating to SIGKILL[0m
-[31mShutdown errors:
- * process[default_controllers_spawner-5, pid 820032]: required SIGKILL. May still be running.
- * process[gripper_controllers_spawner-9, pid 820049]: required SIGKILL. May still be running.
- * process[bringup_controllers_spawner_imu-7, pid 820040]: required SIGKILL. May still be running.
- * process[bringup_controllers_spawner_ft-8, pid 820046]: required SIGKILL. May still be running.[0m
-[1mprocess[rosout-1]: started with pid [820008][0m
-started core service [/rosout]
-[1mprocess[gazebo-2]: started with pid [820021][0m
-[1mprocess[gazebo_gui-3]: started with pid [820025][0m
-[1mprocess[spawn_model-4]: started with pid [820031][0m
-[1mprocess[default_controllers_spawner-5]: started with pid [820032][0m
-[1mprocess[head_controller/point_head_action-6]: started with pid [820036][0m
-[1mprocess[bringup_controllers_spawner_imu-7]: started with pid [820040][0m
-[1mprocess[bringup_controllers_spawner_ft-8]: started with pid [820046][0m
-[1mprocess[gripper_controllers_spawner-9]: started with pid [820049][0m
-[1mprocess[gripper_grasping-10]: started with pid [820054][0m
-[1mprocess[home_gripper-11]: started with pid [820058][0m
-[1mprocess[load_motions-12]: started with pid [820060][0m
-[1mprocess[play_motion-13]: started with pid [820064][0m
-[1mprocess[is_already_there-14]: started with pid [820082][0m
-[1mprocess[move_group-15]: started with pid [820107][0m
-[1mprocess[robot_state_publisher-16]: started with pid [820116][0m
-[1mprocess[tf_lookup-17]: started with pid [820138][0m
-[1mprocess[twist_mux-18]: started with pid [820164][0m
-[1mprocess[twist_marker-19]: started with pid [820170][0m
-[1mprocess[joystick_relay-20]: started with pid [820242][0m
-[1mprocess[image_raw_to_rect_color_relay-21]: started with pid [820283][0m
-[1mprocess[xtion/rgb/image_proc-22]: started with pid [820293][0m
-[1m[spawn_model-4] process has finished cleanly
-log file: /home/adriano/.ros/log/c3bfb4f0-e079-11ee-9678-f7a9fa7bfd66/spawn_model-4*.log[0m
-[1m[load_motions-12] process has finished cleanly
-log file: /home/adriano/.ros/log/c3bfb4f0-e079-11ee-9678-f7a9fa7bfd66/load_motions-12*.log[0m
-[1m[home_gripper-11] process has finished cleanly
-log file: /home/adriano/.ros/log/c3bfb4f0-e079-11ee-9678-f7a9fa7bfd66/home_gripper-11*.log[0m
-[xtion/rgb/image_proc-22] killing on exit
-[joystick_relay-20] killing on exit
-[image_raw_to_rect_color_relay-21] killing on exit
-[twist_marker-19] killing on exit
-[twist_mux-18] killing on exit
-[tf_lookup-17] killing on exit
-[robot_state_publisher-16] killing on exit
-[move_group-15] killing on exit
-[is_already_there-14] killing on exit
-[play_motion-13] killing on exit
-[gripper_grasping-10] killing on exit
-[gripper_controllers_spawner-9] killing on exit
-[bringup_controllers_spawner_ft-8] killing on exit
-[bringup_controllers_spawner_imu-7] killing on exit
-[head_controller/point_head_action-6] killing on exit
-[default_controllers_spawner-5] killing on exit
-[gazebo_gui-3] killing on exit
-[gazebo-2] killing on exit
-[rosout-1] killing on exit
-[master] killing on exit
 shutting down processing monitor...
 ... shutting down processing monitor complete
 [1mdone[0m

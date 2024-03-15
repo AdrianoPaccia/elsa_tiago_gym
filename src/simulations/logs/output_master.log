@@ -1,10 +1,10 @@
-... logging to /home/adriano/.ros/log/c3beb730-e079-11ee-9678-f7a9fa7bfd66/roslaunch-oem-IdeaPad-Gaming-3-16IAH7-832375.log
+... logging to /home/adriano/.ros/log/6e33abd6-e2db-11ee-80f6-5962c4e1c5ec/roslaunch-oem-IdeaPad-Gaming-3-16IAH7-638306.log
 Checking log directory for disk usage. This may take a while.
 Press Ctrl-C to interrupt
 Done checking log file disk usage. Usage is <1GB.
 ]2;/home/adriano/Desktop/tiago_ws/src/tiago_simulation/tiago_gazebo/launch/tiago_gazebo.launch
 xacro: in-order processing became default in ROS Melodic. You can drop the option.
-[1mstarted roslaunch server http://oem-IdeaPad-Gaming-3-16IAH7:46351/[0m
+[1mstarted roslaunch server http://oem-IdeaPad-Gaming-3-16IAH7:33533/[0m
 
 SUMMARY
 ========
@@ -649,229 +649,186 @@ NODES
 
 [1mROS_MASTER_URI=http://localhost:11311[0m
 ]2;/home/adriano/Desktop/tiago_ws/src/tiago_simulation/tiago_gazebo/launch/tiago_gazebo.launch http://localhost:11311
-[33m[ WARN] [1710252659.827258986]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.855774213]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.856082091]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.856318668]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.856533508]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.863682661]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.864655339]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.881042162]: MoveGroup launched with ~default_planning_pipeline '' not configured in ~planning_pipelines[0m
-[33m[ WARN] [1710252659.882588026]: Falling back to using the move_group node's namespace (deprecated Melodic behavior).[0m
-[33m[ WARN] [1710252659.956366203]: Transformer::setExtrapolationLimit is deprecated and does not do anything[0m
-[33m[ WARN] [1710252659.984186247]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.984511401]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.984560421]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.984618287]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.984668506]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.984723145]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252659.984758762]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252660.516048144]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252660.523902782]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710252660.713350465]: Kinematics solver doesn't support #attempts anymore, but only a timeout.
+[33m[ WARN] [1710514329.932839635]: Transformer::setExtrapolationLimit is deprecated and does not do anything[0m
+[33m[ WARN] [1710514329.956101905]: MoveGroup launched with ~default_planning_pipeline '' not configured in ~planning_pipelines[0m
+[33m[ WARN] [1710514329.956794021]: Falling back to using the move_group node's namespace (deprecated Melodic behavior).[0m
+[33m[ WARN] [1710514330.001468505]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.001521837]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.001532363]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.001564143]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.001583447]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.001609068]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.001626699]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.047650883]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.047701335]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.047716141]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.047746837]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.047770294]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.047797912]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.047815051]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.557755679]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.590985195]: Kinematics solver doesn't support #attempts anymore, but only a timeout.
 Please remove the parameter '/robot_description_kinematics/arm/kinematics_solver_attempts' from your configuration.[0m
-[33m[ WARN] [1710252660.723375822]: Kinematics solver doesn't support #attempts anymore, but only a timeout.
-Please remove the parameter '/robot_description_kinematics/arm/kinematics_solver_attempts' from your configuration.[0m
-[33m[ WARN] [1710252661.554448960]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead[0m
-[0m[ INFO] [1710252662.017812714]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...[0m
-[0m[ INFO] [1710252662.018685719]: Finished loading Gazebo ROS API Plugin.[0m
-Error: Non-unique names detected in <link name='link'>
-  <collision name='surface'>
-    <pose>0 0 0.4 0 -0 0</pose>
-    <geometry>
-      <box>
-        <size>1 0.8 0.03</size>
-      </box>
-    </geometry>
-  </collision>
-  <visual name='visual1'>
-    <pose>0 0 0.4 0 -0 0</pose>
-    <geometry>
-      <box>
-        <size>1 0.8 0.03</size>
-      </box>
-    </geometry>
-    <material>
-      <script>
-        <uri>file://media/materials/scripts/gazebo.material</uri>
-        <name>Gazebo/Wood</name>
-      </script>
-    </material>
-  </visual>
-  <collision name='front_left_leg'>
-    <pose>0.48 0.38 0.2 0 -0 0</pose>
-    <geometry>
-      <cylinder>
-        <radius>0.02</radius>
-        <length>0.4</length>
-      </cylinder>
-    </geometry>
-  </collision>
-  <visual name='front_left_leg'>
-    <pose>0.48 0.38 0.2 0 -0 0</pose>
-    <geometry>
-      <cylinder>
-        <radius>0.02</radius>
-        <length>0.4</length>
-      </cylinder>
-    </geometry>
-    <material>
-      <script>
-        <uri>file://media/materials/scripts/gazebo.material</uri>
-        <name>Gazebo/Grey</name>
-      </script>
-    </material>
-  </visual>
-  <collision name='front_right_leg'>
-    <pose>0.48 -0.38 0.2 0 -0 0</pose>
-    <geometry>
-      <cylinder>
-        <radius>0.02</radius>
-        <length>0.4</length>
-      </cylinder>
-    </geometry>
-  </collision>
-  <visual name='front_right_leg'>
-    <pose>0.48 -0.38 0.2 0 -0 0</pose>
-    <geometry>
-      <cylinder>
-        <radius>0.02</radius>
-        <length>0.4</length>
-      </cylinder>
-    </geometry>
-    <material>
-      <script>
-        <uri>file://media/materials/scripts/gazebo.material</uri>
-        <name>Gazebo/Grey</name>
-      </script>
-    </material>
-  </visual>
-  <collision name='back_right_leg'>
-    <pose>-0.48 -0.38 0.2 0 -0 0</pose>
-    <geometry>
-      <cylinder>
-        <radius>0.02</radius>
-        <length>0.4</length>
-      </cylinder>
-    </geometry>
-  </collision>
-  <visual name='back_right_leg'>
-    <pose>-0.48 -0.38 0.2 0 -0 0</pose>
-    <geometry>
-      <cylinder>
-        <radius>0.02</radius>
-        <length>0.4</length>
-      </cylinder>
-    </geometry>
-    <material>
-      <script>
-        <uri>file://media/materials/scripts/gazebo.material</uri>
-        <name>Gazebo/Grey</name>
-      </script>
-    </material>
-  </visual>
-  <collision name='back_left_leg'>
-    <pose>-0.48 0.38 0.2 0 -0 0</pose>
-    <geometry>
-      <cylinder>
-        <radius>0.02</radius>
-        <length>0.4</length>
-      </cylinder>
-    </geometry>
-  </collision>
-  <visual name='back_left_leg'>
-    <pose>-0.48 0.38 0.2 0 -0 0</pose>
-    <geometry>
-      <cylinder>
-        <radius>0.02</radius>
-        <length>0.4</length>
-      </cylinder>
-    </geometry>
-    <material>
-      <script>
-        <uri>file://media/materials/scripts/gazebo.material</uri>
-        <name>Gazebo/Grey</name>
-      </script>
-    </material>
-  </visual>
-  <velocity_decay>
-    <linear>0</linear>
-    <angular>0</angular>
-  </velocity_decay>
-  <self_collide>0</self_collide>
-  <kinematic>0</kinematic>
-  <gravity>1</gravity>
-  <sensor name='wall_contact_sensor' type='contact'>
-    <update_rate>100</update_rate>
-    <always_on>1</always_on>
-    <contact>
-      <collision>surface</collision>
-      <topic>/base_bumper_contact</topic>
-    </contact>
-    <plugin name='gazebo_ros_bumper_controller' filename='libgazebo_ros_bumper.so'>
-      <alwaysOn>1</alwaysOn>
-      <updateRate>100.0</updateRate>
-      <bumperTopicName>/table_contact</bumperTopicName>
-      <frameName>world</frameName>
-    </plugin>
-  </sensor>
-</link>
-
-[WARN] [1710252665.154697, 0.001000]: wait_for_service(/controller_manager/load_controller): failed to contact, will keep trying
-[WARN] [1710252665.157127, 0.001000]: wait_for_service(/controller_manager/load_controller): failed to contact, will keep trying
-[WARN] [1710252665.226042, 0.000000]: wait_for_service(/controller_manager/load_controller): failed to contact, will keep trying
-[WARN] [1710252665.303620, 0.000000]: wait_for_service(/controller_manager/load_controller): failed to contact, will keep trying
-../src/intel/isl/isl.c:2105: FINISHME: ../src/intel/isl/isl.c:isl_surf_supports_ccs: CCS for 3D textures is disabled, but a workaround is available.
-../src/intel/isl/isl.c:2105: FINISHME: ../src/intel/isl/isl.c:isl_surf_supports_ccs: CCS for 3D textures is disabled, but a workaround is available.
-[31m[ERROR] [1710252665.518384488, 0.001000000]: [registerPublisher] Failed to contact master at [localhost:11311].  Retrying...[0m
-[31m[ERROR] [1710252665.536625654, 0.001000000]: [registerPublisher] Failed to contact master at [localhost:11311].  Retrying...[0m
-[31m[ERROR] [1710252665.632796818, 0.001000000]: [setParam] Failed to contact master at [localhost:11311].  Retrying...[0m
-[WARN] [1710252691.991492, 0.001000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
-[INFO] [1710252661.750721, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
-[WARN] [1710252692.175491, 0.000000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
-[INFO] [1710252661.966356, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
-[WARN] [1710252781.886228, 0.001000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
-[INFO] [1710252661.766953, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
-[WARN] [1710252782.243392, 0.000000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
-[INFO] [1710252662.208865, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+[33m[ WARN] [1710514330.598740963]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1710514330.775267059]: No kinematics plugins defined. Fill and load kinematics.yaml![0m
+[33m[ WARN] [1710514331.050568105]: No ROS master - start roscore to continue...[0m
+[31m[ERROR] [1710514331.283262161]: [registerService] Failed to contact master at [localhost:11311].  Retrying...[0m
+[33m[ WARN] [1710514331.550807831]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514332.051271186]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514332.551705539]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514333.051875706]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514333.552054237]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514334.052258712]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514334.552403887]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514335.052557237]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514335.552837983]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514336.052967112]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514336.553098260]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514337.053363460]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514337.553638998]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514338.053930428]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514338.554159041]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514339.054340310]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514339.554518777]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514340.054708970]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514340.554852077]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514341.055042243]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514341.555200570]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514342.055328663]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514342.555463828]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514343.055649765]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514343.555899377]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514344.056020917]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514344.556146779]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514345.056278911]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514345.556436977]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514346.056585097]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514346.556743021]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514347.057010338]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514347.557177364]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514348.057327613]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514348.557585846]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514349.057788152]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514349.557940490]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514350.058065992]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514350.558205428]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514351.058363566]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514351.558534629]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514352.058701051]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514352.558845148]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514353.058990155]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514353.559127203]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514354.059246434]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514354.559386802]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514355.059584424]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514355.559852506]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514356.060108272]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514356.560369707]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514357.060616448]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514357.560864132]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514358.061040176]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514358.561225915]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514359.061393723]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514359.561528279]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514360.061716026]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514360.561866724]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514361.061988408]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514361.562128726]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514362.062380699]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514362.562651473]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514363.062808665]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514363.563142362]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514364.063283176]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514364.563408277]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514365.063524763]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514365.563695049]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514366.063853114]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514366.564108228]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514367.064375391]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514367.564554990]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514368.064711837]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514368.564836406]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514369.065010575]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514369.565152469]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514370.065292911]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514370.565466374]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514371.065632156]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514371.565808924]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514372.066049083]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514372.566198943]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514373.066330684]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514373.566456235]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514374.066620546]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514374.566751465]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514375.066910545]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514375.567056646]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514376.067186706]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514376.567337847]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514377.067496075]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514377.567664348]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514378.067809202]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514378.567966762]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514379.068111352]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514379.568383564]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514380.068508314]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514380.568635729]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514381.068927729]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514381.569201145]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514382.069352427]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514382.569530223]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514383.069624416]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514383.569894997]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514384.070153276]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514384.570320636]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514385.070475645]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514385.570611399]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514386.070734464]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514386.570889463]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514387.071051606]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514387.571219708]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514388.071406205]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514388.571560416]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514389.071727091]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514389.571882533]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514390.072016223]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514390.572219042]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514391.072393784]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514391.572538408]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514392.072784549]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514392.572931319]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514393.073190296]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514393.573387962]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514394.073672882]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514394.573923931]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514395.074094539]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514395.574234337]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514396.074368844]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514396.574597233]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514397.074748935]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514397.574881871]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514398.075084072]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514398.575229504]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514399.075407818]: No ROS master - start roscore to continue...[0m
+[0m[ INFO] [1710514329.891572624]: tf_lookup starting[0m
+[0m[ INFO] [1710514329.950818048]: Topic handler 'navigation' subscribed to topic 'nav_vel': timeout = 0.500000s, priority = 10[0m
+[0m[ INFO] [1710514329.953376623]: Topic handler 'joystick' subscribed to topic 'joy_vel': timeout = 0.500000s, priority = 100[0m
+[0m[ INFO] [1710514329.955096029]: Topic handler 'keyboard' subscribed to topic 'key_vel': timeout = 0.500000s, priority = 90[0m
+[0m[ INFO] [1710514329.962024091]: Topic handler 'tablet' subscribed to topic 'tab_vel': timeout = 0.500000s, priority = 100[0m
+[0m[ INFO] [1710514329.987937960]: Topic handler 'marker' subscribed to topic 'marker_vel': timeout = 0.500000s, priority = 99[0m
+[0m[ INFO] [1710514329.988873749]: Topic handler 'phone' subscribed to topic 'phone_vel': timeout = 0.500000s, priority = 98[0m
+[0m[ INFO] [1710514329.990445893]: Topic handler 'rviz_joy' subscribed to topic 'rviz_joy_vel': timeout = 0.500000s, priority = 95[0m
+[0m[ INFO] [1710514329.991389353]: Topic handler 'servoing_cmd_vel' subscribed to topic 'servoing_cmd_vel': timeout = 0.500000s, priority = 20[0m
+[0m[ INFO] [1710514329.992736060]: Topic handler 'pause' subscribed to topic 'pause_navigation': timeout = None, priority = 100[0m
+[0m[ INFO] [1710514329.993642940]: Topic handler 'loop_closure' subscribed to topic 'stop_closing_loop': timeout = None, priority = 200[0m
+[0m[ INFO] [1710514329.994537467]: Topic handler 'joystick' subscribed to topic 'joy_priority': timeout = None, priority = 100[0m
 terminate called after throwing an instance of 'std::runtime_error'
   what():  Unable to connect to move_group action server 'move_group' within allotted time (0s)
-[0m[ INFO] [1710252659.840038867]: Topic handler 'navigation' subscribed to topic 'nav_vel': timeout = 0.500000s, priority = 10[0m
-[0m[ INFO] [1710252659.850897560]: Topic handler 'joystick' subscribed to topic 'joy_vel': timeout = 0.500000s, priority = 100[0m
-[0m[ INFO] [1710252659.853194404]: Topic handler 'keyboard' subscribed to topic 'key_vel': timeout = 0.500000s, priority = 90[0m
-[0m[ INFO] [1710252659.855226245]: Topic handler 'tablet' subscribed to topic 'tab_vel': timeout = 0.500000s, priority = 100[0m
-[0m[ INFO] [1710252659.860281137]: Topic handler 'marker' subscribed to topic 'marker_vel': timeout = 0.500000s, priority = 99[0m
-[0m[ INFO] [1710252659.864624271]: Topic handler 'phone' subscribed to topic 'phone_vel': timeout = 0.500000s, priority = 98[0m
-[0m[ INFO] [1710252659.869455459]: Topic handler 'rviz_joy' subscribed to topic 'rviz_joy_vel': timeout = 0.500000s, priority = 95[0m
-[0m[ INFO] [1710252659.880527064]: Topic handler 'servoing_cmd_vel' subscribed to topic 'servoing_cmd_vel': timeout = 0.500000s, priority = 20[0m
-[0m[ INFO] [1710252659.901441162]: Topic handler 'pause' subscribed to topic 'pause_navigation': timeout = None, priority = 100[0m
-[0m[ INFO] [1710252659.917299415]: Topic handler 'loop_closure' subscribed to topic 'stop_closing_loop': timeout = None, priority = 200[0m
-[0m[ INFO] [1710252659.925255146]: Topic handler 'joystick' subscribed to topic 'joy_priority': timeout = None, priority = 100[0m
-[0m[ INFO] [1710252659.863358656]: tf_lookup starting[0m
-[0m[ INFO] [1710252659.922745538]: Loading robot model 'tiago'...[0m
-[0m[ INFO] [1710252659.931893397]: No root/virtual joint specified in SRDF. Assuming fixed joint[0m
-[0m[ INFO] [1710252661.540167136]: Publishing maintained planning scene on 'monitored_planning_scene'[0m
-[0m[ INFO] [1710252661.543551963]: Listening to 'joint_states' for joint states[0m
-[0m[ INFO] [1710252661.548661449]: Listening to '/attached_collision_object' for attached collision objects[0m
-[0m[ INFO] [1710252661.548690475]: Starting planning scene monitor[0m
-[0m[ INFO] [1710252661.550249650]: Listening to '/planning_scene'[0m
-[0m[ INFO] [1710252661.550273360]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.[0m
-[0m[ INFO] [1710252661.552138005]: Listening to '/collision_object'[0m
-[0m[ INFO] [1710252661.554068810]: Listening to '/planning_scene_world' for planning scene world geometry[0m
-[0m[ INFO] [1710252661.554870612]: No 3D sensor plugin(s) defined for octomap updates[0m
-[0m[ INFO] [1710252662.869415007]: Loading planning pipeline ''[0m
-[0m[ INFO] [1710252662.912131120]: Using planning interface 'OMPL'[0m
-[0m[ INFO] [1710252662.915017096]: Param 'default_workspace_bounds' was not set. Using default value: 10[0m
-[0m[ INFO] [1710252662.915494013]: Param 'start_state_max_bounds_error' was set to 0.1[0m
-[0m[ INFO] [1710252662.916123822]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
-[0m[ INFO] [1710252662.916676041]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
-[0m[ INFO] [1710252662.916868977]: Param 'jiggle_fraction' was set to 0.05[0m
-[0m[ INFO] [1710252662.917060092]: Param 'max_sampling_attempts' was not set. Using default value: 100[0m
-[0m[ INFO] [1710252662.917102076]: Using planning request adapter 'Add Time Parameterization'[0m
-[0m[ INFO] [1710252662.917112240]: Using planning request adapter 'Fix Workspace Bounds'[0m
-[0m[ INFO] [1710252662.917121019]: Using planning request adapter 'Fix Start State Bounds'[0m
-[0m[ INFO] [1710252662.917135759]: Using planning request adapter 'Fix Start State In Collision'[0m
-[0m[ INFO] [1710252662.917148550]: Using planning request adapter 'Fix Start State Path Constraints'[0m
+[33m[ WARN] [1710514399.575587866]: No ROS master - start roscore to continue...[0m
+[0m[ INFO] [1710514329.677427027]: Load description from: /robot_description[0m
+[33m[ WARN] [1710514400.075808120]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514400.575977350]: No ROS master - start roscore to continue...[0m
+[0m[ INFO] [1710514329.978321856]: Loading robot model 'tiago'...[0m
+[0m[ INFO] [1710514329.978361793]: No root/virtual joint specified in SRDF. Assuming fixed joint[0m
 [96mLoading 'move_group/ApplyPlanningSceneService'...
 [0m[96mLoading 'move_group/ClearOctomapService'...
 [0m[96mLoading 'move_group/MoveGroupCartesianPathService'...
@@ -886,112 +843,136 @@ terminate called after throwing an instance of 'std::runtime_error'
 [0m[92m
 You can start planning now!
 
-[0m[0m[ INFO] [1710252659.467769391]: Load description from: /robot_description[0m
-[INFO] [1710252662.605274, 0.000000]: Waiting for gripper_controller...
-[INFO] [1710252829.397304, 0.000000]: ...connected.
+[0m[33m[ WARN] [1710514401.076142423]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514401.576375793]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514402.076617642]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514402.576856768]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514403.077095666]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514403.577306283]: No ROS master - start roscore to continue...[0m
+[33m[ WARN] [1710514404.077542893]: No ROS master - start roscore to continue...[0m
+Unable to register with master node [http://localhost:11311]: master may not be running yet. Will keep trying.
 Traceback (most recent call last):
-  File "/home/adriano/Desktop/tiago_ws/src/pal_robotiq_gripper/pal_robotiq_controller_configuration/scripts/home_gripper.py", line 23, in <module>
-    rospy.wait_for_message("joint_states", JointState)
-  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 428, in wait_for_message
-    raise rospy.exceptions.ROSInterruptException("rospy shutdown")
-rospy.exceptions.ROSInterruptException: rospy shutdown
-[INFO] [1710252661.713708, 0.000000]: Initializing Gripper Grasper...
-[INFO] [1710252661.811507, 0.000000]: timeout2.2closing_time0.2
-[INFO] [1710252661.818768, 0.000000]: Initialized dynamic reconfigure on: /gripper_grasping
-[INFO] [1710252661.822402, 0.000000]: Subscribed to topic: /gripper_controller/state
-[INFO] [1710252661.824918, 0.000000]: Publishing to topic: /gripper_controller/command
-[INFO] [1710252661.827332, 0.000000]: Offering grasp service on: /gripper_controller/grasp
-[INFO] [1710252661.828676, 0.000000]: Done initializing Gripper Grasp Service!
-[INFO] [1710252661.831110, 0.000000]: Offering release service on: /gripper_controller/release
-[INFO] [1710252661.832408, 0.000000]: Done initializing Gripper Release Service!
+  File "/opt/ros/noetic/lib/twist_mux/joystick_relay.py", line 223, in <module>
+    rospy.init_node('joystick_relay')
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/src/play_motion/play_motion/scripts/is_already_there.py", line 43, in <module>
+    rospy.init_node("is_already_there")
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
 Traceback (most recent call last):
   File "/home/adriano/Desktop/tiago_ws/src/pal_motion_loader/scripts/load_available_motions.py", line 39, in <module>
     main()
-  File "/home/adriano/Desktop/tiago_ws/src/pal_motion_loader/scripts/load_available_motions.py", line 16, in main
-    js = rospy.wait_for_message('/joint_states', JointState)
-  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 428, in wait_for_message
-    raise rospy.exceptions.ROSInterruptException("rospy shutdown")
-rospy.exceptions.ROSInterruptException: rospy shutdown
-[31m[gazebo-1] escalating to SIGTERM[0m
-[1mprocess[gazebo-1]: started with pid [832770][0m
-[1mprocess[gazebo_gui-2]: started with pid [832775][0m
-[1mprocess[spawn_model-3]: started with pid [832778][0m
-[1mprocess[default_controllers_spawner-4]: started with pid [832783][0m
-[1mprocess[head_controller/point_head_action-5]: started with pid [832785][0m
-[1mprocess[bringup_controllers_spawner_imu-6]: started with pid [832787][0m
-[1mprocess[bringup_controllers_spawner_ft-7]: started with pid [832789][0m
-[1mprocess[gripper_controllers_spawner-8]: started with pid [832840][0m
-[1mprocess[gripper_grasping-9]: started with pid [832850][0m
-[1mprocess[home_gripper-10]: started with pid [832863][0m
-[1mprocess[load_motions-11]: started with pid [832865][0m
-[1mprocess[play_motion-12]: started with pid [832870][0m
-[1mprocess[is_already_there-13]: started with pid [832873][0m
-[1mprocess[move_group-14]: started with pid [832880][0m
-[1mprocess[robot_state_publisher-15]: started with pid [832883][0m
-[1mprocess[tf_lookup-16]: started with pid [832893][0m
-[1mprocess[twist_mux-17]: started with pid [832918][0m
-[1mprocess[twist_marker-18]: started with pid [832923][0m
-[1mprocess[joystick_relay-19]: started with pid [832939][0m
-[1mprocess[image_raw_to_rect_color_relay-20]: started with pid [832964][0m
-[1mprocess[xtion/rgb/image_proc-21]: started with pid [832992][0m
-[1m[spawn_model-3] process has finished cleanly
-log file: /home/adriano/.ros/log/c3beb730-e079-11ee-9678-f7a9fa7bfd66/spawn_model-3*.log[0m
-[1m[bringup_controllers_spawner_imu-6] process has finished cleanly
-log file: /home/adriano/.ros/log/c3beb730-e079-11ee-9678-f7a9fa7bfd66/bringup_controllers_spawner_imu-6*.log[0m
-[1m[bringup_controllers_spawner_ft-7] process has finished cleanly
-log file: /home/adriano/.ros/log/c3beb730-e079-11ee-9678-f7a9fa7bfd66/bringup_controllers_spawner_ft-7*.log[0m
-[1m[gripper_controllers_spawner-8] process has finished cleanly
-log file: /home/adriano/.ros/log/c3beb730-e079-11ee-9678-f7a9fa7bfd66/gripper_controllers_spawner-8*.log[0m
-[1m[default_controllers_spawner-4] process has finished cleanly
-log file: /home/adriano/.ros/log/c3beb730-e079-11ee-9678-f7a9fa7bfd66/default_controllers_spawner-4*.log[0m
-[xtion/rgb/image_proc-21] killing on exit
+  File "/home/adriano/Desktop/tiago_ws/src/pal_motion_loader/scripts/load_available_motions.py", line 14, in main
+    rospy.init_node('load_motions_node')
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
+Unable to register with master node [http://localhost:11311]: master may not be running yet. Will keep trying.
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/src/pal_robotiq_gripper/pal_robotiq_gripper_wrapper/scripts/gripper_grasping.py", line 276, in <module>
+    rospy.init_node('gripper_grasping')
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
+Unable to register with master node [http://localhost:11311]: master may not be running yet. Will keep trying.
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/src/pal_robotiq_gripper/pal_robotiq_controller_configuration/scripts/home_gripper.py", line 12, in <module>
+    rospy.init_node("home_gripper")
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
+Unable to register with master node [http://localhost:11311]: master may not be running yet. Will keep trying.
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 212, in <module>
+    if __name__ == '__main__': main()
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 108, in main
+    rospy.init_node('spawner', anonymous=True)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
+Unable to register with master node [http://localhost:11311]: master may not be running yet. Will keep trying.
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 212, in <module>
+    if __name__ == '__main__': main()
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 108, in main
+Unable to register with master node [http://localhost:11311]: master may not be running yet. Will keep trying.
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 212, in <module>
+    rospy.init_node('spawner', anonymous=True)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    if __name__ == '__main__': main()
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 108, in main
+    rospy.init_node('spawner', anonymous=True)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
+Unable to register with master node [http://localhost:11311]: master may not be running yet. Will keep trying.
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 212, in <module>
+    if __name__ == '__main__': main()
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 108, in main
+    rospy.init_node('spawner', anonymous=True)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/devel/lib/gazebo_ros/spawn_model", line 15, in <module>
+    exec(compile(fh.read(), python_script, 'exec'), context)
+  File "/home/adriano/Desktop/tiago_ws/src/gazebo_ros_pkgs/gazebo_ros/scripts/spawn_model", line 313, in <module>
+    sm.callSpawnService()
+  File "/home/adriano/Desktop/tiago_ws/src/gazebo_ros_pkgs/gazebo_ros/scripts/spawn_model", line 206, in callSpawnService
+    rospy.init_node('spawn_model')
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 336, in init_node
+    raise rospy.exceptions.ROSInitException("Failed to initialize time. Please check logs for additional details")
+rospy.exceptions.ROSInitException: Failed to initialize time. Please check logs for additional details
+[1mprocess[gazebo-1]: started with pid [638719][0m
+[1mprocess[gazebo_gui-2]: started with pid [638725][0m
+[1mprocess[spawn_model-3]: started with pid [638731][0m
+[1mprocess[default_controllers_spawner-4]: started with pid [638733][0m
+[1mprocess[head_controller/point_head_action-5]: started with pid [638735][0m
+[1mprocess[bringup_controllers_spawner_imu-6]: started with pid [638742][0m
+[1mprocess[bringup_controllers_spawner_ft-7]: started with pid [638769][0m
+[1mprocess[gripper_controllers_spawner-8]: started with pid [638770][0m
+[1mprocess[gripper_grasping-9]: started with pid [638773][0m
+[1mprocess[home_gripper-10]: started with pid [638793][0m
+[1mprocess[load_motions-11]: started with pid [638797][0m
+[1mprocess[play_motion-12]: started with pid [638803][0m
+[1mprocess[is_already_there-13]: started with pid [638806][0m
+[1mprocess[move_group-14]: started with pid [638811][0m
+[1mprocess[robot_state_publisher-15]: started with pid [638817][0m
+[1mprocess[tf_lookup-16]: started with pid [638828][0m
+[1mprocess[twist_mux-17]: started with pid [638859][0m
+[1mprocess[twist_marker-18]: started with pid [638873][0m
+[1mprocess[joystick_relay-19]: started with pid [638884][0m
+[1mprocess[image_raw_to_rect_color_relay-20]: started with pid [638895][0m
+[1mprocess[xtion/rgb/image_proc-21]: started with pid [638912][0m
 [image_raw_to_rect_color_relay-20] killing on exit
+[xtion/rgb/image_proc-21] killing on exit
 [joystick_relay-19] killing on exit
 [twist_marker-18] killing on exit
 [twist_mux-17] killing on exit
 [tf_lookup-16] killing on exit
+[robot_state_publisher-15] killing on exit
 [move_group-14] killing on exit
 [is_already_there-13] killing on exit
 [play_motion-12] killing on exit
-[robot_state_publisher-15] killing on exit
 [load_motions-11] killing on exit
 [home_gripper-10] killing on exit
 [gripper_grasping-9] killing on exit
-[gazebo-1] killing on exit
+[gripper_controllers_spawner-8] killing on exit
+[bringup_controllers_spawner_ft-7] killing on exit
+[bringup_controllers_spawner_imu-6] killing on exit
 [head_controller/point_head_action-5] killing on exit
+[default_controllers_spawner-4] killing on exit
+[spawn_model-3] killing on exit
 [gazebo_gui-2] killing on exit
-shutting down processing monitor...
-... shutting down processing monitor complete
-[1mdone[0m
-]: started with pid [820205][0m
-[1mprocess[image_raw_to_rect_color_relay-21]: started with pid [820279][0m
-[1mprocess[xtion/rgb/image_proc-22]: started with pid [820287][0m
-[1m[spawn_model-4] process has finished cleanly
-log file: /home/adriano/.ros/log/c3beb730-e079-11ee-9678-f7a9fa7bfd66/spawn_model-4*.log[0m
-[1m[load_motions-12] process has finished cleanly
-log file: /home/adriano/.ros/log/c3beb730-e079-11ee-9678-f7a9fa7bfd66/load_motions-12*.log[0m
-[1m[home_gripper-11] process has finished cleanly
-log file: /home/adriano/.ros/log/c3beb730-e079-11ee-9678-f7a9fa7bfd66/home_gripper-11*.log[0m
-[xtion/rgb/image_proc-22] killing on exit
-[image_raw_to_rect_color_relay-21] killing on exit
-[joystick_relay-20] killing on exit
-[twist_marker-19] killing on exit
-[twist_mux-18] killing on exit
-[tf_lookup-17] killing on exit
-[robot_state_publisher-16] killing on exit
-[move_group-15] killing on exit
-[is_already_there-14] killing on exit
-[play_motion-13] killing on exit
-[gripper_grasping-10] killing on exit
-[gripper_controllers_spawner-9] killing on exit
-[bringup_controllers_spawner_ft-8] killing on exit
-[bringup_controllers_spawner_imu-7] killing on exit
-[head_controller/point_head_action-6] killing on exit
-[default_controllers_spawner-5] killing on exit
-[gazebo_gui-3] killing on exit
-[gazebo-2] killing on exit
-[rosout-1] killing on exit
-[master] killing on exit
+[gazebo-1] killing on exit
 shutting down processing monitor...
 ... shutting down processing monitor complete
 [1mdone[0m

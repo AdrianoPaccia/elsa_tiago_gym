@@ -16,28 +16,6 @@ from elsa_tiago_gym.utils_parallel import set_sim_velocity
 max_episode_steps = 100
 
 
-def setup_env(env_name, ros_uri = "http://localhost:11311/", gz_uri='http://localhost:11345'):
-    os.environ['ROS_MASTER_URI'] = ros_uri
-    os.environ['GAZEBO_MASTER_URI'] = gz_uri
-    rospack = rospkg.RosPack()
-    dir = rospack.get_path('elsa_tiago_gym')
-    tasks_path = os.path.join(dir,'src/elsa_tiago_gym')
-    sys.path.append(tasks_path)
-
-    if env_name =='TiagoReachEnv-v0':
-        entry_point = 'tiago_reach_env:TiagoReachEnv'
-    elif env_name == 'TiagoSimpleEnv-v0':
-        entry_point = 'tiago_simple_env:TiagoSimpleEnv'
-    else:
-        raise ValueError(
-        "Environment '{:s}' not expected.".format(env_name))
-    register(
-        id=env_name, 
-        entry_point=entry_point,
-        max_episode_steps=max_episode_steps, 
-    )
-
-
 class ObservationSpace:
     def __init__(self, num_items, num_boxes,
                  grip_low=-1.0,grip_high=-1.0,
