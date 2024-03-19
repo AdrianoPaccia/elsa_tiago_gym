@@ -12,7 +12,7 @@ def start_env(env, speed,client_id, max_episode_steps:int = 100, multimodal = Fa
     os.environ['ROS_MASTER_URI'] = ros_uri
     os.environ['GAZEBO_MASTER_URI'] = gz_uri
     setup_env(env,max_episode_steps)
-    rospy.init_node('parallelSimulationNode',log_level=rospy.FATAL)
+    rospy.init_node('parallelSimulationNode',log_level=rospy.ERROR)
     env = gym.make(id=env,
                     env_code=client_id,
                     speed = speed,

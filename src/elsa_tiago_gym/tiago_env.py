@@ -85,8 +85,8 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         self.arm_workspace_high = np.array([0.8,  0.5, 0.9])
         #self.arm_joint_bounds_low = np.array([0, -90, -202.5, -22.5, -120, -90, -120])/90 * np.pi 
         #self.arm_joint_bounds_high = np.array([157.5, 62.5, 90, 135, 120, 90, 120])/90 * np.pi
-        self.arm_joint_bounds_low = np.array( [45,     0, -90,  20, -120, -90, -120])/90 * np.pi 
-        self.arm_joint_bounds_high = np.array([135, 60,  90, 135, 120,  90,  120])/90 * np.pi
+        self.arm_joint_bounds_low = np.array( [60,     0, -90,  20, -120, -90, -120])/90 * np.pi 
+        self.arm_joint_bounds_high = np.array([120, 50,  90, 135, 120,  90,  120])/90 * np.pi
         
 
         # init and start
@@ -389,9 +389,6 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
 
         
 
-
-
-    # TODO
     def store_arm_state(self):
         # store the arm cartesian pose
         pose = self.arm_group.get_current_pose().pose
@@ -504,3 +501,9 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         """Checks which is the closest grapable object
         """
         raise NotImplementedError()
+
+
+
+
+
+
