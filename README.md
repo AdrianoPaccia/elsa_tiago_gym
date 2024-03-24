@@ -1,12 +1,12 @@
 # 🦾 tiago_gym
-A ROS package to run Reinforcement Learning experiments, particularly pick and place tasks, on the TIAGo robot. Uses Gazebo, Rviz and MoveIt! (for motion planning)
+A ROS package to run Reinforcement Learning experiments, particularly pick and place tasks, on the TIAGo robot.
+It allows to run multiple instances of ROS and Gazebo running in parallel, so that are accessible by multiple parallel process. It is suggested to use of workers to collect exeperience, while another process updates the AI in parallel (it implies the use of off-policy algorithms).
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/28115337/128855778-1333fb2a-a6ac-47d0-8d59-ccc5798a2c32.gif" alt="rviz-showcase" />
 </p>
 
 ## Installation
-Tested on Ubuntu 18.04 only. Beware! Instructions assume familiarity with the ROS [packages](http://wiki.ros.org/Packages) system.
 - Install ROS Melodic + TIAGo
     -  http://wiki.ros.org/Robots/TIAGo/Tutorials/Installation/InstallUbuntuAndROS
 - Install openai_ros package into your TIAGo workspace
