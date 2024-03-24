@@ -2,6 +2,7 @@
 A ROS package to run Reinforcement Learning experiments, particularly pick and place tasks, on the TIAGo robot.
 It allows to run multiple instances of ROS and Gazebo running in parallel, so that are accessible by multiple parallel process. It is suggested to use of workers to collect exeperience, while another process updates the AI in parallel (it implies the use of off-policy algorithms).
 
+![Alt Text](media/tiago_video.gif)
 
 ## Installation
 - Install ROS Melodic + TIAGo
