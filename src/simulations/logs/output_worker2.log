@@ -1,11 +1,10 @@
-INFO: cannot create a symlink to latest log directory: [Errno 2] No such file or directory: '/home/adriano/.ros/log/latest'
-... logging to /home/adriano/.ros/log/384e1ecc-e504-11ee-a89b-5f2243cc42f0/roslaunch-oem-IdeaPad-Gaming-3-16IAH7-8015.log
+... logging to /home/adriano/.ros/log/0f6cbb72-eac6-11ee-af9f-97fe27d21d27/roslaunch-oem-IdeaPad-Gaming-3-16IAH7-886893.log
 Checking log directory for disk usage. This may take a while.
 Press Ctrl-C to interrupt
 Done checking log file disk usage. Usage is <1GB.
-]2;/home/adriano/Desktop/tiago_ws/src/tiago_simulation/tiago_gazebo/launch/tiago_gazebo.launch
+]2;/home/adriano/Desktop/tiago_ws/src/tiago_packages_v3/tiago_simulation/tiago_gazebo/launch/tiago_gazebo.launch
 xacro: in-order processing became default in ROS Melodic. You can drop the option.
-[1mstarted roslaunch server http://oem-IdeaPad-Gaming-3-16IAH7:43583/[0m
+[1mstarted roslaunch server http://oem-IdeaPad-Gaming-3-16IAH7:35219/[0m
 
 SUMMARY
 ========
@@ -22,6 +21,52 @@ PARAMETERS
  * /arm_controller/constraints/stopped_velocity_tolerance: 5.0
  * /arm_controller/joints: ['arm_1_joint', '...
  * /arm_controller/type: position_controll...
+ * /arm_velocity_trajectory_controller/constraints/arm_1_joint/goal: 0.02
+ * /arm_velocity_trajectory_controller/constraints/arm_2_joint/goal: 0.02
+ * /arm_velocity_trajectory_controller/constraints/arm_3_joint/goal: 0.02
+ * /arm_velocity_trajectory_controller/constraints/arm_4_joint/goal: 0.02
+ * /arm_velocity_trajectory_controller/constraints/arm_5_joint/goal: 0.02
+ * /arm_velocity_trajectory_controller/constraints/arm_6_joint/goal: 0.02
+ * /arm_velocity_trajectory_controller/constraints/arm_7_joint/goal: 0.02
+ * /arm_velocity_trajectory_controller/constraints/goal_time: 0.6
+ * /arm_velocity_trajectory_controller/constraints/stopped_velocity_tolerance: 5.0
+ * /arm_velocity_trajectory_controller/gains/arm_1_joint/d: 0.1
+ * /arm_velocity_trajectory_controller/gains/arm_1_joint/i: 0.01
+ * /arm_velocity_trajectory_controller/gains/arm_1_joint/i_clamp: 2
+ * /arm_velocity_trajectory_controller/gains/arm_1_joint/p: 15
+ * /arm_velocity_trajectory_controller/gains/arm_2_joint/d: 0.2
+ * /arm_velocity_trajectory_controller/gains/arm_2_joint/i: 0.01
+ * /arm_velocity_trajectory_controller/gains/arm_2_joint/i_clamp: 2
+ * /arm_velocity_trajectory_controller/gains/arm_2_joint/p: 17
+ * /arm_velocity_trajectory_controller/gains/arm_3_joint/d: 0.2
+ * /arm_velocity_trajectory_controller/gains/arm_3_joint/i: 0.01
+ * /arm_velocity_trajectory_controller/gains/arm_3_joint/i_clamp: 2
+ * /arm_velocity_trajectory_controller/gains/arm_3_joint/p: 17
+ * /arm_velocity_trajectory_controller/gains/arm_4_joint/d: 0.2
+ * /arm_velocity_trajectory_controller/gains/arm_4_joint/i: 0.01
+ * /arm_velocity_trajectory_controller/gains/arm_4_joint/i_clamp: 2
+ * /arm_velocity_trajectory_controller/gains/arm_4_joint/p: 17
+ * /arm_velocity_trajectory_controller/gains/arm_5_joint/d: 0.1
+ * /arm_velocity_trajectory_controller/gains/arm_5_joint/i: 0.01
+ * /arm_velocity_trajectory_controller/gains/arm_5_joint/i_clamp: 1
+ * /arm_velocity_trajectory_controller/gains/arm_5_joint/p: 17
+ * /arm_velocity_trajectory_controller/gains/arm_6_joint/d: 0.2
+ * /arm_velocity_trajectory_controller/gains/arm_6_joint/i: 0.01
+ * /arm_velocity_trajectory_controller/gains/arm_6_joint/i_clamp: 1
+ * /arm_velocity_trajectory_controller/gains/arm_6_joint/p: 14
+ * /arm_velocity_trajectory_controller/gains/arm_7_joint/d: 0.1
+ * /arm_velocity_trajectory_controller/gains/arm_7_joint/i: 0.01
+ * /arm_velocity_trajectory_controller/gains/arm_7_joint/i_clamp: 1
+ * /arm_velocity_trajectory_controller/gains/arm_7_joint/p: 12
+ * /arm_velocity_trajectory_controller/joints: ['arm_1_joint', '...
+ * /arm_velocity_trajectory_controller/type: velocity_controll...
+ * /arm_velocity_trajectory_controller/velocity_ff/arm_1_joint: 1.0
+ * /arm_velocity_trajectory_controller/velocity_ff/arm_2_joint: 1.0
+ * /arm_velocity_trajectory_controller/velocity_ff/arm_3_joint: 1.0
+ * /arm_velocity_trajectory_controller/velocity_ff/arm_4_joint: 1.0
+ * /arm_velocity_trajectory_controller/velocity_ff/arm_5_joint: 1.0
+ * /arm_velocity_trajectory_controller/velocity_ff/arm_6_joint: 1.0
+ * /arm_velocity_trajectory_controller/velocity_ff/arm_7_joint: 1.0
  * /collision_model_parameters/blacklist/default: [{'first': 'arm_2...
  * /collision_model_parameters/links_with_padding: ['arm_4_link', 'a...
  * /collision_model_parameters/padding: 0.01
@@ -30,102 +75,102 @@ PARAMETERS
  * /force_torque_sensor_controller/publish_rate: 50
  * /force_torque_sensor_controller/type: force_torque_sens...
  * /gains/FFJ1/d: 0
- * /gains/FFJ1/i: 1
- * /gains/FFJ1/p: 10
+ * /gains/FFJ1/i: 10
+ * /gains/FFJ1/p: 100
  * /gains/FFJ2/d: 0
- * /gains/FFJ2/i: 1
- * /gains/FFJ2/p: 10
+ * /gains/FFJ2/i: 10
+ * /gains/FFJ2/p: 100
  * /gains/FFJ3/d: 0
- * /gains/FFJ3/i: 1
- * /gains/FFJ3/p: 10
+ * /gains/FFJ3/i: 10
+ * /gains/FFJ3/p: 100
  * /gains/FFJ4/d: 0
- * /gains/FFJ4/i: 1
- * /gains/FFJ4/p: 10
+ * /gains/FFJ4/i: 10
+ * /gains/FFJ4/p: 100
  * /gains/MFJ1/d: 0
- * /gains/MFJ1/i: 1
- * /gains/MFJ1/p: 10
+ * /gains/MFJ1/i: 10
+ * /gains/MFJ1/p: 100
  * /gains/MFJ2/d: 0
- * /gains/MFJ2/i: 1
- * /gains/MFJ2/p: 10
+ * /gains/MFJ2/i: 10
+ * /gains/MFJ2/p: 100
  * /gains/MFJ3/d: 0
- * /gains/MFJ3/i: 1
- * /gains/MFJ3/p: 10
+ * /gains/MFJ3/i: 10
+ * /gains/MFJ3/p: 100
  * /gains/MFJ4/d: 0
- * /gains/MFJ4/i: 1
- * /gains/MFJ4/p: 10
+ * /gains/MFJ4/i: 10
+ * /gains/MFJ4/p: 100
  * /gains/RFJ1/d: 0
- * /gains/RFJ1/i: 1
- * /gains/RFJ1/p: 10
+ * /gains/RFJ1/i: 10
+ * /gains/RFJ1/p: 100
  * /gains/RFJ2/d: 0
- * /gains/RFJ2/i: 1
- * /gains/RFJ2/p: 10
+ * /gains/RFJ2/i: 10
+ * /gains/RFJ2/p: 100
  * /gains/RFJ3/d: 0
- * /gains/RFJ3/i: 1
- * /gains/RFJ3/p: 10
+ * /gains/RFJ3/i: 10
+ * /gains/RFJ3/p: 100
  * /gains/RFJ4/d: 0
- * /gains/RFJ4/i: 1
- * /gains/RFJ4/p: 10
+ * /gains/RFJ4/i: 10
+ * /gains/RFJ4/p: 100
  * /gains/THJ1/d: 0
- * /gains/THJ1/i: 1
- * /gains/THJ1/p: 10
+ * /gains/THJ1/i: 10
+ * /gains/THJ1/p: 100
  * /gains/THJ2/d: 0
- * /gains/THJ2/i: 1
- * /gains/THJ2/p: 10
+ * /gains/THJ2/i: 10
+ * /gains/THJ2/p: 100
  * /gains/THJ4/d: 0
- * /gains/THJ4/i: 1
- * /gains/THJ4/p: 10
+ * /gains/THJ4/i: 10
+ * /gains/THJ4/p: 100
  * /gains/THJ5/d: 0
- * /gains/THJ5/i: 1
- * /gains/THJ5/p: 10
+ * /gains/THJ5/i: 10
+ * /gains/THJ5/p: 100
  * /gains/arm_1_joint/d: 0.5
  * /gains/arm_1_joint/i: 0.0
  * /gains/arm_1_joint/i_clamp: 3
- * /gains/arm_1_joint/p: 400
+ * /gains/arm_1_joint/p: 3000
  * /gains/arm_1_joint/torque_clamp: 60
  * /gains/arm_2_joint/d: 5.0
  * /gains/arm_2_joint/i: 0.5
  * /gains/arm_2_joint/i_clamp: 3
- * /gains/arm_2_joint/p: 750
+ * /gains/arm_2_joint/p: 3000
  * /gains/arm_2_joint/torque_clamp: 50
  * /gains/arm_3_joint/d: 0.5
  * /gains/arm_3_joint/i: 0.1
  * /gains/arm_3_joint/i_clamp: 3
- * /gains/arm_3_joint/p: 400
+ * /gains/arm_3_joint/p: 3000
  * /gains/arm_3_joint/torque_clamp: 50
  * /gains/arm_4_joint/d: 1.0
  * /gains/arm_4_joint/i: 0.1
  * /gains/arm_4_joint/i_clamp: 3
- * /gains/arm_4_joint/p: 400
+ * /gains/arm_4_joint/p: 3000
  * /gains/arm_4_joint/torque_clamp: 50
  * /gains/arm_5_joint/d: 0.1
  * /gains/arm_5_joint/i: 0.01
  * /gains/arm_5_joint/i_clamp: 3
- * /gains/arm_5_joint/p: 100
+ * /gains/arm_5_joint/p: 3000
  * /gains/arm_5_joint/torque_clamp: 50
  * /gains/arm_6_joint/d: 0.1
  * /gains/arm_6_joint/i: 0.01
  * /gains/arm_6_joint/i_clamp: 3
- * /gains/arm_6_joint/p: 100
+ * /gains/arm_6_joint/p: 3000
  * /gains/arm_6_joint/torque_clamp: 50
  * /gains/arm_7_joint/d: 0.1
  * /gains/arm_7_joint/i: 0.01
  * /gains/arm_7_joint/i_clamp: 3
- * /gains/arm_7_joint/p: 50
+ * /gains/arm_7_joint/p: 3000
  * /gains/arm_7_joint/torque_clamp: 50
  * /gains/gripper_finger_joint/d: 0
  * /gains/gripper_finger_joint/i: 0
  * /gains/gripper_finger_joint/i_clamp: 3
  * /gains/gripper_finger_joint/p: 250
- * /gains/gripper_finger_joint/p_gain: 200
+ * /gains/gripper_finger_joint/p_gain: 2000
  * /gains/gripper_finger_joint/torque_clamp: 60
  * /gains/gripper_left_finger_joint/d: 0
  * /gains/gripper_left_finger_joint/i: 0
- * /gains/gripper_left_finger_joint/p: 200
- * /gains/gripper_left_finger_joint/p_gain: 200
+ * /gains/gripper_left_finger_joint/p: 2000
+ * /gains/gripper_left_finger_joint/p_gain: 2000
  * /gains/gripper_right_finger_joint/d: 0
  * /gains/gripper_right_finger_joint/i: 0
- * /gains/gripper_right_finger_joint/p: 200
- * /gains/gripper_right_finger_joint/p_gain: 200
+ * /gains/gripper_right_finger_joint/p: 2000
+ * /gains/gripper_right_finger_joint/p_gain: 2000
  * /gains/hand_index_abd_joint/d: 0.01
  * /gains/hand_index_abd_joint/i: 0.01
  * /gains/hand_index_abd_joint/i_clamp: 1
@@ -294,10 +339,10 @@ PARAMETERS
  * /gains/suspension_right_joint/i: 0.1
  * /gains/suspension_right_joint/i_clamp: 1.5
  * /gains/suspension_right_joint/p: 30000
- * /gains/torso_lift_joint/d: 25
- * /gains/torso_lift_joint/i: 0.02
+ * /gains/torso_lift_joint/d: 250
+ * /gains/torso_lift_joint/i: 0.2
  * /gains/torso_lift_joint/i_clamp: 1.5
- * /gains/torso_lift_joint/p: 90000
+ * /gains/torso_lift_joint/p: 900000
  * /gains/xtion_frame_joint/d: 0
  * /gains/xtion_frame_joint/i: 0
  * /gains/xtion_frame_joint/i_clamp: 1.5
@@ -364,41 +409,110 @@ PARAMETERS
  * /mobile_base_controller/twist_covariance_diagonal: [0.001, 0.001, 10...
  * /mobile_base_controller/type: diff_drive_contro...
  * /move_group/allow_trajectory_execution: True
- * /move_group/arm/longest_valid_segment_fraction: 0.01
- * /move_group/arm/planner_configs: ['SBLkConfigDefau...
- * /move_group/arm/projection_evaluator: joints(arm_1_join...
- * /move_group/arm_torso/longest_valid_segment_fraction: 0.01
- * /move_group/arm_torso/planner_configs: ['SBLkConfigDefau...
- * /move_group/arm_torso/projection_evaluator: joints(torso_lift...
  * /move_group/capabilities: 
  * /move_group/controller_list: [{'name': 'arm_co...
  * /move_group/controller_manager_name: controller_manager
  * /move_group/controller_manager_ns: controller_manager
+ * /move_group/default_planning_pipeline: ompl
  * /move_group/disable_capabilities: 
- * /move_group/jiggle_fraction: 0.05
- * /move_group/max_safe_path_cost: 1
+ * /move_group/monitor_dynamics: False
  * /move_group/moveit_controller_manager: moveit_simple_con...
  * /move_group/moveit_manage_controllers: True
- * /move_group/planner_configs/BKPIECEkConfigDefault/type: geometric::BKPIECE
- * /move_group/planner_configs/ESTkConfigDefault/type: geometric::EST
- * /move_group/planner_configs/KPIECEkConfigDefault/type: geometric::KPIECE
- * /move_group/planner_configs/LBKPIECEkConfigDefault/type: geometric::LBKPIECE
- * /move_group/planner_configs/PRMkConfigDefault/type: geometric::PRM
- * /move_group/planner_configs/PRMstarkConfigDefault/type: geometric::PRMstar
- * /move_group/planner_configs/RRTConnectkConfigDefault/type: geometric::RRTCon...
- * /move_group/planner_configs/RRTkConfigDefault/type: geometric::RRT
- * /move_group/planner_configs/RRTstarkConfigDefault/type: geometric::RRTstar
- * /move_group/planner_configs/SBLkConfigDefault/type: geometric::SBL
- * /move_group/planner_configs/TRRTkConfigDefault/type: geometric::TRRT
- * /move_group/planning_plugin: ompl_interface/OM...
+ * /move_group/planning_pipelines/chomp/collision_clearance: 0.05
+ * /move_group/planning_pipelines/chomp/collision_threshold: 0.07
+ * /move_group/planning_pipelines/chomp/enable_failure_recovery: False
+ * /move_group/planning_pipelines/chomp/jiggle_fraction: 0.05
+ * /move_group/planning_pipelines/chomp/joint_update_limit: 0.1
+ * /move_group/planning_pipelines/chomp/learning_rate: 0.01
+ * /move_group/planning_pipelines/chomp/max_iterations: 500
+ * /move_group/planning_pipelines/chomp/max_iterations_after_collision_free: 5
+ * /move_group/planning_pipelines/chomp/max_recovery_attempts: 5
+ * /move_group/planning_pipelines/chomp/obstacle_cost_weight: 1.0
+ * /move_group/planning_pipelines/chomp/planning_plugin: chomp_interface/C...
+ * /move_group/planning_pipelines/chomp/planning_time_limit: 60.0
+ * /move_group/planning_pipelines/chomp/pseudo_inverse_ridge_factor: 1e-4
+ * /move_group/planning_pipelines/chomp/request_adapters: default_planner_r...
+ * /move_group/planning_pipelines/chomp/ridge_factor: 0.0
+ * /move_group/planning_pipelines/chomp/smoothness_cost_acceleration: 1.0
+ * /move_group/planning_pipelines/chomp/smoothness_cost_jerk: 0.0
+ * /move_group/planning_pipelines/chomp/smoothness_cost_velocity: 0.0
+ * /move_group/planning_pipelines/chomp/smoothness_cost_weight: 0.1
+ * /move_group/planning_pipelines/chomp/start_state_max_bounds_error: 0.1
+ * /move_group/planning_pipelines/chomp/use_pseudo_inverse: False
+ * /move_group/planning_pipelines/chomp/use_stochastic_descent: True
+ * /move_group/planning_pipelines/ompl/arm/longest_valid_segment_fraction: 0.01
+ * /move_group/planning_pipelines/ompl/arm/planner_configs: ['SBLkConfigDefau...
+ * /move_group/planning_pipelines/ompl/arm/projection_evaluator: joints(arm_1_join...
+ * /move_group/planning_pipelines/ompl/arm_torso/longest_valid_segment_fraction: 0.01
+ * /move_group/planning_pipelines/ompl/arm_torso/planner_configs: ['SBLkConfigDefau...
+ * /move_group/planning_pipelines/ompl/arm_torso/projection_evaluator: joints(torso_lift...
+ * /move_group/planning_pipelines/ompl/jiggle_fraction: 0.05
+ * /move_group/planning_pipelines/ompl/planner_configs/BKPIECEkConfigDefault/type: geometric::BKPIECE
+ * /move_group/planning_pipelines/ompl/planner_configs/ESTkConfigDefault/type: geometric::EST
+ * /move_group/planning_pipelines/ompl/planner_configs/KPIECEkConfigDefault/type: geometric::KPIECE
+ * /move_group/planning_pipelines/ompl/planner_configs/LBKPIECEkConfigDefault/type: geometric::LBKPIECE
+ * /move_group/planning_pipelines/ompl/planner_configs/PRMkConfigDefault/type: geometric::PRM
+ * /move_group/planning_pipelines/ompl/planner_configs/PRMstarkConfigDefault/type: geometric::PRMstar
+ * /move_group/planning_pipelines/ompl/planner_configs/RRTConnectkConfigDefault/type: geometric::RRTCon...
+ * /move_group/planning_pipelines/ompl/planner_configs/RRTkConfigDefault/type: geometric::RRT
+ * /move_group/planning_pipelines/ompl/planner_configs/RRTstarkConfigDefault/type: geometric::RRTstar
+ * /move_group/planning_pipelines/ompl/planner_configs/SBLkConfigDefault/type: geometric::SBL
+ * /move_group/planning_pipelines/ompl/planner_configs/TRRTkConfigDefault/type: geometric::TRRT
+ * /move_group/planning_pipelines/ompl/planning_plugin: ompl_interface/OM...
+ * /move_group/planning_pipelines/ompl/request_adapters: default_planner_r...
+ * /move_group/planning_pipelines/ompl/start_state_max_bounds_error: 0.1
+ * /move_group/planning_pipelines/ompl_chomp/arm/longest_valid_segment_fraction: 0.01
+ * /move_group/planning_pipelines/ompl_chomp/arm/planner_configs: ['SBLkConfigDefau...
+ * /move_group/planning_pipelines/ompl_chomp/arm/projection_evaluator: joints(arm_1_join...
+ * /move_group/planning_pipelines/ompl_chomp/arm_torso/longest_valid_segment_fraction: 0.01
+ * /move_group/planning_pipelines/ompl_chomp/arm_torso/planner_configs: ['SBLkConfigDefau...
+ * /move_group/planning_pipelines/ompl_chomp/arm_torso/projection_evaluator: joints(torso_lift...
+ * /move_group/planning_pipelines/ompl_chomp/collision_clearance: 0.05
+ * /move_group/planning_pipelines/ompl_chomp/collision_threshold: 0.07
+ * /move_group/planning_pipelines/ompl_chomp/enable_failure_recovery: False
+ * /move_group/planning_pipelines/ompl_chomp/jiggle_fraction: 0.05
+ * /move_group/planning_pipelines/ompl_chomp/joint_update_limit: 0.1
+ * /move_group/planning_pipelines/ompl_chomp/learning_rate: 0.01
+ * /move_group/planning_pipelines/ompl_chomp/max_iterations: 500
+ * /move_group/planning_pipelines/ompl_chomp/max_iterations_after_collision_free: 5
+ * /move_group/planning_pipelines/ompl_chomp/max_recovery_attempts: 5
+ * /move_group/planning_pipelines/ompl_chomp/obstacle_cost_weight: 1.0
+ * /move_group/planning_pipelines/ompl_chomp/planner_configs/BKPIECEkConfigDefault/type: geometric::BKPIECE
+ * /move_group/planning_pipelines/ompl_chomp/planner_configs/ESTkConfigDefault/type: geometric::EST
+ * /move_group/planning_pipelines/ompl_chomp/planner_configs/KPIECEkConfigDefault/type: geometric::KPIECE
+ * /move_group/planning_pipelines/ompl_chomp/planner_configs/LBKPIECEkConfigDefault/type: geometric::LBKPIECE
+ * /move_group/planning_pipelines/ompl_chomp/planner_configs/PRMkConfigDefault/type: geometric::PRM
+ * /move_group/planning_pipelines/ompl_chomp/planner_configs/PRMstarkConfigDefault/type: geometric::PRMstar
+ * /move_group/planning_pipelines/ompl_chomp/planner_configs/RRTConnectkConfigDefault/type: geometric::RRTCon...
+ * /move_group/planning_pipelines/ompl_chomp/planner_configs/RRTkConfigDefault/type: geometric::RRT
+ * /move_group/planning_pipelines/ompl_chomp/planner_configs/RRTstarkConfigDefault/type: geometric::RRTstar
+ * /move_group/planning_pipelines/ompl_chomp/planner_configs/SBLkConfigDefault/type: geometric::SBL
+ * /move_group/planning_pipelines/ompl_chomp/planner_configs/TRRTkConfigDefault/type: geometric::TRRT
+ * /move_group/planning_pipelines/ompl_chomp/planning_plugin: ompl_interface/OM...
+ * /move_group/planning_pipelines/ompl_chomp/planning_time_limit: 60.0
+ * /move_group/planning_pipelines/ompl_chomp/pseudo_inverse_ridge_factor: 1e-4
+ * /move_group/planning_pipelines/ompl_chomp/request_adapters: default_planner_r...
+ * /move_group/planning_pipelines/ompl_chomp/ridge_factor: 0.0
+ * /move_group/planning_pipelines/ompl_chomp/smoothness_cost_acceleration: 1.0
+ * /move_group/planning_pipelines/ompl_chomp/smoothness_cost_jerk: 0.0
+ * /move_group/planning_pipelines/ompl_chomp/smoothness_cost_velocity: 0.0
+ * /move_group/planning_pipelines/ompl_chomp/smoothness_cost_weight: 0.1
+ * /move_group/planning_pipelines/ompl_chomp/start_state_max_bounds_error: 0.1
+ * /move_group/planning_pipelines/ompl_chomp/trajectory_initialization_method: fillTrajectory
+ * /move_group/planning_pipelines/ompl_chomp/use_pseudo_inverse: False
+ * /move_group/planning_pipelines/ompl_chomp/use_stochastic_descent: True
+ * /move_group/planning_pipelines/pilz_industrial_motion_planner/capabilities: pilz_industrial_m...
+ * /move_group/planning_pipelines/pilz_industrial_motion_planner/default_planner_config: PTP
+ * /move_group/planning_pipelines/pilz_industrial_motion_planner/planning_plugin: pilz_industrial_m...
+ * /move_group/planning_pipelines/pilz_industrial_motion_planner/request_adapters: 
  * /move_group/planning_scene_monitor/publish_geometry_updates: True
  * /move_group/planning_scene_monitor/publish_planning_scene: True
  * /move_group/planning_scene_monitor/publish_state_updates: True
  * /move_group/planning_scene_monitor/publish_transforms_updates: True
- * /move_group/request_adapters: default_planner_r...
- * /move_group/start_state_max_bounds_error: 0.1
+ * /move_group/sense_for_plan/max_safe_path_cost: 1
  * /move_group/trajectory_execution/allowed_execution_duration_scaling: 1.2
  * /move_group/trajectory_execution/allowed_goal_duration_margin: 0.5
+ * /move_group/trajectory_execution/allowed_start_tolerance: 0.01
  * /move_group/use_controller_manager: True
  * /pal_robot_info/arm: True
  * /pal_robot_info/arm_type: tiago_arm
@@ -514,14 +628,23 @@ PARAMETERS
  * /play_motion/motions/wave/meta/usage: demo
  * /play_motion/motions/wave/points: [{'positions': [0...
  * /robot_description: <?xml version="1....
+ * /robot_description_kinematics/arm/goal_joint_tolerance: 0.0001
+ * /robot_description_kinematics/arm/goal_orientation_tolerance: 0.001
+ * /robot_description_kinematics/arm/goal_position_tolerance: 0.0001
  * /robot_description_kinematics/arm/kinematics_solver: kdl_kinematics_pl...
- * /robot_description_kinematics/arm/kinematics_solver_attempts: 3
  * /robot_description_kinematics/arm/kinematics_solver_search_resolution: 0.005
  * /robot_description_kinematics/arm/kinematics_solver_timeout: 0.005
+ * /robot_description_kinematics/arm_torso/goal_joint_tolerance: 0.0001
+ * /robot_description_kinematics/arm_torso/goal_orientation_tolerance: 0.001
+ * /robot_description_kinematics/arm_torso/goal_position_tolerance: 0.0001
  * /robot_description_kinematics/arm_torso/kinematics_solver: kdl_kinematics_pl...
- * /robot_description_kinematics/arm_torso/kinematics_solver_attempts: 3
  * /robot_description_kinematics/arm_torso/kinematics_solver_search_resolution: 0.005
  * /robot_description_kinematics/arm_torso/kinematics_solver_timeout: 0.005
+ * /robot_description_planning/cartesian_limits/max_rot_vel: 1.57
+ * /robot_description_planning/cartesian_limits/max_trans_acc: 2.25
+ * /robot_description_planning/cartesian_limits/max_trans_dec: -5
+ * /robot_description_planning/cartesian_limits/max_trans_vel: 1
+ * /robot_description_planning/default_acceleration_scaling_factor: 1.0
  * /robot_description_planning/default_robot_link_padding/arm_5_link: 0.02
  * /robot_description_planning/default_velocity_scaling_factor: 1.0
  * /robot_description_planning/joint_limits/arm_1_joint/has_acceleration_limits: False
@@ -547,23 +670,11 @@ PARAMETERS
  * /robot_description_planning/joint_limits/arm_6_joint/has_acceleration_limits: False
  * /robot_description_planning/joint_limits/arm_6_joint/has_velocity_limits: True
  * /robot_description_planning/joint_limits/arm_6_joint/max_acceleration: 0
- * /robot_description_planning/joint_limits/arm_6_joint/max_velocity: 1.76
+ * /robot_description_planning/joint_limits/arm_6_joint/max_velocity: 0.74
  * /robot_description_planning/joint_limits/arm_7_joint/has_acceleration_limits: False
  * /robot_description_planning/joint_limits/arm_7_joint/has_velocity_limits: True
  * /robot_description_planning/joint_limits/arm_7_joint/max_acceleration: 0
  * /robot_description_planning/joint_limits/arm_7_joint/max_velocity: 1.76
- * /robot_description_planning/joint_limits/gripper_finger_joint/has_acceleration_limits: False
- * /robot_description_planning/joint_limits/gripper_finger_joint/has_velocity_limits: True
- * /robot_description_planning/joint_limits/gripper_finger_joint/max_acceleration: 0
- * /robot_description_planning/joint_limits/gripper_finger_joint/max_velocity: 0.01
- * /robot_description_planning/joint_limits/gripper_left_finger_joint/has_acceleration_limits: False
- * /robot_description_planning/joint_limits/gripper_left_finger_joint/has_velocity_limits: True
- * /robot_description_planning/joint_limits/gripper_left_finger_joint/max_acceleration: 0
- * /robot_description_planning/joint_limits/gripper_left_finger_joint/max_velocity: 0.01
- * /robot_description_planning/joint_limits/gripper_right_finger_joint/has_acceleration_limits: False
- * /robot_description_planning/joint_limits/gripper_right_finger_joint/has_velocity_limits: True
- * /robot_description_planning/joint_limits/gripper_right_finger_joint/max_acceleration: 0
- * /robot_description_planning/joint_limits/gripper_right_finger_joint/max_velocity: 0.01
  * /robot_description_planning/joint_limits/torso_lift_joint/has_acceleration_limits: False
  * /robot_description_planning/joint_limits/torso_lift_joint/has_velocity_limits: True
  * /robot_description_planning/joint_limits/torso_lift_joint/max_acceleration: 0
@@ -633,6 +744,7 @@ NODES
     home_gripper (pal_robotiq_controller_configuration/home_gripper.py)
     image_raw_to_rect_color_relay (topic_tools/relay)
     is_already_there (play_motion/is_already_there.py)
+    joint_trajectory_controllers_velocity_controllers_spawner (controller_manager/spawner)
     joystick_relay (twist_mux/joystick_relay.py)
     load_motions (pal_motion_loader/load_available_motions.py)
     move_group (moveit_ros_move_group/move_group)
@@ -647,204 +759,509 @@ NODES
   /xtion/rgb/
     image_proc (image_proc/image_proc)
 
-auto-starting new master
-[1mprocess[master]: started with pid [8603][0m
 [1mROS_MASTER_URI=http://localhost:11352[0m
-]2;/home/adriano/Desktop/tiago_ws/src/tiago_simulation/tiago_gazebo/launch/tiago_gazebo.launch http://localhost:11352
-[1msetting /run_id to 384e1ecc-e504-11ee-a89b-5f2243cc42f0[0m
-[33m[ WARN] [1710751680.696404855]: Transformer::setExtrapolationLimit is deprecated and does not do anything[0m
-[33m[ WARN] [1710751680.987504843]: Falling back to using the move_group node's namespace (deprecated Melodic behavior).[0m
-[33m[ WARN] [1710751681.048182240]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710751681.048567714]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710751681.048675660]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710751681.048782983]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710751681.048887172]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710751681.049003678]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710751681.049075306]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710751681.064828958]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710751681.065098226]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710751681.065193859]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710751681.065295812]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710751681.065408330]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710751681.065501611]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710751681.065580007]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710751681.937318460]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710751681.942668286]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710751682.169919116]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710751682.198407022]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1710751682.252912004]: Kinematics solver doesn't support #attempts anymore, but only a timeout.
-Please remove the parameter '/robot_description_kinematics/arm/kinematics_solver_attempts' from your configuration.[0m
-[33m[ WARN] [1710751682.312581003]: Kinematics solver doesn't support #attempts anymore, but only a timeout.
-Please remove the parameter '/robot_description_kinematics/arm/kinematics_solver_attempts' from your configuration.[0m
-[33m[ WARN] [1710751683.150996200]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead[0m
-libGL error: failed to create drawable
-X Error of failed request:  GLXBadContext
-  Major opcode of failed request:  152 (GLX)
-  Minor opcode of failed request:  5 (X_GLXMakeCurrent)
-  Serial number of failed request:  40
-  Current serial number in output stream:  40
-[WARN] [1710751713.322825, 0.000000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
-[INFO] [1710751683.215224, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
-[WARN] [1710751713.358651, 0.000000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
-[INFO] [1710751683.256231, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
-[33m[ WARN] [1710751741.932017197]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710751741.932356796]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710751801.931523510]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710751801.931770469]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[WARN] [1710751802.307687, 0.000000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
-[INFO] [1710751682.144398, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
-[WARN] [1710751803.372247, 0.000000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
-[INFO] [1710751683.210353, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
-[33m[ WARN] [1710751861.931440739]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710751861.931580387]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710751921.932454870]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710751921.932757901]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710751981.931953243]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710751981.932247234]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710752041.932172973]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710752041.932424725]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710752101.935925229]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710752101.936190170]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710752161.932468380]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710752161.932719952]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710752221.933086646]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710752221.933395460]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710752281.931365627]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710752281.931622464]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710752341.932131814]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710752341.932444942]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710752401.931849408]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710752401.932123746]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710752461.932108907]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710752461.932374535]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710752521.932285295]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710752521.932457159]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710752581.931349983]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710752581.931522535]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710752641.932190283]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710752641.932451327]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710752701.932087129]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710752701.932358357]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710752761.931261741]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710752761.931500592]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710752821.932012886]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710752821.932275181]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710752881.932667234]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710752881.932923898]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710752941.932289114]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710752941.932623694]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710753001.932505984]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710753001.932707132]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710753061.931003845]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710753061.931256224]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710753121.930353309]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710753121.930430691]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710753181.931491773]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710753181.931672606]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710753241.930977839]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710753241.931107968]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710753301.930542449]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710753301.930655714]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710753361.930771517]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710753361.931015793]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710753421.931019516]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710753421.931218986]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710753481.931905786]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710753481.932096652]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710753541.931974368]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710753541.932178210]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710753601.932173221]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710753601.932381978]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710753661.932309945]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710753661.932505604]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710753721.932828599]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710753721.933018711]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710753781.931224319]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710753781.931445310]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710753841.931078166]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710753841.931263309]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710753901.931280293]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710753901.931562906]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710753961.931559573]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710753961.931698940]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710754021.930887148]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710754021.931083026]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710754081.932743603]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710754081.933141091]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710754141.931869553]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710754141.932274904]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710754201.931257986]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710754201.931469615]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710754261.932194166]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710754261.932405920]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710754321.931136411]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710754321.931310818]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1710754381.931667280]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1710754381.931943407]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[0m[ INFO] [1710751680.691713204]: Topic handler 'navigation' subscribed to topic 'nav_vel': timeout = 0.500000s, priority = 10[0m
-[0m[ INFO] [1710751680.696467633]: Topic handler 'joystick' subscribed to topic 'joy_vel': timeout = 0.500000s, priority = 100[0m
-[0m[ INFO] [1710751680.700369092]: Topic handler 'keyboard' subscribed to topic 'key_vel': timeout = 0.500000s, priority = 90[0m
-[0m[ INFO] [1710751680.709538734]: Topic handler 'tablet' subscribed to topic 'tab_vel': timeout = 0.500000s, priority = 100[0m
-[0m[ INFO] [1710751680.722147152]: Topic handler 'marker' subscribed to topic 'marker_vel': timeout = 0.500000s, priority = 99[0m
-[0m[ INFO] [1710751680.728024616]: Topic handler 'phone' subscribed to topic 'phone_vel': timeout = 0.500000s, priority = 98[0m
-[0m[ INFO] [1710751680.731020091]: Topic handler 'rviz_joy' subscribed to topic 'rviz_joy_vel': timeout = 0.500000s, priority = 95[0m
-[0m[ INFO] [1710751680.732394872]: Topic handler 'servoing_cmd_vel' subscribed to topic 'servoing_cmd_vel': timeout = 0.500000s, priority = 20[0m
-[0m[ INFO] [1710751680.734403954]: Topic handler 'pause' subscribed to topic 'pause_navigation': timeout = None, priority = 100[0m
-[0m[ INFO] [1710751680.737551598]: Topic handler 'loop_closure' subscribed to topic 'stop_closing_loop': timeout = None, priority = 200[0m
-[0m[ INFO] [1710751680.740663016]: Topic handler 'joystick' subscribed to topic 'joy_priority': timeout = None, priority = 100[0m
-[0m[ INFO] [1710751680.656675227]: tf_lookup starting[0m
+]2;/home/adriano/Desktop/tiago_ws/src/tiago_packages_v3/tiago_simulation/tiago_gazebo/launch/tiago_gazebo.launch http://localhost:11352
+[33m[ WARN] [1711384928.912296725]: Transformer::setExtrapolationLimit is deprecated and does not do anything[0m
+[33m[ WARN] [1711384929.290463281]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711384929.290581845]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711384929.290614764]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711384929.290667496]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711384929.290709665]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711384929.290774803]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711384929.290813945]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711384929.353164349]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711384929.353458754]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711384929.353605243]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711384929.353767644]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711384929.353910241]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711384929.354028352]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711384929.354127828]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711384930.460606487]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711384930.652305786]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711384931.046055817]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead[0m
+INFO: cannot create a symlink to latest log directory: [Errno 2] No such file or directory: '/home/adriano/.ros/log/latest'
+[31m[ERROR] [1711384932.263731964]: Exception while loading planner 'chomp_interface/CHOMPPlanner': According to the loaded plugin descriptions the class chomp_interface/CHOMPPlanner with base class type planning_interface::PlannerManager does not exist. Declared types are  ompl_interface/OMPLPlanner
+Available plugins: ompl_interface/OMPLPlanner[0m
+[31m[ERROR] [1711384932.271260708]: Failed to initialize planning pipeline 'chomp'.[0m
+[0m[ INFO] [1711384929.259599706]: Loading robot model 'tiago'...[0m
+[0m[ INFO] [1711384929.267472644]: No root/virtual joint specified in SRDF. Assuming fixed joint[0m
+[0m[ INFO] [1711384931.020306585]: Publishing maintained planning scene on 'monitored_planning_scene'[0m
+[0m[ INFO] [1711384931.026430877]: Listening to 'joint_states' for joint states[0m
+[0m[ INFO] [1711384931.032004906]: Listening to '/attached_collision_object' for attached collision objects[0m
+[0m[ INFO] [1711384931.033650876]: Starting planning scene monitor[0m
+[0m[ INFO] [1711384931.035800466]: Listening to '/planning_scene'[0m
+[0m[ INFO] [1711384931.036283533]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.[0m
+[0m[ INFO] [1711384931.038489515]: Listening to '/collision_object'[0m
+[0m[ INFO] [1711384931.044688985]: Listening to '/planning_scene_world' for planning scene world geometry[0m
+[0m[ INFO] [1711384931.047040508]: No 3D sensor plugin(s) defined for octomap updates[0m
+[0m[ INFO] [1711384932.261161543]: Loading planning pipeline 'chomp'[0m
+[0m[ INFO] [1711384932.267457364]: Param 'default_workspace_bounds' was not set. Using default value: 10[0m
+[0m[ INFO] [1711384932.268227885]: Param 'start_state_max_bounds_error' was set to 0.1[0m
+[0m[ INFO] [1711384932.268660851]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
+[0m[ INFO] [1711384932.269045687]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
+[0m[ INFO] [1711384932.269368093]: Param 'jiggle_fraction' was set to 0.05[0m
+[0m[ INFO] [1711384932.269683213]: Param 'max_sampling_attempts' was not set. Using default value: 100[0m
+[0m[ INFO] [1711384932.269791952]: Using planning request adapter 'Limiting Max Cartesian Speed'[0m
+[0m[ INFO] [1711384932.269853392]: Using planning request adapter 'Add Time Parameterization'[0m
+[0m[ INFO] [1711384932.269928470]: Using planning request adapter 'Resolve constraint frames to robot links'[0m
+[0m[ INFO] [1711384932.269976947]: Using planning request adapter 'Fix Workspace Bounds'[0m
+[0m[ INFO] [1711384932.270024052]: Using planning request adapter 'Fix Start State Bounds'[0m
+[0m[ INFO] [1711384932.270070152]: Using planning request adapter 'Fix Start State In Collision'[0m
+[0m[ INFO] [1711384932.270114469]: Using planning request adapter 'Fix Start State Path Constraints'[0m
+[0m[ INFO] [1711384932.272399423]: Loading planning pipeline 'ompl'[0m
+[0m[ INFO] [1711384932.318088430]: Using planning interface 'OMPL'[0m
+[0m[ INFO] [1711384932.319983462]: Param 'default_workspace_bounds' was not set. Using default value: 10[0m
+[0m[ INFO] [1711384932.320764430]: Param 'start_state_max_bounds_error' was set to 0.1[0m
+[0m[ INFO] [1711384932.321195597]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
+[0m[ INFO] [1711384932.321554664]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
+[0m[ INFO] [1711384932.321900145]: Param 'jiggle_fraction' was set to 0.05[0m
+[0m[ INFO] [1711384932.322215826]: Param 'max_sampling_attempts' was not set. Using default value: 100[0m
+[0m[ INFO] [1711384932.322329684]: Using planning request adapter 'Limiting Max Cartesian Speed'[0m
+[0m[ INFO] [1711384932.322397744]: Using planning request adapter 'Add Time Parameterization'[0m
+[0m[ INFO] [1711384932.322453708]: Using planning request adapter 'Resolve constraint frames to robot links'[0m
+[0m[ INFO] [1711384932.322510482]: Using planning request adapter 'Fix Workspace Bounds'[0m
+[0m[ INFO] [1711384932.322575667]: Using planning request adapter 'Fix Start State Bounds'[0m
+[0m[ INFO] [1711384932.322621391]: Using planning request adapter 'Fix Start State In Collision'[0m
+[0m[ INFO] [1711384932.322666324]: Using planning request adapter 'Fix Start State Path Constraints'[0m
+[0m[ INFO] [1711384932.323742810]: Loading planning pipeline 'ompl_chomp'[0m
+[0m[ INFO] [1711384932.342739047]: Using planning interface 'OMPL'[0m
+[0m[ INFO] [1711384932.344589944]: Param 'default_workspace_bounds[31m[ERROR] [1711384932.347085790]: Exception while loading planning adapter plugin 'chomp/OptimizerAdapter': According to the loaded plugin descriptions the class chomp/OptimizerAdapter with base class type planning_request_adapter::PlanningRequestAdapter does not exist. Declared types are  default_planner_request_adapters/AddIterativeSplineParameterization default_planner_request_adapters/AddRuckigTrajectorySmoothing default_planner_request_adapters/AddTimeOptimalParameterization default_planner_request_adapters/AddTimeParameterization default_planner_request_adapters/Empty default_planner_request_adapters/FixStartStateBounds default_planner_request_adapters/FixStartStateCollision default_planner_request_adapters/FixStartStatePathConstraints default_planner_request_adapters/FixWorkspaceBounds default_planner_request_adapters/LimitMaxCartesianLinkSpeed default_planner_request_adapters/ResolveConstraintFrames[0m
+[31m[ERROR] [1711384932.350639015]: Exception while loading planner 'pilz_industrial_motion_planner::CommandPlanner': According to the loaded plugin descriptions the class pilz_industrial_motion_planner::CommandPlanner with base class type planning_interface::PlannerManager does not exist. Declared types are  ompl_interface/OMPLPlanner
+Available plugins: ompl_interface/OMPLPlanner[0m
+[31m[ERROR] [1711384932.351153162]: Failed to initialize planning pipeline 'pilz_industrial_motion_planner'.[0m
+[0m[ INFO] [1711384931.213414459]: Finished loading Gazebo ROS API Plugin.[0m
+[0m[ INFO] [1711384931.233343998]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...[0m
+Error: Non-unique names detected in <link name='link'>
+  <collision name='surface'>
+    <pose>0 0 0.4 0 -0 0</pose>
+    <geometry>
+      <box>
+        <size>1 0.8 0.03</size>
+      </box>
+    </geometry>
+  </collision>
+  <visual name='visual1'>
+    <pose>0 0 0.4 0 -0 0</pose>
+    <geometry>
+      <box>
+        <size>1 0.8 0.03</size>
+      </box>
+    </geometry>
+    <material>
+      <script>
+        <uri>file://media/materials/scripts/gazebo.material</uri>
+        <name>Gazebo/Wood</name>
+      </script>
+    </material>
+  </visual>
+  <collision name='front_left_leg'>
+    <pose>0.48 0.38 0.2 0 -0 0</pose>
+    <geometry>
+      <cylinder>
+        <radius>0.02</radius>
+        <length>0.4</length>
+      </cylinder>
+    </geometry>
+  </collision>
+  <visual name='front_left_leg'>
+    <pose>0.48 0.38 0.2 0 -0 0</pose>
+    <geometry>
+      <cylinder>
+        <radius>0.02</radius>
+        <length>0.4</length>
+      </cylinder>
+    </geometry>
+    <material>
+      <script>
+        <uri>file://media/materials/scripts/gazebo.material</uri>
+        <name>Gazebo/Grey</name>
+      </script>
+    </material>
+  </visual>
+  <collision name='front_right_leg'>
+    <pose>0.48 -0.38 0.2 0 -0 0</pose>
+    <geometry>
+      <cylinder>
+        <radius>0.02</radius>
+        <length>0.4</length>
+      </cylinder>
+    </geometry>
+  </collision>
+  <visual name='front_right_leg'>
+    <pose>0.48 -0.38 0.2 0 -0 0</pose>
+    <geometry>
+      <cylinder>
+        <radius>0.02</radius>
+        <length>0.4</length>
+      </cylinder>
+    </geometry>
+    <material>
+      <script>
+        <uri>file://media/materials/scripts/gazebo.material</uri>
+        <name>Gazebo/Grey</name>
+      </script>
+    </material>
+  </visual>
+  <collision name='back_right_leg'>
+    <pose>-0.48 -0.38 0.2 0 -0 0</pose>
+    <geometry>
+      <cylinder>
+        <radius>0.02</radius>
+        <length>0.4</length>
+      </cylinder>
+    </geometry>
+  </collision>
+  <visual name='back_right_leg'>
+    <pose>-0.48 -0.38 0.2 0 -0 0</pose>
+    <geometry>
+      <cylinder>
+        <radius>0.02</radius>
+        <length>0.4</length>
+      </cylinder>
+    </geometry>
+    <material>
+      <script>
+        <uri>file://media/materials/scripts/gazebo.material</uri>
+        <name>Gazebo/Grey</name>
+      </script>
+    </material>
+  </visual>
+  <collision name='back_left_leg'>
+    <pose>-0.48 0.38 0.2 0 -0 0</pose>
+    <geometry>
+      <cylinder>
+        <radius>0.02</radius>
+        <length>0.4</length>
+      </cylinder>
+    </geometry>
+  </collision>
+  <visual name='back_left_leg'>
+    <pose>-0.48 0.38 0.2 0 -0 0</pose>
+    <geometry>
+      <cylinder>
+        <radius>0.02</radius>
+        <length>0.4</length>
+      </cylinder>
+    </geometry>
+    <material>
+      <script>
+        <uri>file://media/materials/scripts/gazebo.material</uri>
+        <name>Gazebo/Grey</name>
+      </script>
+    </material>
+  </visual>
+  <velocity_decay>
+    <linear>0</linear>
+    <angular>0</angular>
+  </velocity_decay>
+  <self_collide>0</self_collide>
+  <kinematic>0</kinematic>
+  <gravity>1</gravity>
+  <sensor name='wall_contact_sensor' type='contact'>
+    <update_rate>100</update_rate>
+    <always_on>1</always_on>
+    <contact>
+      <collision>surface</collision>
+      <topic>/base_bumper_contact</topic>
+    </contact>
+    <plugin name='gazebo_ros_bumper_controller' filename='libgazebo_ros_bumper.so'>
+      <alwaysOn>1</alwaysOn>
+      <updateRate>100.0</updateRate>
+      <bumperTopicName>/table_contact</bumperTopicName>
+      <frameName>world</frameName>
+    </plugin>
+  </sensor>
+</link>
+
+../src/intel/isl/isl.c:2105: FINISHME: ../src/intel/isl/isl.c:isl_surf_supports_ccs: CCS for 3D textures is disabled, but a workaround is available.
+[0m[ INFO] [1711384933.328902179]: waitForService: Service [/gazebo/set_physics_properties] is now available.[0m
+[0m[ INFO] [1711384933.343909124]: Physics dynamic reconfigure ready.[0m
+[0m[ INFO] [1711384934.245281203, 0.119000000]: Laser Plugin: Using the 'robotNamespace' param: '/'[0m
+[0m[ INFO] [1711384934.245335139, 0.119000000]: Starting GazeboRosLaser Plugin (ns = /)[0m
+[0m[ INFO] [1711384934.246586547, 0.119000000]: GPU Laser Plugin (ns = /) <tf_prefix_>, set to ""[0m
+[0m[ INFO] [1711384934.247545366, 0.119000000]: LoadThread function completed[0m
+[0m[ INFO] [1711384934.325422724, 0.119000000]: Camera Plugin: Using the 'robotNamespace' param: '/'[0m
+[0m[ INFO] [1711384934.332800902, 0.119000000]: Camera Plugin (ns = /)  <tf_prefix_>, set to ""[0m
+[0m[ INFO] [1711384934.479282050, 0.119000000]: Loading gazebo_ros_control plugin[0m
+[0m[ INFO] [1711384934.479644451, 0.119000000]: Starting gazebo_ros_control plugin in namespace: [0m
+[0m[ INFO] [1711384934.480510549, 0.119000000]: gazebo_ros_control plugin is waiting for model URDF in parameter [/robot_description] on the ROS param server.[0m
+[0m[ INFO] [1711384934.636841026, 0.119000000]: Loading PAL HARWARE GAZEBO[0m
+[0m[ INFO] [1711384934.934164348, 0.119000000]: Joint mode switching is enabled[0m
+      wrist_ft_link - arm_7_link
+      arm_tool_link - arm_7_link
+[31m[ERROR] [1711384934.992467507, 0.119000000]: Could not stop controller with name arm_velocity_trajectory_controller because no controller with this name exists[0m
+[33m[ WARN] [1711384935.060186513, 0.120000000]: Called publishAsync but publisher thread has not been started, THIS IS NOT RT safe. You should start it yourself.[0m
+[31m[ERROR] [1711384935.094976659, 0.130000000]: Could not stop controller with name force_torque_sensor_controller because no controller with this name exists[0m
+[31m[ERROR] [1711384935.108486700, 0.133000000]: Could not stop controller with name gripper_controller because no controller with this name exists[0m
+[31m[ERROR] [1711384935.108620260, 0.133000000]: Could not stop controller with name imu_sensor_controller because no controller with this name exists[0m
+[WARN] [1711384935.133043, 0.133000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
+[INFO] [1711384931.200806, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+shutdown request: [/bringup_controllers_spawner_imu] Reason: new node registered with same name
+[INFO] [1711384931.480959, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+[INFO] [1711384935.105806, 0.133000]: Controller Spawner: Waiting for service controller_manager/switch_controller
+[INFO] [1711384935.115228, 0.133000]: Controller Spawner: Waiting for service controller_manager/unload_controller
+shutdown request: [/gripper_controllers_spawner] Reason: new node registered with same name
+[INFO] [1711384935.138057, 0.142000]: Loading controller: gripper_controller
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 212, in <module>
+    if __name__ == '__main__': main()
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 190, in main
+    resp = load_controller(name)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py", line 442, in __call__
+    return self.call(*args, **kwds)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py", line 525, in call
+    raise ServiceException("service [%s] returned no response"%self.resolved_name)
+rospy.service.ServiceException: service [/controller_manager/load_controller] returned no response
+[WARN] [1711384935.204847, 0.000000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
+[INFO] [1711384931.581647, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+shutdown request: [/joint_trajectory_controllers_velocity_controllers_spawner] Reason: new node registered with same name
+[31m[ERROR] [1711384935.299644129, 0.169000000]: Could not stop controller with name head_controller because no controller with this name exists[0m
+[INFO] [1711384931.116212, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+[INFO] [1711384935.050113, 0.120000]: Controller Spawner: Waiting for service controller_manager/switch_controller
+[INFO] [1711384935.068861, 0.120000]: Controller Spawner: Waiting for service controller_manager/unload_controller
+[INFO] [1711384935.078163, 0.122000]: Loading controller: joint_state_controller
+[INFO] [1711384935.108954, 0.133000]: Loading controller: torso_controller
+shutdown request: [/default_controllers_spawner] Reason: new node registered with same name
+[INFO] [1711384935.255054, 0.160000]: Shutting down spawner. Stopping and unloading controllers...
+[INFO] [1711384935.262222, 0.160000]: Loading controller: head_controller
+[INFO] [1711384935.339424, 0.190000]: Loading controller: arm_controller
+[INFO] [1711384935.406798, 0.211000]: Loading controller: mobile_base_controller
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py", line 465, in _get_service_uri
+    self.uri = master.lookupService(self.resolved_name)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/masterapi.py", line 327, in lookupService
+    return self._succeed(self.handle.lookupService(self.caller_id, service))
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/xmlrpc/client.py", line 1122, in __call__
+    return self.__send(self.__name, args)
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/xmlrpc/client.py", line 1464, in __request
+    response = self.__transport.request(
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/xmlrpc/client.py", line 1166, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/xmlrpc/client.py", line 1178, in single_request
+    http_conn = self.send_request(host, handler, request_body, verbose)
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/xmlrpc/client.py", line 1291, in send_request
+    self.send_content(connection, request_body)
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/xmlrpc/client.py", line 1321, in send_content
+    connection.endheaders(request_body)
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/http/client.py", line 941, in connect
+    self.sock = self._create_connection(
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/socket.py", line 845, in create_connection
+    raise err
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/socket.py", line 833, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 212, in <module>
+    if __name__ == '__main__': main()
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 190, in main
+    resp = load_controller(name)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py", line 442, in __call__
+    return self.call(*args, **kwds)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py", line 502, in call
+    service_uri = self._get_service_uri(request)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py", line 467, in _get_service_uri
+    raise ServiceException("unable to contact master")
+rospy.service.ServiceException: unable to contact master
+[WARN] [1711384936.119777, 0.133000]: Controller Spawner couldn't reach controller_manager to take down controllers. Waited for 30 second(s).
+[INFO] [1711384931.467339, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+[INFO] [1711384935.094509, 0.130000]: Controller Spawner: Waiting for service controller_manager/switch_controller
+[INFO] [1711384935.101037, 0.132000]: Controller Spawner: Waiting for service controller_manager/unload_controller
+shutdown request: [/bringup_controllers_spawner_ft] Reason: new node registered with same name
+[INFO] [1711384935.116482, 0.133000]: Shutting down spawner. Stopping and unloading controllers...
+[INFO] [1711384936.123780, 0.133000]: Loading controller: force_torque_sensor_controller
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py", line 465, in _get_service_uri
+    self.uri = master.lookupService(self.resolved_name)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/masterapi.py", line 327, in lookupService
+    return self._succeed(self.handle.lookupService(self.caller_id, service))
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/xmlrpc/client.py", line 1122, in __call__
+    return self.__send(self.__name, args)
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/xmlrpc/client.py", line 1464, in __request
+    response = self.__transport.request(
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/xmlrpc/client.py", line 1166, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/xmlrpc/client.py", line 1178, in single_request
+    http_conn = self.send_request(host, handler, request_body, verbose)
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/xmlrpc/client.py", line 1291, in send_request
+    self.send_content(connection, request_body)
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/xmlrpc/client.py", line 1321, in send_content
+    connection.endheaders(request_body)
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/http/client.py", line 941, in connect
+    self.sock = self._create_connection(
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/socket.py", line 845, in create_connection
+    raise err
+  File "/home/adriano/.pyenv/versions/3.10.6/lib/python3.10/socket.py", line 833, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 212, in <module>
+    if __name__ == '__main__': main()
+  File "/home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner", line 190, in main
+    resp = load_controller(name)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py", line 442, in __call__
+    return self.call(*args, **kwds)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py", line 502, in call
+    service_uri = self._get_service_uri(request)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py", line 467, in _get_service_uri
+    raise ServiceException("unable to contact master")
+rospy.service.ServiceException: unable to contact master
+[33m[ WARN] [1711384947.026878033, 5.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711384947.356458284, 5.120000000]: Waiting for arm_controller/follow_joint_trajectory to come up[0m
+[33m[ WARN] [1711384959.600444812, 10.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711384962.649067316, 11.120000000]: Waiting for arm_controller/follow_joint_trajectory to come up[0m
+[33m[ WARN] [1711384972.398534905, 15.000000000]: Could not get list of controllers from controller manager.[0m
+[31m[ERROR] [1711384977.206312565, 17.120000000]: Action client not connected: arm_controller/follow_joint_trajectory[0m
+[31m[ERROR] [1711384977.281729865, 17.156000000]: [registerSubscriber] Failed to contact master at [localhost:11352].  Retrying...[0m
+[33m[ WARN] [1711384983.866832511, 20.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711384996.090666573, 25.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385008.440038084, 30.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385020.671771021, 35.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385032.812233298, 40.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385045.195205788, 45.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385057.540223020, 50.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385069.809145613, 55.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385082.157374137, 60.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385094.570015356, 65.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385107.117499190, 70.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385119.536009899, 75.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385131.786346221, 80.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385144.168867692, 85.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385156.666183564, 90.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385169.111160921, 95.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385181.435261809, 100.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385193.783596409, 105.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385205.982240655, 110.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385218.339815645, 115.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385232.171478499, 120.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385243.865601061, 125.001000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385257.543166979, 131.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385269.059892979, 136.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385280.559431920, 141.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385292.186466206, 146.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385303.618153605, 151.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385314.975631117, 156.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385326.529956896, 161.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385338.032744901, 166.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385349.838932055, 171.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385361.340631700, 176.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385372.901706991, 181.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385384.401863460, 186.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385395.999919314, 191.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385407.450836927, 196.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385418.858154032, 201.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385430.426098551, 206.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385441.791188533, 211.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385453.311607322, 216.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385464.848735185, 221.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385476.362346186, 226.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385487.844451498, 231.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385499.272742670, 236.002000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385513.171712363, 242.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385524.680035832, 247.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385536.262370333, 252.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385547.760846660, 257.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385559.045040107, 262.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385570.464838578, 267.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385582.084677086, 272.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385593.495013541, 277.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385604.952882691, 282.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385616.533246675, 287.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385628.067044735, 292.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385639.175733870, 297.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385650.835295879, 302.001000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385664.489134013, 308.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385675.825839113, 313.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385687.352240559, 318.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385698.865381675, 323.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385710.350009155, 328.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385721.825993761, 333.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385733.225615736, 338.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385744.491146943, 343.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385755.836374945, 348.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385767.450426762, 353.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385778.812754409, 358.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385790.231133607, 363.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385801.492602865, 368.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385813.039340493, 373.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385824.552400073, 378.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385836.123238500, 383.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385847.478070279, 388.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385858.864141146, 393.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385870.470944928, 398.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385881.917287701, 403.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385893.571819801, 408.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385905.129197954, 413.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385916.499858759, 418.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385928.025303751, 423.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385939.411931668, 428.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385950.970345710, 433.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385962.163739020, 438.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385973.428880228, 443.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385984.783450105, 448.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711385996.415081101, 453.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711386007.742899850, 458.003000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711386021.456950515, 464.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711386032.768208794, 469.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711386044.265565273, 474.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711386055.590533541, 479.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711386067.130472518, 484.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711386078.855820091, 489.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711386090.445531599, 494.001000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711386101.951921906, 499.001000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711386115.885394353, 505.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711386127.277953499, 510.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711386139.126556292, 515.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711386150.551121369, 520.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711386162.265841957, 525.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711386173.868484353, 530.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711386185.399316366, 535.000000000]: Could not get list of controllers from controller manager.[0m
+[33m[ WARN] [1711386197.828371875, 540.000000000]: Could not get list of controllers from controller manager.[0m
 terminate called after throwing an instance of 'std::runtime_error'
   what():  Unable to connect to move_group action server 'move_group' within allotted time (0s)
-[0m[ INFO] [1710751680.633734604]: Load description from: /robot_description[0m
-Traceback (most recent call last):
-  File "/home/adriano/Desktop/tiago_ws/src/pal_motion_loader/scripts/load_available_motions.py", line 39, in <module>
-    main()
-  File "/home/adriano/Desktop/tiago_ws/src/pal_motion_loader/scripts/load_available_motions.py", line 16, in main
-    js = rospy.wait_for_message('/joint_states', JointState)
-  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 428, in wait_for_message
-    raise rospy.exceptions.ROSInterruptException("rospy shutdown")
-rospy.exceptions.ROSInterruptException: rospy shutdown
-[INFO] [1710751683.505844, 0.000000]: Waiting for gripper_controller...
-[INFO] [1710754424.093271, 0.000000]: ...connected.
-Traceback (most recent call last):
-  File "/home/adriano/Desktop/tiago_ws/src/pal_robotiq_gripper/pal_robotiq_controller_configuration/scripts/home_gripper.py", line 23, in <module>
-    rospy.wait_for_message("joint_states", JointState)
-  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 428, in wait_for_message
-    raise rospy.exceptions.ROSInterruptException("rospy shutdown")
-rospy.exceptions.ROSInterruptException: rospy shutdown
-[INFO] [1710751683.183191, 0.000000]: Initializing Gripper Grasper...
-[INFO] [1710751683.261814, 0.000000]: timeout2.0closing_time0.2
-[INFO] [1710751683.267964, 0.000000]: Initialized dynamic reconfigure on: /gripper_grasping
-[INFO] [1710751683.270627, 0.000000]: Subscribed to topic: /gripper_controller/state
-[INFO] [1710751683.272476, 0.000000]: Publishing to topic: /gripper_controller/command
-[INFO] [1710751683.274142, 0.000000]: Offering grasp service on: /gripper_controller/grasp
-[INFO] [1710751683.275069, 0.000000]: Done initializing Gripper Grasp Service!
-[INFO] [1710751683.276644, 0.000000]: Offering release service on: /gripper_controller/release
-[INFO] [1710751683.277464, 0.000000]: Done initializing Gripper Release Service!
-[0m[ INFO] [1710751681.033784679]: Loading robot model 'tiago'...[0m
-[0m[ INFO] [1710751681.033874738]: No root/virtual joint specified in SRDF. Assuming fixed joint[0m
-[0m[ INFO] [1710751683.141266466]: Publishing maintained planning scene on 'monitored_planning_scene'[0m
-[0m[ INFO] [1710751683.143136307]: Listening to 'joint_states' for joint states[0m
-[0m[ INFO] [1710751683.146103247]: Listening to '/attached_collision_object' for attached collision objects[0m
-[0m[ INFO] [1710751683.146128750]: Starting planning scene monitor[0m
-[0m[ INFO] [1710751683.147653055]: Listening to '/planning_scene'[0m
-[0m[ INFO] [1710751683.147685071]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.[0m
-[0m[ INFO] [1710751683.148897460]: Listening to '/collision_object'[0m
-[0m[ INFO] [1710751683.150316212]: Listening to '/planning_scene_world' for planning scene world geometry[0m
-[0m[ INFO] [1710751683.151853654]: No 3D sensor plugin(s) defined for octomap updates[0m
-[0m[ INFO] [1710751683.886396858]: Loading planning pipeline ''[0m
-[0m[ INFO] [1710751683.908177690]: Using planning interface 'OMPL'[0m
-[0m[ INFO] [1710751683.909604531]: Param 'default_workspace_bounds' was not set. Using default value: 10[0m
-[0m[ INFO] [1710751683.909725361]: Param 'start_state_max_bounds_error' was set to 0.1[0m
-[0m[ INFO] [1710751683.909822957]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
-[0m[ INFO] [1710751683.909927086]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
-[0m[ INFO] [1710751683.910022984]: Param 'jiggle_fraction' was set to 0.05[0m
-[0m[ INFO] [1710751683.910118642]: Param 'max_sampling_attempts' was not set. Using default value: 100[0m
-[0m[ INFO] [1710751683.910130019]: Using planning request adapter 'Add Time Parameterization'[0m
-[0m[ INFO] [1710751683.910135990]: Using planning request adapter 'Fix Workspace Bounds'[0m
-[0m[ INFO] [1710751683.910140323]: Using planning request adapter 'Fix Start State Bounds'[0m
-[0m[ INFO] [1710751683.910144974]: Using planning request adapter 'Fix Start State In Collision'[0m
-[0m[ INFO] [1710751683.910149278]: Using planning request adapter 'Fix Start State Path Constraints'[0m
+[0m[ INFO] [1711384928.861722530]: tf_lookup starting[0m
+[0m[ INFO] [1711384928.956710637]: Topic handler 'navigation' subscribed to topic 'nav_vel': timeout = 0.500000s, priority = 10[0m
+[0m[ INFO] [1711384928.959687316]: Topic handler 'joystick' subscribed to topic 'joy_vel': timeout = 0.500000s, priority = 100[0m
+[0m[ INFO] [1711384928.961579256]: Topic handler 'keyboard' subscribed to topic 'key_vel': timeout = 0.500000s, priority = 90[0m
+[0m[ INFO] [1711384928.989074175]: Topic handler 'tablet' subscribed to topic 'tab_vel': timeout = 0.500000s, priority = 100[0m
+[0m[ INFO] [1711384928.990510509]: Topic handler 'marker' subscribed to topic 'marker_vel': timeout = 0.500000s, priority = 99[0m
+[0m[ INFO] [1711384928.991742538]: Topic handler 'phone' subscribed to topic 'phone_vel': timeout = 0.500000s, priority = 98[0m
+[0m[ INFO] [1711384929.014573378]: Topic handler 'rviz_joy' subscribed to topic 'rviz_joy_vel': timeout = 0.500000s, priority = 95[0m
+[0m[ INFO] [1711384929.026678166]: Topic handler 'servoing_cmd_vel' subscribed to topic 'servoing_cmd_vel': timeout = 0.500000s, priority = 20[0m
+[0m[ INFO] [1711384929.028325091]: Topic handler 'pause' subscribed to topic 'pause_navigation': timeout = None, priority = 100[0m
+[0m[ INFO] [1711384929.043495302]: Topic handler 'loop_closure' subscribed to topic 'stop_closing_loop': timeout = None, priority = 200[0m
+[0m[ INFO] [1711384929.044935108]: Topic handler 'joystick' subscribed to topic 'joy_priority': timeout = None, priority = 100[0m
+[0m[ INFO] [1711384928.561403472]: Load description from: /robot_description[0m
+' was not set. Using default value: 10[0m
+[0m[ INFO] [1711384932.345406196]: Param 'start_state_max_bounds_error' was set to 0.1[0m
+[0m[ INFO] [1711384932.345767204]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
+[0m[ INFO] [1711384932.346148212]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
+[0m[ INFO] [1711384932.346604483]: Param 'jiggle_fraction' was set to 0.05[0m
+[0m[ INFO] [1711384932.346947293]: Param 'max_sampling_attempts' was not set. Using default value: 100[0m
+[0m[ INFO] [1711384932.347122442]: Using planning request adapter 'Limiting Max Cartesian Speed'[0m
+[0m[ INFO] [1711384932.347130511]: Using planning request adapter 'Add Time Parameterization'[0m
+[0m[ INFO] [1711384932.347139186]: Using planning request adapter 'Fix Workspace Bounds'[0m
+[0m[ INFO] [1711384932.347146708]: Using planning request adapter 'Fix Start State Bounds'[0m
+[0m[ INFO] [1711384932.347153933]: Using planning request adapter 'Fix Start State In Collision'[0m
+[0m[ INFO] [1711384932.347159908]: Using planning request adapter 'Fix Start State Path Constraints'[0m
+[0m[ INFO] [1711384932.347210600]: Loading planning pipeline 'pilz_industrial_motion_planner'[0m
 [96mLoading 'move_group/ApplyPlanningSceneService'...
 [0m[96mLoading 'move_group/ClearOctomapService'...
 [0m[96mLoading 'move_group/MoveGroupCartesianPathService'...
@@ -860,65 +1277,79 @@ rospy.exceptions.ROSInterruptException: rospy shutdown
 You can start planning now!
 
 [0mTraceback (most recent call last):
-  File "/home/adriano/Desktop/tiago_ws/devel/lib/gazebo_ros/spawn_model", line 15, in <module>
-    exec(compile(fh.read(), python_script, 'exec'), context)
-  File "/home/adriano/Desktop/tiago_ws/src/gazebo_ros_pkgs/gazebo_ros/scripts/spawn_model", line 313, in <module>
-    sm.callSpawnService()
-  File "/home/adriano/Desktop/tiago_ws/src/gazebo_ros_pkgs/gazebo_ros/scripts/spawn_model", line 270, in callSpawnService
-    success = gazebo_interface.spawn_urdf_model_client(self.model_name, model_xml, self.robot_namespace,
-  File "/home/adriano/Desktop/tiago_ws/src/gazebo_ros_pkgs/gazebo_ros/src/gazebo_ros/gazebo_interface.py", line 28, in spawn_urdf_model_client
-    rospy.wait_for_service(gazebo_namespace+'/spawn_urdf_model')
-  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py", line 166, in wait_for_service
-    raise ROSInterruptException("rospy shutdown")
+  File "/home/adriano/Desktop/tiago_ws/src/pal_motion_loader/scripts/load_available_motions.py", line 39, in <module>
+    main()
+  File "/home/adriano/Desktop/tiago_ws/src/pal_motion_loader/scripts/load_available_motions.py", line 16, in main
+    js = rospy.wait_for_message('/joint_states', JointState)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 428, in wait_for_message
+    raise rospy.exceptions.ROSInterruptException("rospy shutdown")
 rospy.exceptions.ROSInterruptException: rospy shutdown
-[1mprocess[rosout-1]: started with pid [8876][0m
-started core service [/rosout]
-[1mprocess[gazebo-2]: started with pid [8920][0m
-[1mprocess[spawn_model-3]: started with pid [8926][0m
-[1mprocess[default_controllers_spawner-4]: started with pid [8941][0m
-[1mprocess[head_controller/point_head_action-5]: started with pid [8998][0m
-[1mprocess[bringup_controllers_spawner_imu-6]: started with pid [9033][0m
-[1mprocess[bringup_controllers_spawner_ft-7]: started with pid [9037][0m
-[1mprocess[gripper_controllers_spawner-8]: started with pid [9041][0m
-[1mprocess[gripper_grasping-9]: started with pid [9048][0m
-[1mprocess[home_gripper-10]: started with pid [9072][0m
-[1mprocess[load_motions-11]: started with pid [9115][0m
-[1mprocess[play_motion-12]: started with pid [9140][0m
-[1mprocess[is_already_there-13]: started with pid [9153][0m
-[1mprocess[move_group-14]: started with pid [9220][0m
-[1mprocess[robot_state_publisher-15]: started with pid [9222][0m
-[1mprocess[tf_lookup-16]: started with pid [9227][0m
-[1mprocess[twist_mux-17]: started with pid [9235][0m
-[1mprocess[twist_marker-18]: started with pid [9237][0m
-[1mprocess[joystick_relay-19]: started with pid [9273][0m
-[1mprocess[image_raw_to_rect_color_relay-20]: started with pid [9278][0m
-[1mprocess[xtion/rgb/image_proc-21]: started with pid [9295][0m
-[1m[bringup_controllers_spawner_ft-7] process has finished cleanly
-log file: /home/adriano/.ros/log/384e1ecc-e504-11ee-a89b-5f2243cc42f0/bringup_controllers_spawner_ft-7*.log[0m
-[1m[bringup_controllers_spawner_imu-6] process has finished cleanly
-log file: /home/adriano/.ros/log/384e1ecc-e504-11ee-a89b-5f2243cc42f0/bringup_controllers_spawner_imu-6*.log[0m
-[1m[gripper_controllers_spawner-8] process has finished cleanly
-log file: /home/adriano/.ros/log/384e1ecc-e504-11ee-a89b-5f2243cc42f0/gripper_controllers_spawner-8*.log[0m
-[1m[default_controllers_spawner-4] process has finished cleanly
-log file: /home/adriano/.ros/log/384e1ecc-e504-11ee-a89b-5f2243cc42f0/default_controllers_spawner-4*.log[0m
+[INFO] [1711384931.707229, 0.000000]: Waiting for gripper_controller...
+[INFO] [1711386212.456494, 544.852000]: ...connected.
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/tiago_ws/src/pal_robotiq_gripper/pal_robotiq_controller_configuration/scripts/home_gripper.py", line 23, in <module>
+    rospy.wait_for_message("joint_states", JointState)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/client.py", line 428, in wait_for_message
+    raise rospy.exceptions.ROSInterruptException("rospy shutdown")
+rospy.exceptions.ROSInterruptException: rospy shutdown
+[INFO] [1711384931.608845, 0.000000]: Initializing Gripper Grasper...
+[INFO] [1711384931.659098, 0.000000]: timeout2.2closing_time0.2
+[INFO] [1711384931.663380, 0.000000]: Initialized dynamic reconfigure on: /gripper_grasping
+[INFO] [1711384931.665134, 0.000000]: Subscribed to topic: /gripper_controller/state
+[INFO] [1711384931.666582, 0.000000]: Publishing to topic: /gripper_controller/command
+[INFO] [1711384931.668248, 0.000000]: Offering grasp service on: /gripper_controller/grasp
+[INFO] [1711384931.668982, 0.000000]: Done initializing Gripper Grasp Service!
+[INFO] [1711384931.670384, 0.000000]: Offering release service on: /gripper_controller/release
+[INFO] [1711384931.671248, 0.000000]: Done initializing Gripper Release Service!
+Segmentation fault (core dumped)
+[31m[default_controllers_spawner-3] process has died [pid 887781, exit code 1, cmd /home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner --timeout 120 joint_state_controller torso_controller head_controller arm_controller mobile_base_controller __name:=default_controllers_spawner __log:=/home/adriano/.ros/log/0f6cbb72-eac6-11ee-af9f-97fe27d21d27/default_controllers_spawner-3.log].
+log file: /home/adriano/.ros/log/0f6cbb72-eac6-11ee-af9f-97fe27d21d27/default_controllers_spawner-3*.log[0m
+[31m[gripper_controllers_spawner-7] process has died [pid 887817, exit code 1, cmd /home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner --timeout 120 gripper_controller __name:=gripper_controllers_spawner __log:=/home/adriano/.ros/log/0f6cbb72-eac6-11ee-af9f-97fe27d21d27/gripper_controllers_spawner-7.log].
+log file: /home/adriano/.ros/log/0f6cbb72-eac6-11ee-af9f-97fe27d21d27/gripper_controllers_spawner-7*.log[0m
+[31m[bringup_controllers_spawner_ft-6] process has died [pid 887802, exit code 1, cmd /home/adriano/Desktop/tiago_ws/src/ros_control/controller_manager/scripts/spawner force_torque_sensor_controller __name:=bringup_controllers_spawner_ft __log:=/home/adriano/.ros/log/0f6cbb72-eac6-11ee-af9f-97fe27d21d27/bringup_controllers_spawner_ft-6.log].
+log file: /home/adriano/.ros/log/0f6cbb72-eac6-11ee-af9f-97fe27d21d27/bringup_controllers_spawner_ft-6*.log[0m
+[1mprocess[gazebo-1]: started with pid [887750][0m
+[1mprocess[spawn_model-2]: started with pid [887771][0m
+[1mprocess[default_controllers_spawner-3]: started with pid [887781][0m
+[1mprocess[head_controller/point_head_action-4]: started with pid [887790][0m
+[1mprocess[bringup_controllers_spawner_imu-5]: started with pid [887796][0m
+[1mprocess[bringup_controllers_spawner_ft-6]: started with pid [887802][0m
+[1mprocess[gripper_controllers_spawner-7]: started with pid [887817][0m
+[1mprocess[gripper_grasping-8]: started with pid [887822][0m
+[1mprocess[home_gripper-9]: started with pid [887827][0m
+[1mprocess[joint_trajectory_controllers_velocity_controllers_spawner-10]: started with pid [887844][0m
+[1mprocess[load_motions-11]: started with pid [887879][0m
+[1mprocess[play_motion-12]: started with pid [887892][0m
+[1mprocess[is_already_there-13]: started with pid [887912][0m
+[1mprocess[move_group-14]: started with pid [887918][0m
+[1mprocess[robot_state_publisher-15]: started with pid [887925][0m
+[1mprocess[tf_lookup-16]: started with pid [887930][0m
+[1mprocess[twist_mux-17]: started with pid [887940][0m
+[1mprocess[twist_marker-18]: started with pid [887979][0m
+[1mprocess[joystick_relay-19]: started with pid [887999][0m
+[1mprocess[image_raw_to_rect_color_relay-20]: started with pid [888056][0m
+[1mprocess[xtion/rgb/image_proc-21]: started with pid [888081][0m
+[1m[spawn_model-2] process has finished cleanly
+log file: /home/adriano/.ros/log/0f6cbb72-eac6-11ee-af9f-97fe27d21d27/spawn_model-2*.log[0m
+[1m[bringup_controllers_spawner_imu-5] process has finished cleanly
+log file: /home/adriano/.ros/log/0f6cbb72-eac6-11ee-af9f-97fe27d21d27/bringup_controllers_spawner_imu-5*.log[0m
+[1m[joint_trajectory_controllers_velocity_controllers_spawner-10] process has finished cleanly
+log file: /home/adriano/.ros/log/0f6cbb72-eac6-11ee-af9f-97fe27d21d27/joint_trajectory_controllers_velocity_controllers_spawner-10*.log[0m
 [xtion/rgb/image_proc-21] killing on exit
 [image_raw_to_rect_color_relay-20] killing on exit
+[tf_lookup-16] killing on exit
 [joystick_relay-19] killing on exit
 [twist_marker-18] killing on exit
 [twist_mux-17] killing on exit
-[tf_lookup-16] killing on exit
 [robot_state_publisher-15] killing on exit
-[move_group-14] killing on exit
 [is_already_there-13] killing on exit
+[move_group-14] killing on exit
 [play_motion-12] killing on exit
 [load_motions-11] killing on exit
-[home_gripper-10] killing on exit
-[gripper_grasping-9] killing on exit
-[head_controller/point_head_action-5] killing on exit
-[spawn_model-3] killing on exit
-[gazebo-2] killing on exit
-[rosout-1] killing on exit
-[master] killing on exit
+[home_gripper-9] killing on exit
+[gripper_grasping-8] killing on exit
+[head_controller/point_head_action-4] killing on exit
+[gazebo-1] killing on exit
 shutting down processing monitor...
 ... shutting down processing monitor complete
 [1mdone[0m

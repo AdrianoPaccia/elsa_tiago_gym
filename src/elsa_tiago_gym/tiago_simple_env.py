@@ -21,6 +21,8 @@ import rospkg
 import os
 from std_msgs.msg import Bool
 from elsa_tiago_fl.utils.utils import tic,toc
+import logging 
+
 
 
     
@@ -42,7 +44,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         3       Grasping action (True/False)
     """
     
-    def __init__(self,env_code=None,speed=0.0025, max_episode_steps = 128, multimodal=False, discrete=True):
+    def __init__(self,env_code=None,speed=0.0025, max_episode_steps = 200, multimodal=False, discrete=True):
         super(TiagoSimpleEnv, self).__init__(env_code,speed)
 
 
@@ -78,16 +80,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
                     self.obs_points['z'].append(z)
         self.visualize_points(self.obs_points['x'], self.obs_points['y'], self.obs_points['z'], ns='obs')
 
-        # randomize goal
-        x = np.random.uniform(self.obs_low[0], self.obs_high[0])
-        y = np.random.uniform(self.obs_low[1], self.obs_high[1])
-        z = np.random.uniform(self.obs_low[2], self.obs_high[2])
 
-        x = self.obs_points['x'][np.abs(np.asarray(self.obs_points['x'])-x).argmin()]
-        y = self.obs_points['y'][np.abs(np.asarray(self.obs_points['y'])-y).argmin()]
-        z = self.obs_points['z'][np.abs(np.asarray(self.obs_points['z'])-z).argmin()]
-
-        self.goal = [x, y, z]
 
         # get the training parameters
         self.reward_coef ={   
@@ -161,10 +154,9 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         8 dim vector: 7 JOINT displacemets (continuos) and 1 (boolean) for grasping.
         """
         self.episode_step += 1
-        scale=0.05
-        motion_vel = 15
+        max_speed = 0.6 # rad/s
+        dt = 0.1
 
-        
         #joint position-related act
         if type(action) == np.ndarray:
             action = action.tolist()
@@ -188,9 +180,8 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         
         # joint motion
         else:
-            target_joints = [j + dj*scale for j,dj in zip(self.stored_join_state, djoins)]
-            #self.visualize_points(x_target,y_target,z_target, ns='action')
-            self.action_failed = not self.set_arm_joint_pose(target_joints, motion_vel)
+            target_joints = [j + (dj*max_speed)*dt for j,dj in zip(self.stored_join_state, djoins)]
+            self.action_failed = not self.set_arm_joint_pose(target_joints, dt)
 
 
     def _get_obs(self):
@@ -202,19 +193,20 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         """
         self.store_model_state()
         if self.collision_detected is False:
-            joint_state = np.array(self.stored_join_state)
+            arm_state = np.array(self.stored_join_state) 
+            #arm_state = np.array(self.stored_arm_pose[:3])# position of the EE 
         else:
-            joint_state = np.array(self.collision_arm_state)
+            arm_state = np.array(self.collision_arm_state) #position of the EE where the collision happened
 
         if self.is_multimodal:
             img_msg = rospy.wait_for_message("/xtion/rgb/image_raw", Image)
             bridge = CvBridge()
             cv_image = bridge.imgmsg_to_cv2(img_msg, desired_encoding="passthrough")
             image = np.array(cv_image)
-            return [image,joint_state]
+            return [image,arm_state]
         else:
             cubes_obs, cylinders_obs = self.model_state.get_obs()
-            return [cubes_obs,cylinders_obs,joint_state]
+            return [cubes_obs,cylinders_obs,arm_state]
 
 
     def _is_done(self, observations):
@@ -226,6 +218,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             grasped = rospy.wait_for_message("/gripper/is_grasped", Bool)
             if grasped is True:
                 self.placing()
+            self.reset()
             self.gazebo.pauseSim()
             done= True
         else:
@@ -236,24 +229,25 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
 
     def _compute_reward(self, observations, done):
         """
-        Return the reward based on the observations given
+        Return the reward based on the observations given, as:
+            - Goal reaching (reward)
+            - Collision (penalty)
         """
-        reward = 0
+
+        reward =0 
         # add a reward if the goal is accomplished
         if self.model_state.all_cubes_in_cylinders() is True:
             reward += self.reward_coef['R_goal']
         # add a penalty if a collision is detected
         if self.collision_detected is True:
-            reward += self.reward_coef['R_coll']
-        # add a penalty if the command generates a not reachable position
-        if (self.out_of_reach or self.action_failed) is True:
-            reward += self.reward_coef['R_fail']
-            self.out_of_reach = False
-        # add a reward/penality for each cube placed in the rigth/wrong box
-        reward += sum(self.model_state.cubes_in_cylinders()) * self.reward_coef['R_semigoal']
+            reward += self.reward_coef['R_coll']        
+        # add a reward for each cube placed in the rigth
+        subgoals_old = self.model_state.cubes_subgoals
+        subgoals_new = self.model_state.check_subgoals()
+        delta_subgoals = [1 for old,new in zip(subgoals_old,subgoals_new) if (old==False and new == True)]
+        reward += sum(delta_subgoals) * self.reward_coef['R_semigoal']
         # add a penaly for the distance of the cubes from the respective cylinders
-        reward += sum(self.model_state.get_distances()) * self.reward_coef['R_dist']
-
+        #reward += sum(self.model_state.get_distances()) * self.reward_coef['R_dist']
         return reward
 
 
@@ -277,6 +271,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             else:
                 self.collision_detected = True
                 self.collision_arm_state = self.stored_join_state
+                #self.collision_arm_state = self.stored_arm_pose[:3] #position where the collistion happened
                 rospy.loginfo("COLLISION DETECTED between {:} - {:}".format(c1,c2))
 
             
@@ -295,7 +290,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             if dist < min_dist:
                 min_dist = dist
                 candidate = id
-        if dist<0.25 and z_c<z+0.25:
+        if dist<0.3:# and z_c<z+0.25:
             return candidate, dist
         else:
             return None,None

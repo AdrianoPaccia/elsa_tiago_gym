@@ -1,0 +1,20 @@
+<launch>
+    <!-- Define arguments -->
+    <arg name="world_arg" default="elsa"/>
+    <arg name="end_effector_arg" default="robotiq-2f-85"/>
+    <arg name="public_sim_arg" default="true"/>
+    <arg name="gui_arg" default="true"/>
+    <arg name="tuck_arm_arg" default="false"/>
+
+    <!-- Launch tiago_gazebo with specified parameters -->
+    <include file="$(find tiago_gazebo)/launch/tiago_gazebo.launch">
+        <arg name="world" value="$(arg world_arg)"/>
+        <arg name="end_effector" value="$(arg end_effector_arg)"/>
+        <arg name="public_sim" value="$(arg public_sim_arg)"/>
+        <arg name="gui" value="$(arg gui_arg)"/>
+        <arg name="tuck_arm" value="$(arg tuck_arm_arg)"/>
+    </include>
+
+    <!-- Run trajectory_publisher.py from elsa_tiago_gym package -->
+    <node name="trajectory_publisher_node" pkg="elsa_tiago_gym" type="trajectory_publisher.py" output="screen"/>
+</launch>

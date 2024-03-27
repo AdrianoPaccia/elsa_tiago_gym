@@ -83,11 +83,10 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         self.joint_names = ["arm_"+str(i)+"_joint" for i in range(1,8)] 
         self.arm_workspace_low =  np.array([0.6, -0.5, 0.63])
         self.arm_workspace_high = np.array([0.8,  0.5, 0.9])
-        #self.arm_joint_bounds_low = np.array([0, -90, -202.5, -22.5, -120, -90, -120])/90 * np.pi 
-        #self.arm_joint_bounds_high = np.array([157.5, 62.5, 90, 135, 120, 90, 120])/90 * np.pi
-        self.arm_joint_bounds_low = np.array( [60,     0, -90,  20, -120, -90, -120])/90 * np.pi 
-        self.arm_joint_bounds_high = np.array([120, 50,  90, 135, 120,  90,  120])/90 * np.pi
-        
+        #self.arm_joint_bounds_low = np.array( [60, 0, -90,  20, -120, -90, -120])/90 * np.pi 
+        #self.arm_joint_bounds_high = np.array([120, 50,  90, 135, 120,  90,  120])/90 * np.pi
+        self.arm_joint_bounds_low = np.array( [60, 0, -45,  20, -120, -45, -120])/90 * np.pi 
+        self.arm_joint_bounds_high = np.array([120, 50,  45, 120, 120,  45,  120])/90 * np.pi
 
         # init and start
         self.gazebo.unpauseSim()
@@ -337,30 +336,24 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
 
 
     
-    def set_arm_joint_pose(self, joint_poses, velocity):
+    def set_arm_joint_pose(self, joint_poses, motion_time):
         """
         Motions of the arm in the joint space (7 joints)
         """
+        #if not self.arm_joints_feasible(joint_poses):
+        #    self.out_of_reach = True
+        #    return False
         
         joint_poses  = np.clip(joint_poses, self.arm_joint_bounds_low, self.arm_joint_bounds_high)
-        max_displacement =  np.max(np.abs(joint_poses - self.arm_joint_bounds_low))
-        time_from_start = max_displacement/velocity
-
-        '''
-        feasible = self.arm_joints_feasible(joint_poses)
-        if not self.arm_joints_feasible(joint_poses):
-            idx_high = np.where(joint_poses>self.arm_joint_bounds_high)[0]
-            idx_low = np.where(joint_poses<self.arm_joint_bounds_low)[0]
-            logger.debug(f'joints {idx_high+idx_low} out of bounds - feasible {feasible}')
-            self.out_of_reach = True
-            return False'''
+        #max_displacement =  np.max(np.abs(joint_poses - self.arm_joint_bounds_low))
+        #time_from_start = max_displacement/velocity
 
         # Create a JointTrajectoryPoint for the desired joint positions    
         trajectory_point = JointTrajectoryPoint()
         trajectory_point.positions = joint_poses
         trajectory_point.velocities = [0.0]*7
         trajectory_point.accelerations = [0.0]*7
-        trajectory_point.time_from_start = rospy.Duration(time_from_start)
+        trajectory_point.time_from_start = rospy.Duration(motion_time)
 
         # Create and send the trajectory message
         joint_trajectory_msg = JointTrajectory()
@@ -372,19 +365,21 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
 
         self.pub_arm_joint_controller.publish(joint_trajectory_msg)
         e = 1
-        #rospy.sleep(1)
+        rospy.sleep(motion_time)
+        self.store_arm_state()
+
         
-        accomplished = ''
-        start_time = time.time()
-        while e>0.05:
-            self.store_arm_state()
-            e = np.linalg.norm(np.subtract(self.stored_join_state,joint_poses))
-            time_from_start = time.time() - start_time
-            if time_from_start> 1.0:
-                accomplished = 'NOT'
-                break
+        #accomplished = ''
+        #start_time = time.time()
+        #while e>0.05:
+        #    self.store_arm_state()
+        #    e = np.linalg.norm(np.subtract(self.stored_join_state,joint_poses))
+        #    time_from_start = time.time() - start_time
+        #    if time_from_start> 1.0:
+        #        accomplished = 'NOT'
+        #        break
         
-        end_time =  time.time() - start_time
+        #end_time =  time.time() - start_time
         #logger.debug(f"{accomplished} acc. - t = {round(end_time,3)}s - e = {e}")
 
         

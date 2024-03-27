@@ -15,17 +15,27 @@ def launch_simulations(n:int,speed:float = 0.0025,gui:bool=True):
                     str(n),
                     str(speed),
                     gui])
-    #set simulations velocities
-    vel_path = os.path.join(sim_pkg_path,'src/simulations/set_velocity.sh')
-    subprocess.run(['gnome-terminal', '--',vel_path, 
-                    str(n),
-                    str(speed)])
+
+def launch_master_simulation(speed:float = 0.0025,gui:bool=True):
+    gui = 'true' if gui else 'false'
+    print(f'Launching simulation with speed {speed} and with GUI = {gui}')
+    #launch the simulation environments
+    sim_path = os.path.join(sim_pkg_path,'src/simulations/run_simulation_master.sh')
+    subprocess.run(['gnome-terminal', '--',sim_path, 
+                    str(speed),
+                    gui])
+
+
+
+
 
 def set_velocity(n:int,speed:float = 0.0025):
     vel_path = os.path.join(sim_pkg_path,'src/simulations/set_velocity.sh')
     subprocess.run(['gnome-terminal', '--',vel_path, 
                     str(n),
                     str(speed)])
+
+
 
 #def set_sim_velocity(uri:str,speed:float = 0.0025):
 #    vel_path = os.path.join(sim_pkg_path,'src/simulations/set_sim_velocity.sh')
