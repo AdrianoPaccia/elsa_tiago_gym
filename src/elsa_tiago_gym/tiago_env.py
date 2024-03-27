@@ -8,8 +8,12 @@ from openai_ros.openai_ros_common import ROSLauncher
 from geometry_msgs.msg import PoseStamped, Point,Twist,Quaternion, Pose
 from visualization_msgs.msg import Marker
 from sensor_msgs.msg import JointState
-from std_msgs.msg import ColorRGBA, Bool
+from trajectory_msgs.msg import JointTrajectory,JointTrajectoryPoint
+from std_msgs.msg import ColorRGBA, Bool,Header
 from std_srvs.srv import Empty
+from elsa_tiago_fl.utils.utils import tic,toc
+from elsa_tiago_gym.utils_parallel import set_sim_velocity
+
 from gazebo_msgs.msg import ContactsState
 from gazebo_msgs.srv import GetModelState,SetModelState
 from control_msgs.msg import PointHeadActionGoal
@@ -23,18 +27,15 @@ import yaml
 import rospkg
 import os
 import random
+import time
 
-import logging
-import multiprocessing as mp
-logger = mp.log_to_stderr()
-logger.setLevel(logging.DEBUG)
 
 
 class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
     """
     Initializes a new Tiago Steel environment
     """
-    def __init__(self, env_code:str):
+    def __init__(self, env_code:str,speed:float):
         rospy.logdebug("========= In Tiago Env")
         
         self.env_code = env_code
@@ -48,6 +49,8 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
             '/head_controller/point_head_action/goal', 
             PointHeadActionGoal, queue_size=1)
         self.pub_base_controller = rospy.Publisher('/mobile_base_controller/cmd_vel',Twist,queue_size=1)
+        self.pub_arm_joint_controller = rospy.Publisher('/arm_controller/command', JointTrajectory, queue_size=10)
+
 
         # Whether to reset controllers when a new episode starts
         reset_controls_bool = False
@@ -59,6 +62,7 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
                                        reset_world_or_sim="WORLD")
 
         self.grasp = rospy.ServiceProxy('/gripper_controller/grasp', Empty)
+        
 
         # define services for changing environemnt
         self.delete_object = rospy.ServiceProxy('/gazebo/delete_model',DeleteModel)
@@ -74,13 +78,23 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         if env_code is None:
             env_code = random.randint(1,10)
         self.test_env = 'elsa_'+str(env_code)
-        
+
+        # define the reachability boundaries (ws, joint bounds)
+        self.joint_names = ["arm_"+str(i)+"_joint" for i in range(1,8)] 
+        self.arm_workspace_low =  np.array([0.6, -0.5, 0.63])
+        self.arm_workspace_high = np.array([0.8,  0.5, 0.9])
+        #self.arm_joint_bounds_low = np.array( [60, 0, -90,  20, -120, -90, -120])/90 * np.pi 
+        #self.arm_joint_bounds_high = np.array([120, 50,  90, 135, 120,  90,  120])/90 * np.pi
+        self.arm_joint_bounds_low = np.array( [60, 0, -45,  20, -120, -45, -120])/90 * np.pi 
+        self.arm_joint_bounds_high = np.array([120, 50,  45, 120, 120,  45,  120])/90 * np.pi
+
+        # init and start
         self.gazebo.unpauseSim()
         self.init_model_states()
         self._init_moveit()
         self._init_rviz()
+        set_sim_velocity(speed)
         self._check_all_systems_ready()
-
         self.gazebo.pauseSim()
 
     # Methods needed by the RobotGazeboEnv
@@ -101,14 +115,10 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
 
         self.arm_torso_group = moveit_commander.MoveGroupCommander('arm_torso')
         self.arm_torso_group.set_planning_time(1)
-        self.store_torso_state()
 
         self.arm_group = moveit_commander.MoveGroupCommander('arm')
         self.arm_group.set_planning_time(1)
         self.store_arm_state()
-
-        self.arm_workspace_low =  np.array([0.6, -0.5, 0.63])
-        self.arm_workspace_high = np.array([0.8,  0.5, 0.9])
 
         rospy.sleep(2)
         p = PoseStamped()
@@ -116,10 +126,6 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         p.pose.position.x = 0.8
         p.pose.position.y = 0
         p.pose.position.z = 0.2
-
-        # rospy.loginfo(self.stored_gripper_state)
-        rospy.loginfo(self.stored_torso_state)
-        rospy.loginfo(self.stored_arm_state)
 
         self.release()
         #self.look_down()
@@ -222,35 +228,41 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
 
         self.pub_head_topic.publish(phag)
 
-    def set_torso_joint(self, heigth):
-        pose = self.arm_torso_group.get_current_joint_values()
-        pose[0] = heigth
-        self.arm_torso_group.set_joint_value_target(pose)
-        plan = self.arm_torso_group.go(wait=True)
-        self.arm_torso_group.stop()
-        self.store_torso_state()
-        return plan
-
     def grasping(self, object):
-        #logger.debug(f'GRASPING')
-        #collec where to grasp
+        """
+        1. remove the object from its place
+        2. brings the EE to its position
+        3. open the gripper
+        4. put the obj in place again
+        3. close the gripper
+        """
+        #collect the object position
         x,y,z = object.position
-
         roll, pitch, yaw = 0, np.radians(90), 0
 
+        '''
+        # go over the object
+        roll, pitch, yaw = 0, np.radians(90), 0
+        self.set_arm_pose(x, y, z + 0.27, roll, pitch, yaw)
         #remove the object
-        self.set_obj_pos(object.id,[-2, 0, 0,0, 0, 0])
-
-        #go in that position
+        self.set_obj_pos(object.id,[3, 0, 0,0, 0, 0])
+        #go in the object position
         self.set_arm_pose(x, y, z + 0.23, roll, pitch, yaw)
         self.release()
         rospy.sleep(1)
+        '''
+        self.release()
+        self.execute_trajectory(
+            [[x, y, z + 0.27, roll, pitch, yaw],
+            [x, y, z + 0.23, roll, pitch, yaw]]
+        )
 
-        # get the object back
+
+
+        
+
+        # get the object in position and grasp
         self.set_obj_pos(object.id,[x, y, z, 0, 0, 0])
-        
-        # grasp the object
-        
         self.grasp()
         grasped = rospy.wait_for_message("/gripper/is_grasped", Bool)
 
@@ -268,11 +280,14 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
             return False
 
     def placing(self):
-        #logger.debug('PLACING')
+        """
+        1. Open the gripper
+        2. Detach the object from the gripper group
+        3. Wait for the object to fall
+        """
         self.release()
         self.scene.remove_attached_object("gripper_base_link", name=self.grasped_item)
         placed = self.wait_for_placed_item(self.grasped_item)
-        #rospy.sleep(2)
         object = self.model_state.cubes[self.grasped_item]
         object_state = self.get_gazebo_object_state(self.grasped_item,'')
         object_state.header.frame_id = "base_footprint"
@@ -290,13 +305,16 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
             rospy.loginfo("waiting for dropping")
             cnt+=1
             if cnt>20:
-                x, y, z, _, _,_ = self.stored_arm_state
+                x, y, z, _, _,_ = self.stored_arm_pose
                 self.set_obj_pos(self.grasped_item,[x, y, z,0, 0, 0])
                 break
         self.placed_item = None
         return True
-    
+
     def set_arm_pose(self, x, y, z, roll, pitch, yaw):
+        """
+        Motions of the arm in the cartesian space.
+        """
         if not self.arm_pose_reachable(x, y, z):
             self.out_of_reach = True
             return False
@@ -307,66 +325,106 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         self.arm_group.clear_pose_targets()
         self.store_arm_state()
         return plan
+
+    def execute_trajectory(self,poses):
+        waypoints = [ Pose(Point(*p[:3]), Quaternion(*quaternion_from_euler(*p[3:]))) for p in poses]
+        (plan, fraction) = self.arm_group.compute_cartesian_path(waypoints, 0.01, 0.0)
+        self.arm_group.execute(plan, wait=True)
+        self.arm_group.stop()
+        self.arm_group.clear_pose_targets()
+        self.store_arm_state()
+
+
     
-    def set_arm_torso_pose(self, x, y, z, roll, pitch, yaw):
-        if not self.arm_pose_reachable(x, y, z):
-            self.out_of_reach = True
-            return False
-        self.out_of_reach = False
-        self.arm_torso_group.set_pose_target([x, y, z, roll, pitch, yaw])
-        plan = self.arm_torso_group.go(wait=True)
-        self.arm_torso_group.stop()
-        self.arm_torso_group.clear_pose_targets()
-        self.store_arm_torso_state()
-        return plan
+    def set_arm_joint_pose(self, joint_poses, motion_time):
+        """
+        Motions of the arm in the joint space (7 joints)
+        """
+        #if not self.arm_joints_feasible(joint_poses):
+        #    self.out_of_reach = True
+        #    return False
+        
+        joint_poses  = np.clip(joint_poses, self.arm_joint_bounds_low, self.arm_joint_bounds_high)
+        #max_displacement =  np.max(np.abs(joint_poses - self.arm_joint_bounds_low))
+        #time_from_start = max_displacement/velocity
+
+        # Create a JointTrajectoryPoint for the desired joint positions    
+        trajectory_point = JointTrajectoryPoint()
+        trajectory_point.positions = joint_poses
+        trajectory_point.velocities = [0.0]*7
+        trajectory_point.accelerations = [0.0]*7
+        trajectory_point.time_from_start = rospy.Duration(motion_time)
+
+        # Create and send the trajectory message
+        joint_trajectory_msg = JointTrajectory()
+        joint_trajectory_msg.header = Header()
+        joint_trajectory_msg.header.stamp = rospy.Time.now()
+        joint_trajectory_msg.header.frame_id = "world"
+        joint_trajectory_msg.joint_names = self.joint_names
+        joint_trajectory_msg.points.append(trajectory_point)
+
+        self.pub_arm_joint_controller.publish(joint_trajectory_msg)
+        e = 1
+        rospy.sleep(motion_time)
+        self.store_arm_state()
+
+        
+        #accomplished = ''
+        #start_time = time.time()
+        #while e>0.05:
+        #    self.store_arm_state()
+        #    e = np.linalg.norm(np.subtract(self.stored_join_state,joint_poses))
+        #    time_from_start = time.time() - start_time
+        #    if time_from_start> 1.0:
+        #        accomplished = 'NOT'
+        #        break
+        
+        #end_time =  time.time() - start_time
+        #logger.debug(f"{accomplished} acc. - t = {round(end_time,3)}s - e = {e}")
+
+        
 
     def store_arm_state(self):
+        # store the arm cartesian pose
         pose = self.arm_group.get_current_pose().pose
-        x = pose.position.x
-        y = pose.position.y
-        z = pose.position.z
+        x, y, z = pose.position.x, pose.position.y, pose.position.z
         roll, pitch, yaw = self.arm_group.get_current_rpy()
+        self.stored_arm_pose = [x, y, z, roll, pitch, yaw]
 
-        self.stored_arm_state = [x, y, z, roll, pitch, yaw]
-        return self.stored_arm_state
-    
-    def store_arm_torso_state(self):
-        pose = self.arm_torso_group.get_current_pose().pose
-        x = pose.position.x
-        y = pose.position.y
-        z = pose.position.z
-        roll, pitch, yaw = self.arm_torso_group.get_current_rpy()
-        self.stored_arm_state = [x, y, z, roll, pitch, yaw]
-        return self.stored_arm_state
-    
+        #store joints pose
+        joint_states_msg = rospy.wait_for_message('/joint_states', JointState, timeout=5.0)
+        self.stored_join_state = joint_states_msg.position[:7]
 
-    def execute_trajectory(self,poses,only_arm=True):
-        waypoints = []
-        for p in poses:
-            pos = p[:3]
-            ang = p[3:]
-            pose_i = Pose()
-            pose_i.position = Point(*pos)
-            pose_i.orientation = Quaternion(*tf.transformations.quaternion_from_euler(*ang))
-            waypoints.append(pose_i)
-        
-        if only_arm:
-            (plan, fraction) = self.arm_group.compute_cartesian_path(
-                            waypoints, 0.01, 0.0)
-            self.arm_group.execute(plan, wait=True)
-            self.arm_group.stop()
-            self.arm_group.clear_pose_targets()
-            self.store_arm_state()
 
-        else:
-            (plan, fraction) = self.arm_torso_group.compute_cartesian_path(
-                            waypoints, 0.01, 0.0)
-            self.arm_torso_group.execute(plan, wait=True)
-            self.arm_torso_group.stop()
-            self.arm_torso_group.clear_pose_targets()
-            self.store_arm_torso_state()
+
+    def arm_pose_reachable(self, x, y, z):
+        return (([x, y, z] >= self.arm_workspace_low) & ([x, y, z] <= self.arm_workspace_high)).all()  
+
+    def arm_joints_feasible(self,joints):
+        return ((joints >= self.arm_joint_bounds_low) & (joints <= self.arm_joint_bounds_high)).all()
+
+
+
+    def store_model_state(self):
+        """
+        To update the position of the objects in the scene
+        """
+        # upadte the model states
+        get_gazebo_object_state = rospy.ServiceProxy('/gazebo/get_model_state', GetModelState)
+        for id,cube in self.model_state.cubes.items():
+            cube_state = get_gazebo_object_state(id,'')
+            c = cube_state.pose.position
+            if c.z < 0.4:
+                self.set_obj_pos(id,[*cube.init_position,0,0,0])
+            cube.set_state(cube_state)
+        for id,cyl in self.model_state.cylinders.items():
+            cyl_state = get_gazebo_object_state(id,'')
+            cyl.set_state(cyl_state)
 
     def set_obj_pos(self,id:str,pose):
+        """
+        To artiifcially change the position of the bjects in the scene
+        """
         pos = pose[:3]
         euler = pose[3:]
         quaternion =quaternion_from_euler(*euler)
@@ -391,26 +449,10 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
             self.scene.add_box(id,cube_state, size=(size,size,size))'''
         except rospy.ServiceException as exc:
             print("Service did not process request: " + str(exc))
-
-    def store_torso_state(self):
-        self.stored_torso_state = (self.arm_torso_group.get_current_joint_values())[0]
     
-    def store_model_state(self):
-        # upadte the model states
-        get_gazebo_object_state = rospy.ServiceProxy('/gazebo/get_model_state', GetModelState)
-        for id,cube in self.model_state.cubes.items():
-            cube_state = get_gazebo_object_state(id,'')
-            c = cube_state.pose.position
-            if c.z < 0.4:
-                self.set_obj_pos(id,[*cube.init_position,0,0,0])
-            cube.set_state(cube_state)
-        for id,cyl in self.model_state.cylinders.items():
-            cyl_state = get_gazebo_object_state(id,'')
-            cyl.set_state(cyl_state)
 
 
-    def arm_pose_reachable(self, x, y, z):
-        return  (([x, y, z] >= self.arm_workspace_low) & ([x, y, z] <= self.arm_workspace_high)).all()
+
 
     # Methods that the TrainingEnvironment will need to define here as virtual
     # because they will be used in RobotGazeboEnv GrandParentClass and defined in the
@@ -454,3 +496,9 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         """Checks which is the closest grapable object
         """
         raise NotImplementedError()
+
+
+
+
+
+

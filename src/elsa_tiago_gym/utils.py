@@ -16,28 +16,6 @@ from elsa_tiago_gym.utils_parallel import set_sim_velocity
 max_episode_steps = 100
 
 
-def setup_env(env_name, port = "http://localhost:11311/"):
-    rospack = rospkg.RosPack()
-    dir = rospack.get_path('elsa_tiago_gym')
-    tasks_path = os.path.join(dir,'src/elsa_tiago_gym')
-    sys.path.append(tasks_path)
-    os.environ['ROS_MASTER_URI'] = port
-
-
-    if env_name =='TiagoReachEnv-v0':
-        entry_point = 'tiago_reach_env:TiagoReachEnv'
-    elif env_name == 'TiagoSimpleEnv-v0':
-        entry_point = 'tiago_simple_env:TiagoSimpleEnv'
-    else:
-        raise ValueError(
-        "Environment '{:s}' not expected.".format(env_name))
-    register(
-        id=env_name, 
-        entry_point=entry_point,
-        max_episode_steps=max_episode_steps, 
-    )
-
-
 class ObservationSpace:
     def __init__(self, num_items, num_boxes,
                  grip_low=-1.0,grip_high=-1.0,
@@ -206,7 +184,7 @@ class Cylinder(Object):
         if xy_check and z_check:
             return True
         else:
-            return False
+            return False 
 
 class Cube(Object):
     def __init__(self,id:str, position:list, type_code:str, gazebo_state, held:bool=False, side:float=0.06):
@@ -233,6 +211,8 @@ class Model:
         self.cylinders=cylinders
         self.n_cubes = len(cubes)
         self.n_cylinders = len(cylinders)
+        # define a dict indicating if a cube (key = cube_id) is in the goal (value = bool)
+        self.cubes_subgoals = {}
 
     def set_cube_state(self,id,state):
         self.cubes[id].set_state(state)
@@ -292,9 +272,19 @@ class Model:
                         inside = -1
             res.append(inside)
         return res
+
+    def check_subgoals(self):
+        for cube_id, cube in self.cubes.items():
+            for cyl in self.cylinders.values():
+                if cube.is_inside(cyl) and cyl.type_code==cube.type_code:
+                    self.cubes_subgoals[cube_id] = True
+                else:
+                    self.cubes_subgoals[cube_id] = False
+        return self.cubes_subgoals
+        
     
     def all_cubes_in_cylinders(self):
-        check = np.array(self.cubes_in_cylinders)
+        check = np.array(self.cubes_in_cylinders())
         if check.prod() == 1:
             return True
         else:
@@ -309,6 +299,12 @@ class Model:
                                        (cube.position[1]-cyl.position[1])**2)
                     dist.append(dist_i)
         return dist
+
+    def cylinder_of_type(self, code):
+        for cylinder in self.cylinders.values():
+            if cylinder.type_code == code:
+                return cylinder
+        return None                
 
 
 
