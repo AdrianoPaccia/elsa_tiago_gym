@@ -47,8 +47,6 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
     def __init__(self,env_code=None,speed=0.0025, max_episode_steps = 200, multimodal=False, discrete=True):
         super(TiagoSimpleEnv, self).__init__(env_code,speed)
 
-
-        #self.env_code = env_code
         self.max_episode_steps = max_episode_steps
 
         # Observation space
@@ -99,7 +97,12 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
 
 
 
-    def init_environment(self, test_env):
+    def init_environment(self, env_code=None):
+        # get which env to init
+        if env_code == None:
+            env_code = random.randint(1,10)     
+        test_env = 'elsa_'+str(env_code)
+
         #To integrate the cube deletion loop
         model_states_msg = rospy.wait_for_message('/gazebo/model_states', ModelStates, timeout=5.0)
 
@@ -111,7 +114,8 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         number_of_cube = 0
         rospack = rospkg.RosPack()
         path_to_models = os.path.join(rospack.get_path('pal_gazebo_worlds'),'models')
-        for cube in self.environments['environments'][test_env]:
+        env_kind = 'environments_' + str(1)
+        for cube in self.environments[env_kind][test_env]:
             number_of_cube = number_of_cube + 1 
             cube_pose = Pose()
             cube_pose.position.x = cube['positions'][0]
@@ -142,10 +146,16 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         self.grasped_item = None
         self.placed_item = None
         self.action_failed = False
-        '''for id,cube in self.model_state.cubes.items():
-            cube_state = self.get_gazebo_object_state(id,'')
-            cube_state.header.frame_id = "base_footprint"
-            self.scene.add_box(id, cube_state, size=(cube.side+0.01, cube.side+0.01, cube.side+0.01))'''
+
+        #change environment if it is randomized
+        if self.random_env:
+            self.gazebo.unpauseSim()
+            self.init_environment()
+            self.init_model_states()
+            self.gazebo.pauseSim()
+
+
+
 
 
     def _set_action(self, action):
@@ -218,7 +228,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             grasped = rospy.wait_for_message("/gripper/is_grasped", Bool)
             if grasped is True:
                 self.placing()
-            self.reset()
+            self._set_init_pose()
             self.gazebo.pauseSim()
             done= True
         else:
@@ -290,7 +300,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             if dist < min_dist:
                 min_dist = dist
                 candidate = id
-        if dist<0.3:# and z_c<z+0.25:
+        if dist<1.0:# and z_c<z+0.25:
             return candidate, dist
         else:
             return None,None

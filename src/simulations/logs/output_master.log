@@ -1,10 +1,10 @@
-... logging to /home/adriano/.ros/log/c86c738a-ed03-11ee-98bb-0d3dacdec6c8/roslaunch-oem-IdeaPad-Gaming-3-16IAH7-160110.log
+... logging to /home/adriano/.ros/log/88d5e9f6-ed1f-11ee-bf8a-515a48b2d8ca/roslaunch-oem-IdeaPad-Gaming-3-16IAH7-114511.log
 Checking log directory for disk usage. This may take a while.
 Press Ctrl-C to interrupt
 Done checking log file disk usage. Usage is <1GB.
 ]2;/home/adriano/Desktop/tiago_ws/src/tiago_simulation/tiago_gazebo/launch/tiago_gazebo.launch
 xacro: in-order processing became default in ROS Melodic. You can drop the option.
-[1mstarted roslaunch server http://oem-IdeaPad-Gaming-3-16IAH7:35835/[0m
+[1mstarted roslaunch server http://oem-IdeaPad-Gaming-3-16IAH7:46537/[0m
 
 SUMMARY
 ========
@@ -739,6 +739,7 @@ NODES
     bringup_controllers_spawner_imu (controller_manager/spawner)
     default_controllers_spawner (controller_manager/spawner)
     gazebo (gazebo_ros/gzserver)
+    gazebo_gui (gazebo_ros/gzclient)
     gripper_controllers_spawner (controller_manager/spawner)
     gripper_grasping (pal_robotiq_gripper_wrapper/gripper_grasping.py)
     home_gripper (pal_robotiq_controller_configuration/home_gripper.py)
@@ -760,81 +761,81 @@ NODES
     image_proc (image_proc/image_proc)
 
 auto-starting new master
-[1mprocess[master]: started with pid [160240][0m
+[1mprocess[master]: started with pid [114666][0m
 [1mROS_MASTER_URI=http://localhost:11311[0m
 ]2;/home/adriano/Desktop/tiago_ws/src/tiago_simulation/tiago_gazebo/launch/tiago_gazebo.launch http://localhost:11311
-[1msetting /run_id to c86c738a-ed03-11ee-98bb-0d3dacdec6c8[0m
-[33m[ WARN] [1711631101.260973930]: Transformer::setExtrapolationLimit is deprecated and does not do anything[0m
-[33m[ WARN] [1711631101.362441669]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1711631101.362587124]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1711631101.362662373]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1711631101.362748596]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1711631101.362829009]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1711631101.362913091]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1711631101.362981503]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1711631101.364750743]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1711631101.365068133]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1711631101.365191863]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1711631101.365306160]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1711631101.365429995]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1711631101.365545562]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1711631101.365654748]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1711631101.631270755]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1711631101.687126138]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1711631101.748208696]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1711631101.749010535]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1711631102.023315410]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead[0m
-[31m[ERROR] [1711631102.534189899]: Exception while loading planner 'chomp_interface/CHOMPPlanner': According to the loaded plugin descriptions the class chomp_interface/CHOMPPlanner with base class type planning_interface::PlannerManager does not exist. Declared types are  ompl_interface/OMPLPlanner
+[1msetting /run_id to 88d5e9f6-ed1f-11ee-bf8a-515a48b2d8ca[0m
+[33m[ WARN] [1711643020.455185997]: Transformer::setExtrapolationLimit is deprecated and does not do anything[0m
+[33m[ WARN] [1711643020.536817097]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711643020.536891280]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711643020.536913525]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711643020.536953133]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711643020.536982482]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711643020.537016243]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711643020.537040523]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711643020.569594501]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711643020.569870221]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711643020.569981337]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711643020.570076141]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711643020.570166386]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711643020.570274393]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711643020.570362362]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711643020.845514932]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
+[33m[ WARN] [1711643020.845801945]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711643020.846102706]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
+[33m[ WARN] [1711643020.861160973]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1711643021.221359015]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead[0m
+[31m[ERROR] [1711643021.718390836]: Exception while loading planner 'chomp_interface/CHOMPPlanner': According to the loaded plugin descriptions the class chomp_interface/CHOMPPlanner with base class type planning_interface::PlannerManager does not exist. Declared types are  ompl_interface/OMPLPlanner
 Available plugins: ompl_interface/OMPLPlanner[0m
-[31m[ERROR] [1711631102.537404605]: Failed to initialize planning pipeline 'chomp'.[0m
-[0m[ INFO] [1711631101.344475012]: Loading robot model 'tiago'...[0m
-[0m[ INFO] [1711631101.346312232]: No root/virtual joint specified in SRDF. Assuming fixed joint[0m
-[0m[ INFO] [1711631102.017506751]: Publishing maintained planning scene on 'monitored_planning_scene'[0m
-[0m[ INFO] [1711631102.019007883]: Listening to 'joint_states' for joint states[0m
-[0m[ INFO] [1711631102.020878522]: Listening to '/attached_collision_object' for attached collision objects[0m
-[0m[ INFO] [1711631102.020899281]: Starting planning scene monitor[0m
-[0m[ INFO] [1711631102.021537872]: Listening to '/planning_scene'[0m
-[0m[ INFO] [1711631102.021552654]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.[0m
-[0m[ INFO] [1711631102.022172975]: Listening to '/collision_object'[0m
-[0m[ INFO] [1711631102.023156813]: Listening to '/planning_scene_world' for planning scene world geometry[0m
-[0m[ INFO] [1711631102.023564337]: No 3D sensor plugin(s) defined for octomap updates[0m
-[0m[ INFO] [1711631102.532997772]: Loading planning pipeline 'chomp'[0m
-[0m[ INFO] [1711631102.535878978]: Param 'default_workspace_bounds' was not set. Using default value: 10[0m
-[0m[ INFO] [1711631102.536209974]: Param 'start_state_max_bounds_error' was set to 0.1[0m
-[0m[ INFO] [1711631102.536517568]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
-[0m[ INFO] [1711631102.536722818]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
-[0m[ INFO] [1711631102.536844791]: Param 'jiggle_fraction' was set to 0.05[0m
-[0m[ INFO] [1711631102.536951347]: Param 'max_sampling_attempts' was not set. Using default value: 100[0m
-[0m[ INFO] [1711631102.536963233]: Using planning request adapter 'Limiting Max Cartesian Speed'[0m
-[0m[ INFO] [1711631102.536968481]: Using planning request adapter 'Add Time Parameterization'[0m
-[0m[ INFO] [1711631102.536974286]: Using planning request adapter 'Resolve constraint frames to robot links'[0m
-[0m[ INFO] [1711631102.536978104]: Using planning request adapter 'Fix Workspace Bounds'[0m
-[0m[ INFO] [1711631102.536983970]: Using planning request adapter 'Fix Start State Bounds'[0m
-[0m[ INFO] [1711631102.536989121]: Using planning request adapter 'Fix Start State In Collision'[0m
-[0m[ INFO] [1711631102.536993306]: Using planning request adapter 'Fix Start State Path Constraints'[0m
-[0m[ INFO] [1711631102.537778935]: Loading planning pipeline 'ompl'[0m
-[0m[ INFO] [1711631102.559554428]: Using planning interface 'OMPL'[0m
-[0m[ INFO] [1711631102.560405411]: Param 'default_workspace_bounds' was not set. Using default value: 10[0m
-[0m[ INFO] [1711631102.560612224]: Param 'start_state_max_bounds_error' was set to 0.1[0m
-[0m[ INFO] [1711631102.560731463]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
-[0m[ INFO] [1711631102.560838711]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
-[0m[ INFO] [1711631102.560933172]: Param 'jiggle_fraction' was set to 0.05[0m
-[0m[ INFO] [1711631102.561024252]: Param 'max_sampling_attempts' was not set. Using default value: 100[0m
-[0m[ INFO] [1711631102.561035706]: Using planning request adapter 'Limiting Max Cartesian Speed'[0m
-[0m[ INFO] [1711631102.561041141]: Using planning request adapter 'Add Time Parameterization'[0m
-[0m[ INFO] [1711631102.561045390]: Using planning request adapter 'Resolve constraint frames to robot links'[0m
-[0m[ INFO] [1711631102.561049337]: Using planning request adapter 'Fix Workspace Bounds'[0m
-[0m[ INFO] [1711631102.561054071]: Using planning request adapter 'Fix Start State Bounds'[0m
-[0m[ INFO] [1711631102.561057702]: Using planning request adapter 'Fix Start State In Collision'[0m
-[0m[ INFO] [1711631102.561062783]: Using planning request adapter 'Fix Start State Path Constraints'[0m
-[0m[ INFO] [1711631102.561371296]: Loading planning pipeline 'ompl_chomp'[0m
-[0m[ INFO] [1711631102.568202396]: Using planning interface 'OMPL'[0m
-[0m[ INFO] [1711631102.568770337]: Param 'default_workspace_bounds[31m[ERROR] [1711631102.569500347]: Exception while loading planning adapter plugin 'chomp/OptimizerAdapter': According to the loaded plugin descriptions the class chomp/OptimizerAdapter with base class type planning_request_adapter::PlanningRequestAdapter does not exist. Declared types are  default_planner_request_adapters/AddIterativeSplineParameterization default_planner_request_adapters/AddRuckigTrajectorySmoothing default_planner_request_adapters/AddTimeOptimalParameterization default_planner_request_adapters/AddTimeParameterization default_planner_request_adapters/Empty default_planner_request_adapters/FixStartStateBounds default_planner_request_adapters/FixStartStateCollision default_planner_request_adapters/FixStartStatePathConstraints default_planner_request_adapters/FixWorkspaceBounds default_planner_request_adapters/LimitMaxCartesianLinkSpeed default_planner_request_adapters/ResolveConstraintFrames[0m
-[31m[ERROR] [1711631102.570100496]: Exception while loading planner 'pilz_industrial_motion_planner::CommandPlanner': According to the loaded plugin descriptions the class pilz_industrial_motion_planner::CommandPlanner with base class type planning_interface::PlannerManager does not exist. Declared types are  ompl_interface/OMPLPlanner
+[31m[ERROR] [1711643021.721590035]: Failed to initialize planning pipeline 'chomp'.[0m
+[0m[ INFO] [1711643020.515496759]: Loading robot model 'tiago'...[0m
+[0m[ INFO] [1711643020.522634086]: No root/virtual joint specified in SRDF. Assuming fixed joint[0m
+[0m[ INFO] [1711643021.216886079]: Publishing maintained planning scene on 'monitored_planning_scene'[0m
+[0m[ INFO] [1711643021.217926496]: Listening to 'joint_states' for joint states[0m
+[0m[ INFO] [1711643021.219383178]: Listening to '/attached_collision_object' for attached collision objects[0m
+[0m[ INFO] [1711643021.219400804]: Starting planning scene monitor[0m
+[0m[ INFO] [1711643021.220104146]: Listening to '/planning_scene'[0m
+[0m[ INFO] [1711643021.220116201]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.[0m
+[0m[ INFO] [1711643021.220692201]: Listening to '/collision_object'[0m
+[0m[ INFO] [1711643021.221236461]: Listening to '/planning_scene_world' for planning scene world geometry[0m
+[0m[ INFO] [1711643021.221479501]: No 3D sensor plugin(s) defined for octomap updates[0m
+[0m[ INFO] [1711643021.717089252]: Loading planning pipeline 'chomp'[0m
+[0m[ INFO] [1711643021.719874787]: Param 'default_workspace_bounds' was not set. Using default value: 10[0m
+[0m[ INFO] [1711643021.720115049]: Param 'start_state_max_bounds_error' was set to 0.1[0m
+[0m[ INFO] [1711643021.720343590]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
+[0m[ INFO] [1711643021.720595879]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
+[0m[ INFO] [1711643021.720939369]: Param 'jiggle_fraction' was set to 0.05[0m
+[0m[ INFO] [1711643021.721166316]: Param 'max_sampling_attempts' was not set. Using default value: 100[0m
+[0m[ INFO] [1711643021.721176941]: Using planning request adapter 'Limiting Max Cartesian Speed'[0m
+[0m[ INFO] [1711643021.721181226]: Using planning request adapter 'Add Time Parameterization'[0m
+[0m[ INFO] [1711643021.721184752]: Using planning request adapter 'Resolve constraint frames to robot links'[0m
+[0m[ INFO] [1711643021.721188393]: Using planning request adapter 'Fix Workspace Bounds'[0m
+[0m[ INFO] [1711643021.721191465]: Using planning request adapter 'Fix Start State Bounds'[0m
+[0m[ INFO] [1711643021.721194498]: Using planning request adapter 'Fix Start State In Collision'[0m
+[0m[ INFO] [1711643021.721197545]: Using planning request adapter 'Fix Start State Path Constraints'[0m
+[0m[ INFO] [1711643021.721917340]: Loading planning pipeline 'ompl'[0m
+[0m[ INFO] [1711643021.740734686]: Using planning interface 'OMPL'[0m
+[0m[ INFO] [1711643021.741361878]: Param 'default_workspace_bounds' was not set. Using default value: 10[0m
+[0m[ INFO] [1711643021.741462712]: Param 'start_state_max_bounds_error' was set to 0.1[0m
+[0m[ INFO] [1711643021.741546773]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
+[0m[ INFO] [1711643021.741642268]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
+[0m[ INFO] [1711643021.741733545]: Param 'jiggle_fraction' was set to 0.05[0m
+[0m[ INFO] [1711643021.741823641]: Param 'max_sampling_attempts' was not set. Using default value: 100[0m
+[0m[ INFO] [1711643021.741834649]: Using planning request adapter 'Limiting Max Cartesian Speed'[0m
+[0m[ INFO] [1711643021.741838425]: Using planning request adapter 'Add Time Parameterization'[0m
+[0m[ INFO] [1711643021.741842301]: Using planning request adapter 'Resolve constraint frames to robot links'[0m
+[0m[ INFO] [1711643021.741845887]: Using planning request adapter 'Fix Workspace Bounds'[0m
+[0m[ INFO] [1711643021.741849286]: Using planning request adapter 'Fix Start State Bounds'[0m
+[0m[ INFO] [1711643021.741852809]: Using planning request adapter 'Fix Start State In Collision'[0m
+[0m[ INFO] [1711643021.741856078]: Using planning request adapter 'Fix Start State Path Constraints'[0m
+[0m[ INFO] [1711643021.742180381]: Loading planning pipeline 'ompl_chomp'[0m
+[0m[ INFO] [1711643021.748860958]: Using planning interface 'OMPL'[0m
+[0m[ INFO] [1711643021.749402094]: Param 'default_workspace_bounds[31m[ERROR] [1711643021.749938748]: Exception while loading planning adapter plugin 'chomp/OptimizerAdapter': According to the loaded plugin descriptions the class chomp/OptimizerAdapter with base class type planning_request_adapter::PlanningRequestAdapter does not exist. Declared types are  default_planner_request_adapters/AddIterativeSplineParameterization default_planner_request_adapters/AddRuckigTrajectorySmoothing default_planner_request_adapters/AddTimeOptimalParameterization default_planner_request_adapters/AddTimeParameterization default_planner_request_adapters/Empty default_planner_request_adapters/FixStartStateBounds default_planner_request_adapters/FixStartStateCollision default_planner_request_adapters/FixStartStatePathConstraints default_planner_request_adapters/FixWorkspaceBounds default_planner_request_adapters/LimitMaxCartesianLinkSpeed default_planner_request_adapters/ResolveConstraintFrames[0m
+[31m[ERROR] [1711643021.750499951]: Exception while loading planner 'pilz_industrial_motion_planner::CommandPlanner': According to the loaded plugin descriptions the class pilz_industrial_motion_planner::CommandPlanner with base class type planning_interface::PlannerManager does not exist. Declared types are  ompl_interface/OMPLPlanner
 Available plugins: ompl_interface/OMPLPlanner[0m
-[31m[ERROR] [1711631102.570118529]: Failed to initialize planning pipeline 'pilz_industrial_motion_planner'.[0m
-[0m[ INFO] [1711631101.977283515]: Finished loading Gazebo ROS API Plugin.[0m
-[0m[ INFO] [1711631101.978273176]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...[0m
+[31m[ERROR] [1711643021.750518679]: Failed to initialize planning pipeline 'pilz_industrial_motion_planner'.[0m
+[0m[ INFO] [1711643021.189034237]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...[0m
+[0m[ INFO] [1711643021.189649225]: Finished loading Gazebo ROS API Plugin.[0m
 Error: Non-unique names detected in <link name='link'>
   <collision name='surface'>
     <pose>0 0 0.4 0 -0 0</pose>
@@ -843,6 +844,19 @@ Error: Non-unique names detected in <link name='link'>
         <size>1 0.8 0.03</size>
       </box>
     </geometry>
+    <max_contacts>10</max_contacts>
+    <surface>
+      <contact>
+        <ode/>
+      </contact>
+      <bounce/>
+      <friction>
+        <torsional>
+          <ode/>
+        </torsional>
+        <ode/>
+      </friction>
+    </surface>
   </collision>
   <visual name='visual1'>
     <pose>0 0 0.4 0 -0 0</pose>
@@ -866,6 +880,19 @@ Error: Non-unique names detected in <link name='link'>
         <length>0.4</length>
       </cylinder>
     </geometry>
+    <max_contacts>10</max_contacts>
+    <surface>
+      <contact>
+        <ode/>
+      </contact>
+      <bounce/>
+      <friction>
+        <torsional>
+          <ode/>
+        </torsional>
+        <ode/>
+      </friction>
+    </surface>
   </collision>
   <visual name='front_left_leg'>
     <pose>0.48 0.38 0.2 0 -0 0</pose>
@@ -890,6 +917,19 @@ Error: Non-unique names detected in <link name='link'>
         <length>0.4</length>
       </cylinder>
     </geometry>
+    <max_contacts>10</max_contacts>
+    <surface>
+      <contact>
+        <ode/>
+      </contact>
+      <bounce/>
+      <friction>
+        <torsional>
+          <ode/>
+        </torsional>
+        <ode/>
+      </friction>
+    </surface>
   </collision>
   <visual name='front_right_leg'>
     <pose>0.48 -0.38 0.2 0 -0 0</pose>
@@ -914,6 +954,19 @@ Error: Non-unique names detected in <link name='link'>
         <length>0.4</length>
       </cylinder>
     </geometry>
+    <max_contacts>10</max_contacts>
+    <surface>
+      <contact>
+        <ode/>
+      </contact>
+      <bounce/>
+      <friction>
+        <torsional>
+          <ode/>
+        </torsional>
+        <ode/>
+      </friction>
+    </surface>
   </collision>
   <visual name='back_right_leg'>
     <pose>-0.48 -0.38 0.2 0 -0 0</pose>
@@ -938,6 +991,19 @@ Error: Non-unique names detected in <link name='link'>
         <length>0.4</length>
       </cylinder>
     </geometry>
+    <max_contacts>10</max_contacts>
+    <surface>
+      <contact>
+        <ode/>
+      </contact>
+      <bounce/>
+      <friction>
+        <torsional>
+          <ode/>
+        </torsional>
+        <ode/>
+      </friction>
+    </surface>
   </collision>
   <visual name='back_left_leg'>
     <pose>-0.48 0.38 0.2 0 -0 0</pose>
@@ -975,47 +1041,50 @@ Error: Non-unique names detected in <link name='link'>
       <frameName>world</frameName>
     </plugin>
   </sensor>
+  <enable_wind>0</enable_wind>
 </link>
 
 ../src/intel/isl/isl.c:2105: FINISHME: ../src/intel/isl/isl.c:isl_surf_supports_ccs: CCS for 3D textures is disabled, but a workaround is available.
-[0m[ INFO] [1711631102.744069347]: waitForService: Service [/gazebo/set_physics_properties] is now available.[0m
-[0m[ INFO] [1711631102.762612403, 0.004000000]: Physics dynamic reconfigure ready.[0m
-[0m[ INFO] [1711631103.708272226, 0.315000000]: Laser Plugin: Using the 'robotNamespace' param: '/'[0m
-[0m[ INFO] [1711631103.708294508, 0.315000000]: Starting GazeboRosLaser Plugin (ns = /)[0m
-[0m[ INFO] [1711631103.709630892, 0.315000000]: GPU Laser Plugin (ns = /) <tf_prefix_>, set to ""[0m
-[0m[ INFO] [1711631103.710574545, 0.315000000]: LoadThread function completed[0m
-[0m[ INFO] [1711631103.763600110, 0.315000000]: Camera Plugin: Using the 'robotNamespace' param: '/'[0m
-[0m[ INFO] [1711631103.765717380, 0.315000000]: Camera Plugin (ns = /)  <tf_prefix_>, set to ""[0m
-[0m[ INFO] [1711631103.836169878, 0.315000000]: Loading gazebo_ros_control plugin[0m
-[0m[ INFO] [1711631103.836291931, 0.315000000]: Starting gazebo_ros_control plugin in namespace: [0m
-[0m[ INFO] [1711631103.836726993, 0.315000000]: gazebo_ros_control plugin is waiting for model URDF in parameter [/robot_description] on the ROS param server.[0m
-[0m[ INFO] [1711631103.960358800, 0.315000000]: Loading PAL HARWARE GAZEBO[0m
-[0m[ INFO] [1711631104.024963453, 0.315000000]: Joint mode switching is enabled[0m
+[31m[ERROR] [1711643022.156988043]: SpawnModel: Failure - model name tiago already exist.[0m
+../src/intel/isl/isl.c:2105: FINISHME: ../src/intel/isl/isl.c:isl_surf_supports_ccs: CCS for 3D textures is disabled, but a workaround is available.
+[0m[ INFO] [1711643021.883959273]: waitForService: Service [/gazebo/set_physics_properties] is now available.[0m
+[0m[ INFO] [1711643021.896066019]: Physics dynamic reconfigure ready.[0m
+[0m[ INFO] [1711643022.873848378]: Laser Plugin: Using the 'robotNamespace' param: '/'[0m
+[0m[ INFO] [1711643022.873880496]: Starting GazeboRosLaser Plugin (ns = /)[0m
+[0m[ INFO] [1711643022.875816506]: GPU Laser Plugin (ns = /) <tf_prefix_>, set to ""[0m
+[0m[ INFO] [1711643022.876942835]: LoadThread function completed[0m
+[0m[ INFO] [1711643022.894740039]: Camera Plugin: Using the 'robotNamespace' param: '/'[0m
+[0m[ INFO] [1711643022.896898426]: Camera Plugin (ns = /)  <tf_prefix_>, set to ""[0m
+[0m[ INFO] [1711643022.903365250]: Loading gazebo_ros_control plugin[0m
+[0m[ INFO] [1711643022.903489152]: Starting gazebo_ros_control plugin in namespace: [0m
+[0m[ INFO] [1711643022.903687595]: gazebo_ros_control plugin is waiting for model URDF in parameter [/robot_description] on the ROS param server.[0m
+[0m[ INFO] [1711643023.022664648]: Loading PAL HARWARE GAZEBO[0m
+[0m[ INFO] [1711643023.104280314]: Joint mode switching is enabled[0m
       wrist_ft_link - arm_7_link
       arm_tool_link - arm_7_link
-[33m[ WARN] [1711631104.055352511, 0.316000000]: Called publishAsync but publisher thread has not been started, THIS IS NOT RT safe. You should start it yourself.[0m
-[33m[ WARN] [1711631104.226370501, 0.486000000]: updateConfig() called on a dynamic_reconfigure::Server that provides its own mutex. This can lead to deadlocks if updateConfig() is called during an update. Providing a mutex to the constructor is highly recommended in this case. Please forward this message to the node author.[0m
+[33m[ WARN] [1711643023.141086317, 155.274000000]: Called publishAsync but publisher thread has not been started, THIS IS NOT RT safe. You should start it yourself.[0m
+[33m[ WARN] [1711643023.535534298, 155.650000000]: updateConfig() called on a dynamic_reconfigure::Server that provides its own mutex. This can lead to deadlocks if updateConfig() is called during an update. Providing a mutex to the constructor is highly recommended in this case. Please forward this message to the node author.[0m
 ' was not set. Using default value: 10[0m
-[0m[ INFO] [1711631102.568973879]: Param 'start_state_max_bounds_error' was set to 0.1[0m
-[0m[ INFO] [1711631102.569173208]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
-[0m[ INFO] [1711631102.569272389]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
-[0m[ INFO] [1711631102.569364767]: Param 'jiggle_fraction' was set to 0.05[0m
-[0m[ INFO] [1711631102.569454353]: Param 'max_sampling_attempts' was not set. Using default value: 100[0m
-[0m[ INFO] [1711631102.569511167]: Using planning request adapter 'Limiting Max Cartesian Speed'[0m
-[0m[ INFO] [1711631102.569517466]: Using planning request adapter 'Add Time Parameterization'[0m
-[0m[ INFO] [1711631102.569523247]: Using planning request adapter 'Fix Workspace Bounds'[0m
-[0m[ INFO] [1711631102.569527343]: Using planning request adapter 'Fix Start State Bounds'[0m
-[0m[ INFO] [1711631102.569532785]: Using planning request adapter 'Fix Start State In Collision'[0m
-[0m[ INFO] [1711631102.569537724]: Using planning request adapter 'Fix Start State Path Constraints'[0m
-[0m[ INFO] [1711631102.569561412]: Loading planning pipeline 'pilz_industrial_motion_planner'[0m
-[0m[ INFO] [1711631104.427973886, 0.686000000]: Added FollowJointTrajectory controller for arm_controller[0m
-[0m[ INFO] [1711631104.638053710, 0.894000000]: Added FollowJointTrajectory controller for arm_velocity_trajectory_controller[0m
-[0m[ INFO] [1711631105.125152573, 1.376000000]: Added FollowJointTrajectory controller for torso_controller[0m
-[0m[ INFO] [1711631105.345725046, 1.592000000]: Added FollowJointTrajectory controller for head_controller[0m
-[0m[ INFO] [1711631105.666916669, 1.904000000]: Added FollowJointTrajectory controller for gripper_controller[0m
-[0m[ INFO] [1711631105.666984680, 1.904000000]: Returned 5 controllers in list[0m
-[0m[ INFO] [1711631105.671237293, 1.908000000]: Trajectory execution is managing controllers[0m
-[0m[ INFO] [1711631105.671262190, 1.908000000]: MoveGroup debug mode is OFF[0m
+[0m[ INFO] [1711643021.749522903]: Param 'start_state_max_bounds_error' was set to 0.1[0m
+[0m[ INFO] [1711643021.749617606]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
+[0m[ INFO] [1711643021.749721453]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
+[0m[ INFO] [1711643021.749812561]: Param 'jiggle_fraction' was set to 0.05[0m
+[0m[ INFO] [1711643021.749901976]: Param 'max_sampling_attempts' was not set. Using default value: 100[0m
+[0m[ INFO] [1711643021.749950981]: Using planning request adapter 'Limiting Max Cartesian Speed'[0m
+[0m[ INFO] [1711643021.749956015]: Using planning request adapter 'Add Time Parameterization'[0m
+[0m[ INFO] [1711643021.749967584]: Using planning request adapter 'Fix Workspace Bounds'[0m
+[0m[ INFO] [1711643021.749972089]: Using planning request adapter 'Fix Start State Bounds'[0m
+[0m[ INFO] [1711643021.749978355]: Using planning request adapter 'Fix Start State In Collision'[0m
+[0m[ INFO] [1711643021.749984937]: Using planning request adapter 'Fix Start State Path Constraints'[0m
+[0m[ INFO] [1711643021.750002610]: Loading planning pipeline 'pilz_industrial_motion_planner'[0m
+[0m[ INFO] [1711643023.770098568, 155.867000000]: Added FollowJointTrajectory controller for arm_controller[0m
+[0m[ INFO] [1711643024.068664653, 156.149000000]: Added FollowJointTrajectory controller for arm_velocity_trajectory_controller[0m
+[0m[ INFO] [1711643024.375516791, 156.439000000]: Added FollowJointTrajectory controller for torso_controller[0m
+[0m[ INFO] [1711643024.674861356, 156.720000000]: Added FollowJointTrajectory controller for head_controller[0m
+[0m[ INFO] [1711643024.949553163, 156.976000000]: Added FollowJointTrajectory controller for gripper_controller[0m
+[0m[ INFO] [1711643024.949893767, 156.976000000]: Returned 5 controllers in list[0m
+[0m[ INFO] [1711643024.964523528, 156.990000000]: Trajectory execution is managing controllers[0m
+[0m[ INFO] [1711643024.964661068, 156.991000000]: MoveGroup debug mode is OFF[0m
 [96mLoading 'move_group/ApplyPlanningSceneService'...
 [0m[96mLoading 'move_group/ClearOctomapService'...
 [0m[96mLoading 'move_group/MoveGroupCartesianPathService'...
@@ -1027,7 +1096,7 @@ Error: Non-unique names detected in <link name='link'>
 [0m[96mLoading 'move_group/MoveGroupPlanService'...
 [0m[96mLoading 'move_group/MoveGroupQueryPlannersService'...
 [0m[96mLoading 'move_group/MoveGroupStateValidationService'...
-[0m[0m[ INFO] [1711631105.697391567, 1.933000000]: 
+[0m[0m[ INFO] [1711643025.033071131, 157.053000000]: 
 
 ********************************************************
 * MoveGroup using: 
@@ -1044,101 +1113,298 @@ Error: Non-unique names detected in <link name='link'>
 *     - StateValidationService
 ********************************************************
 [0m
-[0m[ INFO] [1711631105.697615261, 1.933000000]: MoveGroup context using planning plugin ompl_interface/OMPLPlanner[0m
-[0m[ INFO] [1711631105.697624394, 1.933000000]: MoveGroup context initialization complete[0m
+[0m[ INFO] [1711643025.033707639, 157.054000000]: MoveGroup context using planning plugin ompl_interface/OMPLPlanner[0m
+[0m[ INFO] [1711643025.033739346, 157.054000000]: MoveGroup context initialization complete[0m
 [92m
 You can start planning now!
 
-[0m[INFO] [1711631102.108164, 0.000000]: Waiting for gripper_controller...
-[INFO] [1711631104.435225, 0.692000]: ...connected.
-[INFO] [1711631104.459444, 0.716000]: Opening gripper...
-[INFO] [1711631106.502983, 2.724000]: Gripper opened.
-[0m[ INFO] [1711631101.217444633]: tf_lookup starting[0m
-[0m[ INFO] [1711631101.286820064]: Topic handler 'navigation' subscribed to topic 'nav_vel': timeout = 0.500000s, priority = 10[0m
-[0m[ INFO] [1711631101.297293820]: Topic handler 'joystick' subscribed to topic 'joy_vel': timeout = 0.500000s, priority = 100[0m
-[0m[ INFO] [1711631101.302874949]: Topic handler 'keyboard' subscribed to topic 'key_vel': timeout = 0.500000s, priority = 90[0m
-[0m[ INFO] [1711631101.306364743]: Topic handler 'tablet' subscribed to topic 'tab_vel': timeout = 0.500000s, priority = 100[0m
-[0m[ INFO] [1711631101.308389219]: Topic handler 'marker' subscribed to topic 'marker_vel': timeout = 0.500000s, priority = 99[0m
-[0m[ INFO] [1711631101.310967153]: Topic handler 'phone' subscribed to topic 'phone_vel': timeout = 0.500000s, priority = 98[0m
-[0m[ INFO] [1711631101.313607726]: Topic handler 'rviz_joy' subscribed to topic 'rviz_joy_vel': timeout = 0.500000s, priority = 95[0m
-[0m[ INFO] [1711631101.316581847]: Topic handler 'servoing_cmd_vel' subscribed to topic 'servoing_cmd_vel': timeout = 0.500000s, priority = 20[0m
-[0m[ INFO] [1711631101.319204200]: Topic handler 'pause' subscribed to topic 'pause_navigation': timeout = None, priority = 100[0m
-[0m[ INFO] [1711631101.321464992]: Topic handler 'loop_closure' subscribed to topic 'stop_closing_loop': timeout = None, priority = 200[0m
-[0m[ INFO] [1711631101.322607760]: Topic handler 'joystick' subscribed to topic 'joy_priority': timeout = None, priority = 100[0m
-[0m[ INFO] [1711631101.106190030]: Load description from: /robot_description[0m
-[INFO] [1711631102.217005, 0.000000]: Initializing Gripper Grasper...
-[INFO] [1711631102.241006, 0.000000]: timeout2.0closing_time0.2
-[INFO] [1711631102.242738, 0.000000]: Initialized dynamic reconfigure on: /gripper_grasping
-[INFO] [1711631102.243578, 0.000000]: Subscribed to topic: /gripper_controller/state
-[INFO] [1711631102.244256, 0.000000]: Publishing to topic: /gripper_controller/command
-[INFO] [1711631102.244968, 0.000000]: Offering grasp service on: /gripper_controller/grasp
-[INFO] [1711631102.245301, 0.000000]: Done initializing Gripper Grasp Service!
-[INFO] [1711631102.245896, 0.000000]: Offering release service on: /gripper_controller/release
-[INFO] [1711631102.246211, 0.000000]: Done initializing Gripper Release Service!
-[INFO] [1711631111.885320, 8.052000]: Opening: [0.0]
+[0m[INFO] [1711643021.325844, 0.000000]: Waiting for gripper_controller...
+[INFO] [1711643023.668142, 155.773000]: ...connected.
+[INFO] [1711643023.692220, 155.793000]: Opening gripper...
+[INFO] [1711643025.850314, 157.810000]: Gripper opened.
+[33m[ WARN] [1711643043.613840438, 173.888000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1711643043.654326252, 174.013000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.164s.[0m
+[33m[ WARN] [1711643044.252969379, 175.563000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1711643044.277248829, 175.610500000]: Dropping first 1 trajectory point(s) out of 77, as they occur before the current time.
+First valid point will be reached in 0.230s.[0m
+[33m[ WARN] [1711643046.210907876, 182.323000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[31m[ERROR] [1711643046.211135448, 182.323000000]: Attempting to attach object 'cube_red_1' to link 'gripper_base_link' but no geometry specified and such an object does not exist in the collision world[0m
+[33m[ WARN] [1711643046.212462623, 182.328000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1711643046.254301359, 182.453000000]: Dropping first 1 trajectory point(s) out of 4, as they occur before the current time.
+First valid point will be reached in 0.316s.[0m
+[33m[ WARN] [1711643046.867217055, 184.028000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[31m[ERROR] [1711643046.867837794, 184.028000000]: Attached body 'cube_red_1' not found[0m
+[33m[ WARN] [1711643047.454296560, 185.905500000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[31m[ERROR] [1711643047.472211320, 185.945500000]: 
+Invalid Trajectory: start point deviates from current robot state more than 0.01
+joint 'arm_1_joint': expected: 2.21943, current: 2.18751[0m
+[33m[ WARN] [1711643048.461073937, 189.513000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[0m[ INFO] [1711643043.614311231, 173.888000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1711643043.614541601, 173.888000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1711643043.624415787, 173.925500000]: Planner configuration 'arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1711643043.626764210, 173.930500000]: arm/arm: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1711643043.640029921, 173.975500000]: arm/arm: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1711643043.640205624, 173.978000000]: Solution found in 0.014409 seconds[0m
+[0m[ INFO] [1711643043.647418990, 173.990500000]: SimpleSetup: Path simplification took 0.006747 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1711643043.705622837, 174.218000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1711643043.708047994, 174.228000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1711643043.712672850, 174.238000000]: Received event 'stop'[0m
+[0m[ INFO] [1711643044.252741052, 175.563000000]: Received request to compute Cartesian path[0m
+[0m[ INFO] [1711643044.253233757, 175.563000000]: Attempting to follow 2 waypoints for link 'arm_tool_link' using a step of 0.010000 m and jump threshold 0.000000 (in global reference frame)[0m
+[0m[ INFO] [1711643044.261520486, 175.585500000]: Computed Cartesian path with 77 points (followed 100.000000% of requested trajectory)[0m
+[0m[ INFO] [1711643044.264530446, 175.593000000]: Execution request received[0m
+[0m[ INFO] [1711643045.442879024, 179.923000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1711643045.453094184, 179.968000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1711643045.453635704, 179.970500000]: Execution completed: SUCCEEDED[0m
+[0m[ INFO] [1711643045.454410672, 179.975500000]: Received event 'stop'[0m
+[0m[ INFO] [1711643046.212739667, 182.328000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1711643046.212830257, 182.328000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1711643046.216059609, 182.333000000]: Planner configuration 'arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1711643046.216554233, 182.335500000]: arm/arm: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1711643046.239595281, 182.403000000]: arm/arm: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1711643046.239693175, 182.403000000]: Solution found in 0.023404 seconds[0m
+[0m[ INFO] [1711643046.248324637, 182.433000000]: SimpleSetup: Path simplification took 0.008406 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1711643046.517950199, 183.260500000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1711643046.519598217, 183.268000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1711643046.520352185, 183.270500000]: Received event 'stop'[0m
+[0m[ INFO] [1711643047.453845840, 185.905500000]: Received request to compute Cartesian path[0m
+[0m[ INFO] [1711643047.454734098, 185.905500000]: Attempting to follow 2 waypoints for link 'arm_tool_link' using a step of 0.010000 m and jump threshold 0.000000 (in global reference frame)[0m
+[0m[ INFO] [1711643047.462752397, 185.923000000]: Computed Cartesian path with 82 points (followed 100.000000% of requested trajectory)[0m
+[0m[ INFO] [1711643047.466961475, 185.928000000]: Execution request received[0m
+[0m[ INFO] [1711643047.472520264, 185.945500000]: Execution completed: ABORTED[0m
+[0m[ INFO] [1711643047.473582122, 185.955500000]: Received event 'stop'[0m
+[0m[ INFO] [1711643048.461437794, 189.515500000]: Combined planning and execution request receiv[33m[ WARN] [1711643048.496237442, 189.645500000]: Dropping first 1 trajectory point(s) out of 16, as they occur before the current time.
+First valid point will be reached in 0.335s.[0m
+[33m[ WARN] [1711643049.185833944, 191.750500000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1711643049.230819163, 191.930500000]: Dropping first 1 trajectory point(s) out of 21, as they occur before the current time.
+First valid point will be reached in 0.201s.[0m
+[33m[ WARN] [1711643049.993710747, 194.730500000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1711643050.021345385, 194.830500000]: Dropping first 1 trajectory point(s) out of 3, as they occur before the current time.
+First valid point will be reached in 0.104s.[0m
+ed for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1711643048.461592588, 189.515500000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1711643048.466612213, 189.535500000]: Planner configuration 'arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1711643048.467385814, 189.538000000]: arm/arm: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1711643048.479428328, 189.583000000]: arm/arm: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1711643048.479491309, 189.583000000]: Solution found in 0.012445 seconds[0m
+[0m[ INFO] [1711643048.488688355, 189.608000000]: SimpleSetup: Path simplification took 0.009013 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1711643049.083883757, 191.548000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1711643049.097048495, 191.588000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1711643049.099802777, 191.593000000]: Received event 'stop'[0m
+[0m[ INFO] [1711643049.185998324, 191.750500000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1711643049.186084277, 191.750500000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1711643049.186471502, 191.753000000]: Starting state is just outside bounds (joint 'arm_7_joint'). Assuming within bounds.[0m
+[0m[ INFO] [1711643049.188550760, 191.765500000]: Planner configuration 'arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1711643049.189075652, 191.768000000]: arm/arm: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1711643049.212212316, 191.855500000]: arm/arm: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1711643049.212342872, 191.855500000]: Solution found in 0.023501 seconds[0m
+[0m[ INFO] [1711643049.224882897, 191.913000000]: SimpleSetup: Path simplification took 0.012417 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1711643049.225910617, 191.918000000]: Planning adapters have added states at index positions: [ 0 ][0m
+[0m[ INFO] [1711643049.914383718, 194.533000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1711643049.922893929, 194.565500000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1711643049.923891369, 194.568000000]: Received event 'stop'[0m
+[0m[ INFO] [1711643049.993912004, 194.730500000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1711643049.993941595, 194.730500000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1711643049.994050192, 194.730500000]: Starting state is just outside bounds (joint 'arm_6_joint'). Assuming within bounds.[0m
+[0m[ INFO] [1711643049.996748694, 194.740500000]: Planner configuration 'arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1711643049.997320744, 194.740500000]: arm/arm: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1711643050.009468522, 194.790500000]: arm/arm: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1711643050.009603962, 194.790500000]: Solution found in 0.012508 seconds[0m
+[0m[ INFO] [1711643050.015936141, 194.815500000]: SimpleSetup: Path simplification took 0.006114 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1711643050.016343879, 194.815500000]: Planning adapters have added states at index positions: [ 0 ][0m
+[0m[ INFO] [1711643050.089832907, 195.085500000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1711643050.099282727, 195.130500000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1711643050.101198974, 195.138000000]: Received event 'stop'[0m
+[0m[ INFO] [1711643050.570771901, 196.5355[33m[ WARN] [1711643050.571195598, 196.535500000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[31m[ERROR] [1711643050.582893589, 196.568000000]: 
+Invalid Trajectory: start point deviates from current robot state more than 0.01
+joint 'arm_1_joint': expected: 2.09785, current: 2.07981[0m
+[33m[ WARN] [1711643051.590705495, 200.068000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1711643051.617774271, 200.150500000]: Dropping first 1 trajectory point(s) out of 14, as they occur before the current time.
+First valid point will be reached in 0.376s.[0m
+[33m[ WARN] [1711643052.850060609, 204.058000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1711643052.863499181, 204.110500000]: Dropping first 1 trajectory point(s) out of 60, as they occur before the current time.
+First valid point will be reached in 0.229s.[0m
+[33m[ WARN] [1711643054.488931009, 209.773000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[31m[ERROR] [1711643054.489175269, 209.775500000]: Attempting to attach object 'cube_red_1' to link 'gripper_base_link' but no geometry specified and such an object does not exist in the collision world[0m
+[33m[ WARN] [1711643054.494300164, 209.790500000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1711643054.519907974, 209.878000000]: Dropping first 1 trajectory point(s) out of 3, as they occur before the current time.
+First valid point will be reached in 0.396s.[0m
+[33m[ WARN] [1711643055.176130662, 211.343000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[31m[ERROR] [1711643055.176343069, 211.343000000]: Attached body 'cube_red_1' not found[0m
+[33m[ WARN] [1711643055.990563559, 213.643000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+00000]: Received request to compute Cartesian path[0m
+[0m[ INFO] [1711643050.571400524, 196.535500000]: Attempting to follow 2 waypoints for link 'arm_tool_link' using a step of 0.010000 m and jump threshold 0.000000 (in global reference frame)[0m
+[0m[ INFO] [1711643050.578436741, 196.553000000]: Computed Cartesian path with 79 points (followed 100.000000% of requested trajectory)[0m
+[0m[ INFO] [1711643050.580595892, 196.560500000]: Execution request received[0m
+[0m[ INFO] [1711643050.582967169, 196.568000000]: Execution completed: ABORTED[0m
+[0m[ INFO] [1711643050.583490873, 196.570500000]: Received event 'stop'[0m
+[0m[ INFO] [1711643051.590928853, 200.070500000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1711643051.590989930, 200.070500000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1711643051.594118623, 200.083000000]: Planner configuration 'arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1711643051.595061897, 200.088000000]: arm/arm: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1711643051.606754602, 200.120500000]: arm/arm: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1711643051.606919900, 200.123000000]: Solution found in 0.012440 seconds[0m
+[0m[ INFO] [1711643051.614348381, 200.143000000]: SimpleSetup: Path simplification took 0.007011 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1711643052.180539524, 202.105500000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1711643052.191245247, 202.145500000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1711643052.194357473, 202.150500000]: Received event 'stop'[0m
+[0m[ INFO] [1711643052.849941099, 204.058000000]: Received request to compute Cartesian path[0m
+[0m[ INFO] [1711643052.850191415, 204.060500000]: Attempting to follow 2 waypoints for link 'arm_tool_link' using a step of 0.010000 m and jump threshold 0.000000 (in global reference frame)[0m
+[0m[ INFO] [1711643052.854774314, 204.078000000]: Computed Cartesian path with 60 points (followed 100.000000% of requested trajectory)[0m
+[0m[ INFO] [1711643052.858266418, 204.093000000]: Execution request received[0m
+[0m[ INFO] [1711643053.775037853, 207.425500000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1711643053.783690435, 207.465500000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1711643053.783932679, 207.465500000]: Execution completed: SUCCEEDED[0m
+[0m[ INFO] [1711643053.785118439, 207.473000000]: Received event 'stop'[0m
+[0m[ INFO] [1711643054.494396127, 209.790500000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1711643054.494440871, 209.790500000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1711643054.495722143, 209.795500000]: Planner configuration 'arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1711643054.496108168, 209.798000000]: arm/arm: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1711643054.508167220, 209.833000000]: arm/arm: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1711643054.508200699, 209.833000000]: Solution found in 0.012333 seconds[0m
+[0m[ INFO] [1711643054.513218515, 209.850500000]: SimpleSetup: Path simplification took 0.004744 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1711643054.829507564, 210.683000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1711643054.830294636, 210.685500000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1711643054.832596082, 210.695500000]: Received event 'stop'[0m
+[0m[ INFO] [1711643055.990175974, 213.640500000]: Received request to compute Cartesian path[0m
+[0m[ INFO] [1711643055.990901631, 213.643[31m[ERROR] [1711643056.000029197, 213.665500000]: 
+Invalid Trajectory: start point deviates from current robot state more than 0.01
+joint 'arm_1_joint': expected: 2.2784, current: 2.21565[0m
+[33m[ WARN] [1711643056.710438722, 215.973000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[31m[ERROR] [1711643056.710760582, 215.973000000]: Attempting to attach object 'cube_red_1' to link 'gripper_base_link' but no geometry specified and such an object does not exist in the collision world[0m
+[33m[ WARN] [1711643056.716650135, 215.993000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1711643056.748397240, 216.098000000]: Dropping first 1 trajectory point(s) out of 9, as they occur before the current time.
+First valid point will be reached in 0.348s.[0m
+[33m[ WARN] [1711643057.275965522, 217.688000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1711643057.315070357, 217.808000000]: Dropping first 1 trajectory point(s) out of 22, as they occur before the current time.
+First valid point will be reached in 0.395s.[0m
+[0m[ INFO] [1711643020.486685897]: Topic handler 'navigation' subscribed to topic 'nav_vel': timeout = 0.500000s, priority = 10[0m
+[0m[ INFO] [1711643020.493677729]: Topic handler 'joystick' subscribed to topic 'joy_vel': timeout = 0.500000s, priority = 100[0m
+[0m[ INFO] [1711643020.516871525]: Topic handler 'keyboard' subscribed to topic 'key_vel': timeout = 0.500000s, priority = 90[0m
+[0m[ INFO] [1711643020.523669393]: Topic handler 'tablet' subscribed to topic 'tab_vel': timeout = 0.500000s, priority = 100[0m
+[0m[ INFO] [1711643020.529245122]: Topic handler 'marker' subscribed to topic 'marker_vel': timeout = 0.500000s, priority = 99[0m
+[0m[ INFO] [1711643020.532753136]: Topic handler 'phone' subscribed to topic 'phone_vel': timeout = 0.500000s, priority = 98[0m
+[0m[ INFO] [1711643020.535341534]: Topic handler 'rviz_joy' subscribed to topic 'rviz_joy_vel': timeout = 0.500000s, priority = 95[0m
+[0m[ INFO] [1711643020.538570315]: Topic handler 'servoing_cmd_vel' subscribed to topic 'servoing_cmd_vel': timeout = 0.500000s, priority = 20[0m
+[0m[ INFO] [1711643020.546063351]: Topic handler 'pause' subscribed to topic 'pause_navigation': timeout = None, priority = 100[0m
+[0m[ INFO] [1711643020.549317139]: Topic handler 'loop_closure' subscribed to topic 'stop_closing_loop': timeout = None, priority = 200[0m
+[0m[ INFO] [1711643020.551613782]: Topic handler 'joystick' subscribed to topic 'joy_priority': timeout = None, priority = 100[0m
+[0m[ INFO] [1711643020.449326079]: tf_lookup starting[0m
+[0m[ INFO] [1711643020.336112539]: Load description from: /robot_description[0m
+000000]: Attempting to follow 2 waypoints for link 'arm_tool_link' using a step of 0.010000 m and jump threshold 0.000000 (in global reference frame)[0m
+[0m[ INFO] [1711643055.995923888, 213.655500000]: Computed Cartesian path with 33 points (followed 100.000000% of requested trajectory)[0m
+[0m[ INFO] [1711643055.997514269, 213.658000000]: Execution request received[0m
+[0m[ INFO] [1711643056.000339762, 213.665500000]: Execution completed: ABORTED[0m
+[0m[ INFO] [1711643056.001813186, 213.668000000]: Received event 'stop'[0m
+[0m[ INFO] [1711643056.716977874, 215.993000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1711643056.717106338, 215.993000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1711643056.720263970, 216.005500000]: Planner configuration 'arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1711643056.721368561, 216.005500000]: arm/arm: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1711643056.733530243, 216.048000000]: arm/arm: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1711643056.733654077, 216.048000000]: Solution found in 0.012880 seconds[0m
+[0m[ INFO] [1711643056.740726209, 216.068000000]: SimpleSetup: Path simplification took 0.006752 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1711643057.188586831, 217.503000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1711643057.189358686, 217.505500000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1711643057.191392932, 217.515500000]: Received event 'stop'[0m
+[0m[ INFO] [1711643057.276279133, 217.688000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1711643057.276414587, 217.688000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1711643057.279304464, 217.703000000]: Planner configuration 'arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1711643057.279868552, 217.705500000]: arm/arm: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1711643057.302389060, 217.770500000]: arm/arm: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1711643057.302460468, 217.770500000]: Solution found in 0.022908 seconds[0m
+[0m[ INFO] [1711643057.310809840, 217.800500000]: SimpleSetup: Path simplification took 0.008001 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1711643058.131326316, 220.413000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1711643058.144504344, 220.465500000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1711643058.749279484, 222.375500000]: Received event 'stop'[0m
+[INFO] [1711643021.343389, 0.000000]: Initializing Gripper Grasper...
+[INFO] [1711643021.366299, 0.000000]: timeout2.0closing_time0.2
+[INFO] [1711643021.368535, 0.000000]: Initialized dynamic reconfigure on: /gripper_grasping
+[INFO] [1711643021.369475, 0.000000]: Subscribed to topic: /gripper_controller/state
+[INFO] [1711643021.370898, 0.000000]: Publishing to topic: /gripper_controller/command
+[INFO] [1711643021.372291, 0.000000]: Offering grasp service on: /gripper_controller/grasp
+[INFO] [1711643021.372817, 0.000000]: Done initializing Gripper Grasp Service!
+[INFO] [1711643021.373828, 0.000000]: Offering release service on: /gripper_controller/release
+[INFO] [1711643021.374168, 0.000000]: Done initializing Gripper Release Service!
+[INFO] [1711643040.955396, 171.838000]: Opening: [0.0]
+[INFO] [1711643045.803302, 181.200500]: Closing: [0.8]
+[INFO] [1711643046.189599, 182.253000]: Closing: [0.3818645036339871]
+[INFO] [1711643046.850116, 183.963000]: Opening: [0.0]
+[INFO] [1711643047.808563, 187.183000]: Closing: [0.8]
+[INFO] [1711643048.444254, 189.440500]: Opening: [0.0]
+[INFO] [1711643050.933707, 197.720500]: Closing: [0.8]
+[INFO] [1711643051.574553, 200.028000]: Opening: [0.0]
+[INFO] [1711643054.122398, 208.673000]: Closing: [0.8]
+[INFO] [1711643054.466047, 209.713000]: Closing: [0.39330049746257506]
+[INFO] [1711643055.160571, 211.290500]: Opening: [0.0]
+[INFO] [1711643056.354351, 214.848000]: Closing: [0.8]
+[INFO] [1711643056.685803, 215.888000]: Closing: [0.23031091304462586]
 Segmentation fault (core dumped)
-[31m[gripper_controllers_spawner-8] escalating to SIGTERM[0m
-[31m[joint_trajectory_controllers_velocity_controllers_spawner-11] escalating to SIGTERM[0m
-[31m[bringup_controllers_spawner_ft-7] escalating to SIGTERM[0m
-[31m[bringup_controllers_spawner_imu-6] escalating to SIGTERM[0m
-[31m[default_controllers_spawner-4] escalating to SIGTERM[0m
-[31m[gripper_controllers_spawner-8] escalating to SIGKILL[0m
-[31m[joint_trajectory_controllers_velocity_controllers_spawner-11] escalating to SIGKILL[0m
-[31m[bringup_controllers_spawner_ft-7] escalating to SIGKILL[0m
-[31m[bringup_controllers_spawner_imu-6] escalating to SIGKILL[0m
-[31m[default_controllers_spawner-4] escalating to SIGKILL[0m
+[31m[joint_trajectory_controllers_velocity_controllers_spawner-12] escalating to SIGTERM[0m
+[31m[gripper_controllers_spawner-9] escalating to SIGTERM[0m
+[31m[bringup_controllers_spawner_imu-7] escalating to SIGTERM[0m
+[31m[bringup_controllers_spawner_ft-8] escalating to SIGTERM[0m
+[31m[default_controllers_spawner-5] escalating to SIGTERM[0m
+[31m[joint_trajectory_controllers_velocity_controllers_spawner-12] escalating to SIGKILL[0m
+[31m[gripper_controllers_spawner-9] escalating to SIGKILL[0m
+[31m[bringup_controllers_spawner_imu-7] escalating to SIGKILL[0m
+[31m[bringup_controllers_spawner_ft-8] escalating to SIGKILL[0m
+[31m[default_controllers_spawner-5] escalating to SIGKILL[0m
 [31mShutdown errors:
- * process[bringup_controllers_spawner_imu-6, pid 160302]: required SIGKILL. May still be running.
- * process[joint_trajectory_controllers_velocity_controllers_spawner-11, pid 160313]: required SIGKILL. May still be running.
- * process[gripper_controllers_spawner-8, pid 160304]: required SIGKILL. May still be running.
- * process[bringup_controllers_spawner_ft-7, pid 160303]: required SIGKILL. May still be running.
- * process[default_controllers_spawner-4, pid 160300]: required SIGKILL. May still be running.[0m
-[1mprocess[rosout-1]: started with pid [160286][0m
+ * process[bringup_controllers_spawner_ft-8, pid 114731]: required SIGKILL. May still be running.
+ * process[bringup_controllers_spawner_imu-7, pid 114730]: required SIGKILL. May still be running.
+ * process[joint_trajectory_controllers_velocity_controllers_spawner-12, pid 114741]: required SIGKILL. May still be running.
+ * process[gripper_controllers_spawner-9, pid 114732]: required SIGKILL. May still be running.
+ * process[default_controllers_spawner-5, pid 114728]: required SIGKILL. May still be running.[0m
+[1mprocess[rosout-1]: started with pid [114710][0m
 started core service [/rosout]
-[1mprocess[gazebo-2]: started with pid [160294][0m
-[1mprocess[spawn_model-3]: started with pid [160298][0m
-[1mprocess[default_controllers_spawner-4]: started with pid [160300][0m
-[1mprocess[head_controller/point_head_action-5]: started with pid [160301][0m
-[1mprocess[bringup_controllers_spawner_imu-6]: started with pid [160302][0m
-[1mprocess[bringup_controllers_spawner_ft-7]: started with pid [160303][0m
-[1mprocess[gripper_controllers_spawner-8]: started with pid [160304][0m
-[1mprocess[gripper_grasping-9]: started with pid [160309][0m
-[1mprocess[home_gripper-10]: started with pid [160312][0m
-[1mprocess[joint_trajectory_controllers_velocity_controllers_spawner-11]: started with pid [160313][0m
-[1mprocess[load_motions-12]: started with pid [160314][0m
-[1mprocess[play_motion-13]: started with pid [160331][0m
-[1mprocess[is_already_there-14]: started with pid [160333][0m
-[1mprocess[move_group-15]: started with pid [160335][0m
-[1mprocess[robot_state_publisher-16]: started with pid [160336][0m
-[1mprocess[tf_lookup-17]: started with pid [160337][0m
-[1mprocess[twist_mux-18]: started with pid [160353][0m
-[1mprocess[twist_marker-19]: started with pid [160354][0m
-[1mprocess[joystick_relay-20]: started with pid [160355][0m
-[1mprocess[image_raw_to_rect_color_relay-21]: started with pid [160357][0m
-[1mprocess[xtion/rgb/image_proc-22]: started with pid [160368][0m
-[1m[spawn_model-3] process has finished cleanly
-log file: /home/adriano/.ros/log/c86c738a-ed03-11ee-98bb-0d3dacdec6c8/spawn_model-3*.log[0m
-[1m[load_motions-12] process has finished cleanly
-log file: /home/adriano/.ros/log/c86c738a-ed03-11ee-98bb-0d3dacdec6c8/load_motions-12*.log[0m
-[1m[home_gripper-10] process has finished cleanly
-log file: /home/adriano/.ros/log/c86c738a-ed03-11ee-98bb-0d3dacdec6c8/home_gripper-10*.log[0m
-[xtion/rgb/image_proc-22] killing on exit
-[image_raw_to_rect_color_relay-21] killing on exit
-[joystick_relay-20] killing on exit
-[twist_marker-19] killing on exit
-[twist_mux-18] killing on exit
-[tf_lookup-17] killing on exit
-[robot_state_publisher-16] killing on exit
-[move_group-15] killing on exit
-[is_already_there-14] killing on exit
-[play_motion-13] killing on exit
-[joint_trajectory_controllers_velocity_controllers_spawner-11] killing on exit
-[gripper_grasping-9] killing on exit
-[gripper_controllers_spawner-8] killing on exit
-[bringup_controllers_spawner_ft-7] killing on exit
-[bringup_controllers_spawner_imu-6] killing on exit
-[head_controller/point_head_action-5] killing on exit
-[default_controllers_spawner-4] killing on exit
+[1mprocess[gazebo-2]: started with pid [114717][0m
+[1mprocess[gazebo_gui-3]: started with pid [114721][0m
+[1mprocess[spawn_model-4]: started with pid [114726][0m
+[1mprocess[default_controllers_spawner-5]: started with pid [114728][0m
+[1mprocess[head_controller/point_head_action-6]: started with pid [114729][0m
+[1mprocess[bringup_controllers_spawner_imu-7]: started with pid [114730][0m
+[1mprocess[bringup_controllers_spawner_ft-8]: started with pid [114731][0m
+[1mprocess[gripper_controllers_spawner-9]: started with pid [114732][0m
+[1mprocess[gripper_grasping-10]: started with pid [114737][0m
+[1mprocess[home_gripper-11]: started with pid [114739][0m
+[1mprocess[joint_trajectory_controllers_velocity_controllers_spawner-12]: started with pid [114741][0m
+[1mprocess[load_motions-13]: started with pid [114757][0m
+[1mprocess[play_motion-14]: started with pid [114759][0m
+[1mprocess[is_already_there-15]: started with pid [114779][0m
+[1mprocess[move_group-16]: started with pid [114780][0m
+[1mprocess[robot_state_publisher-17]: started with pid [114781][0m
+[1mprocess[tf_lookup-18]: started with pid [114802][0m
+[1mprocess[twist_mux-19]: started with pid [114804][0m
+[1mprocess[twist_marker-20]: started with pid [114808][0m
+[1mprocess[joystick_relay-21]: started with pid [114828][0m
+[1mprocess[image_raw_to_rect_color_relay-22]: started with pid [114848][0m
+[1mprocess[xtion/rgb/image_proc-23]: started with pid [114869][0m
+[1m[spawn_model-4] process has finished cleanly
+log file: /home/adriano/.ros/log/88d5e9f6-ed1f-11ee-bf8a-515a48b2d8ca/spawn_model-4*.log[0m
+[1m[load_motions-13] process has finished cleanly
+log file: /home/adriano/.ros/log/88d5e9f6-ed1f-11ee-bf8a-515a48b2d8ca/load_motions-13*.log[0m
+[1m[home_gripper-11] process has finished cleanly
+log file: /home/adriano/.ros/log/88d5e9f6-ed1f-11ee-bf8a-515a48b2d8ca/home_gripper-11*.log[0m
+[xtion/rgb/image_proc-23] killing on exit
+[image_raw_to_rect_color_relay-22] killing on exit
+[joystick_relay-21] killing on exit
+[twist_marker-20] killing on exit
+[twist_mux-19] killing on exit
+[tf_lookup-18] killing on exit
+[robot_state_publisher-17] killing on exit
+[move_group-16] killing on exit
+[is_already_there-15] killing on exit
+[play_motion-14] killing on exit
+[joint_trajectory_controllers_velocity_controllers_spawner-12] killing on exit
+[gripper_grasping-10] killing on exit
+[gripper_controllers_spawner-9] killing on exit
+[bringup_controllers_spawner_imu-7] killing on exit
+[head_controller/point_head_action-6] killing on exit
+[bringup_controllers_spawner_ft-8] killing on exit
+[gazebo_gui-3] killing on exit
+[default_controllers_spawner-5] killing on exit
 [gazebo-2] killing on exit
 [rosout-1] killing on exit
 [master] killing on exit

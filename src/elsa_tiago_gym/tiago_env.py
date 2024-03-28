@@ -38,7 +38,11 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
     def __init__(self, env_code:str,speed:float):
         rospy.logdebug("========= In Tiago Env")
         
-        self.env_code = env_code
+        if env_code == None:
+            self.random_env = True
+        else:
+            self.random_env = False
+
         self.ros_master_uri = os.environ.get('ROS_MASTER_URI')
         self.controllers_list = []
         self.robot_name_space = ""
@@ -73,11 +77,7 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
             try:
                 self.environments = yaml.safe_load(file)
             except yaml.YAMLError as exc:
-                print(exc)
-        rospy.loginfo(self.environments['environments']['elsa_1'][0]['color'])
-        if env_code is None:
-            env_code = random.randint(1,10)
-        self.test_env = 'elsa_'+str(env_code)
+                print(exc)        
 
         # define the reachability boundaries (ws, joint bounds)
         self.joint_names = ["arm_"+str(i)+"_joint" for i in range(1,8)] 
@@ -90,12 +90,16 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
 
         # init and start
         self.gazebo.unpauseSim()
+        self.init_environment(env_code)
         self.init_model_states()
         self._init_moveit()
         self._init_rviz()
-        set_sim_velocity(speed)
         self._check_all_systems_ready()
         self.gazebo.pauseSim()
+
+        if speed is not None:
+            set_sim_velocity(speed)
+
 
     # Methods needed by the RobotGazeboEnv
     # ----------------------------
@@ -154,7 +158,6 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         self.marker_publisher = rospy.Publisher('visualization_marker', Marker, queue_size=100, latch=True)
 
     def init_model_states(self):
-        self.init_environment(self.test_env)
         self.grasped_item = None
         self.tiago_orientation = 0.0
         model_states_msg = rospy.wait_for_message('/gazebo/model_states', ModelStates, timeout=5.0)
@@ -228,7 +231,7 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
 
         self.pub_head_topic.publish(phag)
 
-    def grasping(self, object):
+    def grasping(self, obj):
         """
         1. remove the object from its place
         2. brings the EE to its position
@@ -236,41 +239,38 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         4. put the obj in place again
         3. close the gripper
         """
-        #collect the object position
-        x,y,z = object.position
-        roll, pitch, yaw = 0, np.radians(90), 0
 
+        #collect the object position
+        x,y,z = obj.position
+        roll, pitch, yaw = 0, np.radians(90), 0
+        self.release()
         '''
         # go over the object
-        roll, pitch, yaw = 0, np.radians(90), 0
         self.set_arm_pose(x, y, z + 0.27, roll, pitch, yaw)
         #remove the object
-        self.set_obj_pos(object.id,[3, 0, 0,0, 0, 0])
+        self.set_obj_pos(obj.id,[10, 0, 0,0, 0, 0])
         #go in the object position
-        self.set_arm_pose(x, y, z + 0.23, roll, pitch, yaw)
-        self.release()
-        rospy.sleep(1)
+        self.set_arm_pose(x, y, z + 0.21, roll, pitch, yaw)
+
+        
         '''
-        self.release()
         self.execute_trajectory(
             [[x, y, z + 0.27, roll, pitch, yaw],
             [x, y, z + 0.23, roll, pitch, yaw]]
         )
-
-
-
         
+        rospy.sleep(1)
 
         # get the object in position and grasp
-        self.set_obj_pos(object.id,[x, y, z, 0, 0, 0])
+        self.set_obj_pos(obj.id,[x, y, z, 0, 0, 0])
         self.grasp()
         grasped = rospy.wait_for_message("/gripper/is_grasped", Bool)
 
         if grasped.data is True:
             grasping_group = 'gripper'
             touch_links = self.robot.get_link_names(group=grasping_group)
-            self.scene.attach_box("gripper_base_link", object.id, touch_links=touch_links)
-            self.grasped_item = object.id
+            self.scene.attach_box("gripper_base_link", obj.id, touch_links=touch_links)
+            self.grasped_item = obj.id
             self.set_arm_pose(x, y, z + 0.3, roll, pitch, yaw)
             return True
         else:
@@ -288,7 +288,6 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         self.release()
         self.scene.remove_attached_object("gripper_base_link", name=self.grasped_item)
         placed = self.wait_for_placed_item(self.grasped_item)
-        object = self.model_state.cubes[self.grasped_item]
         object_state = self.get_gazebo_object_state(self.grasped_item,'')
         object_state.header.frame_id = "base_footprint"
         '''
@@ -365,7 +364,7 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
 
         self.pub_arm_joint_controller.publish(joint_trajectory_msg)
         e = 1
-        rospy.sleep(motion_time)
+        rospy.sleep(motion_time+0.001)
         self.store_arm_state()
 
         
@@ -420,6 +419,10 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         for id,cyl in self.model_state.cylinders.items():
             cyl_state = get_gazebo_object_state(id,'')
             cyl.set_state(cyl_state)
+
+        attached_objects = self.scene.get_attached_objects(["gripper_base_link"])
+        #if self.grasped_item is not None:
+
 
     def set_obj_pos(self,id:str,pose):
         """
@@ -496,6 +499,7 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         """Checks which is the closest grapable object
         """
         raise NotImplementedError()
+
 
 
 

@@ -7,7 +7,7 @@ from gym.envs.registration import register
 
 rospack = rospkg.RosPack()
 
-def start_env(env, speed,client_id, max_episode_steps:int = 100, multimodal = False, ros_uri = "http://localhost:11311/", gz_uri='http://localhost:11345'):
+def start_env(env, speed = None,client_id = None, max_episode_steps:int = 100, multimodal = False, ros_uri = "http://localhost:11311/", gz_uri='http://localhost:11345'):
 
     os.environ['ROS_MASTER_URI'] = ros_uri
     os.environ['GAZEBO_MASTER_URI'] = gz_uri
