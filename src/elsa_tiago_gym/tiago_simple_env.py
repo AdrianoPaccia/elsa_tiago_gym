@@ -6,9 +6,8 @@ import random
 from gym.envs.registration import register
 from elsa_tiago_gym import tiago_env
 from gazebo_msgs.msg import ContactsState, ModelStates
-from sensor_msgs.msg import Image
+from sensor_msgs.msg import Image,JointState
 from std_msgs.msg import Header
-
 from cv_bridge import CvBridge
 from elsa_tiago_gym.utils import Model
 import math
@@ -97,6 +96,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
 
 
 
+
     def init_environment(self, env_code=None):
         # get which env to init
         if env_code == None:
@@ -130,8 +130,9 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
 
     def _set_init_pose(self):
         """Sets the Robot in its init pose
-        """
-        self.set_arm_pose(0.65, -0.1, 0.85, 0, np.radians(90), 0)
+        """    
+        x, y, z  = [np.random.uniform(low, high) for low, high in zip([0.60,-0.3,0.65], [0.7,0.3,0.85])]
+        self.set_arm_pose(x, y, z, 0, np.radians(90), 0)
         self.release()
 
 
@@ -164,14 +165,14 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         8 dim vector: 7 JOINT displacemets (continuos) and 1 (boolean) for grasping.
         """
         self.episode_step += 1
-        max_speed = 0.6 # rad/s
+        max_velocities = np.ones(7)*0.005
         dt = 0.1
 
         #joint position-related act
         if type(action) == np.ndarray:
             action = action.tolist()
 
-        djoins = action[:-1]
+        djoint = action[:-1]
         grasp = action[-1]
 
         grasp_item_id,distance = self.get_grasping_obj()
@@ -190,8 +191,14 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         
         # joint motion
         else:
-            target_joints = [j + (dj*max_speed)*dt for j,dj in zip(self.stored_join_state, djoins)]
-            self.action_failed = not self.set_arm_joint_pose(target_joints, dt)
+            act = []
+            # We get the joint values from the group and change some of the values
+            joint_goal = self.arm_group.get_current_joint_values()
+            for i in range(7):
+                joint_goal[i] += (djoint[i]*max_velocities[i])*dt
+                act.append(djoint[i]*max_velocities[i]*dt)
+            print('act = ',act)
+            self.action_failed = not self.set_arm_joint_pose(joint_goal, dt)
 
 
     def _get_obs(self):
