@@ -1,15 +1,13 @@
 #!/bin/bash
 
 # Check if the user provided the required arguments
-if [ "$#" -ne 2 ]; then
-    echo "Usage: $0 <sim_velocity> <gui>"
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <gui>"
     exit 1
 fi
 
 # Extract the arguments
-velocity="$1"
-gui="$2"
-echo "velocity = $velocity"
+gui="$1"
 echo "gui = $gui"
 
 # Get the relative path

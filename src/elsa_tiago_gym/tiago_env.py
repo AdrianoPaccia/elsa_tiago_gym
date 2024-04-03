@@ -81,7 +81,7 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
 
         # define the reachability boundaries (ws, joint bounds)
         self.joint_names = ["arm_"+str(i)+"_joint" for i in range(1,8)] 
-        self.arm_workspace_low =  np.array([0.6, -0.5, 0.63])
+        self.arm_workspace_low =  np.array([0.4, -0.5, 0.63])
         self.arm_workspace_high = np.array([0.8,  0.5, 0.9])
         #self.arm_joint_bounds_low = np.array( [60, 0, -90,  20, -120, -90, -120])/180 * np.pi 
         #self.arm_joint_bounds_high = np.array([120, 50,  90, 135, 120,  90,  120])/180 * np.pi
@@ -299,17 +299,18 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         return True
     
     def wait_for_placed_item(self,item):
-        self.placed_item = None
+        self.placed_item = False
         cnt=0
-        while not self.placed_item == item :
+        while not self.placed_item:
             rospy.sleep(0.1)
+            print(f"placed item = {self.placed_item} waiting for dropping")
             rospy.loginfo("waiting for dropping")
             cnt+=1
-            if cnt>20:
+            if cnt>30:
+                print('REPLACING')
                 x, y, z, _, _,_ = self.stored_arm_pose
-                self.set_obj_pos(self.grasped_item,[x, y, z,0, 0, 0])
+                self.set_obj_pos(self.grasped_item,[x, y, z-0.23,0, 0, 0])
                 break
-        self.placed_item = None
         return True
 
     def set_arm_pose(self, x, y, z, roll, pitch, yaw):
@@ -349,43 +350,13 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         #    print('not feasible')
         #    self.out_of_reach = True
         #    return False
-
         joint_goal  = np.clip(joint_goal, self.arm_joint_bounds_low, self.arm_joint_bounds_high)
         self.arm_group.go(joint_goal,wait=True)
         self.arm_group.stop()
-
-        '''#if not self.arm_joints_feasible(joint_goal):
-        #    self.out_of_reach = True
-        #    return False
         
-        joint_goal  = np.clip(joint_goal, self.arm_joint_bounds_low, self.arm_joint_bounds_high)
-
-        # Create a JointTrajectoryPoint for the desired joint positions    
-        trajectory_point = JointTrajectoryPoint()
-        trajectory_point.positions = joint_goal
-        trajectory_point.velocities = [0.0]*7
-        trajectory_point.accelerations = [0.0]*7
-        trajectory_point.time_from_start = rospy.Duration(motion_time)
-
-        # Create and send the trajectory message
-        joint_trajectory_msg = JointTrajectory()
-        joint_trajectory_msg.header = Header()
-        joint_trajectory_msg.header.stamp = rospy.Time.now()
-        joint_trajectory_msg.header.frame_id = "world"
-        joint_trajectory_msg.joint_names = self.joint_names
-        joint_trajectory_msg.points.append(trajectory_point)
-
-        self.pub_arm_joint_controller.publish(joint_trajectory_msg)
-        rospy.sleep(motion_time+0.01)
-        
-        '''
         self.store_arm_state()
         return True
-        #print("\n{:<10} {:<10} {:<10}".format('        ', 'target', 'result'))#, 'other computation'))
-        #for item1, item2, item3 in zip(self.joint_names, joint_goal, self.stored_join_state):
-        #    print("{:<10} {:<10} {:<10}".format(item1, round(item2,4), round(item3,4)))#,round(item4,4)))
-       
-        
+
 
     def store_arm_state(self):
         # store the arm cartesian poseget_current_pose
@@ -395,9 +366,9 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         self.stored_arm_pose = [x, y, z, roll, pitch, yaw]
 
         #store joints pose
-        #self.stored_join_state = self.arm_group.get_current_joint_values()
-        joint_states_msg = rospy.wait_for_message('/joint_states', JointState, timeout=5.0)
-        self.stored_join_state = joint_states_msg.position[:7]
+        self.stored_join_state = self.arm_group.get_current_joint_values()
+        #joint_states_msg = rospy.wait_for_message('/joint_states', JointState, timeout=5.0)
+        #self.stored_join_state = joint_states_msg.position[:7]
 
 
 

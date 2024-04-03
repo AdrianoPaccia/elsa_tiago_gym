@@ -1,15 +1,14 @@
 #!/bin/bash
 
 # Check if the user provided the required arguments
-if [ "$#" -ne 3 ]; then
-    echo "Usage: $0 <number_of_scripts> <sim_velocity> <gui>"
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 <number_of_scripts> <gui>"
     exit 1
 fi
 
 # Extract the arguments
 num_scripts="$1"
-velocity="$2"
-gui="$3"
+gui="$2"
 
 # Check if the provided argument is a valid number
 if ! [[ "$num_scripts" =~ ^[0-9]+$ ]]; then
@@ -26,7 +25,12 @@ script_dir="$(cd "$(dirname "$0")" && pwd)"
 world=elsa_empty
 gui_master=$gui
 
-(roslaunch tiago_gazebo tiago_gazebo.launch world:=$world end_effector:=robotiq-2f-85 public_sim:=true gui:=$gui_master tuck_arm:=false > "$script_dir/logs/output_master.log" 2>&1) &
+
+
+(
+    export ROS_MASTER_URI="http://localhost:11311"
+    export GAZEBO_MASTER_URI="http://localhost:11312"
+    roslaunch tiago_gazebo tiago_gazebo.launch world:=$world end_effector:=robotiq-2f-85 public_sim:=true gui:=$gui_master tuck_arm:=false > "$script_dir/logs/output_master.log" 2>&1) &
 master_pid=$!
 pids+=("$master_pid")
 echo "Master simulation (gui=$gui_master) is up and running with PID: $master_pid"

@@ -131,7 +131,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
     def _set_init_pose(self):
         """Sets the Robot in its init pose
         """    
-        x, y, z  = [np.random.uniform(low, high) for low, high in zip([0.60,-0.3,0.65], [0.7,0.3,0.85])]
+        x, y, z  = [np.random.uniform(low, high) for low, high in zip([0.40,-0.3,0.65], [0.6,0.3,0.85])]
         self.set_arm_pose(x, y, z, 0, np.radians(90), 0)
         self.release()
 
@@ -145,7 +145,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         self.episode_step = 0
         self.collision_detected = False
         self.grasped_item = None
-        self.placed_item = None
+        self.placed_item = False
         self.action_failed = False
 
         #change environment if it is randomized
@@ -191,13 +191,10 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         
         # joint motion
         else:
-            act = []
             # We get the joint values from the group and change some of the values
             joint_goal = self.arm_group.get_current_joint_values()
             for i in range(7):
                 joint_goal[i] += (djoint[i]*max_velocities[i])*dt
-                act.append(djoint[i]*max_velocities[i]*dt)
-            print('act = ',act)
             self.action_failed = not self.set_arm_joint_pose(joint_goal, dt)
 
 
@@ -280,8 +277,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             c1 = coll_1[0]
             c2 = coll_2[0]
             if (c1 or c2) in self.items:
-                if c1 == self.grasped_item: self.placed_item = self.grasped_item
-                elif c2 == self.grasped_item: self.placed_item = self.grasped_item
+                if c1 == self.grasped_item or c2 == self.grasped_item: self.placed_item = True
                 else: pass
             elif (c1 and c2) in [*self.items,*self.forniture] or self.collision_detected:
                 pass
@@ -307,7 +303,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             if dist < min_dist:
                 min_dist = dist
                 candidate = id
-        if dist<1.0:# and z_c<z+0.25:
+        if dist<0.4:# and z_c<z+0.25:
             return candidate, dist
         else:
             return None,None
