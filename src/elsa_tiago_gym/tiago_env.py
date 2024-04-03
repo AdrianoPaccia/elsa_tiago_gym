@@ -35,7 +35,7 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
     """
     Initializes a new Tiago Steel environment
     """
-    def __init__(self, env_code:str,speed:float):
+    def __init__(self, env_code:str,speed:float,random_init:bool):
         rospy.logdebug("========= In Tiago Env")
         
         if env_code == None:
@@ -78,6 +78,9 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
                 self.environments = yaml.safe_load(file)
             except yaml.YAMLError as exc:
                 print(exc)        
+        self.random_init = random_init
+        print('random init = ', self.random_init)
+
 
         # define the reachability boundaries (ws, joint bounds)
         self.joint_names = ["arm_"+str(i)+"_joint" for i in range(1,8)] 
@@ -131,18 +134,19 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         p.pose.position.x = 0.8
         p.pose.position.y = 0
         p.pose.position.z = 0.2
-
-        self.release()
+        
+        self.arm_group.go([np.pi/2,0,0,0,0,0,0],wait=True)
+        self.arm_group.stop()
         rospy.sleep(2)
 
-        #self.look_down()
-        '''
+
+        '''        
         ## ADD objects in the scene
         # Place the table in movit
         self.table = self.get_gazebo_object_state('table_0m4','')
         self.table.header.frame_id = "base_footprint"
         self.table.pose.position.z = 0.21
-        self.scene.add_box("table", self.table, size=(1.02, 0.82, 0.44))
+        self.scene.add_box("table", self.table, size=(1.05, 0.85, 0.5))
         
         # Place the cubes and cylinders in movit
         

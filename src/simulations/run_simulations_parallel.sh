@@ -22,7 +22,7 @@ pids=()
 # Get the relative path
 script_dir="$(cd "$(dirname "$0")" && pwd)"
 
-world=elsa_empty
+world=elsa
 gui_master=$gui
 
 

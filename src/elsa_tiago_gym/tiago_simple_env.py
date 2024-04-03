@@ -43,8 +43,8 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         3       Grasping action (True/False)
     """
     
-    def __init__(self,env_code=None,speed=0.0025, max_episode_steps = 200, multimodal=False, discrete=True):
-        super(TiagoSimpleEnv, self).__init__(env_code,speed)
+    def __init__(self,env_code=None,speed=0.0025, max_episode_steps = 200, random_init=False,multimodal=False, discrete=True):
+        super(TiagoSimpleEnv, self).__init__(env_code,speed,random_init)
 
         self.max_episode_steps = max_episode_steps
 
@@ -130,9 +130,14 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
 
     def _set_init_pose(self):
         """Sets the Robot in its init pose
-        """    
-        x, y, z  = [np.random.uniform(low, high) for low, high in zip([0.40,-0.3,0.65], [0.6,0.3,0.85])]
-        self.set_arm_pose(x, y, z, 0, np.radians(90), 0)
+        """
+        if self.random_init:
+            # put the gripper in a random pose
+            x, y, z  = [np.random.uniform(low, high) for low, high in zip([0.40,-0.4,0.75], [0.8,0.4,0.85])]
+            self.set_arm_pose(x, y, z, 0, np.radians(90), 0)
+        else:
+            x, y, z  = [0.5,-0.1,0.8]
+            self.set_arm_pose(x, y, z, 0, np.radians(90), 0)
         self.release()
 
 
@@ -154,6 +159,12 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             self.init_environment()
             self.init_model_states()
             self.gazebo.pauseSim()
+
+        if self.random_init:
+            #put the objects in a random position
+            for cube in self.model_state.cubes:
+                x, y, z  = [np.random.uniform(low, high) for low, high in zip([0.40,-0.3,0.44], [0.5,0.3,0.44])]
+                self.set_obj_pos(cube,[x, y, z, 0, 0, 0])
 
 
 
@@ -232,7 +243,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             grasped = rospy.wait_for_message("/gripper/is_grasped", Bool)
             if grasped is True:
                 self.placing()
-            self._set_init_pose()
+            #self._set_init_pose()
             self.gazebo.pauseSim()
             done= True
         else:
