@@ -88,8 +88,8 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         self.arm_workspace_high = np.array([0.8,  0.5, 0.9])
         #self.arm_joint_bounds_low = np.array( [60, 0, -90,  20, -120, -90, -120])/180 * np.pi 
         #self.arm_joint_bounds_high = np.array([120, 50,  90, 135, 120,  90,  120])/180 * np.pi
-        self.arm_joint_bounds_low = np.array( [60, 0, -45,  20, -120, -45, -120])/180 * np.pi 
-        self.arm_joint_bounds_high = np.array([120, 50,  45, 120, 120,  45,  120])/180 * np.pi
+        self.arm_joint_bounds_low = np.array( [60, 0, -90,  20, -120, -45, -120])/180 * np.pi 
+        self.arm_joint_bounds_high = np.array([120, 50,  90, 120, 120,  45,  120])/180 * np.pi
 
         # init and start
         self.gazebo.unpauseSim()
@@ -134,9 +134,11 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         p.pose.position.x = 0.8
         p.pose.position.y = 0
         p.pose.position.z = 0.2
-        
-        self.arm_group.go([np.pi/2,0,0,0,0,0,0],wait=True)
-        self.arm_group.stop()
+
+        self.arm_torso_group.go([0.3, 1.05, 0.3, -1.57, 2.0, 0.24, -0.5, 0.0],wait=True)
+        self.arm_torso_group.go([0.05, 1.05, 0.3, -1.57, 2.0, 0.24, -0.5, 0.0],wait=True)
+        #self.arm_group.go([np.pi/2,0,0,0,0,0,0],wait=True)
+        self.arm_torso_group.stop()
         rospy.sleep(2)
 
 
@@ -246,6 +248,10 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         3. close the gripper
         """
 
+        #get the initial joints
+        init_join_state = self.arm_group.get_current_joint_values()
+
+
         #collect the object position
         x,y,z = obj.position
         roll, pitch, yaw = 0, np.radians(90), 0
@@ -278,11 +284,14 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
             self.scene.attach_box("gripper_base_link", obj.id, touch_links=touch_links)
             self.grasped_item = obj.id
             self.set_arm_pose(x, y, z + 0.3, roll, pitch, yaw)
+            #self.set_arm_joint_pose( init_join_state, self.motion_time)
             return True
         else:
             self.release()
             self.grasped_item = None
             self.set_arm_pose(x, y, z + 0.3,roll, pitch, yaw)
+            #self.set_arm_joint_pose( init_join_state, self.motion_time)
+
             return False
 
     def placing(self):
@@ -307,11 +316,9 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         cnt=0
         while not self.placed_item:
             rospy.sleep(0.1)
-            print(f"placed item = {self.placed_item} waiting for dropping")
             rospy.loginfo("waiting for dropping")
             cnt+=1
             if cnt>30:
-                print('REPLACING')
                 x, y, z, _, _,_ = self.stored_arm_pose
                 self.set_obj_pos(self.grasped_item,[x, y, z-0.23,0, 0, 0])
                 break
@@ -355,11 +362,11 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         #    self.out_of_reach = True
         #    return False
         joint_goal  = np.clip(joint_goal, self.arm_joint_bounds_low, self.arm_joint_bounds_high)
-        self.arm_group.go(joint_goal,wait=True)
+        plan = self.arm_group.go(joint_goal,wait=True)
         self.arm_group.stop()
         
         self.store_arm_state()
-        return True
+        return plan 
 
 
     def store_arm_state(self):
@@ -370,9 +377,9 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         self.stored_arm_pose = [x, y, z, roll, pitch, yaw]
 
         #store joints pose
-        self.stored_join_state = self.arm_group.get_current_joint_values()
-        #joint_states_msg = rospy.wait_for_message('/joint_states', JointState, timeout=5.0)
-        #self.stored_join_state = joint_states_msg.position[:7]
+        #self.stored_join_state = self.arm_group.get_current_joint_values()
+        joint_states_msg = rospy.wait_for_message('/joint_states', JointState, timeout=5.0)
+        self.stored_join_state = joint_states_msg.position[:7]
 
 
 

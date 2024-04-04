@@ -13,6 +13,7 @@ def start_env(env, speed:float=None, client_id:int=None, max_episode_steps:int=1
     os.environ['GAZEBO_MASTER_URI'] = gz_uri
     setup_env(env,max_episode_steps)
     rospy.init_node('parallelSimulationNode',log_level=rospy.ERROR)
+    print(f'gazebo physics at {speed} speed')
     env = gym.make(id=env,
                     env_code=client_id,
                     speed = speed,

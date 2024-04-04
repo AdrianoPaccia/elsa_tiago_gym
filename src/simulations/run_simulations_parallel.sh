@@ -23,7 +23,8 @@ pids=()
 script_dir="$(cd "$(dirname "$0")" && pwd)"
 
 world=elsa
-gui_master=$gui
+gui_master=true
+#$gui
 
 
 

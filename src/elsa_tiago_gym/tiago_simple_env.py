@@ -47,6 +47,9 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         super(TiagoSimpleEnv, self).__init__(env_code,speed,random_init)
 
         self.max_episode_steps = max_episode_steps
+        self.motion_time = 0.1
+        self.max_joint_vel = np.ones(7)*0.01
+
 
         # Observation space
         self.is_multimodal = multimodal
@@ -131,14 +134,19 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
     def _set_init_pose(self):
         """Sets the Robot in its init pose
         """
+        
         if self.random_init:
+            print('set init pose (RANDOM)')
             # put the gripper in a random pose
-            x, y, z  = [np.random.uniform(low, high) for low, high in zip([0.40,-0.4,0.75], [0.8,0.4,0.85])]
+            x, y, z  = [np.random.uniform(low, high) for low, high in zip([0.40,-0.3,0.75], [0.8,0.3,0.85])]
             self.set_arm_pose(x, y, z, 0, np.radians(90), 0)
         else:
+            print('set init pose')
             x, y, z  = [0.5,-0.1,0.8]
             self.set_arm_pose(x, y, z, 0, np.radians(90), 0)
         self.release()
+        rospy.sleep(2)
+        self.store_arm_state()
 
 
     def _init_env_variables(self):
@@ -163,7 +171,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         if self.random_init:
             #put the objects in a random position
             for cube in self.model_state.cubes:
-                x, y, z  = [np.random.uniform(low, high) for low, high in zip([0.40,-0.3,0.44], [0.5,0.3,0.44])]
+                x, y, z  = [np.random.uniform(low, high) for low, high in zip([0.40,-0.3,0.44], [0.5,0.3,0.54])]
                 self.set_obj_pos(cube,[x, y, z, 0, 0, 0])
 
 
@@ -176,8 +184,6 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         8 dim vector: 7 JOINT displacemets (continuos) and 1 (boolean) for grasping.
         """
         self.episode_step += 1
-        max_velocities = np.ones(7)*0.005
-        dt = 0.1
 
         #joint position-related act
         if type(action) == np.ndarray:
@@ -205,8 +211,8 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             # We get the joint values from the group and change some of the values
             joint_goal = self.arm_group.get_current_joint_values()
             for i in range(7):
-                joint_goal[i] += (djoint[i]*max_velocities[i])*dt
-            self.action_failed = not self.set_arm_joint_pose(joint_goal, dt)
+                joint_goal[i] += (djoint[i]*self.max_joint_vel[i])*self.motion_time
+            self.action_failed = not self.set_arm_joint_pose(joint_goal, self.motion_time)
 
 
     def _get_obs(self):
@@ -243,7 +249,6 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             grasped = rospy.wait_for_message("/gripper/is_grasped", Bool)
             if grasped is True:
                 self.placing()
-            #self._set_init_pose()
             self.gazebo.pauseSim()
             done= True
         else:
@@ -314,7 +319,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             if dist < min_dist:
                 min_dist = dist
                 candidate = id
-        if dist<0.4:# and z_c<z+0.25:
+        if dist<0.35 and z_c<z+0.25:
             return candidate, dist
         else:
             return None,None
