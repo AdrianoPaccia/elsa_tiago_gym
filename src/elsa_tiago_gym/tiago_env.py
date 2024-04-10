@@ -136,11 +136,9 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         p.pose.position.z = 0.2
 
         self.arm_torso_group.go([0.3, 1.05, 0.3, -1.57, 2.0, 0.24, -0.5, 0.0],wait=True)
-        self.arm_torso_group.go([0.05, 1.05, 0.3, -1.57, 2.0, 0.24, -0.5, 0.0],wait=True)
-        #self.arm_group.go([np.pi/2,0,0,0,0,0,0],wait=True)
+        self.arm_torso_group.go([0.15, 1.0, 0.4, -0.7, 1.9, 0.3, -0.7, -0.5],wait=True)
         self.arm_torso_group.stop()
         rospy.sleep(2)
-
 
         '''        
         ## ADD objects in the scene
@@ -149,7 +147,6 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         self.table.header.frame_id = "base_footprint"
         self.table.pose.position.z = 0.21
         self.scene.add_box("table", self.table, size=(1.05, 0.85, 0.5))
-        
         # Place the cubes and cylinders in movit
         
         for id,cube in self.model_state.cubes.items():
@@ -248,10 +245,6 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         3. close the gripper
         """
 
-        #get the initial joints
-        init_join_state = self.arm_group.get_current_joint_values()
-
-
         #collect the object position
         x,y,z = obj.position
         roll, pitch, yaw = 0, np.radians(90), 0
@@ -263,8 +256,6 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         self.set_obj_pos(obj.id,[10, 0, 0,0, 0, 0])
         #go in the object position
         self.set_arm_pose(x, y, z + 0.21, roll, pitch, yaw)
-
-        
         '''
         self.execute_trajectory(
             [[x, y, z + 0.27, roll, pitch, yaw],
@@ -284,14 +275,11 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
             self.scene.attach_box("gripper_base_link", obj.id, touch_links=touch_links)
             self.grasped_item = obj.id
             self.set_arm_pose(x, y, z + 0.3, roll, pitch, yaw)
-            #self.set_arm_joint_pose( init_join_state, self.motion_time)
             return True
         else:
             self.release()
             self.grasped_item = None
             self.set_arm_pose(x, y, z + 0.3,roll, pitch, yaw)
-            #self.set_arm_joint_pose( init_join_state, self.motion_time)
-
             return False
 
     def placing(self):
@@ -313,6 +301,7 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
     
     def wait_for_placed_item(self,item):
         self.placed_item = False
+        self.to_place_item = item
         cnt=0
         while not self.placed_item:
             rospy.sleep(0.1)
@@ -328,46 +317,55 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         """
         Motions of the arm in the cartesian space.
         """
-        if not self.arm_pose_reachable(x, y, z):
-            self.out_of_reach = True
-            return False
-        self.out_of_reach = False
+        #if not self.arm_pose_reachable(x, y, z):
+        #    self.out_of_reach = True
+        #    return False
+
+        x,y,z = np.clip([x,y,z], self.arm_workspace_low, self.arm_workspace_high)
+
+        #print('setting: ',[x, y, z, roll, pitch, yaw])
+
+        '''self.out_of_reach = False
         self.arm_group.set_pose_target([x, y, z, roll, pitch, yaw])
         plan = self.arm_group.go(wait=True)
         self.arm_group.stop()
         self.arm_group.clear_pose_targets()
+        self.store_arm_state()'''
+        self.out_of_reach = False
+        self.arm_torso_group.set_pose_target([x, y, z, roll, pitch, yaw])
+        plan = self.arm_torso_group.go(wait=True)
+        self.arm_torso_group.stop()
+        self.arm_torso_group.clear_pose_targets()
         self.store_arm_state()
-
-        #x_, y_, z_, _, _, _ = self.stored_arm_pose
-        #e = np.array([x_,y_,z_]) - np.array([x, y, z,])
-        #print('error pose = ', np.linalg.norm(e))
         return plan
 
     def execute_trajectory(self,poses):
-        waypoints = [ Pose(Point(*p[:3]), Quaternion(*quaternion_from_euler(*p[3:]))) for p in poses]
+        '''waypoints = [ Pose(Point(*p[:3]), Quaternion(*quaternion_from_euler(*p[3:]))) for p in poses]
         (plan, fraction) = self.arm_group.compute_cartesian_path(waypoints, 0.01, 0.0)
         self.arm_group.execute(plan, wait=True)
         self.arm_group.stop()
-        self.arm_group.clear_pose_targets()
+        self.arm_group.clear_pose_targets()'''
+        waypoints = [ Pose(Point(*p[:3]), Quaternion(*quaternion_from_euler(*p[3:]))) for p in poses]
+        (plan, fraction) = self.arm_torso_group.compute_cartesian_path(waypoints, 0.01, 0.0)
+        self.arm_torso_group.execute(plan, wait=True)
+        self.arm_torso_group.stop()
+        self.arm_torso_group.clear_pose_targets()
         self.store_arm_state()
 
-
-    
     def set_arm_joint_pose(self, joint_goal, motion_time):
         """
         Motions of the arm in the joint space (7 joints)
         """
-        #if not self.arm_joints_feasible(joint_goal):
-        #    print('not feasible')
-        #    self.out_of_reach = True
-        #    return False
+        if not self.arm_joints_feasible(joint_goal):
+            print('not feasible')
+            self.out_of_reach = True
+            return False
         joint_goal  = np.clip(joint_goal, self.arm_joint_bounds_low, self.arm_joint_bounds_high)
         plan = self.arm_group.go(joint_goal,wait=True)
         self.arm_group.stop()
         
         self.store_arm_state()
         return plan 
-
 
     def store_arm_state(self):
         # store the arm cartesian poseget_current_pose
@@ -376,20 +374,11 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         roll, pitch, yaw = self.arm_group.get_current_rpy()
         self.stored_arm_pose = [x, y, z, roll, pitch, yaw]
 
-        #store joints pose
-        #self.stored_join_state = self.arm_group.get_current_joint_values()
-        joint_states_msg = rospy.wait_for_message('/joint_states', JointState, timeout=5.0)
-        self.stored_join_state = joint_states_msg.position[:7]
-
-
-
     def arm_pose_reachable(self, x, y, z):
         return (([x, y, z] >= self.arm_workspace_low) & ([x, y, z] <= self.arm_workspace_high)).all()  
 
     def arm_joints_feasible(self,joints):
         return ((joints >= self.arm_joint_bounds_low) & (joints <= self.arm_joint_bounds_high)).all()
-
-
 
     def store_model_state(self):
         """
@@ -408,8 +397,6 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
             cyl.set_state(cyl_state)
 
         attached_objects = self.scene.get_attached_objects(["gripper_base_link"])
-        #if self.grasped_item is not None:
-
 
     def set_obj_pos(self,id:str,pose):
         """
@@ -431,18 +418,9 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         try:
             set_state = rospy.ServiceProxy('/gazebo/set_model_state', SetModelState)
             resp = set_state(state_msg)
-            '''self.scene.remove_world_object(name=id)
-            cube = self.model_state.cubes[id]
-            size = cube.side +0.01
-            cube_state = self.get_gazebo_object_state(id,'')
-            cube_state.header.frame_id = "base_footprint"
-            self.scene.add_box(id,cube_state, size=(size,size,size))'''
         except rospy.ServiceException as exc:
             print("Service did not process request: " + str(exc))
     
-
-
-
 
     # Methods that the TrainingEnvironment will need to define here as virtual
     # because they will be used in RobotGazeboEnv GrandParentClass and defined in the

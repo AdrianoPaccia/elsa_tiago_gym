@@ -48,8 +48,8 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
 
         self.max_episode_steps = max_episode_steps
         self.motion_time = 0.1
-        self.max_joint_vel = np.ones(7)*0.01
-
+        #self.max_joint_vel = np.ones(7)*0.01
+        self.max_disp = 0.01
 
         # Observation space
         self.is_multimodal = multimodal
@@ -70,7 +70,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         dpos_space = spaces.Box(low=dpos_low, high=dpos_high, shape=(3,), dtype=np.float32) # Space for increments in position
         hold_space = spaces.Discrete(2)  # Space for the booleans for picking/droping act 
         self.action_space = spaces.Tuple((dpos_space, hold_space))
-
+        self.to_place_item = None
         self.obs_points = {'x': [], 'y': [], 'z':[]}
         for x in np.arange(self.obs_low[0], self.obs_high[0]+0.1, 0.1):
             for y in np.arange(self.obs_low[1], self.obs_high[1]+0.1, 0.1):
@@ -79,8 +79,6 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
                     self.obs_points['y'].append(y)
                     self.obs_points['z'].append(z)
         self.visualize_points(self.obs_points['x'], self.obs_points['y'], self.obs_points['z'], ns='obs')
-
-
 
         # get the training parameters
         self.reward_coef ={   
@@ -95,9 +93,6 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         rospy.Subscriber("/table_contact", ContactsState, self.collision_cb)
         rospy.Subscriber("/cylinder_contact", ContactsState, self.collision_cb)
         rospy.Subscriber("/gripper/is_grasped", Bool, self.check_grasp)
-
-
-
 
 
     def init_environment(self, env_code=None):
@@ -136,12 +131,10 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         """
         
         if self.random_init:
-            print('set init pose (RANDOM)')
             # put the gripper in a random pose
             x, y, z  = [np.random.uniform(low, high) for low, high in zip([0.40,-0.3,0.75], [0.8,0.3,0.85])]
             self.set_arm_pose(x, y, z, 0, np.radians(90), 0)
         else:
-            print('set init pose')
             x, y, z  = [0.5,-0.1,0.8]
             self.set_arm_pose(x, y, z, 0, np.radians(90), 0)
         self.release()
@@ -159,6 +152,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         self.collision_detected = False
         self.grasped_item = None
         self.placed_item = False
+        self.to_place_item = None
         self.action_failed = False
 
         #change environment if it is randomized
@@ -181,18 +175,19 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
     def _set_action(self, action):
         """
         Move the robot based on the action variable given:
-        8 dim vector: 7 JOINT displacemets (continuos) and 1 (boolean) for grasping.
+        4 dim vector: 3d EE displacemets (continuos) and 1 (continuos) for grasping.
         """
         self.episode_step += 1
 
         #joint position-related act
         if type(action) == np.ndarray:
             action = action.tolist()
-
-        djoint = action[:-1]
-        grasp = action[-1]
+        
+        dpos = action[:-1]
+        grasp = True if action[-1] > 0 else False 
 
         grasp_item_id,distance = self.get_grasping_obj()
+        #print(f"action = {action} ==> grasp = {grasp} ({grasp == True and grasp_item_id is not None})")
 
         # grasping/releasing action
         if grasp == True and grasp_item_id is not None:
@@ -206,13 +201,18 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             else:
                 placing_accomplished = self.placing()
         
-        # joint motion
+        # EE motion motion
         else:
-            # We get the joint values from the group and change some of the values
-            joint_goal = self.arm_group.get_current_joint_values()
-            for i in range(7):
-                joint_goal[i] += (djoint[i]*self.max_joint_vel[i])*self.motion_time
-            self.action_failed = not self.set_arm_joint_pose(joint_goal, self.motion_time)
+            # get current EE position from the group and change some of the values
+            pose = self.arm_group.get_current_pose().pose
+            x, y, z = pose.position.x, pose.position.y, pose.position.z
+            roll, pitch, yaw = 0, np.pi/2, 0
+            pose_target = [x+dpos[0]*self.max_disp,
+                           y+dpos[1]*self.max_disp,
+                           z+dpos[2]*self.max_disp,
+                           roll, pitch, yaw]
+
+            self.action_failed = not self.set_arm_pose(*pose_target)
 
 
     def _get_obs(self):
@@ -224,8 +224,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         """
         self.store_model_state()
         if self.collision_detected is False:
-            arm_state = np.array(self.stored_join_state) 
-            #arm_state = np.array(self.stored_arm_pose[:3])# position of the EE 
+            arm_state = np.array(self.stored_arm_pose[:3])# position of the EE 
         else:
             arm_state = np.array(self.collision_arm_state) #position of the EE where the collision happened
 
@@ -253,7 +252,6 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             done= True
         else:
             done= False
-        #print('done: ',done)
         return done
 
 
@@ -293,14 +291,18 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             c1 = coll_1[0]
             c2 = coll_2[0]
             if (c1 or c2) in self.items:
-                if c1 == self.grasped_item or c2 == self.grasped_item: self.placed_item = True
+                if c1 == self.to_place_item or c2 == self.to_place_item: self.placed_item = True
+                elif c1 == self.grasped_item or c2 == self.grasped_item:
+                    self.collision_detected = True
+                    self.to_place_item
+                    self.collision_arm_state = self.stored_arm_pose[:3] #position where the collistion happened
+                    rospy.loginfo("COLLISION DETECTED between {:} - {:}".format(c1,c2))
                 else: pass
             elif (c1 and c2) in [*self.items,*self.forniture] or self.collision_detected:
                 pass
             else:
                 self.collision_detected = True
-                self.collision_arm_state = self.stored_join_state
-                #self.collision_arm_state = self.stored_arm_pose[:3] #position where the collistion happened
+                self.collision_arm_state = self.stored_arm_pose[:3] #position where the collistion happened
                 rospy.loginfo("COLLISION DETECTED between {:} - {:}".format(c1,c2))
 
             
@@ -319,7 +321,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             if dist < min_dist:
                 min_dist = dist
                 candidate = id
-        if dist<0.35 and z_c<z+0.25:
+        if dist<0.3:# and z_c<z+0.25:
             return candidate, dist
         else:
             return None,None
