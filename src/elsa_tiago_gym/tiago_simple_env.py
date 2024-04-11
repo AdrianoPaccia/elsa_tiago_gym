@@ -49,7 +49,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         self.max_episode_steps = max_episode_steps
         self.motion_time = 0.1
         #self.max_joint_vel = np.ones(7)*0.01
-        self.max_disp = 0.01
+        self.max_disp = 0.02
 
         # Observation space
         self.is_multimodal = multimodal
@@ -82,9 +82,9 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
 
         # get the training parameters
         self.reward_coef ={   
-                'R_goal': 10,
-                'R_coll': -10,
-                'R_dist': -1.0,
+                'R_goal': 1,
+                'R_coll': -1,
+                'R_dist': -0.1,
                 'R_semigoal': 0.0,
                 'R_fail': 0.0,
                 }
@@ -204,8 +204,8 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         # EE motion motion
         else:
             # get current EE position from the group and change some of the values
-            pose = self.arm_group.get_current_pose().pose
-            x, y, z = pose.position.x, pose.position.y, pose.position.z
+            #pose = self.arm_group.get_current_pose().pose
+            x, y, z, _, _, _ = self.stored_arm_pose
             roll, pitch, yaw = 0, np.pi/2, 0
             pose_target = [x+dpos[0]*self.max_disp,
                            y+dpos[1]*self.max_disp,
@@ -243,7 +243,11 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         """
         Decide if episode is done based on the model state and if there has been a collision
         """
-        if self.episode_step >= self.max_episode_steps or self.model_state.all_cubes_in_cylinders() or self.collision_detected:
+        task_accomplished = self.model_state.all_cubes_in_cylinders() and (self.grasped_item is None)
+        if self.episode_step >= self.max_episode_steps or task_accomplished or self.collision_detected:
+            #print('done = ', [self.episode_step >= self.max_episode_steps , task_accomplished , self.collision_detected])
+            #if task_accomplished:
+            #    print('task accomplished')
             self.gazebo.unpauseSim()
             grasped = rospy.wait_for_message("/gripper/is_grasped", Bool)
             if grasped is True:
@@ -293,10 +297,11 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             if (c1 or c2) in self.items:
                 if c1 == self.to_place_item or c2 == self.to_place_item: self.placed_item = True
                 elif c1 == self.grasped_item or c2 == self.grasped_item:
-                    self.collision_detected = True
-                    self.to_place_item
-                    self.collision_arm_state = self.stored_arm_pose[:3] #position where the collistion happened
-                    rospy.loginfo("COLLISION DETECTED between {:} - {:}".format(c1,c2))
+                    pass
+                    #self.collision_detected = True
+                    #self.to_place_item
+                    #self.collision_arm_state = self.stored_arm_pose[:3] #position where the collistion happened
+                    #rospy.loginfo("COLLISION DETECTED between {:} - {:}".format(c1,c2))
                 else: pass
             elif (c1 and c2) in [*self.items,*self.forniture] or self.collision_detected:
                 pass

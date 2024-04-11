@@ -136,7 +136,12 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         p.pose.position.z = 0.2
 
         self.arm_torso_group.go([0.3, 1.05, 0.3, -1.57, 2.0, 0.24, -0.5, 0.0],wait=True)
-        self.arm_torso_group.go([0.15, 1.0, 0.4, -0.7, 1.9, 0.3, -0.7, -0.5],wait=True)
+        self.arm_torso_group.set_pose_target([0.5,-0.1,0.8, 0, np.radians(90), 0])
+        plan = self.arm_torso_group.go(wait=True)
+        self.arm_torso_group.stop()
+        self.arm_torso_group.clear_pose_targets()
+        self.store_arm_state()
+        #self.arm_torso_group.go([0.15, 1.0, 0.4, -0.7, 1.9, 0.3, -0.7, -0.5],wait=True)
         self.arm_torso_group.stop()
         rospy.sleep(2)
 
@@ -392,6 +397,8 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
             if c.z < 0.4:
                 self.set_obj_pos(id,[*cube.init_position,0,0,0])
             cube.set_state(cube_state)
+            cube.held = True if id == self.grasped_item else False
+
         for id,cyl in self.model_state.cylinders.items():
             cyl_state = get_gazebo_object_state(id,'')
             cyl.set_state(cyl_state)

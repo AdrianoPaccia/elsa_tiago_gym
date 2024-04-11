@@ -180,7 +180,7 @@ class Cylinder(Object):
         dist_xy = math.sqrt((self.position[0]-cube.position[0])**2+(self.position[1]-cube.position[1])**2) - tollerance
         xy_check =  dist_xy < self.radius
         dist_z = cube.position[2] - self.position[2]
-        z_check = dist_z >= self.heigth/2 + cube.side/2
+        z_check = dist_z <= self.heigth/2 + cube.side/2 + 0.1
         if xy_check and z_check:
             return True
         else:
@@ -196,8 +196,9 @@ class Cube(Object):
         dist_xy = math.sqrt((self.position[0]-box.position[0])**2+(self.position[1]-box.position[1])**2) - tollerance
         xy_check =  dist_xy < box.radius
         dist_z = self.position[2] - box.position[2]
-        z_check = dist_z >= box.heigth/2 + self.side/2
-        if xy_check and z_check:
+        z_check = dist_z <= 0.5
+
+        if xy_check and z_check and not self.held:
             return True
         else:
             return False

@@ -97,12 +97,21 @@ environments_4:
       color: red
     - positions: [0.425601, -0.234243, 0.443346]
       color: green
+  elsa_9:
+    - positions: [0.418486, 0.264288, 0.443669]
+      color: red
+    - positions: [0.500513, -0.101781, 0.443100]
+      color: yellow
+    - positions: [0.489052, 0.080918, 0.444632]
+      color: red
+    - positions: [0.425601, -0.234243, 0.443346]
+      color: green
 
 
 environments_1:
   elsa_0:
     - positions: [0.500513, -0.101781, 0.443100]
-      color: red
+      color: yellow
   elsa_1:
     - positions: [0.490142, 0.082026, 0.4431]
       color: red
@@ -130,3 +139,7 @@ environments_1:
   elsa_9:
     - positions: [0.425601, -0.234243, 0.443346]
       color: blue
+  elsa_10:
+    - positions: [0.425601, -0.234243, 0.443346]
+      color: yellow
+
