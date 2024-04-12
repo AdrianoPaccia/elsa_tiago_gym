@@ -143,3 +143,16 @@ environments_1:
     - positions: [0.425601, -0.234243, 0.443346]
       color: yellow
 
+environments_0:
+  elsa_0:
+    - positions: [0.45, 0.0, 0.443669]
+      color: green
+  elsa_1:
+    - positions: [0.45, 0.0, 0.443669]
+      color: red
+  elsa_2:
+    - positions: [0.45, 0.0, 0.443669]
+      color: yellow
+  elsa_3:
+    - positions: [0.45, 0.0, 0.443669]
+      color: blue

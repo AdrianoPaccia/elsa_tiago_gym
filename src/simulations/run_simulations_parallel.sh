@@ -27,13 +27,20 @@ gui_master=$gui
 
 
 
-(
-    export ROS_MASTER_URI="http://localhost:11311"
-    export GAZEBO_MASTER_URI="http://localhost:11312"
+export ROS_MASTER_URI="http://localhost:11311"
+export GAZEBO_MASTER_URI="http://localhost:11312"
+if ! rostopic list &>/dev/null && ! rosnode list &>/dev/null; then
+    (echo "Launching Master simulation..."
     roslaunch tiago_gazebo tiago_gazebo.launch world:=$world end_effector:=robotiq-2f-85 public_sim:=true gui:=$gui_master tuck_arm:=false > "$script_dir/logs/output_master.log" 2>&1) &
-master_pid=$!
-pids+=("$master_pid")
-echo "Master simulation (gui=$gui_master) is up and running with PID: $master_pid"
+    pid=$!
+    pids+=("$pid")
+    echo "Master simulation (gui=$gui_master) is up and running with PID: $pid"
+
+else
+    echo "Master Simulation is already running"
+    sleep 5
+
+fi
 
 
 # Open tabs for each script in a new window
@@ -42,11 +49,17 @@ for ((i=0; i<num_scripts; i++)); do
     (
     export ROS_MASTER_URI="http://localhost:1135$i"
     export GAZEBO_MASTER_URI="http://localhost:1134$i"
-    roslaunch tiago_gazebo tiago_gazebo.launch world:=$world end_effector:=robotiq-2f-85 public_sim:=true gui:=$gui tuck_arm:=false > "$script_dir/logs/output_worker$i.log" 2>&1 &
-    pid=$!
-    pids+=("$pid")
-    echo "Worker simulation $i (gui=$gui) is up and running with PID: $pid"
-    sleep 5
+    if ! rostopic list &>/dev/null && ! rosnode list &>/dev/null; then
+        echo "Launching simulation $i"
+        roslaunch tiago_gazebo tiago_gazebo.launch world:=$world end_effector:=robotiq-2f-85 public_sim:=true gui:=$gui tuck_arm:=false > "$script_dir/logs/output_worker$i.log" 2>&1 &
+        pid=$!
+        pids+=("$pid")
+        echo "Worker simulation $i (gui=$gui) is up and running with PID: $pid"
+        sleep 2
+    else
+        echo "Simulation $i is already running"
+        sleep 5
+    fi
     ) &
 done
 
@@ -57,3 +70,4 @@ for pid in "${pids[@]}"; do
 done
 
 echo "All simulations have finished"
+exit 0

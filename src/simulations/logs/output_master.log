@@ -1,11 +1,11 @@
-... logging to /home/adriano/.ros/log/de8375e4-f80a-11ee-a580-7b454105e411/roslaunch-oem-IdeaPad-Gaming-3-16IAH7-441570.log
+... logging to /home/adriano/.ros/log/d3451c94-f8fc-11ee-af0f-519eb8d120f3/roslaunch-oem-IdeaPad-Gaming-3-16IAH7-801254.log
 Checking log directory for disk usage. This may take a while.
 Press Ctrl-C to interrupt
 ]2;/home/adriano/Desktop/tiago_ws/src/tiago_simulation/tiago_gazebo/launch/tiago_gazebo.launch
 [31mWARNING: disk usage in log directory [/home/adriano/.ros/log] is over 1GB.
 It's recommended that you use the 'rosclean' command.[0m
 xacro: in-order processing became default in ROS Melodic. You can drop the option.
-[1mstarted roslaunch server http://oem-IdeaPad-Gaming-3-16IAH7:45941/[0m
+[1mstarted roslaunch server http://oem-IdeaPad-Gaming-3-16IAH7:40877/[0m
 
 SUMMARY
 ========
@@ -762,32 +762,32 @@ NODES
     image_proc (image_proc/image_proc)
 
 auto-starting new master
-[1mprocess[master]: started with pid [441893][0m
+[1mprocess[master]: started with pid [801396][0m
 [1mROS_MASTER_URI=http://localhost:11311[0m
 ]2;/home/adriano/Desktop/tiago_ws/src/tiago_simulation/tiago_gazebo/launch/tiago_gazebo.launch http://localhost:11311
-[1msetting /run_id to de8375e4-f80a-11ee-a580-7b454105e411[0m
-[33m[ WARN] [1712843607.848254444]: Transformer::setExtrapolationLimit is deprecated and does not do anything[0m
-[33m[ WARN] [1712843607.890380860]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1712843607.890438547]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1712843607.890450190]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1712843607.890479909]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1712843607.890499547]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1712843607.890525283]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1712843607.890541875]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1712843607.944036483]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1712843607.952807344]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1712843607.952993513]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1712843607.953131215]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1712843607.953275597]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1712843607.953397322]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1712843607.957891561]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1712843608.363538547]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
-[33m[ WARN] [1712843608.364498372]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
-[33m[ WARN] [1712843608.452060276]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1712843608.717938158]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
-[33m[ WARN] [1712843609.390773781]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead[0m
-[0m[ INFO] [1712843609.127808838]: Finished loading Gazebo ROS API Plugin.[0m
-[0m[ INFO] [1712843609.151596692]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...[0m
+[1msetting /run_id to d3451c94-f8fc-11ee-af0f-519eb8d120f3[0m
+[33m[ WARN] [1712947526.909268358]: Transformer::setExtrapolationLimit is deprecated and does not do anything[0m
+[33m[ WARN] [1712947526.975788714]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1712947526.975974085]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1712947526.976305665]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1712947526.976409246]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1712947526.976491222]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1712947526.976826008]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1712947526.976920818]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1712947527.051559219]: Link base_sonar_01_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1712947527.057954417]: Link base_sonar_02_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1712947527.058117027]: Link base_sonar_03_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1712947527.058256177]: Link caster_back_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1712947527.058393526]: Link caster_back_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1712947527.058529298]: Link caster_front_left_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1712947527.058655225]: Link caster_front_right_1_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1712947527.344225006]: The input topic '/xtion/rgb/image_raw' is not yet advertised[0m
+[33m[ WARN] [1712947527.345027748]: The input topic '/xtion/rgb/camera_info' is not yet advertised[0m
+[33m[ WARN] [1712947527.346832523]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1712947527.496665233]: Link base_cover_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[ WARN] [1712947527.867843402]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead[0m
+[0m[ INFO] [1712947527.653258594]: Finished loading Gazebo ROS API Plugin.[0m
+[0m[ INFO] [1712947527.654026559]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...[0m
 Error: Non-unique names detected in <link name='link'>
   <collision name='surface'>
     <pose>0 0 0.4 0 -0 0</pose>
@@ -930,95 +930,97 @@ Error: Non-unique names detected in <link name='link'>
   </sensor>
 </link>
 
-[31m[ERROR] [1712843610.717647050]: Exception while loading planner 'chomp_interface/CHOMPPlanner': According to the loaded plugin descriptions the class chomp_interface/CHOMPPlanner with base class type planning_interface::PlannerManager does not exist. Declared types are  ompl_interface/OMPLPlanner
+[31m[ERROR] [1712947528.380477589, 0.279000000]: Exception while loading planner 'chomp_interface/CHOMPPlanner': According to the loaded plugin descriptions the class chomp_interface/CHOMPPlanner with base class type planning_interface::PlannerManager does not exist. Declared types are  ompl_interface/OMPLPlanner
 Available plugins: ompl_interface/OMPLPlanner[0m
-[31m[ERROR] [1712843610.723292484]: Failed to initialize planning pipeline 'chomp'.[0m
-[0m[ INFO] [1712843607.853824280]: Loading robot model 'tiago'...[0m
-[0m[ INFO] [1712843607.871140522]: No root/virtual joint specified in SRDF. Assuming fixed joint[0m
-[0m[ INFO] [1712843609.381882579]: Publishing maintained planning scene on 'monitored_planning_scene'[0m
-[0m[ INFO] [1712843609.383513191]: Listening to 'joint_states' for joint states[0m
-[0m[ INFO] [1712843609.386422385]: Listening to '/attached_collision_object' for attached collision objects[0m
-[0m[ INFO] [1712843609.386442381]: Starting planning scene monitor[0m
-[0m[ INFO] [1712843609.387769720]: Listening to '/planning_scene'[0m
-[0m[ INFO] [1712843609.387786784]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.[0m
-[0m[ INFO] [1712843609.389239408]: Listening to '/collision_object'[0m
-[0m[ INFO] [1712843609.390512651]: Listening to '/planning_scene_world' for planning scene world geometry[0m
-[0m[ INFO] [1712843609.391022487]: No 3D sensor plugin(s) defined for octomap updates[0m
-[0m[ INFO] [1712843610.715728355]: Loading planning pipeline 'chomp'[0m
-[0m[ INFO] [1712843610.721005593]: Param 'default_workspace_bounds' was not set. Using default value: 10[0m
-[0m[ INFO] [1712843610.721427741]: Param 'start_state_max_bounds_error' was set to 0.1[0m
-[0m[ INFO] [1712843610.721702079]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
-[0m[ INFO] [1712843610.721943037]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
-[0m[ INFO] [1712843610.722164644]: Param 'jiggle_fraction' was set to 0.05[0m
-[0m[ INFO] [1712843610.722387407]: Param 'max_sampling_attempts' was not set. Using default value: 100[0m
-[0m[ INFO] [1712843610.722428032]: Using planning request adapter 'Limiting Max Cartesian Speed'[0m
-[0m[ INFO] [1712843610.722446098]: Using planning request adapter 'Add Time Parameterization'[0m
-[0m[ INFO] [1712843610.722457125]: Using planning request adapter 'Resolve constraint frames to robot links'[0m
-[0m[ INFO] [1712843610.722466857]: Using planning request adapter 'Fix Workspace Bounds'[0m
-[0m[ INFO] [1712843610.722476555]: Using planning request adapter 'Fix Start State Bounds'[0m
-[0m[ INFO] [1712843610.722485720]: Using planning request adapter 'Fix Start State In Collision'[0m
-[0m[ INFO] [1712843610.722494623]: Using planning request adapter 'Fix Start State Path Constraints'[0m
-[0m[ INFO] [1712843610.724061347]: Loading planning pipeline 'ompl'[0m
-[0m[ INFO] [1712843610.770147887]: Using planning interface 'OMPL'[0m
-[0m[ INFO] [1712843610.771853516]: Param 'default_workspace_bounds' was not set. Using default value: 10[0m
-[0m[ INFO] [1712843610.772234071]: Param 'start_state_max_bounds_error' was set to 0.1[0m
-[0m[ INFO] [1712843610.772575108]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
-[0m[ INFO] [1712843610.772897766]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
-[0m[ INFO] [1712843610.773156110]: Param 'jiggle_fraction' was set to 0.05[0m
-[0m[ INFO] [1712843610.773398525]: Param 'max_sampling_attempts' was not set. Using default value: 100[0m
-[0m[ INFO] [1712843610.773437898]: Using planning request adapter 'Limiting Max Cartesian Speed'[0m
-[0m[ INFO] [1712843610.773455184]: Using planning request adapter 'Add Time Parameterization'[0m
-[0m[ INFO] [1712843610.773466425]: Using planning request adapter 'Resolve constraint frames to robot links'[0m
-[0m[ INFO] [1712843610.773480101]: Using planning request adapter 'Fix Workspace Bounds'[0m
-[0m[ INFO] [1712843610.773490185]: Using planning request adapter 'Fix Start State Bounds'[0m
-[0m[ INFO] [1712843610.773499812]: Using planning request adapter 'Fix Start State In Collision'[0m
-[0m[ INFO] [1712843610.773508552]: Using planning request adapter 'Fix Start State Path Constraints'[0m
-[0m[ INFO] [1712843610.774520804]: Loading planning pipeline 'ompl_chomp'[0m
-[0m[ INFO] [1712843610.792052550]: Using planning interface 'OMPL'[0m
-[0m[ INFO] [1712843610.793279474]: Param 'default_workspace_bounds[31m[ERROR] [1712843610.795166282]: Exception while loading planning adapter plugin 'chomp/OptimizerAdapter': According to the loaded plugin descriptions the class chomp/OptimizerAdapter with base class type planning_request_adapter::PlanningRequestAdapter does not exist. Declared types are  default_planner_request_adapters/AddIterativeSplineParameterization default_planner_request_adapters/AddRuckigTrajectorySmoothing default_planner_request_adapters/AddTimeOptimalParameterization default_planner_request_adapters/AddTimeParameterization default_planner_request_adapters/Empty default_planner_request_adapters/FixStartStateBounds default_planner_request_adapters/FixStartStateCollision default_planner_request_adapters/FixStartStatePathConstraints default_planner_request_adapters/FixWorkspaceBounds default_planner_request_adapters/LimitMaxCartesianLinkSpeed default_planner_request_adapters/ResolveConstraintFrames[0m
-[31m[ERROR] [1712843610.797027618]: Exception while loading planner 'pilz_industrial_motion_planner::CommandPlanner': According to the loaded plugin descriptions the class pilz_industrial_motion_planner::CommandPlanner with base class type planning_interface::PlannerManager does not exist. Declared types are  ompl_interface/OMPLPlanner
+[31m[ERROR] [1712947528.384007033, 0.279000000]: Failed to initialize planning pipeline 'chomp'.[0m
+[0m[ INFO] [1712947527.029279194]: Loading robot model 'tiago'...[0m
+[0m[ INFO] [1712947527.030162653]: No root/virtual joint specified in SRDF. Assuming fixed joint[0m
+[0m[ INFO] [1712947527.861131756]: Publishing maintained planning scene on 'monitored_planning_scene'[0m
+[0m[ INFO] [1712947527.862430736]: Listening to 'joint_states' for joint states[0m
+[0m[ INFO] [1712947527.864112645]: Listening to '/attached_collision_object' for attached collision objects[0m
+[0m[ INFO] [1712947527.864125656]: Starting planning scene monitor[0m
+[0m[ INFO] [1712947527.865006489]: Listening to '/planning_scene'[0m
+[0m[ INFO] [1712947527.865016470]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.[0m
+[0m[ INFO] [1712947527.865858368]: Listening to '/collision_object'[0m
+[0m[ INFO] [1712947527.867578356]: Listening to '/planning_scene_world' for planning scene world geometry[0m
+[0m[ INFO] [1712947527.868099583]: No 3D sensor plugin(s) defined for octomap updates[0m
+[0m[ INFO] [1712947528.379067453, 0.279000000]: Loading planning pipeline 'chomp'[0m
+[0m[ INFO] [1712947528.382107823, 0.279000000]: Param 'default_workspace_bounds' was not set. Using default value: 10[0m
+[0m[ INFO] [1712947528.382415197, 0.279000000]: Param 'start_state_max_bounds_error' was set to 0.1[0m
+[0m[ INFO] [1712947528.382693346, 0.279000000]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
+[0m[ INFO] [1712947528.383023157, 0.279000000]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
+[0m[ INFO] [1712947528.383249770, 0.279000000]: Param 'jiggle_fraction' was set to 0.05[0m
+[0m[ INFO] [1712947528.383514148, 0.279000000]: Param 'max_sampling_attempts' was not set. Using default value: 100[0m
+[0m[ INFO] [1712947528.383536503, 0.279000000]: Using planning request adapter 'Limiting Max Cartesian Speed'[0m
+[0m[ INFO] [1712947528.383542617, 0.279000000]: Using planning request adapter 'Add Time Parameterization'[0m
+[0m[ INFO] [1712947528.383548392, 0.279000000]: Using planning request adapter 'Resolve constraint frames to robot links'[0m
+[0m[ INFO] [1712947528.383552508, 0.279000000]: Using planning request adapter 'Fix Workspace Bounds'[0m
+[0m[ INFO] [1712947528.383556345, 0.279000000]: Using planning request adapter 'Fix Start State Bounds'[0m
+[0m[ INFO] [1712947528.383561332, 0.279000000]: Using planning request adapter 'Fix Start State In Collision'[0m
+[0m[ INFO] [1712947528.383566983, 0.279000000]: Using planning request adapter 'Fix Start State Path Constraints'[0m
+[0m[ INFO] [1712947528.384381114, 0.279000000]: Loading planning pipeline 'ompl'[0m
+[0m[ INFO] [1712947528.405921580, 0.279000000]: Using planning interface 'OMPL'[0m
+[0m[ INFO] [1712947528.406680212, 0.279000000]: Param 'default_workspace_bounds' was not set. Using default value: 10[0m
+[0m[ INFO] [1712947528.406797162, 0.279000000]: Param 'start_state_max_bounds_error' was set to 0.1[0m
+[0m[ INFO] [1712947528.406998968, 0.279000000]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
+[0m[ INFO] [1712947528.407128858, 0.279000000]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
+[0m[ INFO] [1712947528.407238575, 0.279000000]: Param 'jiggle_fraction' was set to 0.05[0m
+[0m[ INFO] [1712947528.407340606, 0.279000000]: Param 'max_sampling_attempts' was not set. Using default value: 100[0m
+[0m[ INFO] [1712947528.407351776, 0.279000000]: Using planning request adapter 'Limiting Max Cartesian Speed'[0m
+[0m[ INFO] [1712947528.407357291, 0.279000000]: Using planning request adapter 'Add Time Parameterization'[0m
+[0m[ INFO] [1712947528.407361770, 0.279000000]: Using planning request adapter 'Resolve constraint frames to robot links'[0m
+[0m[ INFO] [1712947528.407367334, 0.279000000]: Using planning request adapter 'Fix Workspace Bounds'[0m
+[0m[ INFO] [1712947528.407371163, 0.279000000]: Using planning request adapter 'Fix Start State Bounds'[0m
+[0m[ INFO] [1712947528.407376350, 0.279000000]: Using planning request ada[31m[ERROR] [1712947528.417235736, 0.279000000]: Exception while loading planning adapter plugin 'chomp/OptimizerAdapter': According to the loaded plugin descriptions the class chomp/OptimizerAdapter with base class type planning_request_adapter::PlanningRequestAdapter does not exist. Declared types are  default_planner_request_adapters/AddIterativeSplineParameterization default_planner_request_adapters/AddRuckigTrajectorySmoothing default_planner_request_adapters/AddTimeOptimalParameterization default_planner_request_adapters/AddTimeParameterization default_planner_request_adapters/Empty default_planner_request_adapters/FixStartStateBounds default_planner_request_adapters/FixStartStateCollision default_planner_request_adapters/FixStartStatePathConstraints default_planner_request_adapters/FixWorkspaceBounds default_planner_request_adapters/LimitMaxCartesianLinkSpeed default_planner_request_adapters/ResolveConstraintFrames[0m
+[31m[ERROR] [1712947528.418018629, 0.279000000]: Exception while loading planner 'pilz_industrial_motion_planner::CommandPlanner': According to the loaded plugin descriptions the class pilz_industrial_motion_planner::CommandPlanner with base class type planning_interface::PlannerManager does not exist. Declared types are  ompl_interface/OMPLPlanner
 Available plugins: ompl_interface/OMPLPlanner[0m
-[31m[ERROR] [1712843610.797115949]: Failed to initialize planning pipeline 'pilz_industrial_motion_planner'.[0m
+[31m[ERROR] [1712947528.418045242, 0.279000000]: Failed to initialize planning pipeline 'pilz_industrial_motion_planner'.[0m
 ../src/intel/isl/isl.c:2105: FINISHME: ../src/intel/isl/isl.c:isl_surf_supports_ccs: CCS for 3D textures is disabled, but a workaround is available.
-[0m[ INFO] [1712843610.613556217]: waitForService: Service [/gazebo/set_physics_properties] is now available.[0m
-[0m[ INFO] [1712843610.641890577]: Physics dynamic reconfigure ready.[0m
-[0m[ INFO] [1712843611.449098025, 0.280000000]: Laser Plugin: Using the 'robotNamespace' param: '/'[0m
-[0m[ INFO] [1712843611.449146809, 0.280000000]: Starting GazeboRosLaser Plugin (ns = /)[0m
-[0m[ INFO] [1712843611.451165613, 0.280000000]: GPU Laser Plugin (ns = /) <tf_prefix_>, set to ""[0m
-[0m[ INFO] [1712843611.452499393, 0.280000000]: LoadThread function completed[0m
-[0m[ INFO] [1712843611.509784472, 0.280000000]: Camera Plugin: Using the 'robotNamespace' param: '/'[0m
-[0m[ INFO] [1712843611.512599080, 0.280000000]: Camera Plugin (ns = /)  <tf_prefix_>, set to ""[0m
-[0m[ INFO] [1712843611.598679197, 0.280000000]: Loading gazebo_ros_control plugin[0m
-[0m[ INFO] [1712843611.598860784, 0.280000000]: Starting gazebo_ros_control plugin in namespace: [0m
-[0m[ INFO] [1712843611.599368902, 0.280000000]: gazebo_ros_control plugin is waiting for model URDF in parameter [/robot_description] on the ROS param server.[0m
-[0m[ INFO] [1712843611.727211940, 0.280000000]: Loading PAL HARWARE GAZEBO[0m
-[0m[ INFO] [1712843611.830850905, 0.280000000]: Joint mode switching is enabled[0m
+
+libcurl: (6) Could not resolve host: fuel.ignitionrobotics.org
+../src/intel/isl/isl.c:2105: FINISHME: ../src/intel/isl/isl.c:isl_surf_supports_ccs: CCS for 3D textures is disabled, but a workaround is available.
+[0m[ INFO] [1712947528.064394892]: waitForService: Service [/gazebo/set_physics_properties] is now available.[0m
+[0m[ INFO] [1712947528.081774469]: Physics dynamic reconfigure ready.[0m
+[0m[ INFO] [1712947528.943259784, 0.279000000]: Laser Plugin: Using the 'robotNamespace' param: '/'[0m
+[0m[ INFO] [1712947528.943303793, 0.279000000]: Starting GazeboRosLaser Plugin (ns = /)[0m
+[0m[ INFO] [1712947528.945427653, 0.279000000]: GPU Laser Plugin (ns = /) <tf_prefix_>, set to ""[0m
+[0m[ INFO] [1712947528.946737434, 0.279000000]: LoadThread function completed[0m
+[0m[ INFO] [1712947529.005551205, 0.279000000]: Camera Plugin: Using the 'robotNamespace' param: '/'[0m
+[0m[ INFO] [1712947529.008073492, 0.279000000]: Camera Plugin (ns = /)  <tf_prefix_>, set to ""[0m
+[0m[ INFO] [1712947529.097455547, 0.279000000]: Loading gazebo_ros_control plugin[0m
+[0m[ INFO] [1712947529.097734686, 0.279000000]: Starting gazebo_ros_control plugin in namespace: [0m
+[0m[ INFO] [1712947529.098421556, 0.279000000]: gazebo_ros_control plugin is waiting for model URDF in parameter [/robot_description] on the ROS param server.[0m
+[0m[ INFO] [1712947529.215627149, 0.279000000]: Loading PAL HARWARE GAZEBO[0m
+[0m[ INFO] [1712947529.287873584, 0.279000000]: Joint mode switching is enabled[0m
       wrist_ft_link - arm_7_link
       arm_tool_link - arm_7_link
-[33m[ WARN] [1712843611.890753005, 0.281000000]: Called publishAsync but publisher thread has not been started, THIS IS NOT RT safe. You should start it yourself.[0m
-../src/intel/isl/isl.c:2105: FINISHME: ../src/intel/isl/isl.c:isl_surf_supports_ccs: CCS for 3D textures is disabled, but a workaround is available.
-[33m[ WARN] [1712843612.244212967, 0.580000000]: updateConfig() called on a dynamic_reconfigure::Server that provides its own mutex. This can lead to deadlocks if updateConfig() is called during an update. Providing a mutex to the constructor is highly recommended in this case. Please forward this message to the node author.[0m
-' was not set. Using default value: 10[0m
-[0m[ INFO] [1712843610.793621923]: Param 'start_state_max_bounds_error' was set to 0.1[0m
-[0m[ INFO] [1712843610.793903941]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
-[0m[ INFO] [1712843610.794273976]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
-[0m[ INFO] [1712843610.794548985]: Param 'jiggle_fraction' was set to 0.05[0m
-[0m[ INFO] [1712843610.794826502]: Param 'max_sampling_attempts' was not set. Using default value: 100[0m
-[0m[ INFO] [1712843610.795198345]: Using planning request adapter 'Limiting Max Cartesian Speed'[0m
-[0m[ INFO] [1712843610.795210202]: Using planning request adapter 'Add Time Parameterization'[0m
-[0m[ INFO] [1712843610.795236909]: Using planning request adapter 'Fix Workspace Bounds'[0m
-[0m[ INFO] [1712843610.795251139]: Using planning request adapter 'Fix Start State Bounds'[0m
-[0m[ INFO] [1712843610.795260959]: Using planning request adapter 'Fix Start State In Collision'[0m
-[0m[ INFO] [1712843610.795271354]: Using planning request adapter 'Fix Start State Path Constraints'[0m
-[0m[ INFO] [1712843610.795314714]: Loading planning pipeline 'pilz_industrial_motion_planner'[0m
-[0m[ INFO] [1712843612.414732359, 0.724000000]: Added FollowJointTrajectory controller for arm_controller[0m
-[0m[ INFO] [1712843612.692254345, 0.942000000]: Added FollowJointTrajectory controller for arm_velocity_trajectory_controller[0m
-[0m[ INFO] [1712843612.996192436, 1.102000000]: Added FollowJointTrajectory controller for torso_controller[0m
-[0m[ INFO] [1712843613.206276060, 1.166000000]: Added FollowJointTrajectory controller for head_controller[0m
-[0m[ INFO] [1712843613.521760380, 1.293000000]: Added FollowJointTrajectory controller for gripper_controller[0m
-[0m[ INFO] [1712843613.522421556, 1.293000000]: Returned 5 controllers in list[0m
-[0m[ INFO] [1712843613.542829740, 1.299000000]: Trajectory execution is managing controllers[0m
-[0m[ INFO] [1712843613.542993629, 1.299000000]: MoveGroup debug mode is OFF[0m
+[33m[ WARN] [1712947529.325966515, 0.280000000]: Called publishAsync but publisher thread has not been started, THIS IS NOT RT safe. You should start it yourself.[0m
+[33m[ WARN] [1712947529.722390862, 0.670000000]: updateConfig() called on a dynamic_reconfigure::Server that provides its own mutex. This can lead to deadlocks if updateConfig() is called during an update. Providing a mutex to the constructor is highly recommended in this case. Please forward this message to the node author.[0m
+pter 'Fix Start State In Collision'[0m
+[0m[ INFO] [1712947528.407395827, 0.279000000]: Using planning request adapter 'Fix Start State Path Constraints'[0m
+[0m[ INFO] [1712947528.407758640, 0.279000000]: Loading planning pipeline 'ompl_chomp'[0m
+[0m[ INFO] [1712947528.415608766, 0.279000000]: Using planning interface 'OMPL'[0m
+[0m[ INFO] [1712947528.416452417, 0.279000000]: Param 'default_workspace_bounds' was not set. Using default value: 10[0m
+[0m[ INFO] [1712947528.416593457, 0.279000000]: Param 'start_state_max_bounds_error' was set to 0.1[0m
+[0m[ INFO] [1712947528.416711388, 0.279000000]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
+[0m[ INFO] [1712947528.416905726, 0.279000000]: Param 'start_state_max_dt' was not set. Using default value: 0.5[0m
+[0m[ INFO] [1712947528.417047036, 0.279000000]: Param 'jiggle_fraction' was set to 0.05[0m
+[0m[ INFO] [1712947528.417175464, 0.279000000]: Param 'max_sampling_attempts' was not set. Using default value: 100[0m
+[0m[ INFO] [1712947528.417261626, 0.279000000]: Using planning request adapter 'Limiting Max Cartesian Speed'[0m
+[0m[ INFO] [1712947528.417270375, 0.279000000]: Using planning request adapter 'Add Time Parameterization'[0m
+[0m[ INFO] [1712947528.417278312, 0.279000000]: Using planning request adapter 'Fix Workspace Bounds'[0m
+[0m[ INFO] [1712947528.417286248, 0.279000000]: Using planning request adapter 'Fix Start State Bounds'[0m
+[0m[ INFO] [1712947528.417294225, 0.279000000]: Using planning request adapter 'Fix Start State In Collision'[0m
+[0m[ INFO] [1712947528.417301932, 0.279000000]: Using planning request adapter 'Fix Start State Path Constraints'[0m
+[0m[ INFO] [1712947528.417334437, 0.279000000]: Loading planning pipeline 'pilz_industrial_motion_planner'[0m
+[0m[ INFO] [1712947529.816628140, 0.761000000]: Added FollowJointTrajectory controller for arm_controller[0m
+[0m[ INFO] [1712947530.095277477, 0.996000000]: Added FollowJointTrajectory controller for arm_velocity_trajectory_controller[0m
+[0m[ INFO] [1712947530.313964812, 1.197000000]: Added FollowJointTrajectory controller for torso_controller[0m
+[0m[ INFO] [1712947530.560651924, 1.404000000]: Added FollowJointTrajectory controller for head_controller[0m
+[0m[ INFO] [1712947530.819200481, 1.630000000]: Added FollowJointTrajectory controller for gripper_controller[0m
+[0m[ INFO] [1712947530.819606465, 1.630000000]: Returned 5 controllers in list[0m
+[0m[ INFO] [1712947530.833129042, 1.642000000]: Trajectory execution is managing controllers[0m
+[0m[ INFO] [1712947530.833277256, 1.642000000]: MoveGroup debug mode is OFF[0m
 [96mLoading 'move_group/ApplyPlanningSceneService'...
 [0m[96mLoading 'move_group/ClearOctomapService'...
 [0m[96mLoading 'move_group/MoveGroupCartesianPathService'...
@@ -1030,7 +1032,7 @@ Available plugins: ompl_interface/OMPLPlanner[0m
 [0m[96mLoading 'move_group/MoveGroupPlanService'...
 [0m[96mLoading 'move_group/MoveGroupQueryPlannersService'...
 [0m[96mLoading 'move_group/MoveGroupStateValidationService'...
-[0m[0m[ INFO] [1712843613.657744673, 1.339000000]: 
+[0m[0m[ INFO] [1712947530.898585448, 1.696000000]: 
 
 ********************************************************
 * MoveGroup using: 
@@ -1047,53 +1049,95 @@ Available plugins: ompl_interface/OMPLPlanner[0m
 *     - StateValidationService
 ********************************************************
 [0m
-[0m[ INFO] [1712843613.660174526, 1.340000000]: MoveGroup context using planning plugin ompl_interface/OMPLPlanner[0m
-[0m[ INFO] [1712843613.660289677, 1.340000000]: MoveGroup context initialization complete[0m
+[0m[ INFO] [1712947530.899072871, 1.696000000]: MoveGroup context using planning plugin ompl_interface/OMPLPlanner[0m
+[0m[ INFO] [1712947530.899098524, 1.696000000]: MoveGroup context initialization complete[0m
 [92m
 You can start planning now!
 
-[0m[INFO] [1712843609.271902, 0.000000]: Waiting for gripper_controller...
-[INFO] [1712843612.164541, 0.514000]: ...connected.
-[INFO] [1712843612.300047, 0.622000]: Opening gripper...
-[INFO] [1712843616.833483, 2.636000]: Gripper opened.
-[33m[ WARN] [1712843667.386481923, 21.254000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
-[33m[ WARN] [1712843667.468279614, 21.296000000]: Dropping first 1 trajectory point(s) out of 27, as they occur before the current time.
-First valid point will be reached in 0.379s.[0m
-[33m[ WARN] [1712843667.469443547, 21.297000000]: Dropping first 1 trajectory point(s) out of 27, as they occur before the current time.
-First valid point will be reached in 0.379s.[0m
-[33m[ WARN] [1712843677.815463439, 26.373000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
-[33m[ WARN] [1712843677.884184855, 26.393000000]: Dropping first 1 trajectory point(s) out of 13, as they occur before the current time.
-First valid point will be reached in 0.339s.[0m
-[33m[ WARN] [1712843677.884441219, 26.393000000]: Dropping first 1 trajectory point(s) out of 13, as they occur before the current time.
-First valid point will be reached in 0.339s.[0m
-[0m[ INFO] [1712843611.840894865, 0.280000000]: Parsed fake FT sensor: wrist_ft in frame: wrist_ft_link[0m
-[0m[ INFO] [1712843611.842612224, 0.280000000]: Parsed imu sensor: base_imu in frame: base_imu_link[0m
-[0m[ INFO] [1712843611.851797808, 0.280000000]: Loaded gazebo_ros_control.[0m
-[0m[ INFO] [1712843611.873974527, 0.280000000]: Loading gazebo WORLD ODOMETRY RPY plugin[0m
-[0m[ INFO] [1712843611.874034822, 0.280000000]: world odometry sensor plugin missing <bodyName>, defaults to frameName[0m
-[0m[ INFO] [1712843611.874082089, 0.280000000]: world odometry plugin missing <updateRate>, defaults to 1000.000000[0m
-[0m[ INFO] [1712843611.880079162, 0.280000000]: MimicJointPlugin loaded! Joint: "gripper_finger_joint", Mimic joint: "gripper_left_inner_knuckle_joint", Multiplier: 1, Offset: 0, MaxEffort: 0.1, Sensitiveness: 0[0m
-[0m[ INFO] [1712843611.880179866, 0.280000000]: MimicJointPlugin loaded! Joint: "gripper_finger_joint", Mimic joint: "gripper_left_inner_finger_joint", Multiplier: -1, Offset: 0, MaxEffort: 0.1, Sensitiveness: 0[0m
-[0m[ INFO] [1712843611.880227743, 0.280000000]: MimicJointPlugin loaded! Joint: "gripper_finger_joint", Mimic joint: "gripper_right_outer_knuckle_joint", Multiplier: 1, Offset: 0, MaxEffort: 0.1, Sensitiveness: 0[0m
-[0m[ INFO] [1712843611.880261390, 0.280000000]: MimicJointPlugin loaded! Joint: "gripper_finger_joint", Mimic joint: "gripper_right_inner_knuckle_joint", Multiplier: 1, Offset: 0, MaxEffort: 0.1, Sensitiveness: 0[0m
-[0m[ INFO] [1712843611.880290725, 0.280000000]: MimicJointPlugin loaded! Joint: "gripper_finger_joint", Mimic joint: "gripper_right_inner_finger_joint", Multiplier: -1, Offset: 0, MaxEffort: 0.1, Sensitiveness: 0[0m
-[0m[ INFO] [1712843612.201948921, 0.544000000]: Controller state will be published at 50Hz.[0m
-[0m[ INFO] [1712843612.202602677, 0.544000000]: Wheel separation will be multiplied by 1.[0m
-[0m[ INFO] [1712843612.203935850, 0.545000000]: Left wheel radius will be multiplied by 1.[0m
-[0m[ INFO] [1712843612.203984354, 0.546000000]: Right wheel radius will be multiplied by 1.[0m
-[0m[ INFO] [1712843612.204437023, 0.546000000]: Velocity rolling window size of 10.[0m
-[0m[ INFO] [1712843612.205382042, 0.547000000]: Velocity commands will be considered old if they are older than 0.25s.[0m
-[0m[ INFO] [1712843612.205565069, 0.547000000]: Allow mutiple cmd_vel publishers is enabled[0m
-[0m[ INFO] [1712843612.206041128, 0.548000000]: Base frame_id set to /base_footprint[0m
-[0m[ INFO] [1712843612.206452837, 0.548000000]: Odometry frame_id set to /odom[0m
-[0m[ INFO] [1712843612.206573635, 0.548000000]: Publishing to tf is enabled[0m
-[0m[ INFO] [1712843612.206687652, 0.548000000]: Checking error mode is disabled[0m
-[0m[ INFO] [1712843612.206802225, 0.548000000]: Error mode timeout is 1[0m
-[0m[ INFO] [1712843612.223673356, 0.560000000]: left wheel to origin: 0,0.2022, 0[0m
-[0m[ INFO] [1712843612.223787336, 0.560000000]: right wheel to origin: 0,-0.2022, 0[0m
-[0m[ INFO] [1712843612.224287131, 0.560000000]: Odometry params : wheel separation 0.4044, left wheel radius 0.0985, right wheel radius 0.0985[0m
-[0m[ INFO] [1712843612.230560557, 0.567000000]: Adding left wheel with joint name: wheel_left_joint and right wheel with joint name: wheel_right_joint[0m
-[0m[ INFO] [1712843612.246491579, 0.583000000]: Dynamic Reconfigure:
+[0m[INFO] [1712947527.961129, 0.000000]: Waiting for gripper_controller...
+[INFO] [1712947529.502213, 0.454000]: ...connected.
+[INFO] [1712947529.759126, 0.706000]: Opening gripper...
+[INFO] [1712947532.044591, 2.761000]: Gripper opened.
+[33m[ WARN] [1712947679.025566745, 137.841000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712947679.076979803, 137.883000000]: Dropping first 1 trajectory point(s) out of 27, as they occur before the current time.
+First valid point will be reached in 0.380s.[0m
+[33m[ WARN] [1712947679.077197677, 137.883000000]: Dropping first 1 trajectory point(s) out of 27, as they occur before the current time.
+First valid point will be reached in 0.380s.[0m
+[33m[ WARN] [1712947684.583372790, 142.961000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712947684.629754757, 143.000000000]: Dropping first 1 trajectory point(s) out of 13, as they occur before the current time.
+First valid point will be reached in 0.330s.[0m
+[33m[ WARN] [1712947684.629853945, 143.000000000]: Dropping first 1 trajectory point(s) out of 13, as they occur before the current time.
+First valid point will be reached in 0.330s.[0m
+[33m[ WARN] [1712947690.228455477, 147.940000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712947690.258206101, 147.962000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.131s.[0m
+[33m[ WARN] [1712947690.258411252, 147.962000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.131s.[0m
+[0m[ INFO] [1712947679.026043604, 137.841000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712947679.026275824, 137.841000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712947679.026581254, 137.842000000]: Starting state is just outside bounds (joint 'torso_lift_joint'). Assuming within bounds.[0m
+[0m[ INFO] [1712947679.026611784, 137.842000000]: Starting state is just outside bounds (joint 'arm_1_joint'). Assuming within bounds.[0m
+[0m[ INFO] [1712947679.032471083, 137.847000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712947679.033435324, 137.848000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712947679.046576412, 137.859000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712947679.046679574, 137.859000000]: Solution found in 0.013622 seconds[0m
+[0m[ INFO] [1712947679.062605854, 137.870000000]: SimpleSetup: Path simplification took 0.015685 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712947679.064464892, 137.872000000]: Planning adapters have added states at index positions: [ 0 ][0m
+[0m[ INFO] [1712947684.553640243, 142.934000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712947684.555127460, 142.935000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712947684.561127951, 142.940000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712947684.583584274, 142.961000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712947684.583661412, 142.961000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712947684.587290348, 142.964000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712947684.587893605, 142.964000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712947684.611416448, 142.984000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712947684.611493117, 142.984000000]: Solution found in 0.023942 seconds[0m
+[0m[ INFO] [1712947684.626047754, 142.997000000]: SimpleSetup: Path simplification took 0.014399 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712947687.739796959, 145.901000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712947687.739903555, 145.901000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712947687.760255798, 145.920000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712947687.771294453, 145.931000000]: Received event 'stop'[0m
+[0m[ INFO] [1712947687.802438227, 145.961000000]: Received event 'stop'[0m
+[0m[ INFO] [1712947690.228743406, 147.940000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712947690.228865359, 147.940000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712947690.233225385, 147.942000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712947690.234185347, 147.942000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712947690.245803666, 147.953000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712947690.246043373, 147.953000000]: Solution found in 0.012333 seconds[0m
+[0m[ INFO] [1712947690.254479517, 147.958000000]: SimpleSetup: Path simplification took 0.008283 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712947690.425520146, 148.113000000[33m[ WARN] [1712947695.630421278, 152.760000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712947695.676626351, 152.801000000]: Dropping first 1 trajectory point(s) out of 10, as they occur before the current time.
+First valid point will be reached in 0.461s.[0m
+[33m[ WARN] [1712947695.676724256, 152.801000000]: Dropping first 1 trajectory point(s) out of 10, as they occur before the current time.
+First valid point will be reached in 0.461s.[0m
+[0m[ INFO] [1712947529.292608761, 0.279000000]: Parsed fake FT sensor: wrist_ft in frame: wrist_ft_link[0m
+[0m[ INFO] [1712947529.293411700, 0.279000000]: Parsed imu sensor: base_imu in frame: base_imu_link[0m
+[0m[ INFO] [1712947529.297956694, 0.279000000]: Loaded gazebo_ros_control.[0m
+[0m[ INFO] [1712947529.307072768, 0.279000000]: Loading gazebo WORLD ODOMETRY RPY plugin[0m
+[0m[ INFO] [1712947529.307109405, 0.279000000]: world odometry sensor plugin missing <bodyName>, defaults to frameName[0m
+[0m[ INFO] [1712947529.307144795, 0.279000000]: world odometry plugin missing <updateRate>, defaults to 1000.000000[0m
+[0m[ INFO] [1712947529.312067557, 0.279000000]: MimicJointPlugin loaded! Joint: "gripper_finger_joint", Mimic joint: "gripper_left_inner_knuckle_joint", Multiplier: 1, Offset: 0, MaxEffort: 0.1, Sensitiveness: 0[0m
+[0m[ INFO] [1712947529.316385480, 0.279000000]: MimicJointPlugin loaded! Joint: "gripper_finger_joint", Mimic joint: "gripper_left_inner_finger_joint", Multiplier: -1, Offset: 0, MaxEffort: 0.1, Sensitiveness: 0[0m
+[0m[ INFO] [1712947529.316433866, 0.279000000]: MimicJointPlugin loaded! Joint: "gripper_finger_joint", Mimic joint: "gripper_right_outer_knuckle_joint", Multiplier: 1, Offset: 0, MaxEffort: 0.1, Sensitiveness: 0[0m
+[0m[ INFO] [1712947529.316468317, 0.279000000]: MimicJointPlugin loaded! Joint: "gripper_finger_joint", Mimic joint: "gripper_right_inner_knuckle_joint", Multiplier: 1, Offset: 0, MaxEffort: 0.1, Sensitiveness: 0[0m
+[0m[ INFO] [1712947529.316495139, 0.279000000]: MimicJointPlugin loaded! Joint: "gripper_finger_joint", Mimic joint: "gripper_right_inner_finger_joint", Multiplier: -1, Offset: 0, MaxEffort: 0.1, Sensitiveness: 0[0m
+[0m[ INFO] [1712947529.657596421, 0.607000000]: Controller state will be published at 50Hz.[0m
+[0m[ INFO] [1712947529.657912619, 0.607000000]: Wheel separation will be multiplied by 1.[0m
+[0m[ INFO] [1712947529.658309941, 0.608000000]: Left wheel radius will be multiplied by 1.[0m
+[0m[ INFO] [1712947529.658328767, 0.608000000]: Right wheel radius will be multiplied by 1.[0m
+[0m[ INFO] [1712947529.658450448, 0.608000000]: Velocity rolling window size of 10.[0m
+[0m[ INFO] [1712947529.658726315, 0.608000000]: Velocity commands will be considered old if they are older than 0.25s.[0m
+[0m[ INFO] [1712947529.658856279, 0.608000000]: Allow mutiple cmd_vel publishers is enabled[0m
+[0m[ INFO] [1712947529.659163578, 0.609000000]: Base frame_id set to /base_footprint[0m
+[0m[ INFO] [1712947529.659415249, 0.609000000]: Odometry frame_id set to /odom[0m
+[0m[ INFO] [1712947529.659539752, 0.609000000]: Publishing to tf is enabled[0m
+[0m[ INFO] [1712947529.659664221, 0.609000000]: Checking error mode is disabled[0m
+[0m[ INFO] [1712947529.659786388, 0.609000000]: Error mode timeout is 1[0m
+[0m[ INFO] [1712947529.665610167, 0.615000000]: left wheel to origin: 0,0.2022, 0[0m
+[0m[ INFO] [1712947529.665680514, 0.615000000]: right wheel to origin: 0,-0.2022, 0[0m
+[0m[ INFO] [1712947529.665872663, 0.615000000]: Odometry params : wheel separation 0.4044, left wheel radius 0.0985, right wheel radius 0.0985[0m
+[0m[ INFO] [1712947529.667777975, 0.617000000]: Adding left wheel with joint name: wheel_left_joint and right wheel with joint name: wheel_right_joint[0m
+[0m[ INFO] [1712947529.723972572, 0.672000000]: Dynamic Reconfigure:
 DynamicParams:
 	Odometry parameters:
 		left wheel radius: 1
@@ -1104,153 +1148,1046 @@ DynamicParams:
 		Publication rate: 50
 		Publish frame odom on tf: 1[0m
 Node::Advertise(): Error advertising service [/cube_yellow_1/shininess]. Did you forget to start the discovery service?
-[33m[ WARN] [1712843987.253426192, 37.033000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
-[33m[ WARN] [1712843987.296722886, 37.054000000]: Dropping first 1 trajectory point(s) out of 13, as they occur before the current time.
+[31m[ERROR] [1712947700.795027695, 157.309000000]: Updating ModelState: model [cube_red_1] does not exist[0m
+[31m[ERROR] [1712947700.809283803, 157.316000000]: GetModelState: model [cube_red_1] does not exist[0m
+[31m[ERROR] [1712947700.818305988, 157.316000000]: Updating ModelState: model [cube_red_1] does not exist[0m
+[33m[ WARN] [1712947700.906727494, 157.320000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712947700.929344592, 157.341000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.296s.[0m
+[33m[ WARN] [1712947700.929627285, 157.341000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.296s.[0m
+[31m[ERROR] [1712947701.390741436, 157.705000000]: GetModelState: model [cube_red_1] does not exist[0m
+[31m[ERROR] [1712947701.396350206, 157.705000000]: Updating ModelState: model [cube_red_1] does not exist[0m
+[33m[ WARN] [1712947701.436305751, 157.720000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712947701.461871826, 157.741000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.316s.[0m
+[33m[ WARN] [1712947701.462063792, 157.741000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.316s.[0m
+]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712947690.425770032, 148.113000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712947690.434013335, 148.120000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712947690.435492015, 148.121000000]: Received event 'stop'[0m
+[0m[ INFO] [1712947695.630611084, 152.760000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712947695.630686428, 152.760000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712947695.633603632, 152.763000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712947695.634163693, 152.764000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712947695.645731192, 152.774000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712947695.645808703, 152.774000000]: Solution found in 0.011959 seconds[0m
+[0m[ INFO] [1712947695.652959949, 152.780000000]: SimpleSetup: Path simplification took 0.006937 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712947697.863493809, 154.751000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712947697.864922863, 154.752000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712947697.873860010, 154.760000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712947697.875115054, 154.762000000]: Received event 'stop'[0m
+[0m[ INFO] [1712947700.906915388, 157.320000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712947700.907005916, 157.320000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712947700.909404471, 157.323000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712947700.909828575, 157.323000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712947700.921376036, 157.334000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712947700.921426812, 157.334000000]: Solution found in 0.011880 seconds[0m
+[0m[ INFO] [1712947700.927321441, 157.339000000]: SimpleSetup: Path simplification took 0.005790 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712947701.308476004, 157.641000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712947701.308636521, 157.641000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712947701.331385225, 157.660000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712947701.346100007, 157.672000000]: Received event 'stop'[0m
+[0m[ INFO] [1712947701.436496448, 157.721000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712947701.436574658, 157.721000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712947701.440793649, 157.725000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712947701.441720723, 157.726000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712947701.453971013, 157.735000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712947701.454025549, 157.735000000]: Solution found in 0.012871 seconds[0m
+[0m[ INFO] [1712947701.459556596, 157.740000000]: SimpleSetup: Path simplification took 0.005307 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712947701.883382448, 158.091000000]: Controller 'arm_controller' successfully finis[31m[ERROR] [1712947701.954937541, 158.149000000]: GetModelState: model [cube_red_1] does not exist[0m
+[31m[ERROR] [1712947701.959689189, 158.149000000]: Updating ModelState: model [cube_red_1] does not exist[0m
+[33m[ WARN] [1712947702.004161525, 158.161000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[31m[ERROR] [1712947702.051610923, 158.200000000]: 
+Invalid Trajectory: start point deviates from current robot state more than 0.01
+joint 'arm_1_joint': expected: 1.48785, current: 1.47605[0m
+[31m[ERROR] [1712947702.061972629, 158.204000000]: GetModelState: model [cube_red_1] does not exist[0m
+[31m[ERROR] [1712947702.072156124, 158.204000000]: Updating ModelState: model [cube_red_1] does not exist[0m
+[33m[ WARN] [1712947702.118119225, 158.220000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712947702.165733891, 158.263000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.277s.[0m
+[33m[ WARN] [1712947702.166258706, 158.263000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.277s.[0m
+[31m[ERROR] [1712947702.584469544, 158.629000000]: GetModelState: model [cube_red_1] does not exist[0m
+[31m[ERROR] [1712947702.589205026, 158.629000000]: Updating ModelState: model [cube_red_1] does not exist[0m
+[33m[ WARN] [1712947702.626292779, 158.640000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712947702.652711836, 158.661000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.250s.[0m
+[33m[ WARN] [1712947702.652836790, 158.662000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.250s.[0m
+[31m[ERROR] [1712947702.996646772, 158.966000000]: GetModelState: model [cube_red_1] does not exist[0m
+[31m[ERROR] [1712947703.001609880, 158.966000000]: Updating ModelState: model [cube_red_1] does not exist[0m
+[33m[ WARN] [1712947703.037130050, 158.980000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+hed[0m
+[0m[ INFO] [1712947701.883538090, 158.091000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712947701.894152933, 158.100000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712947701.908933296, 158.112000000]: Received event 'stop'[0m
+[0m[ INFO] [1712947702.004421037, 158.161000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712947702.004527454, 158.161000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712947702.007842736, 158.163000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712947702.008537725, 158.163000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712947702.021075924, 158.173000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712947702.021121992, 158.173000000]: Solution found in 0.012958 seconds[0m
+[0m[ INFO] [1712947702.031575520, 158.183000000]: SimpleSetup: Path simplification took 0.010309 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712947702.053129169, 158.201000000]: Received event 'stop'[0m
+[0m[ INFO] [1712947702.118421592, 158.220000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712947702.118506215, 158.220000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712947702.122140782, 158.223000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712947702.123196612, 158.224000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712947702.136027582, 158.234000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712947702.136066425, 158.234000000]: Solution found in 0.013370 seconds[0m
+[0m[ INFO] [1712947702.148634658, 158.246000000]: SimpleSetup: Path simplification took 0.012407 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712947702.506502096, 158.563000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712947702.506689413, 158.563000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712947702.526506102, 158.580000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712947702.538591100, 158.591000000]: Received event 'stop'[0m
+[0m[ INFO] [1712947702.626557474, 158.641000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712947702.626632601, 158.641000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712947702.630026031, 158.641000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712947702.630635721, 158.642000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712947702.642552350, 158.651000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712947702.642668940, 158.651000000]: Solution found in 0.012269 seconds[0m
+[0m[ INFO] [1712947702.650552392, 158.659000000]: SimpleSetup: Path simplification took 0.007717 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712947702.933736470, 158.912000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712947702.933826472, 158.912000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712947702.942509153, 158.920000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712947702.954236354, 158.931000000]: Received event 'stop'[0m
+[0m[ INFO] [1712947703.037321053, 158.980000000]: Combined planning [33m[ WARN] [1712947703.086056978, 159.021000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.312s.[0m
+[33m[ WARN] [1712947703.086557367, 159.022000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.312s.[0m
+[31m[ERROR] [1712947703.552636384, 159.426000000]: GetModelState: model [cube_red_1] does not exist[0m
+[31m[ERROR] [1712947703.560105406, 159.426000000]: Updating ModelState: model [cube_red_1] does not exist[0m
+[33m[ WARN] [1712947703.599110845, 159.440000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712947703.644923894, 159.482000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.290s.[0m
+[33m[ WARN] [1712947703.645184528, 159.482000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.290s.[0m
+[31m[ERROR] [1712947704.056731468, 159.849000000]: GetModelState: model [cube_red_1] does not exist[0m
+[31m[ERROR] [1712947704.066745954, 159.849000000]: Updating ModelState: model [cube_red_1] does not exist[0m
+[33m[ WARN] [1712947704.110760659, 159.861000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[31m[ERROR] [1712947704.153985495, 159.901000000]: 
+Invalid Trajectory: start point deviates from current robot state more than 0.01
+joint 'arm_1_joint': expected: 1.5653, current: 1.55346[0m
+[31m[ERROR] [1712947704.210287950, 159.947000000]: GetModelState: model [cube_red_1] does not exist[0m
+[31m[ERROR] [1712947704.217733631, 159.947000000]: Updating ModelState: model [cube_red_1] does not exist[0m
+[33m[ WARN] [1712947704.260167835, 159.961000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712947703.037447857, 158.981000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712947703.040280126, 158.983000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712947703.040710962, 158.983000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712947703.063179922, 159.003000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712947703.063313430, 159.003000000]: Solution found in 0.022829 seconds[0m
+[0m[ INFO] [1712947703.072563664, 159.009000000]: SimpleSetup: Path simplification took 0.009068 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712947703.484689639, 159.372000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712947703.484820308, 159.372000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712947703.493747526, 159.381000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712947703.495810235, 159.382000000]: Received event 'stop'[0m
+[0m[ INFO] [1712947703.599404487, 159.441000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712947703.599515314, 159.441000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712947703.602886785, 159.443000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712947703.603423505, 159.444000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712947703.616620323, 159.456000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712947703.616796567, 159.456000000]: Solution found in 0.013593 seconds[0m
+[0m[ INFO] [1712947703.625544413, 159.464000000]: SimpleSetup: Path simplification took 0.008542 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712947703.977679936, 159.782000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712947703.977782373, 159.782000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712947703.998554548, 159.800000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712947704.009762636, 159.810000000]: Received event 'stop'[0m
+[0m[ INFO] [1712947704.111037525, 159.861000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712947704.111124440, 159.861000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712947704.113217190, 159.863000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712947704.113997724, 159.864000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712947704.126536906, 159.876000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712947704.126612918, 159.876000000]: Solution found in 0.013134 seconds[0m
+[0m[ INFO] [1712947704.130430840, 159.879000000]: SimpleSetup: Path simplification took 0.003627 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712947704.155537289, 159.902000000]: Received event 'stop'[0m
+[0m[ INFO] [1712947704.260439012, 159.961000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712947704.260551594, 159.961000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712947704.264562098, 159.963000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when th[33m[ WARN] [1712947704.305569160, 160.001000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.289s.[0m
+[33m[ WARN] [1712947704.305921002, 160.001000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.289s.[0m
+[31m[ERROR] [1712947704.726794945, 160.367000000]: GetModelState: model [cube_red_1] does not exist[0m
+[31m[ERROR] [1712947704.734932739, 160.367000000]: Updating ModelState: model [cube_red_1] does not exist[0m
+[33m[ WARN] [1712947704.774431255, 160.380000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712947704.797556854, 160.401000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.267s.[0m
+[33m[ WARN] [1712947704.797694558, 160.401000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.267s.[0m
+[31m[ERROR] [1712947705.186842219, 160.745000000]: GetModelState: model [cube_red_1] does not exist[0m
+[31m[ERROR] [1712947705.191855613, 160.745000000]: Updating ModelState: model [cube_red_1] does not exist[0m
+[33m[ WARN] [1712947705.239380929, 160.761000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712947705.263600364, 160.782000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.309s.[0m
+[33m[ WARN] [1712947705.263866435, 160.782000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.309s.[0m
+[31m[ERROR] [1712947705.722419469, 161.188000000]: GetModelState: model [cube_red_1] does not exist[0m
+[31m[ERROR] [1712947705.727868266, 161.188000000]: Updating ModelState: model [cube_red_1] does not exist[0m
+[33m[ WARN] [1712947705.768078897, 161.200000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+e planner is constructed.[0m
+[0m[ INFO] [1712947704.265337433, 159.965000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712947704.278415638, 159.978000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712947704.278523085, 159.978000000]: Solution found in 0.013577 seconds[0m
+[0m[ INFO] [1712947704.286238405, 159.984000000]: SimpleSetup: Path simplification took 0.007531 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712947704.644657159, 160.301000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712947704.644843056, 160.301000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712947704.666895906, 160.320000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712947704.678925268, 160.331000000]: Received event 'stop'[0m
+[0m[ INFO] [1712947704.774690328, 160.380000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712947704.774751990, 160.380000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712947704.776936818, 160.382000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712947704.777667132, 160.383000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712947704.790826906, 160.395000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712947704.790955132, 160.395000000]: Solution found in 0.013547 seconds[0m
+[0m[ INFO] [1712947704.795690380, 160.399000000]: SimpleSetup: Path simplification took 0.004488 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712947705.135363945, 160.702000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712947705.135458156, 160.702000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712947705.154982564, 160.721000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712947705.166754965, 160.731000000]: Received event 'stop'[0m
+[0m[ INFO] [1712947705.239540584, 160.761000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712947705.239613900, 160.761000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712947705.242643401, 160.764000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712947705.243172338, 160.764000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712947705.255377560, 160.774000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712947705.255531245, 160.774000000]: Solution found in 0.012593 seconds[0m
+[0m[ INFO] [1712947705.258871689, 160.778000000]: SimpleSetup: Path simplification took 0.003250 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712947705.657334429, 161.133000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712947705.657953248, 161.134000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712947705.664301972, 161.140000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712947705.666739572, 161.142000000]: Received event 'stop'[0m
+[0m[ INFO] [1712947705.768212385, 161.200000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712947705.768305440, 161.200000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712947705.768442983, 161.200000000]: Starting state is just outside bounds (joint 'torso_lift_joint'). Assuming within bounds.[0m
+[0m[ INFO] [1712947705.771141291, 161.202000000]: Planner configuration 'arm_torso' w[31m[ERROR] [1712947705.812307738, 161.240000000]: 
+Invalid Trajectory: start point deviates from current robot state more than 0.01
+joint 'arm_1_joint': expected: 1.63515, current: 1.62265[0m
+[31m[ERROR] [1712947705.822927899, 161.243000000]: GetModelState: model [cube_red_1] does not exist[0m
+[31m[ERROR] [1712947705.831764757, 161.243000000]: Updating ModelState: model [cube_red_1] does not exist[0m
+[33m[ WARN] [1712947705.876547661, 161.260000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712947705.902516542, 161.282000000]: Dropping first 1 trajectory point(s) out of 3, as they occur before the current time.
+First valid point will be reached in 0.080s.[0m
+[33m[ WARN] [1712947705.902855840, 161.282000000]: Dropping first 1 trajectory point(s) out of 3, as they occur before the current time.
+First valid point will be reached in 0.080s.[0m
+[31m[ERROR] [1712947706.367419604, 161.689000000]: GetModelState: model [cube_red_1] does not exist[0m
+[31m[ERROR] [1712947706.373705125, 161.689000000]: Updating ModelState: model [cube_red_1] does not exist[0m
+[33m[ WARN] [1712947706.436882398, 161.721000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712947706.481590583, 161.763000000]: Dropping first 1 trajectory point(s) out of 17, as they occur before the current time.
 First valid point will be reached in 0.329s.[0m
-[33m[ WARN] [1712843987.296976670, 37.055000000]: Dropping first 1 trajectory point(s) out of 13, as they occur before the current time.
+[33m[ WARN] [1712947706.481827241, 161.763000000]: Dropping first 1 trajectory point(s) out of 17, as they occur before the current time.
 First valid point will be reached in 0.329s.[0m
-[0m[ INFO] [1712843667.387197703, 21.254000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
-[0m[ INFO] [1712843667.387586829, 21.254000000]: Planning attempt 1 of at most 1[0m
-[0m[ INFO] [1712843667.388207747, 21.254000000]: Starting state is just outside bounds (joint 'torso_lift_joint'). Assuming within bounds.[0m
-[0m[ INFO] [1712843667.388238249, 21.254000000]: Starting state is just outside bounds (joint 'arm_1_joint'). Assuming within bounds.[0m
-[0m[ INFO] [1712843667.401037578, 21.258000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
-[0m[ INFO] [1712843667.404144651, 21.260000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
-[0m[ INFO] [1712843667.418136960, 21.269000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
-[0m[ INFO] [1712843667.418305676, 21.269000000]: Solution found in 0.015262 seconds[0m
-[0m[ INFO] [1712843667.435250118, 21.279000000]: SimpleSetup: Path simplification took 0.015812 seconds and changed from 3 to 2 states[0m
-[0m[ INFO] [1712843667.438145182, 21.280000000]: Planning adapters have added states at index positions: [ 0 ][0m
-[0m[ INFO] [1712843677.751373321, 26.347000000]: Controller 'arm_controller' successfully finished[0m
-[0m[ INFO] [1712843677.751781862, 26.347000000]: Controller 'torso_controller' successfully finished[0m
-[0m[ INFO] [1712843677.763892706, 26.354000000]: Completed trajectory execution with status SUCCEEDED ...[0m
-[0m[ INFO] [1712843677.815835386, 26.373000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
-[0m[ INFO] [1712843677.816041107, 26.373000000]: Planning attempt 1 of at most 1[0m
-[0m[ INFO] [1712843677.822285396, 26.375000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
-[0m[ INFO] [1712843677.823317487, 26.375000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
-[0m[ INFO] [1712843677.847551822, 26.382000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
-[0m[ INFO] [1712843677.847660283, 26.382000000]: Solution found in 0.024956 seconds[0m
-[0m[ INFO] [1712843677.864621674, 26.386000000]: SimpleSetup: Path simplification took 0.016735 seconds and changed from 4 to 2 states[0m
-[0m[ INFO] [1712843683.795212725, 29.294000000]: Controller 'arm_controller' successfully finished[0m
-[0m[ INFO] [1712843683.796406725, 29.294000000]: Controller 'torso_controller' successfully finished[0m
-[0m[ INFO] [1712843683.881921288, 29.333000000]: Completed trajectory execution with status SUCCEEDED ...[0m
-[0m[ INFO] [1712843683.899020769, 29.344000000]: Received event 'stop'[0m
-[0m[ INFO] [1712843683.915271336, 29.355000000]: Received event 'stop'[0m
-[0m[ INFO] [1712843987.253798324, 37.034000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
-[0m[ INFO] [1712843987.253944432, 37.034000000]: Planning attempt 1 of at most 1[0m
-[0m[ INFO] [1712843987.259769837, 37.035000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
-[0m[ INFO] [1712843987.261893483, 37.036000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
-[0m[ INFO] [1712843987.275294927, 37.040000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
-[0m[ INFO] [1712843987.275517254, 37.040000000]: Solution found in 0.014504 seconds[0m
-[0m[ INFO] [1712843987.280748372, 37.044000000]: SimpleSetup: Path simplification took 0.004796 seconds and changed from 3 to 2 states[0m
-[0m[ INFO] [1712843993.724183761, 39.905000000]: Controller 'torso_controller' [33m[ WARN] [1712843993.785159483, 39.933000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
-[33m[ WARN] [1712843993.842758148, 39.954000000]: Dropping first 1 trajectory point(s) out of 13, as they occur before the current time.
-First valid point will be reached in 0.338s.[0m
-[33m[ WARN] [1712843993.843287153, 39.954000000]: Dropping first 1 trajectory point(s) out of 13, as they occur before the current time.
-First valid point will be reached in 0.338s.[0m
-[0m[ INFO] [1712843607.798392223]: tf_lookup starting[0m
-[0m[ INFO] [1712843607.782068499]: Topic handler 'navigation' subscribed to topic 'nav_vel': timeout = 0.500000s, priority = 10[0m
-[0m[ INFO] [1712843607.800826255]: Topic handler 'joystick' subscribed to topic 'joy_vel': timeout = 0.500000s, priority = 100[0m
-[0m[ INFO] [1712843607.802202226]: Topic handler 'keyboard' subscribed to topic 'key_vel': timeout = 0.500000s, priority = 90[0m
-[0m[ INFO] [1712843607.803548611]: Topic handler 'tablet' subscribed to topic 'tab_vel': timeout = 0.500000s, priority = 100[0m
-[0m[ INFO] [1712843607.805056173]: Topic handler 'marker' subscribed to topic 'marker_vel': timeout = 0.500000s, priority = 99[0m
-[0m[ INFO] [1712843607.806400598]: Topic handler 'phone' subscribed to topic 'phone_vel': timeout = 0.500000s, priority = 98[0m
-[0m[ INFO] [1712843607.807672558]: Topic handler 'rviz_joy' subscribed to topic 'rviz_joy_vel': timeout = 0.500000s, priority = 95[0m
-[0m[ INFO] [1712843607.809050034]: Topic handler 'servoing_cmd_vel' subscribed to topic 'servoing_cmd_vel': timeout = 0.500000s, priority = 20[0m
-[0m[ INFO] [1712843607.821618317]: Topic handler 'pause' subscribed to topic 'pause_navigation': timeout = None, priority = 100[0m
-[0m[ INFO] [1712843607.827483825]: Topic handler 'loop_closure' subscribed to topic 'stop_closing_loop': timeout = None, priority = 200[0m
-[0m[ INFO] [1712843607.832182817]: Topic handler 'joystick' subscribed to topic 'joy_priority': timeout = None, priority = 100[0m
-successfully finished[0m
-[0m[ INFO] [1712843993.724581026, 39.905000000]: Controller 'arm_controller' successfully finished[0m
-[0m[ INFO] [1712843993.744402741, 39.913000000]: Completed trajectory execution with status SUCCEEDED ...[0m
-[0m[ INFO] [1712843993.785537338, 39.933000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
-[0m[ INFO] [1712843993.785657223, 39.933000000]: Planning attempt 1 of at most 1[0m
-[0m[ INFO] [1712843993.790533002, 39.935000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
-[0m[ INFO] [1712843993.792179109, 39.936000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
-[0m[ INFO] [1712843993.806154483, 39.940000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
-[0m[ INFO] [1712843993.806546672, 39.940000000]: Solution found in 0.015060 seconds[0m
-[0m[ INFO] [1712843993.822781477, 39.946000000]: SimpleSetup: Path simplification took 0.015437 seconds and changed from 4 to 2 states[0m
-[0m[ INFO] [1712844000.731551561, 42.854000000]: Controller 'torso_controller' successfully finished[0m
-[0m[ INFO] [1712844000.731733339, 42.854000000]: Controller 'arm_controller' successfully finished[0m
-[0m[ INFO] [1712844000.783875606, 42.873000000]: Completed trajectory execution with status SUCCEEDED ...[0m
-[0m[ INFO] [1712844000.809054791, 42.884000000]: Received event 'stop'[0m
-[0m[ INFO] [1712844000.833378496, 42.894000000]: Received event 'stop'[0m
-[INFO] [1712843609.616155, 0.000000]: Initializing Gripper Grasper...
-[INFO] [1712843609.715126, 0.000000]: timeout2.0closing_time0.2
-[INFO] [1712843609.747859, 0.000000]: Initialized dynamic reconfigure on: /gripper_grasping
-[INFO] [1712843609.751302, 0.000000]: Subscribed to topic: /gripper_controller/state
-[INFO] [1712843609.753944, 0.000000]: Publishing to topic: /gripper_controller/command
-[INFO] [1712843609.756603, 0.000000]: Offering grasp service on: /gripper_controller/grasp
-[INFO] [1712843609.757967, 0.000000]: Done initializing Gripper Grasp Service!
-[INFO] [1712843609.762426, 0.000000]: Offering release service on: /gripper_controller/release
-[INFO] [1712843609.765462, 0.000000]: Done initializing Gripper Release Service!
-[0m[ INFO] [1712843607.595813390]: Load description from: /robot_description[0m
-Segmentation fault (core dumped)
-[31m[joint_trajectory_controllers_velocity_controllers_spawner-12] escalating to SIGTERM[0m
-[31m[gripper_controllers_spawner-9] escalating to SIGTERM[0m
-[31m[bringup_controllers_spawner_ft-8] escalating to SIGTERM[0m
-[31m[bringup_controllers_spawner_imu-7] escalating to SIGTERM[0m
-[31m[default_controllers_spawner-5] escalating to SIGTERM[0m
-[31m[joint_trajectory_controllers_velocity_controllers_spawner-12] escalating to SIGKILL[0m
-[31m[gripper_controllers_spawner-9] escalating to SIGKILL[0m
-[31m[bringup_controllers_spawner_imu-7] escalating to SIGKILL[0m
-[31m[bringup_controllers_spawner_ft-8] escalating to SIGKILL[0m
-[31m[default_controllers_spawner-5] escalating to SIGKILL[0m
-[31mShutdown errors:
- * process[joint_trajectory_controllers_velocity_controllers_spawner-12, pid 442084]: required SIGKILL. May still be running.
- * process[bringup_controllers_spawner_ft-8, pid 442028]: required SIGKILL. May still be running.
- * process[gripper_controllers_spawner-9, pid 442037]: required SIGKILL. May still be running.
- * process[bringup_controllers_spawner_imu-7, pid 442026]: required SIGKILL. May still be running.
- * process[default_controllers_spawner-5, pid 442022]: required SIGKILL. May still be running.[0m
-[1mprocess[rosout-1]: started with pid [441985][0m
-started core service [/rosout]
-[1mprocess[gazebo-2]: started with pid [442000][0m
-[1mprocess[gazebo_gui-3]: started with pid [442009][0m
-[1mprocess[spawn_model-4]: started with pid [442018][0m
-[1mprocess[default_controllers_spawner-5]: started with pid [442022][0m
-[1mprocess[head_controller/point_head_action-6]: started with pid [442024][0m
-[1mprocess[bringup_controllers_spawner_imu-7]: started with pid [442026][0m
-[1mprocess[bringup_controllers_spawner_ft-8]: started with pid [442028][0m
-[1mprocess[gripper_controllers_spawner-9]: started with pid [442037][0m
-[1mprocess[gripper_grasping-10]: started with pid [442078][0m
-[1mprocess[home_gripper-11]: started with pid [442082][0m
-[1mprocess[joint_trajectory_controllers_velocity_controllers_spawner-12]: started with pid [442084][0m
-[1mprocess[load_motions-13]: started with pid [442087][0m
-[1mprocess[play_motion-14]: started with pid [442096][0m
-[1mprocess[is_already_there-15]: started with pid [442105][0m
-[1mprocess[move_group-16]: started with pid [442108][0m
-[1mprocess[robot_state_publisher-17]: started with pid [442116][0m
-[1mprocess[tf_lookup-18]: started with pid [442118][0m
-[1mprocess[twist_mux-19]: started with pid [442128][0m
-[1mprocess[twist_marker-20]: started with pid [442130][0m
-[1mprocess[joystick_relay-21]: started with pid [442139][0m
-[1mprocess[image_raw_to_rect_color_relay-22]: started with pid [442151][0m
-[1mprocess[xtion/rgb/image_proc-23]: started with pid [442197][0m
-[1m[spawn_model-4] process has finished cleanly
-log file: /home/adriano/.ros/log/de8375e4-f80a-11ee-a580-7b454105e411/spawn_model-4*.log[0m
-[1m[load_motions-13] process has finished cleanly
-log file: /home/adriano/.ros/log/de8375e4-f80a-11ee-a580-7b454105e411/load_motions-13*.log[0m
-[1m[home_gripper-11] process has finished cleanly
-log file: /home/adriano/.ros/log/de8375e4-f80a-11ee-a580-7b454105e411/home_gripper-11*.log[0m
-[xtion/rgb/image_proc-23] killing on exit
-[image_raw_to_rect_color_relay-22] killing on exit
-[joystick_relay-21] killing on exit
-[twist_marker-20] killing on exit
-[twist_mux-19] killing on exit
-[move_group-16] killing on exit
-[tf_lookup-18] killing on exit
-[robot_state_publisher-17] killing on exit
-[is_already_there-15] killing on exit
-[play_motion-14] killing on exit
-[joint_trajectory_controllers_velocity_controllers_spawner-12] killing on exit
-[gripper_grasping-10] killing on exit
-[gripper_controllers_spawner-9] killing on exit
-[bringup_controllers_spawner_ft-8] killing on exit
-[bringup_controllers_spawner_imu-7] killing on exit
-[head_controller/point_head_action-6] killing on exit
-[default_controllers_spawner-5] killing on exit
-[gazebo_gui-3] killing on exit
-[gazebo-2] killing on exit
-[rosout-1] killing on exit
-[master] killing on exit
-shutting down processing monitor...
-... shutting down processing monitor complete
-[1mdone[0m
+[33m[ WARN] [1712948064.100968316, 492.261000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+ill use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712947705.772271596, 161.203000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712947705.785287608, 161.216000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712947705.785369973, 161.216000000]: Solution found in 0.013582 seconds[0m
+[0m[ INFO] [1712947705.795639511, 161.225000000]: SimpleSetup: Path simplification took 0.010039 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712947705.795981318, 161.226000000]: Planning adapters have added states at index positions: [ 0 ][0m
+[0m[ INFO] [1712947705.813717350, 161.240000000]: Received event 'stop'[0m
+[0m[ INFO] [1712947705.876749341, 161.260000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712947705.876829082, 161.260000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712947705.877009441, 161.260000000]: Starting state is just outside bounds (joint 'torso_lift_joint'). Assuming within bounds.[0m
+[0m[ INFO] [1712947705.880283973, 161.264000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712947705.881988530, 161.265000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712947705.894329282, 161.276000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712947705.894427235, 161.276000000]: Solution found in 0.013455 seconds[0m
+[0m[ INFO] [1712947705.899989396, 161.280000000]: SimpleSetup: Path simplification took 0.005382 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712947705.900353874, 161.280000000]: Planning adapters have added states at index positions: [ 0 ][0m
+[0m[ INFO] [1712947706.298570993, 161.633000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712947706.298688387, 161.633000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712947706.305857559, 161.640000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712947706.318631671, 161.651000000]: Received event 'stop'[0m
+[0m[ INFO] [1712947706.437090139, 161.721000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712947706.437149191, 161.721000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712947706.439691131, 161.723000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712947706.440288465, 161.724000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712947706.453657584, 161.736000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712947706.453915406, 161.736000000]: Solution found in 0.013929 seconds[0m
+[0m[ INFO] [1712947706.472226357, 161.754000000]: SimpleSetup: Path simplification took 0.018151 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712947711.352636657, 166.064000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712947711.352828560, 166.064000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712947711.371729489, 166.080000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712947711.374582228, 166.082000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948064.101207282, 492.261000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948064.101254472, 492.261000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948064.103438426, 492.263000000]: Planner configuration 'arm_to[33m[ WARN] [1712948064.144332845, 492.301000000]: Dropping first 1 trajectory point(s) out of 13, as they occur before the current time.
+First valid point will be reached in 0.476s.[0m
+[33m[ WARN] [1712948064.144586388, 492.302000000]: Dropping first 1 trajectory point(s) out of 13, as they occur before the current time.
+First valid point will be reached in 0.476s.[0m
+[33m[ WARN] [1712948066.795656013, 494.780000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948066.837297301, 494.820000000]: Dropping first 1 trajectory point(s) out of 13, as they occur before the current time.
+First valid point will be reached in 0.337s.[0m
+[33m[ WARN] [1712948066.837358271, 494.820000000]: Dropping first 1 trajectory point(s) out of 13, as they occur before the current time.
+First valid point will be reached in 0.337s.[0m
+[33m[ WARN] [1712948072.364365331, 499.720000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948072.390558520, 499.741000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.135s.[0m
+[33m[ WARN] [1712948072.390724862, 499.741000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.135s.[0m
+[33m[ WARN] [1712948074.906247143, 502.021000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+rso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948064.104182447, 492.264000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948064.115928454, 492.274000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712948064.116056888, 492.274000000]: Solution found in 0.012396 seconds[0m
+[0m[ INFO] [1712948064.122828796, 492.281000000]: SimpleSetup: Path simplification took 0.006655 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712948066.764541050, 494.752000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948066.764604069, 494.752000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948066.773564280, 494.760000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948066.795881107, 494.780000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948066.795977401, 494.780000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948066.798325234, 494.783000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948066.798623344, 494.783000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948066.810239276, 494.794000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948066.810290935, 494.794000000]: Solution found in 0.011839 seconds[0m
+[0m[ INFO] [1712948066.816784100, 494.800000000]: SimpleSetup: Path simplification took 0.006365 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948069.912009587, 497.672000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948069.912162031, 497.672000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948069.920171565, 497.680000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948069.931403516, 497.691000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948069.963228650, 497.721000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948072.364562191, 499.721000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948072.364618723, 499.721000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948072.367592860, 499.722000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948072.368313122, 499.723000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948072.380329249, 499.732000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712948072.380403349, 499.732000000]: Solution found in 0.012285 seconds[0m
+[0m[ INFO] [1712948072.387171848, 499.738000000]: SimpleSetup: Path simplification took 0.006487 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712948072.555697223, 499.892000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948072.555809430, 499.892000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948072.585453029, 499.920000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948072.596941577, 499.931000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948074.906445940, 502.021000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948074.906503021, 502.021000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948074.910684892, 502.023000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Ad[33m[ WARN] [1712948074.955373528, 502.061000000]: Dropping first 1 trajectory point(s) out of 10, as they occur before the current time.
+First valid point will be reached in 0.462s.[0m
+[33m[ WARN] [1712948074.955576291, 502.061000000]: Dropping first 1 trajectory point(s) out of 10, as they occur before the current time.
+First valid point will be reached in 0.462s.[0m
+Node::Advertise(): Error advertising service [/cube_green_1/shininess]. Did you forget to start the discovery service?
+[33m[ WARN] [1712948080.094316603, 506.720000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948080.138204368, 506.761000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.304s.[0m
+[33m[ WARN] [1712948080.138360183, 506.761000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.304s.[0m
+[33m[ WARN] [1712948080.623337970, 507.180000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948080.670824357, 507.221000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.312s.[0m
+[33m[ WARN] [1712948080.670895430, 507.221000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.312s.[0m
+[33m[ WARN] [1712948081.164391388, 507.641000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+ditional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948074.911638593, 502.023000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948074.924021393, 502.032000000]: arm_torso/arm_torso: Created 5 states (3 start + 2 goal)[0m
+[0m[ INFO] [1712948074.924111497, 502.032000000]: Solution found in 0.012934 seconds[0m
+[0m[ INFO] [1712948074.933018643, 502.040000000]: SimpleSetup: Path simplification took 0.008657 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948077.143279685, 504.062000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948077.143425055, 504.062000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948077.162428532, 504.080000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948077.172419033, 504.090000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948080.094368472, 506.720000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948080.094387914, 506.720000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948080.095356792, 506.721000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948080.095559060, 506.721000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948080.119370949, 506.743000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948080.119470121, 506.743000000]: Solution found in 0.024004 seconds[0m
+[0m[ INFO] [1712948080.124310066, 506.747000000]: SimpleSetup: Path simplification took 0.004665 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948080.524674842, 507.113000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948080.524758030, 507.113000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948080.532214919, 507.120000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948080.532892287, 507.121000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948080.623392811, 507.180000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948080.623411249, 507.180000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948080.624510646, 507.181000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948080.624660099, 507.181000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948080.646578309, 507.199000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948080.646711407, 507.199000000]: Solution found in 0.022120 seconds[0m
+[0m[ INFO] [1712948080.654724179, 507.205000000]: SimpleSetup: Path simplification took 0.007878 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948081.054824234, 507.571000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948081.054957931, 507.571000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948081.066483801, 507.580000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948081.079256708, 507.592000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948081.164597176, 507.641000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948081.164659823, 507.641000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948081.166629054, 507.642000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set whe[33m[ WARN] [1712948081.207707163, 507.681000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.332s.[0m
+[33m[ WARN] [1712948081.207918364, 507.681000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.332s.[0m
+[33m[ WARN] [1712948081.692801991, 508.100000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948081.738663212, 508.141000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.323s.[0m
+[33m[ WARN] [1712948081.738839602, 508.141000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.323s.[0m
+[33m[ WARN] [1712948082.251483675, 508.580000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948082.294473459, 508.620000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.319s.[0m
+[33m[ WARN] [1712948082.294627907, 508.620000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.319s.[0m
+[33m[ WARN] [1712948082.775330597, 509.040000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+n the planner is constructed.[0m
+[0m[ INFO] [1712948081.167006557, 507.642000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948081.179513731, 507.655000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948081.179634639, 507.655000000]: Solution found in 0.012814 seconds[0m
+[0m[ INFO] [1712948081.187806653, 507.663000000]: SimpleSetup: Path simplification took 0.008023 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948081.595392261, 508.031000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948081.595471088, 508.031000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948081.606159995, 508.041000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948081.618168373, 508.051000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948081.692991533, 508.101000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948081.693051887, 508.101000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948081.696192681, 508.103000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948081.697050637, 508.104000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948081.708875220, 508.114000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712948081.708972140, 508.114000000]: Solution found in 0.012473 seconds[0m
+[0m[ INFO] [1712948081.722623587, 508.126000000]: SimpleSetup: Path simplification took 0.013561 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712948082.126465029, 508.491000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948082.127952031, 508.493000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948082.159106041, 508.520000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948082.171388346, 508.532000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948082.251661088, 508.580000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948082.251710154, 508.580000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948082.253762511, 508.583000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948082.253950402, 508.583000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948082.276261738, 508.603000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712948082.276312406, 508.603000000]: Solution found in 0.022449 seconds[0m
+[0m[ INFO] [1712948082.279156931, 508.606000000]: SimpleSetup: Path simplification took 0.002682 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712948082.672912641, 508.970000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948082.674935130, 508.972000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948082.684684690, 508.980000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948082.697255292, 508.992000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948082.775518343, 509.040000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948082.775578346, 509.040000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948082.778614653, 509.043000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [17[33m[ WARN] [1712948082.817551351, 509.081000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.323s.[0m
+[33m[ WARN] [1712948082.817679040, 509.081000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.323s.[0m
+[33m[ WARN] [1712948083.293073669, 509.501000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948083.347001728, 509.549000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.318s.[0m
+[33m[ WARN] [1712948083.347250650, 509.549000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.318s.[0m
+[33m[ WARN] [1712948083.839529965, 509.980000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948083.886559659, 510.021000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.318s.[0m
+[33m[ WARN] [1712948083.886806727, 510.021000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.318s.[0m
+[33m[ WARN] [1712948084.363099020, 510.440000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+12948082.779074450, 509.044000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948082.791824854, 509.056000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948082.791938625, 509.056000000]: Solution found in 0.013151 seconds[0m
+[0m[ INFO] [1712948082.796455863, 509.060000000]: SimpleSetup: Path simplification took 0.004359 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948083.193666583, 509.431000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948083.193751045, 509.431000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948083.203558659, 509.440000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948083.215613140, 509.451000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948083.293313292, 509.501000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948083.293383711, 509.501000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948083.297461100, 509.503000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948083.298061776, 509.503000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948083.309974800, 509.514000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948083.310072475, 509.514000000]: Solution found in 0.012297 seconds[0m
+[0m[ INFO] [1712948083.318297962, 509.522000000]: SimpleSetup: Path simplification took 0.008138 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948083.727236329, 509.899000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948083.728550193, 509.901000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948083.749467974, 509.920000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948083.759258499, 509.929000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948083.839596720, 509.980000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948083.839626175, 509.980000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948083.840963705, 509.981000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948083.841200531, 509.981000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948083.853822454, 509.993000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712948083.853938143, 509.993000000]: Solution found in 0.012862 seconds[0m
+[0m[ INFO] [1712948083.864408894, 510.002000000]: SimpleSetup: Path simplification took 0.010287 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712948084.261034850, 510.371000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948084.262084033, 510.372000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948084.270896528, 510.381000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948084.281637926, 510.391000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948084.363281023, 510.441000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948084.363341194, 510.441000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948084.366141545, 510.443000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948084.366429874, 510.444000000]: arm_torso/arm[33m[ WARN] [1712948084.387606704, 510.461000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.315s.[0m
+[33m[ WARN] [1712948084.387840445, 510.461000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.315s.[0m
+[33m[ WARN] [1712948084.868666174, 510.880000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948084.892711938, 510.900000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.280s.[0m
+[33m[ WARN] [1712948084.892826137, 510.900000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.280s.[0m
+[33m[ WARN] [1712948085.340018867, 511.280000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948085.386770850, 511.321000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.141s.[0m
+[33m[ WARN] [1712948085.387030917, 511.322000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.141s.[0m
+[33m[ WARN] [1712948085.651452307, 511.540000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948084.379100667, 510.454000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712948084.379175107, 510.454000000]: Solution found in 0.012899 seconds[0m
+[0m[ INFO] [1712948084.382722477, 510.457000000]: SimpleSetup: Path simplification took 0.003454 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712948084.771318291, 510.811000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948084.771442359, 510.811000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948084.780739263, 510.820000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948084.793240022, 510.831000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948084.868790617, 510.880000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948084.868852180, 510.880000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948084.872492641, 510.883000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948084.873525638, 510.883000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948084.885164349, 510.894000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948084.885269523, 510.894000000]: Solution found in 0.012366 seconds[0m
+[0m[ INFO] [1712948084.890174971, 510.899000000]: SimpleSetup: Path simplification took 0.004741 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948085.228427626, 511.201000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948085.228521673, 511.201000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948085.248715602, 511.220000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948085.259844491, 511.230000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948085.340128265, 511.281000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948085.340175872, 511.281000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948085.342217986, 511.282000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948085.342360079, 511.282000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948085.365689234, 511.303000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948085.365752268, 511.303000000]: Solution found in 0.023458 seconds[0m
+[0m[ INFO] [1712948085.368959759, 511.305000000]: SimpleSetup: Path simplification took 0.003135 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948085.551056035, 511.472000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948085.551178495, 511.472000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948085.559765589, 511.480000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948085.561162467, 511.482000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948085.651525003, 511.540000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948085.651563454, 511.540000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948085.654374717, 511.542000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948085.654927261, 511.542000000]: arm_torso/arm_torso: Starting planning with 1 states already i[33m[ WARN] [1712948085.681540996, 511.561000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.142s.[0m
+[33m[ WARN] [1712948085.681786771, 511.561000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.142s.[0m
+[33m[ WARN] [1712948085.947910413, 511.780000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948085.990925806, 511.820000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.143s.[0m
+[33m[ WARN] [1712948085.991004194, 511.820000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.143s.[0m
+[33m[ WARN] [1712948086.257705185, 512.040000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948086.283981319, 512.061000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.143s.[0m
+[33m[ WARN] [1712948086.284182030, 512.061000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.143s.[0m
+[33m[ WARN] [1712948086.542069443, 512.280000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+n datastructure[0m
+[0m[ INFO] [1712948085.668567622, 511.553000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712948085.668627545, 511.553000000]: Solution found in 0.014034 seconds[0m
+[0m[ INFO] [1712948085.679756116, 511.560000000]: SimpleSetup: Path simplification took 0.010899 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712948085.848744482, 511.711000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948085.848826456, 511.711000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948085.858462249, 511.720000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948085.869761897, 511.731000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948085.948107526, 511.780000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948085.948194365, 511.780000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948085.951012236, 511.783000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948085.951734889, 511.784000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948085.963428974, 511.795000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948085.963502130, 511.795000000]: Solution found in 0.012289 seconds[0m
+[0m[ INFO] [1712948085.972165906, 511.802000000]: SimpleSetup: Path simplification took 0.008553 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948086.154560083, 511.970000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948086.154646501, 511.970000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948086.165216860, 511.980000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948086.176753474, 511.990000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948086.257779202, 512.040000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948086.257802352, 512.040000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948086.259698489, 512.041000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948086.260461206, 512.042000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948086.271796746, 512.051000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948086.271821520, 512.051000000]: Solution found in 0.011724 seconds[0m
+[0m[ INFO] [1712948086.276497644, 512.055000000]: SimpleSetup: Path simplification took 0.004589 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948086.447169114, 512.211000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948086.447337807, 512.212000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948086.456286265, 512.220000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948086.467857005, 512.230000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948086.542185935, 512.280000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948086.542230978, 512.280000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948086.543737444, 512.281000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948086.544207637, 512.282000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948086.55830[33m[ WARN] [1712948086.593922888, 512.321000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.145s.[0m
+[33m[ WARN] [1712948086.594038138, 512.321000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.145s.[0m
+[33m[ WARN] [1712948086.853575624, 512.541000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948086.878271768, 512.561000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.202s.[0m
+[33m[ WARN] [1712948086.878656753, 512.561000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.202s.[0m
+[33m[ WARN] [1712948087.258801931, 512.880000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948087.280942540, 512.901000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.226s.[0m
+[33m[ WARN] [1712948087.281141482, 512.901000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.226s.[0m
+[33m[ WARN] [1712948087.644527485, 513.220000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+2947, 512.293000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712948086.558595172, 512.293000000]: Solution found in 0.014607 seconds[0m
+[0m[ INFO] [1712948086.576831138, 512.305000000]: SimpleSetup: Path simplification took 0.018053 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712948086.754080734, 512.472000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948086.754185865, 512.472000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948086.763258515, 512.480000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948086.774040795, 512.490000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948086.853897230, 512.541000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948086.853984037, 512.541000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948086.856581547, 512.542000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948086.857543930, 512.543000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948086.870374583, 512.554000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948086.870463581, 512.554000000]: Solution found in 0.013496 seconds[0m
+[0m[ INFO] [1712948086.876406575, 512.559000000]: SimpleSetup: Path simplification took 0.005879 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948087.155166998, 512.812000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948087.155215033, 512.812000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948087.164511272, 512.820000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948087.176433008, 512.831000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948087.259083162, 512.880000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948087.259134481, 512.880000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948087.261012753, 512.883000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948087.261367497, 512.883000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948087.273120604, 512.894000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712948087.273186300, 512.894000000]: Solution found in 0.011911 seconds[0m
+[0m[ INFO] [1712948087.279302641, 512.900000000]: SimpleSetup: Path simplification took 0.005552 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712948087.551118105, 513.151000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948087.551236618, 513.151000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948087.561381374, 513.160000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948087.571800813, 513.171000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948087.644601891, 513.220000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948087.644631411, 513.220000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948087.644693515, 513.220000000]: Starting state is just outside bounds (joint 'torso_lift_joint'). Assuming within bounds.[0m
+[0m[ INFO] [1712948087.645732142, 513.221000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948087.645917795, 513.221000000]: arm_torso/arm_t[33m[ WARN] [1712948087.688806130, 513.261000000]: Dropping first 1 trajectory point(s) out of 3, as they occur before the current time.
+First valid point will be reached in 0.067s.[0m
+[33m[ WARN] [1712948087.689047157, 513.262000000]: Dropping first 1 trajectory point(s) out of 3, as they occur before the current time.
+First valid point will be reached in 0.067s.[0m
+[33m[ WARN] [1712948088.169507614, 513.681000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948088.211574287, 513.721000000]: Dropping first 1 trajectory point(s) out of 3, as they occur before the current time.
+First valid point will be reached in 0.055s.[0m
+[33m[ WARN] [1712948088.211648981, 513.721000000]: Dropping first 1 trajectory point(s) out of 3, as they occur before the current time.
+First valid point will be reached in 0.055s.[0m
+[33m[ WARN] [1712948088.590674314, 514.040000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948088.613945529, 514.062000000]: Dropping first 1 trajectory point(s) out of 15, as they occur before the current time.
+First valid point will be reached in 0.050s.[0m
+[33m[ WARN] [1712948088.614139505, 514.062000000]: Dropping first 1 trajectory point(s) out of 15, as they occur before the current time.
+First valid point will be reached in 0.050s.[0m
+orso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948087.669051990, 513.242000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948087.669156359, 513.242000000]: Solution found in 0.023327 seconds[0m
+[0m[ INFO] [1712948087.680692100, 513.253000000]: SimpleSetup: Path simplification took 0.011424 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948087.680829698, 513.253000000]: Planning adapters have added states at index positions: [ 0 ][0m
+[0m[ INFO] [1712948088.070929908, 513.612000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948088.071016596, 513.612000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948088.079784013, 513.620000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948088.091132212, 513.631000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948088.169677105, 513.681000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948088.169739527, 513.681000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948088.169904350, 513.681000000]: Starting state is just outside bounds (joint 'torso_lift_joint'). Assuming within bounds.[0m
+[0m[ INFO] [1712948088.171743645, 513.683000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948088.172121652, 513.684000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948088.183618199, 513.695000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948088.183644138, 513.695000000]: Solution found in 0.011757 seconds[0m
+[0m[ INFO] [1712948088.192609863, 513.703000000]: SimpleSetup: Path simplification took 0.008838 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948088.192939513, 513.703000000]: Planning adapters have added states at index positions: [ 0 ][0m
+[0m[ INFO] [1712948088.487722864, 513.971000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948088.487872770, 513.971000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948088.498468959, 513.980000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948088.510064711, 513.991000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948088.590757446, 514.040000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948088.590774125, 514.040000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948088.590820509, 514.040000000]: Starting state is just outside bounds (joint 'torso_lift_joint'). Assuming within bounds.[0m
+[0m[ INFO] [1712948088.591898002, 514.041000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948088.592100823, 514.041000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948088.603480751, 514.052000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712948088.603537157, 514.052000000]: Solution found in 0.011538 seconds[0m
+[0m[ INFO] [1712948088.608708155, 514.057000000]: SimpleSetup: Path simplification took 0.005123 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712948088.608903397, 514.057000000]: Planning adapters have added states at index positions: [ 0 ][0m
+[0m[ INFO] [1712948093.040609457, 518.112000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948093.041806499, 518.113000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948093.049148738, 518.120000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948093[33m[ WARN] [1712948095.364529598, 520.220000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948095.392096762, 520.241000000]: Dropping first 1 trajectory point(s) out of 13, as they occur before the current time.
+First valid point will be reached in 0.357s.[0m
+[33m[ WARN] [1712948095.392318436, 520.241000000]: Dropping first 1 trajectory point(s) out of 13, as they occur before the current time.
+First valid point will be reached in 0.357s.[0m
+Node::Advertise(): Error advertising service [/cube_green_1/shininess]. Did you forget to start the discovery service?
+[33m[ WARN] [1712948100.340159030, 524.760000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948100.387635467, 524.801000000]: Dropping first 1 trajectory point(s) out of 7, as they occur before the current time.
+First valid point will be reached in 0.114s.[0m
+[33m[ WARN] [1712948100.387856251, 524.802000000]: Dropping first 1 trajectory point(s) out of 7, as they occur before the current time.
+First valid point will be reached in 0.114s.[0m
+[33m[ WARN] [1712948102.104807708, 526.221000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+.051113215, 518.121000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948095.364747742, 520.221000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948095.364800847, 520.221000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948095.368263163, 520.222000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948095.369282554, 520.222000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948095.381976670, 520.232000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948095.382104177, 520.232000000]: Solution found in 0.013425 seconds[0m
+[0m[ INFO] [1712948095.390378548, 520.239000000]: SimpleSetup: Path simplification took 0.007997 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948097.569563668, 522.242000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948097.569675051, 522.242000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948097.588305505, 522.260000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948097.590443191, 522.262000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948100.340402573, 524.761000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948100.340444885, 524.761000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948100.340554109, 524.761000000]: Starting state is just outside bounds (joint 'arm_4_joint'). Assuming within bounds.[0m
+[0m[ INFO] [1712948100.342707511, 524.763000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948100.343556760, 524.764000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948100.357733209, 524.777000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948100.357844671, 524.777000000]: Solution found in 0.014856 seconds[0m
+[0m[ INFO] [1712948100.371086953, 524.787000000]: SimpleSetup: Path simplification took 0.013069 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948100.371467633, 524.787000000]: Planning adapters have added states at index positions: [ 0 ][0m
+[0m[ INFO] [1712948101.996664114, 526.152000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948101.996888292, 526.152000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948102.007544200, 526.160000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948102.008770249, 526.161000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948102.105105931, 526.221000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948102.105190008, 526.221000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948102.105442281, 526.221000000]: Starting state is just outside bounds (joint 'arm_4_joint'). Assuming within bounds.[0m
+[0m[ INFO] [1712948102.110154499, 526.225000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948102.111162629, 526.225000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948102.123793262, 526.233000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948102.124019213, 526.233000000]: Solution found in 0.013419 seconds[0m
+[0m[ INFO] [1712948102.133116803, 526.241000000]: SimpleSetup: Path simplification took 0.008807 seconds and changed from 4 to 2 states[0m[33m[ WARN] [1712948102.155775381, 526.261000000]: Dropping first 1 trajectory point(s) out of 4, as they occur before the current time.
+First valid point will be reached in 0.060s.[0m
+[33m[ WARN] [1712948102.155947897, 526.261000000]: Dropping first 1 trajectory point(s) out of 4, as they occur before the current time.
+First valid point will be reached in 0.060s.[0m
+[33m[ WARN] [1712948103.036330707, 527.001000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948103.079704372, 527.042000000]: Dropping first 1 trajectory point(s) out of 3, as they occur before the current time.
+First valid point will be reached in 0.084s.[0m
+[33m[ WARN] [1712948103.079944525, 527.042000000]: Dropping first 1 trajectory point(s) out of 3, as they occur before the current time.
+First valid point will be reached in 0.084s.[0m
+[33m[ WARN] [1712948103.464021603, 527.360000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948103.507346852, 527.401000000]: Dropping first 1 trajectory point(s) out of 3, as they occur before the current time.
+First valid point will be reached in 0.073s.[0m
+[33m[ WARN] [1712948103.507609351, 527.401000000]: Dropping first 1 trajectory point(s) out of 3, as they occur before the current time.
+First valid point will be reached in 0.073s.[0m
+[33m[ WARN] [1712948103.885244985, 527.720000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+
+[0m[ INFO] [1712948102.133932379, 526.241000000]: Planning adapters have added states at index positions: [ 0 ][0m
+[0m[ INFO] [1712948102.903844195, 526.911000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948102.904035076, 526.911000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948102.935338405, 526.940000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948102.950993283, 526.951000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948103.036646857, 527.001000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948103.036766229, 527.001000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948103.036943094, 527.002000000]: Starting state is just outside bounds (joint 'arm_4_joint'). Assuming within bounds.[0m
+[0m[ INFO] [1712948103.039671310, 527.004000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948103.040166072, 527.005000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948103.051576214, 527.016000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712948103.051624363, 527.016000000]: Solution found in 0.011602 seconds[0m
+[0m[ INFO] [1712948103.059305309, 527.022000000]: SimpleSetup: Path simplification took 0.007504 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712948103.059695665, 527.023000000]: Planning adapters have added states at index positions: [ 0 ][0m
+[0m[ INFO] [1712948103.362640332, 527.293000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948103.362727470, 527.293000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948103.370396997, 527.300000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948103.384410027, 527.311000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948103.464248595, 527.361000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948103.464310952, 527.361000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948103.464443285, 527.361000000]: Starting state is just outside bounds (joint 'arm_4_joint'). Assuming within bounds.[0m
+[0m[ INFO] [1712948103.466977958, 527.363000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948103.467856720, 527.363000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948103.480246380, 527.376000000]: arm_torso/arm_torso: Created 5 states (3 start + 2 goal)[0m
+[0m[ INFO] [1712948103.480312227, 527.376000000]: Solution found in 0.012975 seconds[0m
+[0m[ INFO] [1712948103.489500757, 527.384000000]: SimpleSetup: Path simplification took 0.009069 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948103.489823173, 527.384000000]: Planning adapters have added states at index positions: [ 0 ][0m
+[0m[ INFO] [1712948103.782960308, 527.652000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948103.783034065, 527.652000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948103.791529779, 527.660000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948103.803947099, 527.671000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948103.885434979, 527.720000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948103.885490655, 527.721000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948103.888599062, 527.722000000]: Planner configuration 'arm_torso' will use planner 'ge[33m[ WARN] [1712948103.929409900, 527.762000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.151s.[0m
+[33m[ WARN] [1712948103.929777345, 527.762000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.151s.[0m
+[33m[ WARN] [1712948104.257654010, 528.040000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948104.285174953, 528.061000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.166s.[0m
+[33m[ WARN] [1712948104.285428759, 528.061000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.166s.[0m
+[33m[ WARN] [1712948104.645795695, 528.361000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[31m[ERROR] [1712948104.689687669, 528.400000000]: 
+Invalid Trajectory: start point deviates from current robot state more than 0.01
+joint 'arm_1_joint': expected: 1.32169, current: 1.31024[0m
+[33m[ WARN] [1712948104.781776496, 528.461000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+ometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948103.889348256, 527.724000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948103.901638824, 527.735000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712948103.901809262, 527.736000000]: Solution found in 0.012742 seconds[0m
+[0m[ INFO] [1712948103.908650408, 527.742000000]: SimpleSetup: Path simplification took 0.006667 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712948104.149136720, 527.962000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948104.149228796, 527.962000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948104.168099177, 527.980000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948104.169654662, 527.981000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948104.257942927, 528.041000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948104.258047929, 528.041000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948104.260282723, 528.042000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948104.260642846, 528.042000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948104.273828426, 528.051000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948104.273963991, 528.051000000]: Solution found in 0.013437 seconds[0m
+[0m[ INFO] [1712948104.279138663, 528.056000000]: SimpleSetup: Path simplification took 0.005040 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948104.513664292, 528.262000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948104.513737304, 528.262000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948104.556896600, 528.300000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948104.569968939, 528.311000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948104.646079003, 528.361000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948104.646169017, 528.361000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948104.649269842, 528.364000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948104.650031422, 528.365000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948104.662724597, 528.376000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712948104.662769159, 528.376000000]: Solution found in 0.013213 seconds[0m
+[0m[ INFO] [1712948104.669441984, 528.382000000]: SimpleSetup: Path simplification took 0.006529 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712948104.691266603, 528.401000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948104.782132284, 528.461000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948104.782250062, 528.461000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948104.785989265, 528.465000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948104.786397736, 528.465000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948104.798533853, 528.477000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [17129481[33m[ WARN] [1712948104.825947737, 528.502000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.133s.[0m
+[33m[ WARN] [1712948104.826116320, 528.502000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.133s.[0m
+[33m[ WARN] [1712948105.115505817, 528.740000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948105.163464574, 528.781000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.163s.[0m
+[33m[ WARN] [1712948105.163659786, 528.782000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.163s.[0m
+[33m[ WARN] [1712948105.493746426, 529.061000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[31m[ERROR] [1712948105.538476568, 529.100000000]: 
+Invalid Trajectory: start point deviates from current robot state more than 0.01
+joint 'arm_1_joint': expected: 1.29822, current: 1.30845[0m
+[33m[ WARN] [1712948105.631281632, 529.160000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948105.660695381, 529.180000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.149s.[0m
+[33m[ WARN] [1712948105.660902394, 529.181000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.149s.[0m
+04.798645545, 528.477000000]: Solution found in 0.012475 seconds[0m
+[0m[ INFO] [1712948104.805215912, 528.483000000]: SimpleSetup: Path simplification took 0.006287 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948104.995434273, 528.652000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948104.995524979, 528.652000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948105.026144942, 528.680000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948105.027907794, 528.681000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948105.115719958, 528.741000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948105.115787642, 528.741000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948105.118276897, 528.743000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948105.119106330, 528.744000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948105.131658002, 528.756000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948105.131736997, 528.756000000]: Solution found in 0.013140 seconds[0m
+[0m[ INFO] [1712948105.141993089, 528.763000000]: SimpleSetup: Path simplification took 0.009985 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948105.389010743, 528.983000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948105.389128184, 528.983000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948105.408903429, 529.000000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948105.420237407, 529.011000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948105.494044733, 529.061000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948105.494163379, 529.061000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948105.498238943, 529.064000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948105.499023491, 529.064000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948105.511608722, 529.075000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948105.511710004, 529.075000000]: Solution found in 0.013083 seconds[0m
+[0m[ INFO] [1712948105.518841653, 529.082000000]: SimpleSetup: Path simplification took 0.006986 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948105.541776356, 529.102000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948105.631526897, 529.160000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948105.631627842, 529.160000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948105.635438115, 529.161000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948105.636511332, 529.162000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948105.649751413, 529.172000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948105.649842577, 529.172000000]: Solution found in 0.013954 seconds[0m
+[0m[ INFO] [1712948105.656096671, 529.177000000]: SimpleSetup: Path simplification took 0.006108 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948105.826007169, 529.332000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948105.826125280, 529.332000000]: Contr[33m[ WARN] [1712948105.932530837, 529.401000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948105.977792412, 529.441000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.140s.[0m
+[33m[ WARN] [1712948105.977976425, 529.441000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.140s.[0m
+[33m[ WARN] [1712948106.268034226, 529.680000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948106.293737817, 529.701000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.129s.[0m
+[33m[ WARN] [1712948106.293938427, 529.701000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.129s.[0m
+[33m[ WARN] [1712948106.566855193, 529.921000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948106.611345246, 529.961000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.173s.[0m
+[33m[ WARN] [1712948106.611935444, 529.962000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.173s.[0m
+oller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948105.835218217, 529.340000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948105.847266455, 529.351000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948105.932969575, 529.401000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948105.933018520, 529.401000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948105.935502254, 529.403000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948105.935874704, 529.404000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948105.947495091, 529.413000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948105.947595506, 529.413000000]: Solution found in 0.011936 seconds[0m
+[0m[ INFO] [1712948105.958403700, 529.423000000]: SimpleSetup: Path simplification took 0.010632 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948106.149116768, 529.591000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948106.149219475, 529.591000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948106.179935297, 529.620000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948106.191950478, 529.631000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948106.268197190, 529.680000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948106.268279924, 529.680000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948106.271213477, 529.682000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948106.272162363, 529.682000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948106.284019155, 529.692000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948106.284122353, 529.692000000]: Solution found in 0.012596 seconds[0m
+[0m[ INFO] [1712948106.289752758, 529.696000000]: SimpleSetup: Path simplification took 0.005375 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948106.459502289, 529.851000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948106.459647975, 529.851000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948106.471334556, 529.860000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948106.483514806, 529.871000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948106.567047975, 529.921000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948106.567110906, 529.921000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948106.570173414, 529.924000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948106.570929952, 529.925000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948106.582557879, 529.936000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948106.582579558, 529.936000000]: Solution found in 0.012100 seconds[0m
+[0m[ INFO] [1712948106.587347302, 529.940000000]: SimpleSetup: Path simplification took 0.004652 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948106.833494132, 530.162000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948106.833643973, 530.162000000]: Controller 'torso_controller' successfully finished[0m
+[33m[ WARN] [1712948106.944497502, 530.240000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948106.989061133, 530.280000000]: Dropping first 1 trajectory point(s) out of 8, as they occur before the current time.
+First valid point will be reached in 0.397s.[0m
+[33m[ WARN] [1712948106.989118220, 530.280000000]: Dropping first 1 trajectory point(s) out of 8, as they occur before the current time.
+First valid point will be reached in 0.397s.[0m
+[33m[ WARN] [1712948109.425400509, 532.460000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948109.468970342, 532.501000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.135s.[0m
+[33m[ WARN] [1712948109.469124003, 532.501000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.135s.[0m
+[33m[ WARN] [1712948109.732850645, 532.720000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[31m[ERROR] [1712948109.779286040, 532.760000000]: 
+Invalid Trajectory: start point deviates from current robot state more than 0.01
+joint 'arm_4_joint': expected: 2.23461, current: 2.22372[0m
+[33m[ WARN] [1712948109.874789828, 532.820000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[0m[ INFO] [1712948106.853718370, 530.181000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948106.856379494, 530.183000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948106.944755485, 530.240000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948106.944854425, 530.240000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948106.947667802, 530.242000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948106.948314573, 530.242000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948106.972228637, 530.265000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948106.972308345, 530.265000000]: Solution found in 0.024369 seconds[0m
+[0m[ INFO] [1712948106.979932401, 530.272000000]: SimpleSetup: Path simplification took 0.007434 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948109.315164272, 532.381000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948109.315277228, 532.381000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948109.336853340, 532.400000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948109.350060836, 532.411000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948109.425528010, 532.460000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948109.425588079, 532.460000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948109.428131069, 532.463000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948109.428922967, 532.463000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948109.440864235, 532.475000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948109.440928937, 532.475000000]: Solution found in 0.012431 seconds[0m
+[0m[ INFO] [1712948109.449904950, 532.483000000]: SimpleSetup: Path simplification took 0.008827 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948109.638174531, 532.652000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948109.638258321, 532.652000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948109.647187923, 532.660000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948109.648793181, 532.662000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948109.733049009, 532.720000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948109.733117215, 532.720000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948109.735752528, 532.722000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948109.736236859, 532.723000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948109.757488190, 532.740000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712948109.757513147, 532.740000000]: Solution found in 0.021585 seconds[0m
+[0m[ INFO] [1712948109.763860515, 532.746000000]: SimpleSetup: Path simplification took 0.006165 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712948109.781291140, 532.762000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948109.874980365, 532.820000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO][33m[ WARN] [1712948109.922107743, 532.861000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.162s.[0m
+[33m[ WARN] [1712948109.922308960, 532.861000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.162s.[0m
+[33m[ WARN] [1712948110.258312794, 533.140000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948110.305828707, 533.181000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.146s.[0m
+[33m[ WARN] [1712948110.306187421, 533.181000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.146s.[0m
+[33m[ WARN] [1712948110.583757082, 533.400000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948110.606826318, 533.421000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.174s.[0m
+[33m[ WARN] [1712948110.607117056, 533.421000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.174s.[0m
+[33m[ WARN] [1712948110.940981233, 533.700000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+ [1712948109.875056831, 532.820000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948109.878478586, 532.824000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948109.878888290, 532.824000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948109.891718880, 532.835000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948109.891838953, 532.835000000]: Solution found in 0.013139 seconds[0m
+[0m[ INFO] [1712948109.898884779, 532.841000000]: SimpleSetup: Path simplification took 0.006921 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948110.143418984, 533.062000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948110.143510281, 533.062000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948110.164048056, 533.080000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948110.176221619, 533.091000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948110.258534337, 533.140000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948110.258660470, 533.140000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948110.261679118, 533.142000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948110.262411594, 533.143000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948110.275185971, 533.154000000]: arm_torso/arm_torso: Created 5 states (2 start + 3 goal)[0m
+[0m[ INFO] [1712948110.275291411, 533.154000000]: Solution found in 0.013452 seconds[0m
+[0m[ INFO] [1712948110.281735667, 533.160000000]: SimpleSetup: Path simplification took 0.006191 seconds and changed from 4 to 2 states[0m
+[0m[ INFO] [1712948110.470980472, 533.331000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948110.471047450, 533.331000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948110.480381773, 533.340000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948110.492373938, 533.351000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948110.583978740, 533.400000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948110.584075239, 533.400000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948110.586695321, 533.403000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948110.586976091, 533.403000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948110.598344103, 533.414000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712948110.598381271, 533.414000000]: Solution found in 0.011556 seconds[0m
+[0m[ INFO] [1712948110.603167001, 533.418000000]: SimpleSetup: Path simplification took 0.004586 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712948110.828909835, 533.621000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948110.829030426, 533.621000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948110.849947160, 533.640000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948110.861384760, 533.650000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948110.941269635, 533.701000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948110.941350157, 533.701000000]: Planning [33m[ WARN] [1712948110.988348274, 533.740000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.154s.[0m
+[33m[ WARN] [1712948110.988559330, 533.741000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.154s.[0m
+[33m[ WARN] [1712948111.317408005, 534.020000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948111.343229978, 534.041000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.185s.[0m
+[33m[ WARN] [1712948111.343353322, 534.041000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.185s.[0m
+[33m[ WARN] [1712948111.670099790, 534.320000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948111.692648404, 534.341000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.221s.[0m
+[33m[ WARN] [1712948111.692729569, 534.341000000]: Dropping first 1 trajectory point(s) out of 2, as they occur before the current time.
+First valid point will be reached in 0.221s.[0m
+[33m[ WARN] [1712948112.088118786, 534.681000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+attempt 1 of at most 1[0m
+[0m[ INFO] [1712948110.944738643, 533.702000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948110.945434947, 533.702000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948110.957370685, 533.712000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712948110.957538013, 533.712000000]: Solution found in 0.012429 seconds[0m
+[0m[ INFO] [1712948110.966342642, 533.720000000]: SimpleSetup: Path simplification took 0.008543 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712948111.207768262, 533.941000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948111.207920811, 533.941000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948111.228870786, 533.960000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948111.240723163, 533.971000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948111.317598384, 534.020000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948111.317668832, 534.020000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948111.320963940, 534.021000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948111.321656706, 534.022000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948111.334102099, 534.032000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712948111.334173109, 534.032000000]: Solution found in 0.012816 seconds[0m
+[0m[ INFO] [1712948111.341688640, 534.039000000]: SimpleSetup: Path simplification took 0.007428 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712948111.565765652, 534.242000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948111.565834344, 534.242000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948111.586789935, 534.260000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948111.598785956, 534.271000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948111.670388021, 534.320000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948111.670536953, 534.320000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [1712948111.673144545, 534.323000000]: Planner configuration 'arm_torso' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+[0m[ INFO] [1712948111.673564855, 534.323000000]: arm_torso/arm_torso: Starting planning with 1 states already in datastructure[0m
+[0m[ INFO] [1712948111.685113818, 534.334000000]: arm_torso/arm_torso: Created 4 states (2 start + 2 goal)[0m
+[0m[ INFO] [1712948111.685167456, 534.334000000]: Solution found in 0.011872 seconds[0m
+[0m[ INFO] [1712948111.690070999, 534.338000000]: SimpleSetup: Path simplification took 0.004770 seconds and changed from 3 to 2 states[0m
+[0m[ INFO] [1712948111.967160173, 534.592000000]: Controller 'torso_controller' successfully finished[0m
+[0m[ INFO] [1712948111.967255871, 534.592000000]: Controller 'arm_controller' successfully finished[0m
+[0m[ INFO] [1712948111.976380039, 534.600000000]: Completed trajectory execution with status SUCCEEDED ...[0m
+[0m[ INFO] [1712948111.987999065, 534.611000000]: Received event 'stop'[0m
+[0m[ INFO] [1712948112.088250299, 534.681000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+[0m[ INFO] [1712948112.088288950, 534.681000000]: Planning attempt 1 of at most 1[0m
+[0m[ INFO] [171294811[31m[ERROR] [1712948112.132897657, 534.721000000]: 
+Invalid Trajectory: start point deviates from current robot state more than 0.01
+joint 'arm_1_joint': expected: 1.47212, current: 1.44447[0m
+[33m[ WARN] [1712948114.488946479, 536.820000000]: Unable to transform object from frame 'odom' to planning frame 'world' (Could not find a connection between 'world' and 'odom' because they are not part of the same tree.Tf has two or more unconnected trees.)[0m
+[33m[ WARN] [1712948114.537991487, 536.861000000]: Dropping first 1 trajectory point(s) out of 20, as they occur before the current time.
+First valid point will be reached in 0.428s.[0m
+[33m[ WARN] [1712948114.538302044, 536.861000000]: Dropping first 1 trajectory point(s) out of 20, as they occur before the current time.
+First valid point will be reached in 0.428s.[0m

@@ -51,6 +51,10 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         #self.max_joint_vel = np.ones(7)*0.01
         self.max_disp = 0.02
 
+        self.init_arm_pos = [0.5,-0.1,0.8]
+        self.init_cubo_pos = [0.418486, 0.264288, 0.443669]
+
+
         # Observation space
         self.is_multimodal = multimodal
         self.obs_low = np.array([0.4, -0.25, 0.65])
@@ -112,8 +116,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         number_of_cube = 0
         rospack = rospkg.RosPack()
         path_to_models = os.path.join(rospack.get_path('pal_gazebo_worlds'),'models')
-        env_kind = 'environments_' + str(1)
-        for cube in self.environments[env_kind][test_env]:
+        for cube in self.environments[self.env_kind][test_env]:
             number_of_cube = number_of_cube + 1 
             cube_pose = Pose()
             cube_pose.position.x = cube['positions'][0]
@@ -135,7 +138,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             x, y, z  = [np.random.uniform(low, high) for low, high in zip([0.40,-0.3,0.75], [0.8,0.3,0.85])]
             self.set_arm_pose(x, y, z, 0, np.radians(90), 0)
         else:
-            x, y, z  = [0.5,-0.1,0.8]
+            x, y, z  = self.init_arm_pos
             self.set_arm_pose(x, y, z, 0, np.radians(90), 0)
         self.release()
         rospy.sleep(2)
@@ -155,6 +158,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         self.to_place_item = None
         self.action_failed = False
 
+
         #change environment if it is randomized
         if self.random_env:
             self.gazebo.unpauseSim()
@@ -167,6 +171,18 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             for cube in self.model_state.cubes:
                 x, y, z  = [np.random.uniform(low, high) for low, high in zip([0.40,-0.3,0.44], [0.5,0.3,0.54])]
                 self.set_obj_pos(cube,[x, y, z, 0, 0, 0])
+
+            
+    def impose_configuration(self, gipper_pose:list, env_code:str, cube_poses:list[list]):
+        self.gazebo.unpauseSim()
+        print('gripper pose: ',*gipper_pose)
+        self.set_arm_pose(*gipper_pose)
+        self.init_environment(env_code)
+        for cube_id, pose in zip(self.model_state.cubes, cube_poses):
+            self.set_obj_pos(cube_id,pose)
+        self.gazebo.pauseSim()
+        return self._get_obs()
+
 
 
 
