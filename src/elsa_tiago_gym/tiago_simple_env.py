@@ -49,7 +49,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         self.max_episode_steps = max_episode_steps
         self.motion_time = 0.1
         #self.max_joint_vel = np.ones(7)*0.01
-        self.max_disp = 0.02
+        self.max_disp = 0.05
 
         self.init_arm_pos = [0.5,-0.1,0.8]
         self.init_cubo_pos = [0.418486, 0.264288, 0.443669]
@@ -175,7 +175,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             
     def impose_configuration(self, gipper_pose:list, env_code:str, cube_poses:list[list]):
         self.gazebo.unpauseSim()
-        print('gripper pose: ',*gipper_pose)
+        
         self.set_arm_pose(*gipper_pose)
         self.init_environment(env_code)
         for cube_id, pose in zip(self.model_state.cubes, cube_poses):
@@ -261,9 +261,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         """
         task_accomplished = self.model_state.all_cubes_in_cylinders() and (self.grasped_item is None)
         if self.episode_step >= self.max_episode_steps or task_accomplished or self.collision_detected:
-            #print('done = ', [self.episode_step >= self.max_episode_steps , task_accomplished , self.collision_detected])
-            #if task_accomplished:
-            #    print('task accomplished')
+            print('done = ', [self.episode_step >= self.max_episode_steps , task_accomplished , self.collision_detected])
             self.gazebo.unpauseSim()
             grasped = rospy.wait_for_message("/gripper/is_grasped", Bool)
             if grasped is True:
