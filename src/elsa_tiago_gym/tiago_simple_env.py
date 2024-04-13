@@ -173,7 +173,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
                 self.set_obj_pos(cube,[x, y, z, 0, 0, 0])
 
             
-    def impose_configuration(self, gipper_pose:list, env_code:str, cube_poses:list[list]):
+    def impose_configuration(self, gipper_pose:list, env_code:str, cube_poses:list):
         self.gazebo.unpauseSim()
         
         self.set_arm_pose(*gipper_pose)

@@ -115,12 +115,11 @@ def objects_from_scene(model_names):
                      state_i.pose.position.z] 
             name_tkn = id.split('_')
             type_i = name_tkn[0]
-            match type_i:
-                case 'cube':
-                    color_i = name_tkn[1]
-                    cube_i = Cube(id=id,position=pos_i,type_code=color_i,gazebo_state=state_i)
-                    cubes[id] = cube_i
-                case 'cylinder':
+            if type_i == 'cube':
+                color_i = name_tkn[1]
+                cube_i = Cube(id=id,position=pos_i,type_code=color_i,gazebo_state=state_i)
+                cubes[id] = cube_i
+            elif  type_i == 'cylinder':
                     color_i = name_tkn[1]
                     cylinder_i = Cylinder(id=id,position=pos_i,type_code=color_i,gazebo_state=state_i)
                     cylinders[id] = cylinder_i
