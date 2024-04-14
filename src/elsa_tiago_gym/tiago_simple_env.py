@@ -63,7 +63,6 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
 
         #define which collions are not important
         self.items = list(self.model_state.cubes.keys())
-        self.items.append("static_cube")
         self.forniture = list(self.model_state.cylinders.keys())
         self.forniture.append("table_0m4")
         self.collision_detected = False
@@ -127,6 +126,9 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             self.spawn_object("cube_"+cube['color']+"_"+str(number_of_cube),sdff, "", cube_pose, "world")
             #rospy.loginfo("cube_"+cube['color']+"_"+str(number_of_cube))
             sdff = f.close()
+        self.init_model_states()
+
+
 
 
     def _set_init_pose(self):
@@ -163,7 +165,6 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         if self.random_env:
             self.gazebo.unpauseSim()
             self.init_environment()
-            self.init_model_states()
             self.gazebo.pauseSim()
 
         if self.random_init:
@@ -175,7 +176,6 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             
     def impose_configuration(self, gipper_pose:list, env_code:str, cube_poses:list):
         self.gazebo.unpauseSim()
-        
         self.set_arm_pose(*gipper_pose)
         self.init_environment(env_code)
         for cube_id, pose in zip(self.model_state.cubes, cube_poses):
@@ -294,6 +294,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         reward += sum(delta_subgoals) * self.reward_coef['R_semigoal']
         # add a penaly for the distance of the cubes from the respective cylinders
         #reward += sum(self.model_state.get_distances()) * self.reward_coef['R_dist']
+
         return reward
 
 
@@ -308,16 +309,9 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             coll_2 = contacts.collision2_name.split('::')
             c1 = coll_1[0]
             c2 = coll_2[0]
-            if (c1 or c2) in self.items:
+            if (c1 in self.items) or (c2 in self.items):
                 if c1 == self.to_place_item or c2 == self.to_place_item: self.placed_item = True
-                elif c1 == self.grasped_item or c2 == self.grasped_item:
-                    pass
-                    #self.collision_detected = True
-                    #self.to_place_item
-                    #self.collision_arm_state = self.stored_arm_pose[:3] #position where the collistion happened
-                    #rospy.loginfo("COLLISION DETECTED between {:} - {:}".format(c1,c2))
-                else: pass
-            elif (c1 and c2) in [*self.items,*self.forniture] or self.collision_detected:
+            elif self.collision_detected:
                 pass
             else:
                 self.collision_detected = True
@@ -344,3 +338,14 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             return candidate, dist
         else:
             return None,None
+
+'''
+elif c1 == self.grasped_item or c2 == self.grasped_item:
+pass
+#self.collision_detected = True
+#self.to_place_item
+#self.collision_arm_state = self.stored_arm_pose[:3] #position where the collistion happened
+#rospy.loginfo("COLLISION DETECTED between {:} - {:}".format(c1,c2))
+else: pass
+elif (c1 and c2) in [*self.items,*self.forniture] or self.collision_detected:
+pass'''

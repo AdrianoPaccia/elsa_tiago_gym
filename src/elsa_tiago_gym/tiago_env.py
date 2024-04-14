@@ -37,9 +37,8 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
     """
     def __init__(self, env_code:str,speed:float,random_init:bool):
         rospy.logdebug("========= In Tiago Env")
-        self.env_kind = 'environments_0'
+        self.env_kind = 'environments_1'
 
-        
         if env_code == None:
             self.random_env = True
         else:
@@ -96,7 +95,6 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         # init and start
         self.gazebo.unpauseSim()
         self.init_environment(env_code)
-        self.init_model_states()
         self._init_moveit()
         self._init_rviz()
         self._check_all_systems_ready()
@@ -175,6 +173,9 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         model_states_msg = rospy.wait_for_message('/gazebo/model_states', ModelStates, timeout=5.0)
         model_names = model_states_msg.name 
         self.model_state = objects_from_scene(model_names)
+        self.collision_detected = False
+        self.items = list(self.model_state.cubes.keys())
+
 
 
     # Methods that the TrainingEnvironment will need.
