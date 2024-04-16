@@ -20,7 +20,9 @@ fi
 pids=()
 
 # Get the relative path
-script_dir="$(cd "$(dirname "$0")" && pwd)"
+#script_dir="$(cd "$(dirname "$0")" && pwd)"
+log_dir="$(pwd)/save/ros_logs"
+mkdir -p "$log_dir"
 
 world=elsa
 gui_master=$gui
@@ -31,7 +33,7 @@ export ROS_MASTER_URI="http://localhost:11311"
 export GAZEBO_MASTER_URI="http://localhost:11312"
 if ! rostopic list &>/dev/null && ! rosnode list &>/dev/null; then
     (echo "Launching Master simulation..."
-    roslaunch tiago_gazebo tiago_gazebo.launch world:=$world end_effector:=robotiq-2f-85 public_sim:=true gui:=$gui_master tuck_arm:=false > "$script_dir/logs/output_master.log" 2>&1) &
+    roslaunch tiago_gazebo tiago_gazebo.launch world:=$world end_effector:=robotiq-2f-85 public_sim:=true gui:=$gui_master tuck_arm:=false > "$log_dir/output_master.log" 2>&1) &
     pid=$!
     pids+=("$pid")
     echo "Master simulation (gui=$gui_master) is up and running with PID: $pid"
@@ -51,7 +53,7 @@ for ((i=0; i<num_scripts; i++)); do
     export GAZEBO_MASTER_URI="http://localhost:1134$i"
     if ! rostopic list &>/dev/null && ! rosnode list &>/dev/null; then
         echo "Launching simulation $i"
-        roslaunch tiago_gazebo tiago_gazebo.launch world:=$world end_effector:=robotiq-2f-85 public_sim:=true gui:=$gui tuck_arm:=false > "$script_dir/logs/output_worker$i.log" 2>&1 &
+        roslaunch tiago_gazebo tiago_gazebo.launch world:=$world end_effector:=robotiq-2f-85 public_sim:=true gui:=$gui tuck_arm:=false > "$log_dir/output_worker$i.log" 2>&1 &
         pid=$!
         pids+=("$pid")
         echo "Worker simulation $i (gui=$gui) is up and running with PID: $pid"

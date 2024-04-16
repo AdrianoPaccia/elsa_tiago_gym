@@ -11,9 +11,41 @@ from gazebo_msgs.srv import GetModelState,SetModelState
 from gazebo_msgs.msg import ModelState 
 from tf.transformations import quaternion_from_euler,euler_from_quaternion
 from elsa_tiago_gym.utils_parallel import set_sim_velocity
+from PIL import ImageColor
 
 
 max_episode_steps = 100
+
+
+
+def generate_random_config_2d(low:list, high:list, n_cubes = 5,  dist = 0.6, threshold = 0.02):
+    x_start, y_start = low
+    x_stop, y_stop = high
+    n_row = int(abs(x_start - x_stop)/dist)
+    n_col = int(abs(y_start - y_stop)/dist)
+    if n_row*n_col < n_cubes:
+        raise Exception('Distance not feasible')
+
+
+
+    x_coords = np.linspace(x_start, x_stop, num=n_row)
+    y_coords = np.linspace(y_start, y_stop, num=n_col)
+
+    grid_x, grid_y = np.meshgrid(x_coords, y_coords)
+
+    grid_points = np.column_stack((grid_x.ravel(), grid_y.ravel()))
+
+    random_indices = np.random.choice(len(grid_points), size=n_cubes, replace=False)
+
+    random_points = grid_points[random_indices]
+    #random_points += np.random.uniform(low=[-threshold, threshold], high=[0.2, 0.3], size=random_points.shape)
+
+    for rp in random_points:
+        n = np.random.uniform(low = [-threshold,threshold], high = [threshold,threshold])
+        rp+=n
+
+    return random_points.tolist()
+
 
 
 class ObservationSpace:
@@ -117,13 +149,16 @@ def objects_from_scene(model_names):
             type_i = name_tkn[0]
             if type_i == 'cube':
                 color_i = name_tkn[1]
-                cube_i = Cube(id=id,position=pos_i,type_code=color_i,gazebo_state=state_i)
+                cube_i = Cube(id=id,position=pos_i,type_code=color_to_code(color_i),gazebo_state=state_i)
                 cubes[id] = cube_i
             elif  type_i == 'cylinder':
                     color_i = name_tkn[1]
-                    cylinder_i = Cylinder(id=id,position=pos_i,type_code=color_i,gazebo_state=state_i)
+                    cylinder_i = Cylinder(id=id,position=pos_i,type_code=color_to_code(color_i),gazebo_state=state_i)
                     cylinders[id] = cylinder_i
-        return Model(cubes,cylinders)
+
+            model = Model(cubes,cylinders)
+
+        return model
     
 
         
@@ -139,20 +174,17 @@ class ObservationMultimodal:
         self.gripper_pose = g_pose
         self.image = image
 
-#mapping color to number
-type_to_code = {
-    'red':1,
-    'blue':2,
-    'green':3,
-    'yellow':4
-}
+def color_to_code(color):
+    code = [val / 255 for val in ImageColor.getcolor(color, 'RGB')]
+    return code
+
 
 class Object:
     def __init__(self,id:str,position:list, type_code:str, gazebo_state):
         self.id=id
         self.position = position
         self.init_position = position
-        self.type_code = type_to_code[type_code]
+        self.type_code = type_code
         self.gazebo_state = gazebo_state
     def set_state(self,state):
         #store the state with the frma in the base_footprint
@@ -236,20 +268,36 @@ class Model:
     
     def get_obs(self):
         # outputs the observation stack for cubes and cylinders
+        cubes = {}
+        for cube_k, cube_v in self.cubes.items():
+            cubes[cube_k] = {
+                'position':cube_v.position,
+                'color':cube_v.type_code,
+                'held':[cube_v.held]
+            }
+        cylinders = {}
+        for cy_k, cy_v in self.cylinders.items():
+            cylinders[cy_k] = {
+                'position':cy_v.position,
+                'color':cy_v.type_code
+            }
+
+        return cubes, cylinders
+        '''print(self.cuber)
         cubes=[]
         cylinders=[]
         for id in self.cubes:
             cubes.append([
                 *self.cubes[id].position,
-                int(str(self.cubes[id].type_code)+'0'),
+                int(str(self.cubes[id].type_code)),
                 self.cubes[id].held
             ])
         for id in self.cylinders:
             cylinders.append([
                 *self.cylinders[id].position,
-                int(str(self.cylinders[id].type_code)+'1'),
+                int(str(self.cylinders[id].type_code)),
             ])
-        return np.array(cubes), np.array(cylinders)
+        return np.array(cubes), np.array(cylinders)'''
     
     def get_objects(self):
         '''Outputs the list with the id of all objects. 
@@ -304,7 +352,13 @@ class Model:
         for cylinder in self.cylinders.values():
             if cylinder.type_code == code:
                 return cylinder
-        return None                
+        return None           
+
+    def cube_of_type(self, code):
+        for cube in self.cubes.values():
+            if cube.type_code == code:
+                return cube
+        return None        
 
 
 

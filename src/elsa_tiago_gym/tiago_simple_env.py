@@ -9,7 +9,7 @@ from gazebo_msgs.msg import ContactsState, ModelStates
 from sensor_msgs.msg import Image,JointState
 from std_msgs.msg import Header
 from cv_bridge import CvBridge
-from elsa_tiago_gym.utils import Model
+from elsa_tiago_gym.utils import Model,generate_random_config_2d
 import math
 from geometry_msgs.msg import Twist,Pose,Point,Quaternion
 import tf
@@ -99,9 +99,12 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
 
 
     def init_environment(self, env_code=None):
+
+        self.gazebo.unpauseSim()
+        print(f'init env: {env_code}')
         # get which env to init
         if env_code == None:
-            env_code = random.randint(1,10)     
+            env_code = random.randint(1,20)     
         test_env = 'elsa_'+str(env_code)
 
         #To integrate the cube deletion loop
@@ -110,12 +113,21 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         cube_names = [obj for obj in model_states_msg.name if obj[:4]=='cube']
         for cube in cube_names:
             self.delete_object(cube)
+        cylinder_names = [obj for obj in model_states_msg.name if obj[:8]=='cylinder']
+        for cyl in cylinder_names:
+            self.delete_object(cyl)
         rospy.sleep(2)
         
-        number_of_cube = 0
+        number_of_cylinder = 0
         rospack = rospkg.RosPack()
         path_to_models = os.path.join(rospack.get_path('pal_gazebo_worlds'),'models')
-        for cube in self.environments[self.env_kind][test_env]:
+        items = self.environments[self.env_kind][test_env]
+
+
+        #insert the cubes
+        number_of_cube = 0
+        cubes = items['cubes']
+        for cube in cubes:
             number_of_cube = number_of_cube + 1 
             cube_pose = Pose()
             cube_pose.position.x = cube['positions'][0]
@@ -124,11 +136,45 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             f = open(path_to_models+'/cube_'+cube['color']+'/cube_'+cube['color']+'.sdf','r')
             sdff = f.read()
             self.spawn_object("cube_"+cube['color']+"_"+str(number_of_cube),sdff, "", cube_pose, "world")
-            #rospy.loginfo("cube_"+cube['color']+"_"+str(number_of_cube))
             sdff = f.close()
+
+        #insert the cylinders
+        number_of_cylinder = 0
+        cylinders = items['cylinders']
+        for cyl in cylinders:
+            number_of_cylinder = number_of_cylinder + 1 
+            cyl_pose = Pose()
+            cyl_pose.position.x = cyl['positions'][0]
+            cyl_pose.position.y = cyl['positions'][1]
+            cyl_pose.position.z = cyl['positions'][2]
+            f = open(path_to_models+'/cylinder_'+cyl['color']+'/cylinder_'+cyl['color']+'.sdf','r')
+            sdff = f.read()
+            self.spawn_object("cylinder_"+cyl['color']+"_"+str(number_of_cylinder),sdff, "", cyl_pose, "world")
+            sdff = f.close()
+
         self.init_model_states()
 
 
+        if self.random_init:
+            positions = generate_random_config_2d(
+                low = [0.45,-0.25],
+                high = [0.55,0.25],
+                n_cubes = len(self.model_state.cubes),
+                dist = 0.1,
+                threshold=0.01
+                )
+            for cube in self.model_state.cubes:
+                x,y = positions.pop()
+                self.set_obj_pos(cube,[x, y, 0.44, 0, 0, 0])
+
+        self.incident = False
+        
+        target = next(iter(self.model_state.cylinders.values()))
+        self.type_target = target.type_code
+        self.cylinder_target = target.id
+        self.cube_target = self.model_state.cube_of_type(self.type_target).id
+        print(f'target type {self.type_target} - {self.cube_target}')
+        
 
 
     def _set_init_pose(self):
@@ -137,7 +183,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         
         if self.random_init:
             # put the gripper in a random pose
-            x, y, z  = [np.random.uniform(low, high) for low, high in zip([0.40,-0.3,0.75], [0.8,0.3,0.85])]
+            x, y, z  = [np.random.uniform(low, high) for low, high in zip([0.40,-0.2,0.8], [0.5,0.2,0.85])]
             self.set_arm_pose(x, y, z, 0, np.radians(90), 0)
         else:
             x, y, z  = self.init_arm_pos
@@ -159,20 +205,50 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         self.placed_item = False
         self.to_place_item = None
         self.action_failed = False
+        self.incident = False
+
 
 
         #change environment if it is randomized
         if self.random_env:
-            self.gazebo.unpauseSim()
             self.init_environment()
-            self.gazebo.pauseSim()
 
         if self.random_init:
-            #put the objects in a random position
+            positions = generate_random_config_2d(
+                low = [0.45,-0.25],
+                high = [0.55,0.25],
+                n_cubes = len(self.model_state.cubes),
+                dist = 0.1,
+                threshold = 0.01
+                )
             for cube in self.model_state.cubes:
-                x, y, z  = [np.random.uniform(low, high) for low, high in zip([0.40,-0.3,0.44], [0.5,0.3,0.54])]
-                self.set_obj_pos(cube,[x, y, z, 0, 0, 0])
+                x,y = positions.pop()
+                self.set_obj_pos(cube,[x, y, 0.44, 0, 0, 0])
+            '''#put the objects in a random position
+            positions = []
+            for cube in self.model_state.cubes:
+                position_values = [random.uniform(low, high) for low, high in zip(position_low, position_high)]
+                invalid_position = True
+                while invalid_position:
+                    for existing_position in positions:
+                        if distance(position_values, existing_position) < 0.1:
+                            invalid_position = True
+                            break
 
+
+            for j in range(4):
+        while True:
+            
+            for existing_position in positions:
+                if distance(position_values, existing_position) < 0.1:
+                    valid_position = False
+                    break
+            if valid_position:
+                break
+        positions.append(position_values)
+                x, y, z  = [np.random.uniform(low=[0.40,-0.3,0.44], high=[0.5,0.3,0.54]) for low, high in zip( [0.5,0.3,0.54])]
+                #self.set_obj_pos(cube,[x, y, z, 0, 0, 0])
+        '''
             
     def impose_configuration(self, gipper_pose:list, env_code:str, cube_poses:list):
         self.gazebo.unpauseSim()
@@ -239,6 +315,19 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         curent image and joint configuration (if multimodal)    
         """
         self.store_model_state()
+        
+        # if a cube is in the rigth cylinder lets kill it
+        env_changed = False
+        for cube in self.model_state.cubes.values():
+            if cube.is_inside(self.model_state.cylinders[self.cylinder_target]):
+                self.gazebo.unpauseSim()
+                self.delete_object(cube.id)
+                env_changed = True
+        if env_changed: self.init_model_states()
+
+        self.store_model_state()
+        self.gazebo.pauseSim()
+
         if self.collision_detected is False:
             arm_state = np.array(self.stored_arm_pose[:3])# position of the EE 
         else:
@@ -252,16 +341,21 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             return [image,arm_state]
         else:
             cubes_obs, cylinders_obs = self.model_state.get_obs()
-            return [cubes_obs,cylinders_obs,arm_state]
+            obs = {
+                'cubes':cubes_obs,
+                'cylinders':cylinders_obs,
+                'fk':arm_state
+            }
+            return obs
 
 
     def _is_done(self, observations):
         """
         Decide if episode is done based on the model state and if there has been a collision
         """
-        task_accomplished = self.model_state.all_cubes_in_cylinders() and (self.grasped_item is None)
-        if self.episode_step >= self.max_episode_steps or task_accomplished or self.collision_detected:
-            print('done = ', [self.episode_step >= self.max_episode_steps , task_accomplished , self.collision_detected])
+        task_accomplished = self.cube_target is None
+        if self.episode_step >= self.max_episode_steps or task_accomplished or self.collision_detected or self.incident:
+            print('done = ', [self.episode_step >= self.max_episode_steps , task_accomplished , self.collision_detected, self.incident])
             self.gazebo.unpauseSim()
             grasped = rospy.wait_for_message("/gripper/is_grasped", Bool)
             if grasped is True:
@@ -285,13 +379,13 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         if self.model_state.all_cubes_in_cylinders() is True:
             reward += self.reward_coef['R_goal']
         # add a penalty if a collision is detected
-        if self.collision_detected is True:
-            reward += self.reward_coef['R_coll']        
+        if self.collision_detected or self.incident:
+            reward += self.reward_coef['R_coll']
         # add a reward for each cube placed in the rigth
-        subgoals_old = self.model_state.cubes_subgoals
+        '''subgoals_old = self.model_state.cubes_subgoals
         subgoals_new = self.model_state.check_subgoals()
         delta_subgoals = [1 for old,new in zip(subgoals_old,subgoals_new) if (old==False and new == True)]
-        reward += sum(delta_subgoals) * self.reward_coef['R_semigoal']
+        reward += sum(delta_subgoals) * self.reward_coef['R_semigoal']'''
         # add a penaly for the distance of the cubes from the respective cylinders
         #reward += sum(self.model_state.get_distances()) * self.reward_coef['R_dist']
 
@@ -334,7 +428,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             if dist < min_dist:
                 min_dist = dist
                 candidate = id
-        if dist<0.3:# and z_c<z+0.25:
+        if min_dist<0.3:# and z_c<z+0.25:
             return candidate, dist
         else:
             return None,None

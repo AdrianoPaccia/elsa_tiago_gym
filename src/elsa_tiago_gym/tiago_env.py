@@ -37,7 +37,7 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
     """
     def __init__(self, env_code:str,speed:float,random_init:bool):
         rospy.logdebug("========= In Tiago Env")
-        self.env_kind = 'environments_1'
+        self.env_kind = 'environments_5'
 
         if env_code == None:
             self.random_env = True
@@ -169,7 +169,6 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
 
     def init_model_states(self):
         self.grasped_item = None
-        self.tiago_orientation = 0.0
         model_states_msg = rospy.wait_for_message('/gazebo/model_states', ModelStates, timeout=5.0)
         model_names = model_states_msg.name 
         self.model_state = objects_from_scene(model_names)
@@ -331,14 +330,6 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
 
         x,y,z = np.clip([x,y,z], self.arm_workspace_low, self.arm_workspace_high)
 
-        #print('setting: ',[x, y, z, roll, pitch, yaw])
-
-        '''self.out_of_reach = False
-        self.arm_group.set_pose_target([x, y, z, roll, pitch, yaw])
-        plan = self.arm_group.go(wait=True)
-        self.arm_group.stop()
-        self.arm_group.clear_pose_targets()
-        self.store_arm_state()'''
         self.out_of_reach = False
         self.arm_torso_group.set_pose_target([x, y, z, roll, pitch, yaw])
         plan = self.arm_torso_group.go(wait=True)
@@ -392,20 +383,24 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
         """
         To update the position of the objects in the scene
         """
-        # upadte the model states
+        # update the model states
         get_gazebo_object_state = rospy.ServiceProxy('/gazebo/get_model_state', GetModelState)
         for id,cube in self.model_state.cubes.items():
             cube_state = get_gazebo_object_state(id,'')
             c = cube_state.pose.position
             if c.z < 0.4:
-                self.set_obj_pos(id,[*cube.init_position,0,0,0])
+                self.incident = True
+                #self.set_obj_pos(id,[*cube.init_position,0,0,0])
             cube.set_state(cube_state)
             cube.held = True if id == self.grasped_item else False
-
+        
         for id,cyl in self.model_state.cylinders.items():
             cyl_state = get_gazebo_object_state(id,'')
             cyl.set_state(cyl_state)
-
+        
+        cube_target = self.model_state.cube_of_type(self.type_target)
+        self.cube_target = cube_target.id if cube_target is not None else None
+       
         attached_objects = self.scene.get_attached_objects(["gripper_base_link"])
 
     def set_obj_pos(self,id:str,pose):
