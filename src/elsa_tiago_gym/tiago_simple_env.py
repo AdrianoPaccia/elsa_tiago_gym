@@ -300,9 +300,9 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         self.gazebo.pauseSim()
 
         if self.collision_detected is False:
-            arm_state = np.array(self.stored_arm_pose[:3])# position of the EE 
+            arm_state = self.stored_arm_pose[:3]# position of the EE 
         else:
-            arm_state = np.array(self.collision_arm_state) #position of the EE where the collision happened
+            arm_state = self.collision_arm_state #position of the EE where the collision happened
 
         if self.is_multimodal:
             img_msg = rospy.wait_for_message("/xtion/rgb/image_raw", Image)
