@@ -1,3 +1,636 @@
+environments:
+  elsa_0:
+    cubes:
+      - positions: [0.45, 0.0, 0.443669]
+        color: yellow
+    cylinders:
+      - positions: [0.7, 0.0, 0.443669]
+        color: yellow
+  elsa_1:
+    cubes:
+      - positions: [0.45, 0.0, 0.443669]
+        color: yellow
+      - positions: [0.45, 0.2, 0.443669]
+        color: yellow
+    cylinders:
+      - positions: [0.7, 0.0, 0.443669]
+        color: yellow
+  elsa_2:
+    cubes:
+      - positions: [0.45, 0.0, 0.443669]
+        color: yellow
+      - positions: [0.45, 0.2, 0.443669]
+        color: yellow
+      - positions: [0.45, -0.2, 0.443669]
+        color: yellow
+    cylinders:
+      - positions: [0.7, 0.0, 0.443669]
+        color: yellow
+
+
+
+
+environments_5:
+  elsa_0:
+    cubes:
+      - positions: [0.4517491596566393, 0.04529336125108302, 0.443669]
+        color: yellow
+    cylinders:
+      - positions: [0.7, 0.11692519146173896, 0.443669]
+        color: yellow
+  elsa_1:
+    cubes:
+      - positions: [0.5042591915389136, 0.08241209275149308, 0.443669]
+        color: yellow
+      - positions: [0.579302324193548, 0.04493924717370612, 0.443669]
+        color: yellow
+      - positions: [0.4451240226757014, 0.2770120036378456, 0.443669]
+        color: yellow
+      - positions: [0.5538385409730741, 0.3223281734057495, 0.443669]
+        color: green
+    cylinders:
+      - positions: [0.7, -0.1301065426535456, 0.443669]
+        color: yellow
+  elsa_2:
+    cubes:
+      - positions: [0.5144227283591208, 0.26929435710480965, 0.443669]
+        color: red
+      - positions: [0.4376655940703664, -0.25992630223132684, 0.443669]
+        color: green
+      - positions: [0.40728730744462666, -0.046984492018107615, 0.443669]
+        color: green
+    cylinders:
+      - positions: [0.7, 0.2755578873413042, 0.443669]
+        color: red
+  elsa_3:
+    cubes:
+      - positions: [0.4083008440650651, -0.32068478284154955, 0.443669]
+        color: green
+      - positions: [0.4674678624595715, -0.3231231100610516, 0.443669]
+        color: yellow
+    cylinders:
+      - positions: [0.7, -0.0675372723856146, 0.443669]
+        color: yellow
+  elsa_4:
+    cubes:
+      - positions: [0.5083058482082329, -0.26102383476466273, 0.443669]
+        color: green
+      - positions: [0.5594463674018181, 0.15055129565476366, 0.443669]
+        color: yellow
+      - positions: [0.5967359467849362, -0.058446301218158137, 0.443669]
+        color: blue
+      - positions: [0.5232523410827611, 0.2630902729044764, 0.443669]
+        color: green
+      - positions: [0.4202609824137338, -0.22990496172515718, 0.443669]
+        color: yellow
+    cylinders:
+      - positions: [0.7, -0.1951933282162966, 0.443669]
+        color: yellow
+  elsa_5:
+    cubes:
+      - positions: [0.5317043608671144, 0.12171292576283133, 0.443669]
+        color: yellow
+      - positions: [0.5816244390465457, -0.03510018716120933, 0.443669]
+        color: green
+      - positions: [0.4668529437341708, -0.14345462267969925, 0.443669]
+        color: red
+    cylinders:
+      - positions: [0.7, -0.053152973178874297, 0.443669]
+        color: green
+  elsa_6:
+    cubes:
+      - positions: [0.5665205772620605, -0.3420617625423181, 0.443669]
+        color: yellow
+      - positions: [0.4309600100569568, 0.093377713390982, 0.443669]
+        color: red
+    cylinders:
+      - positions: [0.7, -0.21835475454767822, 0.443669]
+        color: red
+  elsa_7:
+    cubes:
+      - positions: [0.5153059281986891, 0.24291374537262966, 0.443669]
+        color: red
+      - positions: [0.5277667530512883, 0.018247670079862943, 0.443669]
+        color: yellow
+      - positions: [0.4925191804110251, 0.11123003589623848, 0.443669]
+        color: yellow
+      - positions: [0.4712367250424925, 0.2750495730823931, 0.443669]
+        color: green
+      - positions: [0.5898362609866885, -0.09867209647957248, 0.443669]
+        color: red
+    cylinders:
+      - positions: [0.7, 0.2850785814506695, 0.443669]
+        color: yellow
+  elsa_8:
+    cubes:
+      - positions: [0.4797967717968886, 0.1956675654415979, 0.443669]
+        color: blue
+      - positions: [0.5922719577984119, -0.24982411839110097, 0.443669]
+        color: yellow
+      - positions: [0.4331384480475905, -0.2933440140203716, 0.443669]
+        color: blue
+    cylinders:
+      - positions: [0.7, 0.13548522085475356, 0.443669]
+        color: yellow
+  elsa_9:
+    cubes:
+      - positions: [0.49319869049342097, -0.26299569550781865, 0.443669]
+        color: green
+      - positions: [0.5748888710847524, -0.15649909630394315, 0.443669]
+        color: green
+    cylinders:
+      - positions: [0.7, 0.0023691008471564134, 0.443669]
+        color: green
+  elsa_10:
+    cubes:
+      - positions: [0.45548541623620603, 0.23975590454324802, 0.443669]
+        color: green
+      - positions: [0.5605058983417498, -0.12673041824211267, 0.443669]
+        color: blue
+    cylinders:
+      - positions: [0.7, 0.17191118078942064, 0.443669]
+        color: green
+  elsa_11:
+    cubes:
+      - positions: [0.4132834919047998, -0.2443591179613115, 0.443669]
+        color: green
+      - positions: [0.4604969171495537, -0.1746573238752111, 0.443669]
+        color: yellow
+      - positions: [0.5385098995264934, 0.04304277784860727, 0.443669]
+        color: blue
+      - positions: [0.41770623043270866, -0.2692690393203964, 0.443669]
+        color: blue
+    cylinders:
+      - positions: [0.7, -0.2718895764905755, 0.443669]
+        color: blue
+  elsa_12:
+    cubes:
+      - positions: [0.42846069701617806, -0.122242350450635, 0.443669]
+        color: blue
+      - positions: [0.4068278288726203, -0.3456113050344911, 0.443669]
+        color: yellow
+      - positions: [0.43816363164560995, 0.11887796452790533, 0.443669]
+        color: blue
+      - positions: [0.4446626301437451, -0.07359969017137347, 0.443669]
+        color: green
+      - positions: [0.5157337443790577, -0.04087003514205756, 0.443669]
+        color: yellow
+    cylinders:
+      - positions: [0.7, -0.2774222651950183, 0.443669]
+        color: yellow
+  elsa_13:
+    cubes:
+      - positions: [0.4542947540446794, -0.29389696904184043, 0.443669]
+        color: red
+      - positions: [0.5610995234621529, 0.028087771689517427, 0.443669]
+        color: green
+      - positions: [0.5445520505274576, -0.20872689312541196, 0.443669]
+        color: blue
+      - positions: [0.402671911537988, 0.27323608738184946, 0.443669]
+        color: blue
+      - positions: [0.4955990327809638, 0.07855624091779106, 0.443669]
+        color: yellow
+    cylinders:
+      - positions: [0.7, -0.2013007647044611, 0.443669]
+        color: blue
+  elsa_14:
+    cubes:
+      - positions: [0.4506803427469956, -0.17316919702846972, 0.443669]
+        color: blue
+      - positions: [0.4540698664283506, -0.2816456959980015, 0.443669]
+        color: red
+      - positions: [0.47078691593325167, -0.2462418903594935, 0.443669]
+        color: green
+      - positions: [0.5182253612282758, -0.16759234489510222, 0.443669]
+        color: yellow
+    cylinders:
+      - positions: [0.7, 0.1707792322367111, 0.443669]
+        color: red
+  elsa_15:
+    cubes:
+      - positions: [0.5074986016793238, 0.21574736929302385, 0.443669]
+        color: yellow
+      - positions: [0.49795284869785006, -0.23882154492944804, 0.443669]
+        color: blue
+    cylinders:
+      - positions: [0.7, -0.10885466175837152, 0.443669]
+        color: blue
+  elsa_16:
+    cubes:
+      - positions: [0.5783460343642601, 0.1151965885143802, 0.443669]
+        color: green
+    cylinders:
+      - positions: [0.7, -0.09521215975195518, 0.443669]
+        color: green
+  elsa_17:
+    cubes:
+      - positions: [0.5060437107935696, 0.1589678225008503, 0.443669]
+        color: yellow
+      - positions: [0.5523390468206374, 0.16272881045650667, 0.443669]
+        color: red
+      - positions: [0.5569181811507733, 0.03357531140083869, 0.443669]
+        color: green
+      - positions: [0.445871988858413, 0.16094923876937317, 0.443669]
+        color: red
+      - positions: [0.46434400679650706, -0.24417774629912714, 0.443669]
+        color: blue
+    cylinders:
+      - positions: [0.7, 0.11889538073338779, 0.443669]
+        color: red
+  elsa_18:
+    cubes:
+      - positions: [0.4855002920574718, -0.1671597715488369, 0.443669]
+        color: red
+      - positions: [0.5260971888286435, -0.04850715756080021, 0.443669]
+        color: yellow
+      - positions: [0.45891871116136557, -0.20069135063025179, 0.443669]
+        color: yellow
+      - positions: [0.535183233964599, 0.32402811393989683, 0.443669]
+        color: green
+      - positions: [0.5312976063870347, 0.3275274389168191, 0.443669]
+        color: green
+    cylinders:
+      - positions: [0.7, 0.29373144109431487, 0.443669]
+        color: green
+  elsa_19:
+    cubes:
+      - positions: [0.5445397126450454, -0.12423641738839009, 0.443669]
+        color: blue
+      - positions: [0.5967377924270997, 0.33424030341394373, 0.443669]
+        color: yellow
+    cylinders:
+      - positions: [0.7, 0.19114754227171987, 0.443669]
+        color: blue
+  elsa_20:
+    cubes:
+      - positions: [0.41341049811098035, 0.18602945789089642, 0.443669]
+        color: red
+      - positions: [0.45452106469986686, 0.051234303725560704, 0.443669]
+        color: green
+      - positions: [0.5673701697019667, -0.23887386897005458, 0.443669]
+        color: red
+    cylinders:
+      - positions: [0.7, 0.047820563596572385, 0.443669]
+        color: green
+  elsa_21:
+    cubes:
+      - positions: [0.5608531840670221, 0.28559505333252166, 0.443669]
+        color: yellow
+      - positions: [0.46807255490354893, -0.20496515459808354, 0.443669]
+        color: yellow
+      - positions: [0.5418521947281786, -0.04924058540828097, 0.443669]
+        color: blue
+    cylinders:
+      - positions: [0.7, -0.21563085469109938, 0.443669]
+        color: blue
+  elsa_22:
+    cubes:
+      - positions: [0.45226248585489187, 0.30665974768808324, 0.443669]
+        color: green
+      - positions: [0.5739258262797441, 0.1902081495780793, 0.443669]
+        color: green
+      - positions: [0.40358063850778486, 0.07872572786098403, 0.443669]
+        color: green
+      - positions: [0.4857962235884335, 0.1086004214116183, 0.443669]
+        color: blue
+      - positions: [0.5002276833768521, 0.16570481266956572, 0.443669]
+        color: yellow
+    cylinders:
+      - positions: [0.7, 0.13523768049144425, 0.443669]
+        color: green
+  elsa_23:
+    cubes:
+      - positions: [0.5214206975280554, 0.08703764465685426, 0.443669]
+        color: yellow
+      - positions: [0.41395785417436504, -0.13821761900010815, 0.443669]
+        color: red
+      - positions: [0.45082608067208146, 0.010250474822418476, 0.443669]
+        color: blue
+      - positions: [0.427106281490504, -0.06920096975009238, 0.443669]
+        color: blue
+    cylinders:
+      - positions: [0.7, 0.07976809803501583, 0.443669]
+        color: blue
+  elsa_24:
+    cubes:
+      - positions: [0.47670273993528905, -0.05730267421631169, 0.443669]
+        color: blue
+      - positions: [0.49453375077990486, 0.024896794625232477, 0.443669]
+        color: yellow
+      - positions: [0.5313733812440852, 0.033710055826155605, 0.443669]
+        color: red
+      - positions: [0.5473886096905101, -0.17099274124528763, 0.443669]
+        color: yellow
+      - positions: [0.5028113146151283, -0.17486609771017825, 0.443669]
+        color: green
+    cylinders:
+      - positions: [0.7, 0.2876341136463079, 0.443669]
+        color: yellow
+  elsa_25:
+    cubes:
+      - positions: [0.5709674733731309, 0.047616054017641685, 0.443669]
+        color: red
+      - positions: [0.5847243571680529, 0.2541142719167061, 0.443669]
+        color: red
+    cylinders:
+      - positions: [0.7, 0.0928094771303592, 0.443669]
+        color: red
+  elsa_26:
+    cubes:
+      - positions: [0.584384103143529, -0.3235510524049305, 0.443669]
+        color: green
+      - positions: [0.5594762248422515, 0.1971499709097414, 0.443669]
+        color: green
+      - positions: [0.4296838792843908, 0.034125045099321794, 0.443669]
+        color: blue
+      - positions: [0.421730839865238, -0.3063965550812773, 0.443669]
+        color: red
+    cylinders:
+      - positions: [0.7, -0.2671827997760368, 0.443669]
+        color: green
+  elsa_27:
+    cubes:
+      - positions: [0.5537240286420648, -0.3182773435276777, 0.443669]
+        color: yellow
+      - positions: [0.5226076113508451, -0.159712041062733, 0.443669]
+        color: yellow
+    cylinders:
+      - positions: [0.7, 0.08371326385983335, 0.443669]
+        color: yellow
+  elsa_28:
+    cubes:
+      - positions: [0.4369869436346526, 0.31080315773574174, 0.443669]
+        color: blue
+      - positions: [0.4094266860092513, -0.046670092259532725, 0.443669]
+        color: red
+      - positions: [0.49764134640394375, 0.30569415546821066, 0.443669]
+        color: yellow
+      - positions: [0.5491770107456897, -0.3471738474489394, 0.443669]
+        color: blue
+    cylinders:
+      - positions: [0.7, -0.022870889886872248, 0.443669]
+        color: yellow
+  elsa_29:
+    cubes:
+      - positions: [0.46199088633745644, -0.18597194114489618, 0.443669]
+        color: blue
+      - positions: [0.4872857794743094, -0.26129809390743014, 0.443669]
+        color: yellow
+      - positions: [0.4926569605127941, 0.2990444331836253, 0.443669]
+        color: yellow
+      - positions: [0.5418004230459952, -0.2937406630279672, 0.443669]
+        color: red
+      - positions: [0.587890943942265, -0.07407293364327922, 0.443669]
+        color: blue
+    cylinders:
+      - positions: [0.7, 0.27688371987942345, 0.443669]
+        color: yellow
+  elsa_30:
+    cubes:
+      - positions: [0.461807269807765, 0.01510392295818097, 0.443669]
+        color: yellow
+      - positions: [0.48250559654053093, 0.19363972801843232, 0.443669]
+        color: red
+      - positions: [0.488165168515847, -0.20779977378304848, 0.443669]
+        color: blue
+      - positions: [0.5005127539921552, -0.021254313550654547, 0.443669]
+        color: green
+      - positions: [0.5311874982904142, 0.08274252522407471, 0.443669]
+        color: red
+    cylinders:
+      - positions: [0.7, -0.2847503343561001, 0.443669]
+        color: red
+  elsa_31:
+    cubes:
+      - positions: [0.5274946097417952, 0.2395541374529061, 0.443669]
+        color: blue
+      - positions: [0.5105839032586682, -0.3407439336501332, 0.443669]
+        color: red
+      - positions: [0.5765831125515946, 0.02947567569662668, 0.443669]
+        color: blue
+      - positions: [0.5062331301441731, 0.1415450710129399, 0.443669]
+        color: blue
+      - positions: [0.544912092817683, -0.14120845040802318, 0.443669]
+        color: green
+    cylinders:
+      - positions: [0.7, -0.13623678462607386, 0.443669]
+        color: blue
+  elsa_32:
+    cubes:
+      - positions: [0.45626601849804715, -0.19945009773385022, 0.443669]
+        color: blue
+    cylinders:
+      - positions: [0.7, 0.019084173034112695, 0.443669]
+        color: blue
+  elsa_33:
+    cubes:
+      - positions: [0.569699200006096, 0.04785155402974095, 0.443669]
+        color: green
+      - positions: [0.5181485435965348, 0.073378511769229, 0.443669]
+        color: blue
+      - positions: [0.4275614745324553, -0.11344424426343422, 0.443669]
+        color: yellow
+    cylinders:
+      - positions: [0.7, 0.1985604654037894, 0.443669]
+        color: blue
+  elsa_34:
+    cubes:
+      - positions: [0.43874411078136616, 0.06932994263349701, 0.443669]
+        color: green
+      - positions: [0.4547926874371962, -0.12109647683850841, 0.443669]
+        color: yellow
+      - positions: [0.43109805262860956, -0.23287264059723517, 0.443669]
+        color: red
+    cylinders:
+      - positions: [0.7, -0.17343503726343065, 0.443669]
+        color: red
+  elsa_35:
+    cubes:
+      - positions: [0.5501710747679769, 0.2538013786651664, 0.443669]
+        color: yellow
+      - positions: [0.40509325516926953, 0.03184751615346887, 0.443669]
+        color: red
+      - positions: [0.5662927026750092, -0.34030762408317783, 0.443669]
+        color: red
+    cylinders:
+      - positions: [0.7, -0.269294712398884, 0.443669]
+        color: red
+  elsa_36:
+    cubes:
+      - positions: [0.5062095773621963, 0.02171777188814422, 0.443669]
+        color: blue
+      - positions: [0.5500326216141046, 0.0029995950989501474, 0.443669]
+        color: yellow
+      - positions: [0.517679292672646, 0.12057561766340325, 0.443669]
+        color: red
+      - positions: [0.5485697040343733, -0.2497596984396644, 0.443669]
+        color: yellow
+    cylinders:
+      - positions: [0.7, 0.24288535136723072, 0.443669]
+        color: yellow
+  elsa_37:
+    cubes:
+      - positions: [0.5815072463006513, -0.03999250890906536, 0.443669]
+        color: green
+      - positions: [0.48916255824615285, 0.33883666244966937, 0.443669]
+        color: yellow
+      - positions: [0.5354518801473858, -0.2792330897090448, 0.443669]
+        color: blue
+    cylinders:
+      - positions: [0.7, -0.225468123277894, 0.443669]
+        color: green
+  elsa_38:
+    cubes:
+      - positions: [0.4781684050978885, 0.05339233798766024, 0.443669]
+        color: yellow
+      - positions: [0.5256128708903813, 0.16369504814157665, 0.443669]
+        color: green
+      - positions: [0.4156487261996904, -0.21323077198895193, 0.443669]
+        color: yellow
+    cylinders:
+      - positions: [0.7, 0.1130564189760786, 0.443669]
+        color: yellow
+  elsa_39:
+    cubes:
+      - positions: [0.4545536404155071, -0.27708512284319486, 0.443669]
+        color: blue
+      - positions: [0.5318868284235587, -0.000765735395640954, 0.443669]
+        color: green
+      - positions: [0.5354741449510751, 0.2559932301424239, 0.443669]
+        color: green
+      - positions: [0.5785725697258945, -0.33844534468311716, 0.443669]
+        color: blue
+      - positions: [0.534666883948319, -0.03203933146943455, 0.443669]
+        color: green
+    cylinders:
+      - positions: [0.7, -0.02846203419489518, 0.443669]
+        color: blue
+  elsa_40:
+    cubes:
+      - positions: [0.4511586403552359, 0.04364833507709326, 0.443669]
+        color: yellow
+      - positions: [0.5161615991732158, -0.2206462215273325, 0.443669]
+        color: green
+      - positions: [0.4113968856373482, 0.30257439033391387, 0.443669]
+        color: yellow
+      - positions: [0.42436964103060004, -0.23360475229817612, 0.443669]
+        color: yellow
+    cylinders:
+      - positions: [0.7, 0.10842531762400492, 0.443669]
+        color: green
+  elsa_41:
+    cubes:
+      - positions: [0.4922320917319082, -0.31757058323226234, 0.443669]
+        color: blue
+      - positions: [0.5895196696601929, -0.3357071761188381, 0.443669]
+        color: green
+    cylinders:
+      - positions: [0.7, 0.06606964645756441, 0.443669]
+        color: green
+  elsa_42:
+    cubes:
+      - positions: [0.5827034359825588, 0.014962327834434519, 0.443669]
+        color: red
+      - positions: [0.46808291719824746, 0.1452564294412666, 0.443669]
+        color: green
+      - positions: [0.4324884042478669, -0.03561458773225867, 0.443669]
+        color: green
+      - positions: [0.5598577419363484, 0.18978618471999775, 0.443669]
+        color: blue
+    cylinders:
+      - positions: [0.7, 0.25209926765373986, 0.443669]
+        color: blue
+  elsa_43:
+    cubes:
+      - positions: [0.4810455660183013, -0.2707541563169914, 0.443669]
+        color: yellow
+      - positions: [0.5390230999506218, 0.34037799938787494, 0.443669]
+        color: green
+    cylinders:
+      - positions: [0.7, 0.27829102479521056, 0.443669]
+        color: green
+  elsa_44:
+    cubes:
+      - positions: [0.5558049379322326, 0.07792491950339248, 0.443669]
+        color: yellow
+      - positions: [0.5627831777377591, -0.03345973645562739, 0.443669]
+        color: red
+      - positions: [0.5045236207925302, 0.22826646583058474, 0.443669]
+        color: yellow
+    cylinders:
+      - positions: [0.7, -0.16536889768376747, 0.443669]
+        color: yellow
+  elsa_45:
+    cubes:
+      - positions: [0.5587737726961208, 0.08507319267171742, 0.443669]
+        color: red
+      - positions: [0.5209330770069187, 0.14254075028543944, 0.443669]
+        color: red
+      - positions: [0.5224198264392821, -0.24221433228316044, 0.443669]
+        color: green
+      - positions: [0.4850486504952036, -0.20860421281543795, 0.443669]
+        color: yellow
+    cylinders:
+      - positions: [0.7, 0.22203000184552862, 0.443669]
+        color: red
+  elsa_46:
+    cubes:
+      - positions: [0.5428199924307628, -0.1416213845210741, 0.443669]
+        color: yellow
+      - positions: [0.40212951194522073, -0.028732419118487174, 0.443669]
+        color: green
+      - positions: [0.4981634041510136, -0.22280533048847345, 0.443669]
+        color: blue
+      - positions: [0.4848431953822418, 0.01863503582543735, 0.443669]
+        color: red
+    cylinders:
+      - positions: [0.7, 0.06326522854470618, 0.443669]
+        color: green
+  elsa_47:
+    cubes:
+      - positions: [0.45760070428045324, -0.15195021785716373, 0.443669]
+        color: yellow
+      - positions: [0.5774500793625016, 0.16325602133974315, 0.443669]
+        color: blue
+      - positions: [0.5299349029733048, -0.09828258661578798, 0.443669]
+        color: blue
+      - positions: [0.48862739462167026, -0.27289060023975287, 0.443669]
+        color: green
+      - positions: [0.4603807959851369, 0.2291131443518737, 0.443669]
+        color: blue
+    cylinders:
+      - positions: [0.7, 0.03043494170826022, 0.443669]
+        color: blue
+  elsa_48:
+    cubes:
+      - positions: [0.45377370551193114, 0.19953601590277448, 0.443669]
+        color: red
+      - positions: [0.4095015240527521, -0.048356651528870254, 0.443669]
+        color: yellow
+      - positions: [0.4704217954109823, -0.2863546247607939, 0.443669]
+        color: blue
+    cylinders:
+      - positions: [0.7, 0.14138063554410318, 0.443669]
+        color: yellow
+  elsa_49:
+    cubes:
+      - positions: [0.5737790821237785, -0.18177793431521733, 0.443669]
+        color: green
+      - positions: [0.5221902385298501, 0.20870391760075868, 0.443669]
+        color: blue
+      - positions: [0.5829305886938174, 0.16276890604384686, 0.443669]
+        color: red
+      - positions: [0.46651967893055757, 0.2037374498937251, 0.443669]
+        color: green
+    cylinders:
+      - positions: [0.7, 0.18423047408533522, 0.443669]
+        color: green
+
+
+
+
+
+
 environments_4:
   elsa_0:
     - positions: [0.418486, 0.264288, 0.443669]

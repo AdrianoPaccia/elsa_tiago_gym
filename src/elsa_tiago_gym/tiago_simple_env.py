@@ -47,6 +47,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         super(TiagoSimpleEnv, self).__init__(env_code,speed,random_init)
 
         self.max_episode_steps = max_episode_steps
+        self.env_code = env_code
         self.motion_time = 0.1
         #self.max_joint_vel = np.ones(7)*0.01
         self.max_disp = 0.05
@@ -101,11 +102,11 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
     def init_environment(self, env_code=None):
 
         self.gazebo.unpauseSim()
-        print(f'init env: {env_code}')
         # get which env to init
         if env_code == None:
             env_code = random.randint(1,20)     
         test_env = 'elsa_'+str(env_code)
+        print(f'init env {self.env_kind}/{test_env}')
 
         #To integrate the cube deletion loop
         model_states_msg = rospy.wait_for_message('/gazebo/model_states', ModelStates, timeout=5.0)
@@ -152,6 +153,7 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             self.spawn_object("cylinder_"+cyl['color']+"_"+str(number_of_cylinder),sdff, "", cyl_pose, "world")
             sdff = f.close()
 
+        self.target_color =cyl['color']
         self.init_model_states()
 
 
@@ -173,9 +175,8 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         self.type_target = target.type_code
         self.cylinder_target = target.id
         self.cube_target = self.model_state.cube_of_type(self.type_target).id
-        print(f'target type {self.type_target} - {self.cube_target}')
-        
-
+        print(f'target color: {self.target_color} - target cube: {self.cube_target}')
+    
 
     def _set_init_pose(self):
         """Sets the Robot in its init pose
@@ -207,11 +208,9 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
         self.action_failed = False
         self.incident = False
 
-
-
         #change environment if it is randomized
-        if self.random_env:
-            self.init_environment()
+        #print('DIO BISONTE: ',self.env_code)
+        #self.init_environment(self.env_code)
 
         if self.random_init:
             positions = generate_random_config_2d(
@@ -224,45 +223,17 @@ class TiagoSimpleEnv(tiago_env.TiagoEnv):
             for cube in self.model_state.cubes:
                 x,y = positions.pop()
                 self.set_obj_pos(cube,[x, y, 0.44, 0, 0, 0])
-            '''#put the objects in a random position
-            positions = []
-            for cube in self.model_state.cubes:
-                position_values = [random.uniform(low, high) for low, high in zip(position_low, position_high)]
-                invalid_position = True
-                while invalid_position:
-                    for existing_position in positions:
-                        if distance(position_values, existing_position) < 0.1:
-                            invalid_position = True
-                            break
-
-
-            for j in range(4):
-        while True:
             
-            for existing_position in positions:
-                if distance(position_values, existing_position) < 0.1:
-                    valid_position = False
-                    break
-            if valid_position:
-                break
-        positions.append(position_values)
-                x, y, z  = [np.random.uniform(low=[0.40,-0.3,0.44], high=[0.5,0.3,0.54]) for low, high in zip( [0.5,0.3,0.54])]
-                #self.set_obj_pos(cube,[x, y, z, 0, 0, 0])
-        '''
-            
-    def impose_configuration(self, gipper_pose:list, env_code:str, cube_poses:list):
+        
+    def impose_configuration(self, gipper_pose:list, cube_poses:list, env_code=None):
         self.gazebo.unpauseSim()
         self.set_arm_pose(*gipper_pose)
-        self.init_environment(env_code)
+        if env_code is not None:
+            self.init_environment(env_code)
         for cube_id, pose in zip(self.model_state.cubes, cube_poses):
             self.set_obj_pos(cube_id,pose)
         self.gazebo.pauseSim()
         return self._get_obs()
-
-
-
-
-
 
     def _set_action(self, action):
         """
