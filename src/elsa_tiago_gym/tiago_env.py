@@ -37,7 +37,7 @@ class TiagoEnv(robot_gazebo_env.RobotGazeboEnv):
     """
     def __init__(self, env_code:str,speed:float,random_init:bool):
         rospy.logdebug("========= In Tiago Env")
-        self.env_kind = 'environments'
+        self.env_kind = 'environments_5'
 
         if env_code == None:
             self.random_env = True
